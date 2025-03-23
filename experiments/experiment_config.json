@@ -1,0 +1,22 @@
+[
+  {
+    "class_name": "CommandInjectionController",
+    "source_file": "../benchmark/src/main/java/edu/thu/benchmark/annotated/controller/CommandInjectionController.java"
+  },
+  {
+    "class_name": "SqlInjectionTestController",
+    "source_file": "../benchmark/src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java"
+  },
+  {
+    "class_name": "PathTraversalController",
+    "source_file": "../benchmark/src/main/java/edu/thu/benchmark/annotated/controller/PathTraversalController.java"
+  },
+  {
+    "class_name": "LoggingAspect",
+    "source_file": "../benchmark/src/main/java/edu/thu/benchmark/annotated/aspect/LoggingAspect.java"
+  },
+  {
+    "class_name": "SecurityAspect",
+    "source_file": "../benchmark/src/main/java/edu/thu/benchmark/annotated/aspect/SecurityAspect.java"
+  }
+] 

@@ -1,0 +1,12 @@
+[
+  {
+    "class_name": "CommandInjectionController",
+    "source_file": "../benchmark/src/main/java/edu/thu/benchmark/annotated/controller/CommandInjectionController.java",
+    "models": ["gpt-4-turbo", "claude-3-opus"]
+  },
+  {
+    "class_name": "SqlInjectionTestController",
+    "source_file": "../benchmark/src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java",
+    "models": ["gpt-4-turbo", "claude-3-opus"]
+  }
+]
