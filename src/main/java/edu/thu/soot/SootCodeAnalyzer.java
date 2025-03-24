@@ -373,7 +373,7 @@ public class SootCodeAnalyzer {
 
         // 保存调用图到JSON文件
         try {
-            Gson gson = new GsonBuilder().setPrettyPrinting().create();
+            Gson gson = new GsonBuilder().setPrettyPrinting().disableHtmlEscaping().create();
             String json = gson.toJson(callGraph);
 
             Path filePath = Paths.get(outputPath, "call_graph.json");
