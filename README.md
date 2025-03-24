@@ -1,43 +1,146 @@
-# 语义还原系统 (Semantic Restoration System)
+# Java框架语义还原工具
 
-本项目利用大模型技术(LLM)对Java框架特性（尤其是注解和AOP）进行语义还原，将动态框架行为转化为直接的Java代码，以便更好地支持静态分析和漏洞检测。
+这是一个用于将带有框架特性（如注解、依赖注入等）的Java代码还原为纯Java代码的工具，目的是使静态分析工具能够更准确地分析安全漏洞。
 
-## 项目背景
+## 项目概述
 
-现代Java应用大量使用Spring等框架中的注解特性、AOP、反射等高级特性，这些特性带来了极大的便利性，但也为静态安全分析带来了巨大挑战。本项目尝试通过以下思路解决该问题：
+本工具可以处理以下Java框架特性的语义还原：
 
-1. 利用前置建模工具对注解、AOP、依赖注入等特性进行结构化索引
-2. 使用大模型(LLM)结合检索增强生成(RAG)，将这些动态特性还原为简单直接的Java代码
-3. 通过Agent、Tool和Workflow实现自动化的语义还原过程
+1. **依赖注入（DI）还原**：将`@Autowired`注解的字段转换为直接初始化代码
+2. **配置值注入还原**：将`@Value`注解引用的配置值直接赋值给字段
+3. **AOP（面向切面编程）还原**：将切面代码（前置、后置、环绕通知）展开到目标方法中
+4. **Mapper接口实现**：为MyBatis等ORM框架的接口生成实现类
+
+## 使用方法
+
+### 准备工作
+
+1. 使用相关工具对Java项目进行建模，得到JSON格式的建模结果文件
+2. 准备好需要还原的Java源代码目录
+
+### 执行还原
+
+```bash
+java -jar semantic-restoration.jar <建模JSON文件> <源代码目录> <输出目录>
+```
+
+例如：
+
+```bash
+java -jar semantic-restoration.jar annotated-benchmark.json src/main/java restored
+```
+
+### 参数说明
+
+- `<建模JSON文件>`：JSON格式的建模结果文件路径
+- `<源代码目录>`：需要还原的Java源代码目录
+- `<输出目录>`：还原后的代码输出目录
+
+## 建模结果格式
+
+建模结果应为JSON格式，包含以下主要部分：
+
+```json
+{
+  "autowiredFields": {
+    "com.example.Controller.service": {
+      "annotation": "@org.springframework.beans.factory.annotation.Autowired",
+      "linkedBeans": [
+        {
+          "name": "serviceImpl",
+          "type": "com.example.ServiceImpl",
+          "scope": "SINGLETON",
+          "fromSource": "SERVICE_ANNOTATION"
+        }
+      ],
+      "name": "service",
+      "declaringType": "com.example.Controller",
+      "fieldType": "com.example.Service"
+    }
+  },
+  "valueFields": {
+    "com.example.Config.property": {
+      "annotation": "@org.springframework.beans.factory.annotation.Value(\"${app.property}\")",
+      "linkedBeans": [
+        {
+          "name": "app.property",
+          "propertyValue": {
+            "property": "value"
+          },
+          "fromSource": "VALUE_ANNOTATION"
+        }
+      ],
+      "name": "property",
+      "declaringType": "com.example.Config",
+      "fieldType": "java.lang.String"
+    }
+  },
+  "aspects": [
+    {
+      "adviceType": "before",
+      "aspectClass": "com.example.LoggingAspect",
+      "adviceMethod": "logBefore",
+      "targetMethods": [
+        "com.example.Controller.handleRequest"
+      ]
+    }
+  ],
+  "entryPoints": [
+    "com.example.Controller.handleRequest"
+  ],
+  "sources": [
+    "com.example.Controller.getParameter"
+  ],
+  "sinks": [
+    "com.example.DbUtil.executeQuery"
+  ]
+}
+```
 
 ## 项目结构
 
 ```
 semantic-restoration/
-├── src/                # 核心源代码
-├── docs/               # 文档和设计说明
-├── config/             # 配置文件
-├── experiments/        # 实验代码和结果
-├── examples/           # 示例代码
-└── utils/              # 工具类
+├── src/
+│   └── main/
+│       └── java/
+│           ├── model/
+│           │   └── ModelData.java          # 建模数据模型类
+│           └── restoration/
+│               └── SemanticRestorer.java   # 语义还原核心类
+├── build.gradle                            # Gradle构建文件
+└── README.md                               # 本文档
 ```
 
-## 核心功能
+## 构建项目
 
-- RAG引擎：基于建模结果的检索与上下文构建
-- Agent系统：协调大模型和工具调用
-- 各类工具：反射解析、AOP展开、代码生成等
-- 验证与优化：生成代码的验证与改进
+```bash
+./gradlew build
+```
 
-## 实验设计
+构建成功后，可以在`build/libs`目录下找到可执行的JAR文件。
 
-本项目将设计一系列实验，验证语义还原的有效性：
+## 技术实现
 
-1. 注解与依赖注入还原实验
-2. AOP切面逻辑还原实验
-3. 反射与动态代理还原实验
-4. 安全漏洞分析准确度实验
+本项目使用以下技术：
 
-## 使用方法
+- Java 11+
+- GSON库用于JSON解析
+- 正则表达式用于代码分析和修改
 
-[详细使用说明将在项目完成后补充] 
+## 优势特点
+
+1. **简化的输入**：只需要建模JSON和源代码，无需额外的配置文件
+2. **高效解析**：使用GSON直接解析JSON格式的建模结果
+3. **精确还原**：针对不同的框架特性提供专门的还原策略
+4. **可扩展性**：易于添加新的还原规则和支持其他框架
+
+## 限制说明
+
+1. 建模JSON需要符合指定格式
+2. 部分复杂框架特性可能无法完全还原
+3. 生成的代码主要目的是供静态分析使用，不保证可直接运行
+
+## 许可证
+
+MIT 
