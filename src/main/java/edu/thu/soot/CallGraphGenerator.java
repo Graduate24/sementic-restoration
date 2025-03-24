@@ -308,7 +308,10 @@ public class CallGraphGenerator {
         rootObject.add("edges", edgesArray);
         
         // 保存为JSON文件
-        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        Gson gson = new GsonBuilder()
+                .setPrettyPrinting()
+                .disableHtmlEscaping() // 禁用HTML转义，让<>符号正常显示
+                .create();
         try (FileWriter writer = new FileWriter(outputPath + "/call_graph.json")) {
             gson.toJson(rootObject, writer);
         }
