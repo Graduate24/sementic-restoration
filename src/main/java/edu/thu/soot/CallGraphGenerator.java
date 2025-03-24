@@ -206,6 +206,7 @@ public class CallGraphGenerator {
      * 查找方法的行号
      */
     private int findMethodLineNumber(SootMethod method) {
+        // 首先尝试从方法体中获取行号
         if (!method.hasActiveBody()) {
             try {
                 method.retrieveActiveBody();
@@ -220,6 +221,54 @@ public class CallGraphGenerator {
             if (tag != null) {
                 return tag.getLineNumber();
             }
+        }
+        
+        // 如果从方法体中无法获取行号，尝试从源文件解析
+        try {
+            SootClass declaringClass = method.getDeclaringClass();
+            SourceFileTag sourceFileTag = (SourceFileTag) declaringClass.getTag("SourceFileTag");
+            if (sourceFileTag == null) {
+                return -1;
+            }
+            
+            String sourceFileName = sourceFileTag.getSourceFile();
+            String sourceFilePath = appPath + "/" + declaringClass.getPackageName().replace('.', '/') + "/" + sourceFileName;
+            java.io.File file = new java.io.File(sourceFilePath);
+            if (!file.exists()) {
+                // 尝试在项目根目录查找
+                file = new java.io.File(appPath + "/" + sourceFileName);
+                if (!file.exists()) {
+                    return -1;
+                }
+            }
+            
+            // 读取源文件内容
+            List<String> lines = Files.readAllLines(file.toPath());
+            String methodName = method.getName();
+            
+            // 在源文件中查找方法定义
+            for (int i = 0; i < lines.size(); i++) {
+                String line = lines.get(i).trim();
+                if (line.contains(methodName) && line.contains("(") && 
+                    (line.contains("public") || line.contains("private") || line.contains("protected") || line.contains("void") || line.contains("static")) &&
+                    !line.contains("=") && !line.contains("System.")) {
+                    // 检查参数类型以确认这是正确的方法
+                    boolean matchesParams = true;
+                    for (int j = 0; j < method.getParameterCount(); j++) {
+                        Type paramType = method.getParameterType(j);
+                        if (!line.contains(paramType.toString()) && !line.contains(paramType.toQuotedString())) {
+                            matchesParams = false;
+                            break;
+                        }
+                    }
+                    if (matchesParams) {
+                        return i + 1; // 行号从1开始
+                    }
+                }
+            }
+        } catch (Exception e) {
+            // 忽略异常，返回-1
+            logger.debug("解析方法行号时出错: {}", e.getMessage());
         }
         
         return -1;
