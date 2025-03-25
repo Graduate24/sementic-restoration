@@ -1,0 +1,627 @@
+{
+  "edu.thu.benchmark.annotated.service.CommandService.commandExecutor": {
+    "annotation": "@org.springframework.beans.factory.annotation.Value(\"${app.command.executor}\")",
+    "linkedBeans": [
+      {
+        "name": "app.command.executor",
+        "type": "java.lang.String",
+        "scope": "SINGLETON",
+        "propertyValue": {
+          "commandExecutor": "/bin/bash"
+        },
+        "lazyInit": false,
+        "fromSource": "VALUE_ANNOTATION"
+      }
+    ],
+    "name": "commandExecutor",
+    "declaringType": "edu.thu.benchmark.annotated.service.CommandService",
+    "fieldType": "java.lang.String"
+  },
+  "edu.thu.benchmark.annotated.controller.UserController.userService": {
+    "annotation": "@org.springframework.beans.factory.annotation.Autowired",
+    "linkedBeans": [
+      {
+        "name": "userServiceImpl",
+        "type": "edu.thu.benchmark.annotated.service.impl.UserServiceImpl",
+        "scope": "SINGLETON",
+        "constructors": [
+          "public edu.thu.benchmark.annotated.service.impl.UserServiceImpl(){\n}"
+        ],
+        "properties": [
+          {}
+        ],
+        "lazyInit": false,
+        "fromSource": "SERVICE_ANNOTATION"
+      }
+    ],
+    "name": "userService",
+    "declaringType": "edu.thu.benchmark.annotated.controller.UserController",
+    "fieldType": "edu.thu.benchmark.annotated.service.UserService"
+  },
+  "edu.thu.benchmark.annotated.service.CommandService.commandWhitelist": {
+    "annotation": "@org.springframework.beans.factory.annotation.Value(\"${app.command.whitelist}\")",
+    "linkedBeans": [
+      {
+        "name": "app.command.whitelist",
+        "type": "java.lang.String",
+        "scope": "SINGLETON",
+        "propertyValue": {
+          "commandWhitelist": "ls,dir,pwd,whoami,date,echo"
+        },
+        "lazyInit": false,
+        "fromSource": "VALUE_ANNOTATION"
+      }
+    ],
+    "name": "commandWhitelist",
+    "declaringType": "edu.thu.benchmark.annotated.service.CommandService",
+    "fieldType": "java.lang.String"
+  },
+  "edu.thu.benchmark.annotated.service.FileUploadService.maxFileSize": {
+    "annotation": "@org.springframework.beans.factory.annotation.Value(\"${app.upload.max-size}\")",
+    "linkedBeans": [
+      {
+        "name": "app.upload.max-size",
+        "type": "long",
+        "scope": "SINGLETON",
+        "propertyValue": {
+          "maxFileSize": 10485760
+        },
+        "lazyInit": false,
+        "fromSource": "VALUE_ANNOTATION"
+      }
+    ],
+    "name": "maxFileSize",
+    "declaringType": "edu.thu.benchmark.annotated.service.FileUploadService",
+    "fieldType": "long"
+  },
+  "edu.thu.benchmark.annotated.config.AppConfig.queryTemplate": {
+    "annotation": "@org.springframework.beans.factory.annotation.Value(\"${app.database.query.template}\")",
+    "linkedBeans": [
+      {
+        "name": "app.database.query.template",
+        "type": "java.lang.String",
+        "scope": "SINGLETON",
+        "propertyValue": {
+          "queryTemplate": "SELECT * FROM {table} WHERE {condition}"
+        },
+        "lazyInit": false,
+        "fromSource": "VALUE_ANNOTATION"
+      }
+    ],
+    "name": "queryTemplate",
+    "declaringType": "edu.thu.benchmark.annotated.config.AppConfig",
+    "fieldType": "java.lang.String"
+  },
+  "edu.thu.benchmark.annotated.service.TemplateService.templateDir": {
+    "annotation": "@org.springframework.beans.factory.annotation.Value(\"${template.dir}\")",
+    "linkedBeans": [
+      {
+        "name": "template.dir",
+        "type": "java.lang.String",
+        "scope": "SINGLETON",
+        "propertyValue": {
+          "templateDir": "/tmp/templates"
+        },
+        "lazyInit": false,
+        "fromSource": "VALUE_ANNOTATION"
+      }
+    ],
+    "name": "templateDir",
+    "declaringType": "edu.thu.benchmark.annotated.service.TemplateService",
+    "fieldType": "java.lang.String"
+  },
+  "edu.thu.benchmark.annotated.service.SqlInjectionTestService.userSqlInjectionMapper": {
+    "annotation": "@org.springframework.beans.factory.annotation.Autowired",
+    "linkedBeans": [
+      {
+        "name": "userSqlInjectionMapper",
+        "type": "edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper",
+        "scope": "SINGLETON",
+        "properties": [],
+        "lazyInit": false,
+        "fromSource": "MYBATIS_MAPPER"
+      }
+    ],
+    "name": "userSqlInjectionMapper",
+    "declaringType": "edu.thu.benchmark.annotated.service.SqlInjectionTestService",
+    "fieldType": "edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper"
+  },
+  "edu.thu.benchmark.annotated.service.impl.FileServiceImpl.uploadDir": {
+    "annotation": "@org.springframework.beans.factory.annotation.Value(\"${file.upload.dir}\")",
+    "linkedBeans": [
+      {
+        "name": "file.upload.dir",
+        "type": "java.lang.String",
+        "scope": "SINGLETON",
+        "propertyValue": {
+          "uploadDir": "./uploads"
+        },
+        "lazyInit": false,
+        "fromSource": "VALUE_ANNOTATION"
+      }
+    ],
+    "name": "uploadDir",
+    "declaringType": "edu.thu.benchmark.annotated.service.impl.FileServiceImpl",
+    "fieldType": "java.lang.String"
+  },
+  "edu.thu.benchmark.annotated.service.SqlInjectionTestService.namedParameterJdbcTemplate": {
+    "annotation": "@org.springframework.beans.factory.annotation.Autowired",
+    "linkedBeans": [],
+    "name": "namedParameterJdbcTemplate",
+    "declaringType": "edu.thu.benchmark.annotated.service.SqlInjectionTestService",
+    "fieldType": "org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate"
+  },
+  "edu.thu.benchmark.annotated.controller.CommandInjectionController.commandService": {
+    "annotation": "@org.springframework.beans.factory.annotation.Autowired",
+    "linkedBeans": [
+      {
+        "name": "commandService",
+        "type": "edu.thu.benchmark.annotated.service.CommandService",
+        "scope": "SINGLETON",
+        "constructors": [
+          "public edu.thu.benchmark.annotated.service.CommandService(){\n}"
+        ],
+        "properties": [
+          {},
+          {},
+          {},
+          {}
+        ],
+        "lazyInit": false,
+        "fromSource": "SERVICE_ANNOTATION"
+      }
+    ],
+    "name": "commandService",
+    "declaringType": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+    "fieldType": "edu.thu.benchmark.annotated.service.CommandService"
+  },
+  "edu.thu.benchmark.annotated.service.CommandService.argPattern": {
+    "annotation": "@org.springframework.beans.factory.annotation.Value(\"${app.command.arg-pattern}\")",
+    "linkedBeans": [
+      {
+        "name": "app.command.arg-pattern",
+        "type": "java.lang.String",
+        "scope": "SINGLETON",
+        "propertyValue": {
+          "argPattern": "[a-zA-Z0-9_\\-\\.]*"
+        },
+        "lazyInit": false,
+        "fromSource": "VALUE_ANNOTATION"
+      }
+    ],
+    "name": "argPattern",
+    "declaringType": "edu.thu.benchmark.annotated.service.CommandService",
+    "fieldType": "java.lang.String"
+  },
+  "edu.thu.benchmark.annotated.service.impl.UserServiceImpl.userMapper": {
+    "annotation": "@org.springframework.beans.factory.annotation.Autowired",
+    "linkedBeans": [],
+    "name": "userMapper",
+    "declaringType": "edu.thu.benchmark.annotated.service.impl.UserServiceImpl",
+    "fieldType": "edu.thu.benchmark.annotated.mapper.UserMapper"
+  },
+  "edu.thu.benchmark.annotated.config.AppConfig.datasourceUsername": {
+    "annotation": "@org.springframework.beans.factory.annotation.Value(\"${spring.datasource.username}\")",
+    "linkedBeans": [
+      {
+        "name": "spring.datasource.username",
+        "type": "java.lang.String",
+        "scope": "SINGLETON",
+        "propertyValue": {
+          "datasourceUsername": "sa"
+        },
+        "lazyInit": false,
+        "fromSource": "VALUE_ANNOTATION"
+      }
+    ],
+    "name": "datasourceUsername",
+    "declaringType": "edu.thu.benchmark.annotated.config.AppConfig",
+    "fieldType": "java.lang.String"
+  },
+  "edu.thu.benchmark.annotated.config.AppConfig.maxConnections": {
+    "annotation": "@org.springframework.beans.factory.annotation.Value(\"${app.max-connections}\")",
+    "linkedBeans": [
+      {
+        "name": "app.max-connections",
+        "type": "int",
+        "scope": "SINGLETON",
+        "propertyValue": {
+          "maxConnections": 100
+        },
+        "lazyInit": false,
+        "fromSource": "VALUE_ANNOTATION"
+      }
+    ],
+    "name": "maxConnections",
+    "declaringType": "edu.thu.benchmark.annotated.config.AppConfig",
+    "fieldType": "int"
+  },
+  "edu.thu.benchmark.annotated.config.AppConfig.applicationName": {
+    "annotation": "@org.springframework.beans.factory.annotation.Value(\"${spring.application.name}\")",
+    "linkedBeans": [
+      {
+        "name": "spring.application.name",
+        "type": "java.lang.String",
+        "scope": "SINGLETON",
+        "propertyValue": {
+          "applicationName": "java-benchmark"
+        },
+        "lazyInit": false,
+        "fromSource": "VALUE_ANNOTATION"
+      }
+    ],
+    "name": "applicationName",
+    "declaringType": "edu.thu.benchmark.annotated.config.AppConfig",
+    "fieldType": "java.lang.String"
+  },
+  "edu.thu.benchmark.annotated.controller.CommandInjectionController.allowedCommandPrefix": {
+    "annotation": "@org.springframework.beans.factory.annotation.Value(\"${command.allowed.prefix}\")",
+    "linkedBeans": [
+      {
+        "name": "command.allowed.prefix",
+        "type": "java.lang.String",
+        "scope": "SINGLETON",
+        "propertyValue": {
+          "allowedCommandPrefix": "ls,cat,echo,pwd,grep,find"
+        },
+        "lazyInit": false,
+        "fromSource": "VALUE_ANNOTATION"
+      }
+    ],
+    "name": "allowedCommandPrefix",
+    "declaringType": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+    "fieldType": "java.lang.String"
+  },
+  "edu.thu.benchmark.annotated.config.AppConfig.serverPort": {
+    "annotation": "@org.springframework.beans.factory.annotation.Value(\"${server.port}\")",
+    "linkedBeans": [
+      {
+        "name": "server.port",
+        "type": "int",
+        "scope": "SINGLETON",
+        "propertyValue": {
+          "serverPort": 8080
+        },
+        "lazyInit": false,
+        "fromSource": "VALUE_ANNOTATION"
+      }
+    ],
+    "name": "serverPort",
+    "declaringType": "edu.thu.benchmark.annotated.config.AppConfig",
+    "fieldType": "int"
+  },
+  "edu.thu.benchmark.annotated.service.ZipService.extractDir": {
+    "annotation": "@org.springframework.beans.factory.annotation.Value(\"${zip.extract.dir}\")",
+    "linkedBeans": [
+      {
+        "name": "zip.extract.dir",
+        "type": "java.lang.String",
+        "scope": "SINGLETON",
+        "propertyValue": {
+          "extractDir": "/tmp/extracts"
+        },
+        "lazyInit": false,
+        "fromSource": "VALUE_ANNOTATION"
+      }
+    ],
+    "name": "extractDir",
+    "declaringType": "edu.thu.benchmark.annotated.service.ZipService",
+    "fieldType": "java.lang.String"
+  },
+  "edu.thu.benchmark.annotated.controller.PathTraversalController.pathTraversalService": {
+    "annotation": "@org.springframework.beans.factory.annotation.Autowired",
+    "linkedBeans": [
+      {
+        "name": "pathTraversalService",
+        "type": "edu.thu.benchmark.annotated.service.PathTraversalService",
+        "scope": "SINGLETON",
+        "constructors": [
+          "public edu.thu.benchmark.annotated.service.PathTraversalService(){\n}"
+        ],
+        "properties": [
+          {}
+        ],
+        "lazyInit": false,
+        "fromSource": "SERVICE_ANNOTATION"
+      }
+    ],
+    "name": "pathTraversalService",
+    "declaringType": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+    "fieldType": "edu.thu.benchmark.annotated.service.PathTraversalService"
+  },
+  "edu.thu.benchmark.annotated.aspect.SqlInjectionAspect.jdbcTemplate": {
+    "annotation": "@org.springframework.beans.factory.annotation.Autowired",
+    "linkedBeans": [],
+    "name": "jdbcTemplate",
+    "declaringType": "edu.thu.benchmark.annotated.aspect.SqlInjectionAspect",
+    "fieldType": "org.springframework.jdbc.core.JdbcTemplate"
+  },
+  "edu.thu.benchmark.annotated.controller.PathTraversalController.fileAccessAspect": {
+    "annotation": "@org.springframework.beans.factory.annotation.Autowired",
+    "linkedBeans": [
+      {
+        "name": "fileAccessAspect",
+        "type": "edu.thu.benchmark.annotated.aspect.FileAccessAspect",
+        "scope": "SINGLETON",
+        "constructors": [
+          "public edu.thu.benchmark.annotated.aspect.FileAccessAspect(){\n}"
+        ],
+        "properties": [
+          {}
+        ],
+        "lazyInit": false,
+        "fromSource": "COMPONENT_ANNOTATION"
+      }
+    ],
+    "name": "fileAccessAspect",
+    "declaringType": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+    "fieldType": "edu.thu.benchmark.annotated.aspect.FileAccessAspect"
+  },
+  "edu.thu.benchmark.annotated.controller.SqlInjectionTestController.sqlInjectionTestService": {
+    "annotation": "@org.springframework.beans.factory.annotation.Autowired",
+    "linkedBeans": [
+      {
+        "name": "sqlInjectionTestService",
+        "type": "edu.thu.benchmark.annotated.service.SqlInjectionTestService",
+        "scope": "SINGLETON",
+        "constructors": [
+          "public edu.thu.benchmark.annotated.service.SqlInjectionTestService(){\n}"
+        ],
+        "properties": [
+          {},
+          {},
+          {},
+          {}
+        ],
+        "lazyInit": false,
+        "fromSource": "SERVICE_ANNOTATION"
+      }
+    ],
+    "name": "sqlInjectionTestService",
+    "declaringType": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+    "fieldType": "edu.thu.benchmark.annotated.service.SqlInjectionTestService"
+  },
+  "edu.thu.benchmark.annotated.controller.PathTraversalController.templateService": {
+    "annotation": "@org.springframework.beans.factory.annotation.Autowired",
+    "linkedBeans": [
+      {
+        "name": "templateService",
+        "type": "edu.thu.benchmark.annotated.service.TemplateService",
+        "scope": "SINGLETON",
+        "constructors": [
+          "public edu.thu.benchmark.annotated.service.TemplateService(){\n}"
+        ],
+        "properties": [
+          {},
+          {}
+        ],
+        "lazyInit": false,
+        "fromSource": "SERVICE_ANNOTATION"
+      }
+    ],
+    "name": "templateService",
+    "declaringType": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+    "fieldType": "edu.thu.benchmark.annotated.service.TemplateService"
+  },
+  "edu.thu.benchmark.annotated.config.AppConfig.uploadDirectory": {
+    "annotation": "@org.springframework.beans.factory.annotation.Value(\"${app.upload.directory}\")",
+    "linkedBeans": [
+      {
+        "name": "app.upload.directory",
+        "type": "java.lang.String",
+        "scope": "SINGLETON",
+        "propertyValue": {
+          "uploadDirectory": "/var/uploads"
+        },
+        "lazyInit": false,
+        "fromSource": "VALUE_ANNOTATION"
+      }
+    ],
+    "name": "uploadDirectory",
+    "declaringType": "edu.thu.benchmark.annotated.config.AppConfig",
+    "fieldType": "java.lang.String"
+  },
+  "edu.thu.benchmark.annotated.config.AppConfig.timeout": {
+    "annotation": "@org.springframework.beans.factory.annotation.Value(\"${app.timeout}\")",
+    "linkedBeans": [
+      {
+        "name": "app.timeout",
+        "type": "int",
+        "scope": "SINGLETON",
+        "propertyValue": {
+          "timeout": 30000
+        },
+        "lazyInit": false,
+        "fromSource": "VALUE_ANNOTATION"
+      }
+    ],
+    "name": "timeout",
+    "declaringType": "edu.thu.benchmark.annotated.config.AppConfig",
+    "fieldType": "int"
+  },
+  "edu.thu.benchmark.annotated.controller.FileController.fileService": {
+    "annotation": "@org.springframework.beans.factory.annotation.Autowired",
+    "linkedBeans": [
+      {
+        "name": "fileServiceImpl",
+        "type": "edu.thu.benchmark.annotated.service.impl.FileServiceImpl",
+        "scope": "SINGLETON",
+        "constructors": [
+          "public edu.thu.benchmark.annotated.service.impl.FileServiceImpl(java.lang.String){\n    this.uploadDir = uploadDir;\n    this.rootLocation = java.nio.file.Paths.get(uploadDir);\n}"
+        ],
+        "properties": [
+          {},
+          {},
+          {},
+          {}
+        ],
+        "lazyInit": false,
+        "fromSource": "SERVICE_ANNOTATION"
+      }
+    ],
+    "name": "fileService",
+    "declaringType": "edu.thu.benchmark.annotated.controller.FileController",
+    "fieldType": "edu.thu.benchmark.annotated.service.FileService"
+  },
+  "edu.thu.benchmark.annotated.aspect.FileAccessAspect.logDir": {
+    "annotation": "@org.springframework.beans.factory.annotation.Value(\"${log.dir}\")",
+    "linkedBeans": [
+      {
+        "name": "log.dir",
+        "type": "java.lang.String",
+        "scope": "SINGLETON",
+        "propertyValue": {
+          "logDir": "/tmp/logs"
+        },
+        "lazyInit": false,
+        "fromSource": "VALUE_ANNOTATION"
+      }
+    ],
+    "name": "logDir",
+    "declaringType": "edu.thu.benchmark.annotated.aspect.FileAccessAspect",
+    "fieldType": "java.lang.String"
+  },
+  "edu.thu.benchmark.annotated.config.AppConfig.datasourcePassword": {
+    "annotation": "@org.springframework.beans.factory.annotation.Value(\"${spring.datasource.password}\")",
+    "linkedBeans": [
+      {
+        "name": "spring.datasource.password",
+        "type": "java.lang.String",
+        "scope": "SINGLETON",
+        "propertyValue": {
+          "datasourcePassword": "password"
+        },
+        "lazyInit": false,
+        "fromSource": "VALUE_ANNOTATION"
+      }
+    ],
+    "name": "datasourcePassword",
+    "declaringType": "edu.thu.benchmark.annotated.config.AppConfig",
+    "fieldType": "java.lang.String"
+  },
+  "edu.thu.benchmark.annotated.controller.SqlInjectionTestController.jdbcTemplate": {
+    "annotation": "@org.springframework.beans.factory.annotation.Autowired",
+    "linkedBeans": [],
+    "name": "jdbcTemplate",
+    "declaringType": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+    "fieldType": "org.springframework.jdbc.core.JdbcTemplate"
+  },
+  "edu.thu.benchmark.annotated.service.FileUploadService.allowedExtensions": {
+    "annotation": "@org.springframework.beans.factory.annotation.Value(\"${app.upload.allowed-extensions}\")",
+    "linkedBeans": [
+      {
+        "name": "app.upload.allowed-extensions",
+        "type": "java.lang.String",
+        "scope": "SINGLETON",
+        "propertyValue": {
+          "allowedExtensions": ".jpg,.jpeg,.png,.pdf,.docx"
+        },
+        "lazyInit": false,
+        "fromSource": "VALUE_ANNOTATION"
+      }
+    ],
+    "name": "allowedExtensions",
+    "declaringType": "edu.thu.benchmark.annotated.service.FileUploadService",
+    "fieldType": "java.lang.String"
+  },
+  "edu.thu.benchmark.annotated.config.AppConfig.securityEnabled": {
+    "annotation": "@org.springframework.beans.factory.annotation.Value(\"${app.security.enabled}\")",
+    "linkedBeans": [
+      {
+        "name": "app.security.enabled",
+        "type": "boolean",
+        "scope": "SINGLETON",
+        "propertyValue": {
+          "securityEnabled": true
+        },
+        "lazyInit": false,
+        "fromSource": "VALUE_ANNOTATION"
+      }
+    ],
+    "name": "securityEnabled",
+    "declaringType": "edu.thu.benchmark.annotated.config.AppConfig",
+    "fieldType": "boolean"
+  },
+  "edu.thu.benchmark.annotated.controller.PathTraversalController.baseDir": {
+    "annotation": "@org.springframework.beans.factory.annotation.Value(\"${file.base.dir}\")",
+    "linkedBeans": [
+      {
+        "name": "file.base.dir",
+        "type": "java.lang.String",
+        "scope": "SINGLETON",
+        "propertyValue": {
+          "baseDir": "/tmp/files"
+        },
+        "lazyInit": false,
+        "fromSource": "VALUE_ANNOTATION"
+      }
+    ],
+    "name": "baseDir",
+    "declaringType": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+    "fieldType": "java.lang.String"
+  },
+  "edu.thu.benchmark.annotated.controller.CommandInjectionController.commandExecutionAspect": {
+    "annotation": "@org.springframework.beans.factory.annotation.Autowired",
+    "linkedBeans": [
+      {
+        "name": "commandExecutionAspect",
+        "type": "edu.thu.benchmark.annotated.aspect.CommandExecutionAspect",
+        "scope": "SINGLETON",
+        "constructors": [
+          "public edu.thu.benchmark.annotated.aspect.CommandExecutionAspect(){\n}"
+        ],
+        "properties": [
+          {}
+        ],
+        "lazyInit": false,
+        "fromSource": "COMPONENT_ANNOTATION"
+      }
+    ],
+    "name": "commandExecutionAspect",
+    "declaringType": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+    "fieldType": "edu.thu.benchmark.annotated.aspect.CommandExecutionAspect"
+  },
+  "edu.thu.benchmark.annotated.config.AppConfig.datasourceUrl": {
+    "annotation": "@org.springframework.beans.factory.annotation.Value(\"${spring.datasource.url}\")",
+    "linkedBeans": [
+      {
+        "name": "spring.datasource.url",
+        "type": "java.lang.String",
+        "scope": "SINGLETON",
+        "propertyValue": {
+          "datasourceUrl": "jdbc:h2:mem:testdb"
+        },
+        "lazyInit": false,
+        "fromSource": "VALUE_ANNOTATION"
+      }
+    ],
+    "name": "datasourceUrl",
+    "declaringType": "edu.thu.benchmark.annotated.config.AppConfig",
+    "fieldType": "java.lang.String"
+  },
+  "edu.thu.benchmark.annotated.config.AppConfig.commandExecutor": {
+    "annotation": "@org.springframework.beans.factory.annotation.Value(\"${app.command.executor}\")",
+    "linkedBeans": [
+      {
+        "name": "app.command.executor",
+        "type": "java.lang.String",
+        "scope": "SINGLETON",
+        "propertyValue": {
+          "commandExecutor": "/bin/bash"
+        },
+        "lazyInit": false,
+        "fromSource": "VALUE_ANNOTATION"
+      }
+    ],
+    "name": "commandExecutor",
+    "declaringType": "edu.thu.benchmark.annotated.config.AppConfig",
+    "fieldType": "java.lang.String"
+  },
+  "edu.thu.benchmark.annotated.config.AppConfig.userHome": {
+    "annotation": "@org.springframework.beans.factory.annotation.Value(\"${user.home}\")",
+    "linkedBeans": [],
+    "name": "userHome",
+    "declaringType": "edu.thu.benchmark.annotated.config.AppConfig",
+    "fieldType": "java.lang.String"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "sinks": [
+    "<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: java.util.List findUsersInListUnsafe(java.lang.String)>",
+    "<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: int deleteUsersUnsafe(java.lang.String)>",
+    "<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: java.util.List findUsersByNameUnsafe(java.lang.String)>",
+    "<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: int updateUserDynamicUnsafe(int,java.lang.String)>",
+    "<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: java.util.List findUsersWithLimitUnsafe(java.lang.String,java.lang.String)>",
+    "<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: java.util.List findUsersByMultipleConditionsUnsafe(java.lang.String)>",
+    "<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: java.util.List searchUsersSemiSafe(java.lang.String,java.lang.String)>",
+    "<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: java.util.List searchUsersUnsafe(java.lang.String,java.lang.String)>",
+    "<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: edu.thu.benchmark.annotated.entity.User findUserByCredentialsUnsafe(java.lang.String,java.lang.String)>",
+    "<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: java.util.List findUsersSortedUnsafe(java.lang.String)>",
+    "<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: edu.thu.benchmark.annotated.entity.User findUserByEmailUnsafe(java.lang.String)>"
+  ],
+  "count": 11
+}

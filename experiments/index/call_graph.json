@@ -1,0 +1,2161 @@
+{
+  "<edu.thu.benchmark.annotated.service.TemplateService: java.lang.String getNestedTemplateSafe(java.lang.String)>": [
+    "<java.lang.String: boolean contains(java.lang.CharSequence)>",
+    "<java.lang.SecurityException: void <init>(java.lang.String)>",
+    "<java.nio.file.Paths: java.nio.file.Path get(java.lang.String,java.lang.String[])>",
+    "<java.nio.file.Path: java.nio.file.Path toAbsolutePath()>",
+    "<java.nio.file.Path: java.nio.file.Path normalize()>",
+    "<java.nio.file.Path: java.nio.file.Path resolve(java.lang.String)>",
+    "<java.nio.file.Path: boolean startsWith(java.nio.file.Path)>",
+    "<java.nio.file.Files: boolean isRegularFile(java.nio.file.Path,java.nio.file.LinkOption[])>",
+    "<java.io.IOException: void <init>(java.lang.String)>",
+    "<java.nio.file.Files: byte[] readAllBytes(java.nio.file.Path)>",
+    "<java.lang.String: void <init>(byte[])>",
+    "<java.lang.Throwable: java.lang.String getMessage()>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findByNamedParamsSafe(java.util.Map)>": [
+    "<org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate: java.util.List queryForList(java.lang.String,java.util.Map)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.HttpController: java.util.Map connectUrl(java.lang.String)>": [
+    "<java.util.HashMap: void <init>()>",
+    "<java.lang.StringBuilder: void <init>()>",
+    "<java.net.URL: void <init>(java.lang.String)>",
+    "<java.net.URL: java.net.URLConnection openConnection()>",
+    "<java.net.HttpURLConnection: void setRequestMethod(java.lang.String)>",
+    "<java.net.URLConnection: java.io.InputStream getInputStream()>",
+    "<java.io.InputStreamReader: void <init>(java.io.InputStream)>",
+    "<java.io.BufferedReader: void <init>(java.io.Reader)>",
+    "<java.io.BufferedReader: java.lang.String readLine()>",
+    "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>",
+    "<java.io.BufferedReader: void close()>",
+    "<java.lang.Throwable: void addSuppressed(java.lang.Throwable)>",
+    "<java.net.HttpURLConnection: int getResponseCode()>",
+    "<java.lang.Integer: java.lang.Integer valueOf(int)>",
+    "<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>",
+    "<java.net.HttpURLConnection: java.lang.String getResponseMessage()>",
+    "<java.lang.StringBuilder: java.lang.String toString()>",
+    "<java.net.URLConnection: java.lang.String getContentType()>",
+    "<java.lang.Boolean: java.lang.Boolean valueOf(boolean)>",
+    "<java.lang.Throwable: java.lang.String getMessage()>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.AnnotatedBenchmarkApplication: void <init>()>": [
+    "<org.springframework.boot.web.servlet.support.SpringBootServletInitializer: void <init>()>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithMultipleParams09(java.lang.String,java.lang.String)>": [
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String,java.lang.String)>",
+    "<java.lang.Runtime: java.lang.Runtime getRuntime()>",
+    "<java.lang.Runtime: java.lang.Process exec(java.lang.String[])>",
+    "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String readProcessOutput(java.lang.Process)>"
+  ],
+  "<edu.thu.benchmark.annotated.util.MyBatisMapperScanner: boolean lambda$scanMapperXml$0(java.nio.file.Path)>": [
+    "<java.nio.file.Files: boolean isRegularFile(java.nio.file.Path,java.nio.file.LinkOption[])>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase05(java.lang.String,java.lang.String)>": [
+    "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersWithLimitUnsafe(java.lang.String,java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase12(java.lang.String)>": [
+    "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersByTemplateUnsafe(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.CommandController: java.lang.String executeCommand(java.lang.String)>": [
+    "<java.lang.StringBuilder: void <init>()>",
+    "<edu.thu.benchmark.annotated.entity.CommandExecution: void <init>(java.lang.String,java.lang.String)>",
+    "<java.lang.Runtime: java.lang.Runtime getRuntime()>",
+    "<java.lang.Runtime: java.lang.Process exec(java.lang.String)>",
+    "<java.lang.Process: java.io.InputStream getInputStream()>",
+    "<java.io.InputStreamReader: void <init>(java.io.InputStream)>",
+    "<java.io.BufferedReader: void <init>(java.io.Reader)>",
+    "<java.io.BufferedReader: java.lang.String readLine()>",
+    "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>",
+    "<java.lang.Process: boolean waitFor(long,java.util.concurrent.TimeUnit)>",
+    "<edu.thu.benchmark.annotated.entity.CommandExecution: void setStatus(java.lang.String)>",
+    "<java.lang.StringBuilder: java.lang.String toString()>",
+    "<edu.thu.benchmark.annotated.entity.CommandExecution: void setOutput(java.lang.String)>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String)>",
+    "<java.lang.Process: java.lang.Process destroyForcibly()>",
+    "<java.lang.Throwable: java.lang.String getMessage()>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.XmlController: void <init>()>": [
+    "<java.lang.Object: void <init>()>"
+  ],
+  "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersInListSafe(java.util.List)>": [
+    "<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: java.util.List findUsersInListSafe(java.util.List)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.PathTraversalController: org.springframework.http.ResponseEntity getFile01(java.lang.String)>": [
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String,java.lang.String)>",
+    "<java.io.File: void <init>(java.lang.String)>",
+    "<org.springframework.http.ResponseEntity: org.springframework.http.ResponseEntity$BodyBuilder ok()>",
+    "<java.io.File: java.lang.String getName()>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String)>",
+    "<org.springframework.http.ResponseEntity$BodyBuilder: org.springframework.http.ResponseEntity$HeadersBuilder header(java.lang.String,java.lang.String[])>",
+    "<org.springframework.core.io.FileSystemResource: void <init>(java.io.File)>",
+    "<org.springframework.http.ResponseEntity$BodyBuilder: org.springframework.http.ResponseEntity body(java.lang.Object)>"
+  ],
+  "<edu.thu.benchmark.annotated.util.MyBatisMapperScanner: java.lang.String generateSampleUsage(java.util.Map)>": [
+    "<java.lang.StringBuilder: void <init>()>",
+    "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>",
+    "<java.util.Map: java.util.Set entrySet()>",
+    "<java.util.Set: java.util.Iterator iterator()>",
+    "<java.util.Iterator: boolean hasNext()>",
+    "<java.util.Iterator: java.lang.Object next()>",
+    "<java.util.Map$Entry: java.lang.Object getKey()>",
+    "<java.util.Map$Entry: java.lang.Object getValue()>",
+    "<java.lang.String: int lastIndexOf(int)>",
+    "<java.lang.String: java.lang.String substring(int)>",
+    "<java.lang.String: char charAt(int)>",
+    "<java.lang.Character: char toLowerCase(char)>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(char,java.lang.String)>",
+    "<java.util.List: java.util.Iterator iterator()>",
+    "<edu.thu.benchmark.annotated.util.MyBatisMapperScanner$SqlMethod: java.lang.String getSqlType()>",
+    "<edu.thu.benchmark.annotated.util.MyBatisMapperScanner$SqlMethod: java.lang.String getSqlId()>",
+    "<java.lang.String: boolean equals(java.lang.Object)>",
+    "<edu.thu.benchmark.annotated.util.MyBatisMapperScanner$SqlMethod: java.lang.String getResultType()>",
+    "<java.lang.String: boolean contains(java.lang.CharSequence)>",
+    "<edu.thu.benchmark.annotated.util.MyBatisMapperScanner: java.lang.String extractGenericType(java.lang.String)>",
+    "<edu.thu.benchmark.annotated.util.MyBatisMapperScanner: java.lang.String getSimpleTypeName(java.lang.String)>",
+    "<java.lang.StringBuilder: java.lang.String toString()>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.FileController: org.springframework.http.ResponseEntity viewFile(java.lang.String)>": [
+    "<edu.thu.benchmark.annotated.service.FileService: org.springframework.core.io.Resource loadByFilename(java.lang.String)>",
+    "<org.springframework.core.io.Resource: boolean exists()>",
+    "<org.springframework.http.ResponseEntity: org.springframework.http.ResponseEntity$BodyBuilder ok()>",
+    "<org.springframework.http.MediaType: org.springframework.http.MediaType parseMediaType(java.lang.String)>",
+    "<org.springframework.http.ResponseEntity$BodyBuilder: org.springframework.http.ResponseEntity$BodyBuilder contentType(org.springframework.http.MediaType)>",
+    "<org.springframework.core.io.Resource: java.lang.String getFilename()>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String)>",
+    "<org.springframework.http.ResponseEntity$BodyBuilder: org.springframework.http.ResponseEntity$HeadersBuilder header(java.lang.String,java.lang.String[])>",
+    "<org.springframework.http.ResponseEntity$BodyBuilder: org.springframework.http.ResponseEntity body(java.lang.Object)>",
+    "<org.springframework.http.ResponseEntity: org.springframework.http.ResponseEntity$BodyBuilder badRequest()>",
+    "<org.springframework.http.ResponseEntity$BodyBuilder: org.springframework.http.ResponseEntity build()>",
+    "<org.springframework.http.ResponseEntity: org.springframework.http.ResponseEntity$HeadersBuilder notFound()>",
+    "<org.springframework.http.ResponseEntity$HeadersBuilder: org.springframework.http.ResponseEntity build()>"
+  ],
+  "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: int deleteUsersUnsafe(java.lang.String)>": [
+    "<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: int deleteUsersUnsafe(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.entity.Product: java.lang.String toString()>": [
+    "<java.lang.String: java.lang.String valueOf(java.lang.Object)>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.entity.Product: void <init>()>": [
+    "<java.lang.Object: void <init>()>"
+  ],
+  "<edu.thu.benchmark.annotated.util.MyBatisMapperScanner: boolean lambda$scanMapperXml$1(java.nio.file.Path)>": [
+    "<java.nio.file.Path: java.lang.String toString()>",
+    "<java.lang.String: java.lang.String toLowerCase()>",
+    "<java.lang.String: boolean endsWith(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.aspect.FileAccessAspect: java.lang.String accessLogFileSafe(java.lang.String)>": [
+    "<java.nio.file.Paths: java.nio.file.Path get(java.lang.String,java.lang.String[])>",
+    "<java.nio.file.Path: java.nio.file.Path toAbsolutePath()>",
+    "<java.nio.file.Path: java.nio.file.Path normalize()>",
+    "<java.nio.file.Path: java.nio.file.Path resolve(java.lang.String)>",
+    "<java.nio.file.Path: boolean startsWith(java.nio.file.Path)>",
+    "<java.lang.SecurityException: void <init>(java.lang.String)>",
+    "<java.nio.file.Files: boolean isRegularFile(java.nio.file.Path,java.nio.file.LinkOption[])>",
+    "<java.io.IOException: void <init>(java.lang.String)>",
+    "<java.nio.file.Files: byte[] readAllBytes(java.nio.file.Path)>",
+    "<java.lang.String: void <init>(byte[])>",
+    "<java.lang.Throwable: java.lang.String getMessage()>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase10(java.lang.String,java.lang.String)>": [
+    "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List searchUsersUnsafe(java.lang.String,java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.util.MyBatisXmlParser: java.lang.String getFullMethodPath(java.lang.String,java.lang.String)>": [
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String,java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeCommand01(java.lang.String)>": [
+    "<java.lang.Runtime: java.lang.Runtime getRuntime()>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String)>",
+    "<java.lang.Runtime: java.lang.Process exec(java.lang.String)>",
+    "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String readProcessOutput(java.lang.Process)>"
+  ],
+  "<edu.thu.benchmark.annotated.config.DatabaseConfig: org.springframework.jdbc.datasource.init.DataSourceInitializer dataSourceInitializer(javax.sql.DataSource)>": [
+    "<org.springframework.jdbc.datasource.init.ResourceDatabasePopulator: void <init>()>",
+    "<org.springframework.core.io.ClassPathResource: void <init>(java.lang.String)>",
+    "<org.springframework.jdbc.datasource.init.ResourceDatabasePopulator: void addScript(org.springframework.core.io.Resource)>",
+    "<org.springframework.jdbc.datasource.init.DataSourceInitializer: void <init>()>",
+    "<org.springframework.jdbc.datasource.init.DataSourceInitializer: void setDataSource(javax.sql.DataSource)>",
+    "<org.springframework.jdbc.datasource.init.DataSourceInitializer: void setDatabasePopulator(org.springframework.jdbc.datasource.init.DatabasePopulator)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase41(java.lang.String)>": [
+    "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List testAspectUnsafeMethod(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.util.MyBatisXmlParser: java.lang.String generateJavaExample(java.util.List)>": [
+    "<java.lang.StringBuilder: void <init>()>",
+    "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>",
+    "<java.util.List: java.util.Iterator iterator()>",
+    "<java.util.Iterator: boolean hasNext()>",
+    "<java.util.Iterator: java.lang.Object next()>",
+    "<edu.thu.benchmark.annotated.util.MyBatisXmlParser$MapperInfo: java.lang.String getNamespace()>",
+    "<java.lang.String: int lastIndexOf(int)>",
+    "<java.lang.String: java.lang.String substring(int)>",
+    "<java.lang.String: char charAt(int)>",
+    "<java.lang.Character: char toLowerCase(char)>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(char,java.lang.String)>",
+    "<edu.thu.benchmark.annotated.util.MyBatisXmlParser$MapperInfo: java.util.List getSqlInfoList()>",
+    "<edu.thu.benchmark.annotated.util.MyBatisXmlParser$SqlInfo: java.lang.String getType()>",
+    "<java.lang.String: java.lang.String toUpperCase()>",
+    "<edu.thu.benchmark.annotated.util.MyBatisXmlParser$SqlInfo: java.lang.String getId()>",
+    "<java.lang.String: boolean equals(java.lang.Object)>",
+    "<edu.thu.benchmark.annotated.util.MyBatisXmlParser$SqlInfo: java.lang.String getResultType()>",
+    "<edu.thu.benchmark.annotated.util.MyBatisXmlParser: java.lang.String getSimpleTypeName(java.lang.String)>",
+    "<java.lang.StringBuilder: java.lang.String toString()>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase24(java.lang.Integer,java.lang.String,java.lang.String)>": [
+    "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersByMultipleConditionsSafe(java.lang.Integer,java.lang.String,java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase40(java.lang.Integer,java.lang.String,java.lang.String,java.lang.String)>": [
+    "<java.util.List: java.util.List of(java.lang.Object,java.lang.Object,java.lang.Object)>",
+    "<java.util.List: boolean contains(java.lang.Object)>",
+    "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersByMultipleConditionsSafe(java.lang.Integer,java.lang.String,java.lang.String)>",
+    "<java.lang.String: boolean equals(java.lang.Object)>",
+    "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController$lambda_testCase40_0__17: java.util.Comparator bootstrap$()>",
+    "<java.util.List: void sort(java.util.Comparator)>",
+    "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController$lambda_testCase40_1__16: java.util.Comparator bootstrap$()>",
+    "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController$lambda_testCase40_2__15: java.util.Comparator bootstrap$()>"
+  ],
+  "<edu.thu.benchmark.annotated.service.ZipService: java.lang.String getZipEntryUnsafe(java.lang.String,java.lang.String)>": [
+    "<java.io.File: void <init>(java.lang.String,java.lang.String)>",
+    "<java.util.zip.ZipFile: void <init>(java.io.File)>",
+    "<java.util.zip.ZipFile: java.util.zip.ZipEntry getEntry(java.lang.String)>",
+    "<java.lang.StringBuilder: void <init>()>",
+    "<java.util.zip.ZipFile: java.io.InputStream getInputStream(java.util.zip.ZipEntry)>",
+    "<java.io.InputStream: int read(byte[])>",
+    "<java.lang.String: void <init>(byte[],int,int)>",
+    "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>",
+    "<java.io.InputStream: void close()>",
+    "<java.lang.Throwable: void addSuppressed(java.lang.Throwable)>",
+    "<java.util.zip.ZipFile: void close()>",
+    "<java.lang.StringBuilder: java.lang.String toString()>",
+    "<java.lang.Throwable: java.lang.String getMessage()>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.UserController: java.lang.String addUser(edu.thu.benchmark.annotated.entity.User)>": [
+    "<edu.thu.benchmark.annotated.service.UserService: int insertUser(edu.thu.benchmark.annotated.entity.User)>"
+  ],
+  "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List testAspectSafeMethod(java.lang.String)>": [
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String)>",
+    "<java.io.PrintStream: void println(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.service.CommandService: void <init>()>": [
+    "<java.lang.Object: void <init>()>"
+  ],
+  "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List searchUsersSemiSafe(java.lang.String,java.lang.String)>": [
+    "<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: java.util.List searchUsersSemiSafe(java.lang.String,java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.util.MyBatisXmlParser: void main(java.lang.String[])>": [
+    "<java.io.PrintStream: void println(java.lang.String)>",
+    "<java.io.File: void <init>(java.lang.String)>",
+    "<java.io.File: boolean isDirectory()>",
+    "<edu.thu.benchmark.annotated.util.MyBatisXmlParser: java.util.List parseDirectory(java.lang.String)>",
+    "<java.util.List: int size()>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(int)>",
+    "<java.util.List: java.util.Iterator iterator()>",
+    "<java.util.Iterator: boolean hasNext()>",
+    "<java.util.Iterator: java.lang.Object next()>",
+    "<edu.thu.benchmark.annotated.util.MyBatisXmlParser$MapperInfo: java.lang.String getNamespace()>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String)>",
+    "<edu.thu.benchmark.annotated.util.MyBatisXmlParser$MapperInfo: java.util.List getSqlInfoList()>",
+    "<edu.thu.benchmark.annotated.util.MyBatisXmlParser$SqlInfo: java.lang.String getType()>",
+    "<edu.thu.benchmark.annotated.util.MyBatisXmlParser$SqlInfo: java.lang.String getId()>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String,java.lang.String)>",
+    "<edu.thu.benchmark.annotated.util.MyBatisXmlParser: java.lang.String getFullMethodPath(java.lang.String,java.lang.String)>",
+    "<edu.thu.benchmark.annotated.util.MyBatisXmlParser: java.lang.String generateJavaExample(java.util.List)>",
+    "<java.io.File: boolean isFile()>",
+    "<edu.thu.benchmark.annotated.util.MyBatisXmlParser: edu.thu.benchmark.annotated.util.MyBatisXmlParser$MapperInfo parseXml(java.lang.String)>",
+    "<edu.thu.benchmark.annotated.util.MyBatisXmlParser$SqlInfo: java.lang.String getResultType()>",
+    "<edu.thu.benchmark.annotated.util.MyBatisXmlParser$SqlInfo: java.lang.String getParameterType()>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.CommandInjectionController: boolean lambda$executeWithJavaApiSafe09$0(java.lang.String,java.nio.file.Path)>": [
+    "<java.nio.file.Path: java.nio.file.Path getFileName()>",
+    "<java.nio.file.Path: java.lang.String toString()>",
+    "<java.lang.String: boolean contains(java.lang.CharSequence)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.lang.String getFileWithInjection05(java.lang.String)>": [
+    "<edu.thu.benchmark.annotated.service.PathTraversalService: java.lang.String readFileUnsafe(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.'annotation'.VulnerabilityType: edu.thu.benchmark.annotated.'annotation'.VulnerabilityType valueOf(java.lang.String)>": [
+    "<java.lang.Enum: java.lang.Enum valueOf(java.lang.Class,java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.FileController: java.util.Map uploadFile(org.springframework.web.multipart.MultipartFile)>": [
+    "<java.util.HashMap: void <init>()>",
+    "<edu.thu.benchmark.annotated.service.FileService: edu.thu.benchmark.annotated.entity.FileInfo store(org.springframework.web.multipart.MultipartFile)>",
+    "<java.lang.Boolean: java.lang.Boolean valueOf(boolean)>",
+    "<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>",
+    "<edu.thu.benchmark.annotated.entity.FileInfo: java.lang.Integer getId()>",
+    "<java.lang.Throwable: java.lang.String getMessage()>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.util.CommandUtils: java.lang.String readProcessOutput(java.lang.Process)>": [
+    "<java.lang.Process: java.io.InputStream getInputStream()>",
+    "<java.io.InputStreamReader: void <init>(java.io.InputStream)>",
+    "<java.io.BufferedReader: void <init>(java.io.Reader)>",
+    "<java.lang.StringBuilder: void <init>()>",
+    "<java.io.BufferedReader: java.lang.String readLine()>",
+    "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>",
+    "<java.lang.StringBuilder: java.lang.String toString()>",
+    "<java.io.BufferedReader: void close()>",
+    "<java.lang.Throwable: void addSuppressed(java.lang.Throwable)>"
+  ],
+  "<edu.thu.benchmark.annotated.util.MyBatisXmlParser: java.lang.String getSimpleTypeName(java.lang.String)>": [
+    "<java.lang.String: boolean contains(java.lang.CharSequence)>",
+    "<java.lang.String: int indexOf(int)>",
+    "<java.lang.String: java.lang.String substring(int,int)>",
+    "<java.lang.String: int lastIndexOf(int)>",
+    "<edu.thu.benchmark.annotated.util.MyBatisXmlParser: java.lang.String getSimpleTypeName(java.lang.String)>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String,java.lang.String)>",
+    "<java.lang.String: java.lang.String substring(int)>"
+  ],
+  "<edu.thu.benchmark.annotated.util.MyBatisXmlParser$SqlInfo: java.lang.String getFullMethodPath(java.lang.String)>": [
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String,java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.lang.String getLogFile07(java.lang.String)>": [
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String,java.lang.String)>",
+    "<edu.thu.benchmark.annotated.aspect.FileAccessAspect: java.lang.String accessLogFile(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeViaAspectSafe05(java.lang.String)>": [
+    "<edu.thu.benchmark.annotated.aspect.CommandExecutionAspect: java.lang.String executeCommandSafe(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase33(java.lang.String,java.lang.String)>": [
+    "<java.util.HashMap: void <init>()>",
+    "<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>",
+    "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findByNamedParamsSafe(java.util.Map)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeArraySafe03(java.lang.String)>": [
+    "<java.lang.Runtime: java.lang.Runtime getRuntime()>",
+    "<java.lang.Runtime: java.lang.Process exec(java.lang.String[])>",
+    "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String readProcessOutput(java.lang.Process)>"
+  ],
+  "<edu.thu.benchmark.annotated.util.MyBatisMapperScanner: void main(java.lang.String[])>": [
+    "<java.io.PrintStream: void println(java.lang.String)>",
+    "<edu.thu.benchmark.annotated.util.MyBatisMapperScanner: void <init>(java.lang.String)>",
+    "<edu.thu.benchmark.annotated.util.MyBatisMapperScanner: java.util.Map scanMapperXml()>",
+    "<java.util.Map: java.util.Set entrySet()>",
+    "<java.util.Set: java.util.Iterator iterator()>",
+    "<java.util.Iterator: boolean hasNext()>",
+    "<java.util.Iterator: java.lang.Object next()>",
+    "<java.util.Map$Entry: java.lang.Object getKey()>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String)>",
+    "<java.util.Map$Entry: java.lang.Object getValue()>",
+    "<java.util.List: java.util.Iterator iterator()>",
+    "<edu.thu.benchmark.annotated.util.MyBatisMapperScanner$SqlMethod: java.lang.String getSqlType()>",
+    "<edu.thu.benchmark.annotated.util.MyBatisMapperScanner$SqlMethod: java.lang.String getSqlId()>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String,java.lang.String)>",
+    "<edu.thu.benchmark.annotated.util.MyBatisMapperScanner$SqlMethod: java.lang.String getParameterType()>",
+    "<edu.thu.benchmark.annotated.util.MyBatisMapperScanner$SqlMethod: java.lang.String getResultType()>",
+    "<edu.thu.benchmark.annotated.util.MyBatisMapperScanner: java.util.List checkExistingMappers(java.util.Map)>",
+    "<java.util.List: boolean isEmpty()>",
+    "<edu.thu.benchmark.annotated.util.MyBatisMapperScanner: void generateJavaInterfaces(java.util.Map)>",
+    "<edu.thu.benchmark.annotated.util.MyBatisMapperScanner: java.lang.String generateSampleUsage(java.util.Map)>",
+    "<java.io.FileWriter: void <init>(java.lang.String)>",
+    "<java.io.Writer: void write(java.lang.String)>",
+    "<java.io.OutputStreamWriter: void close()>",
+    "<java.lang.Throwable: void addSuppressed(java.lang.Throwable)>",
+    "<java.lang.Throwable: java.lang.String getMessage()>"
+  ],
+  "<edu.thu.benchmark.annotated.aspect.CommandExecutionAspect: java.lang.String readProcessOutput(java.lang.Process)>": [
+    "<java.lang.Process: java.io.InputStream getInputStream()>",
+    "<java.io.InputStreamReader: void <init>(java.io.InputStream)>",
+    "<java.io.BufferedReader: void <init>(java.io.Reader)>",
+    "<java.lang.StringBuilder: void <init>()>",
+    "<java.io.BufferedReader: java.lang.String readLine()>",
+    "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>",
+    "<java.lang.StringBuilder: java.lang.String toString()>",
+    "<java.io.BufferedReader: void close()>",
+    "<java.lang.Throwable: void addSuppressed(java.lang.Throwable)>"
+  ],
+  "<edu.thu.benchmark.annotated.service.ZipService: void <init>()>": [
+    "<java.lang.Object: void <init>()>"
+  ],
+  "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersWithLimitUnsafe(java.lang.String,java.lang.String)>": [
+    "<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: java.util.List findUsersWithLimitUnsafe(java.lang.String,java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase25(int,int)>": [
+    "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersWithLimitSafe(int,int)>"
+  ],
+  "<edu.thu.benchmark.annotated.service.impl.FileServiceImpl: boolean isPathSafe(java.nio.file.Path)>": [
+    "<java.nio.file.Path: java.nio.file.Path normalize()>",
+    "<java.nio.file.Path: boolean startsWith(java.nio.file.Path)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: int testCase06(int,java.lang.String)>": [
+    "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: int updateUserDynamicUnsafe(int,java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.UserController: void <init>()>": [
+    "<java.lang.Object: void <init>()>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.CommandInjectionController: void <init>()>": [
+    "<java.lang.Object: void <init>()>"
+  ],
+  "<edu.thu.benchmark.annotated.entity.CommandExecution: void <init>(java.lang.String,java.lang.String)>": [
+    "<java.lang.Object: void <init>()>",
+    "<java.time.LocalDateTime: java.time.LocalDateTime now()>"
+  ],
+  "<edu.thu.benchmark.annotated.aspect.CommandExecutionAspect: java.lang.String executeCommandUnsafe(java.lang.String)>": [
+    "<java.lang.Runtime: java.lang.Runtime getRuntime()>",
+    "<java.lang.Runtime: java.lang.Process exec(java.lang.String)>",
+    "<edu.thu.benchmark.annotated.aspect.CommandExecutionAspect: java.lang.String readProcessOutput(java.lang.Process)>",
+    "<java.lang.Throwable: java.lang.String getMessage()>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.service.impl.FileServiceImpl: java.lang.String readFileContentSafe(java.lang.String)>": [
+    "<edu.thu.benchmark.annotated.service.impl.FileServiceImpl: java.nio.file.Path getFilePath(java.lang.String)>",
+    "<java.nio.file.Path: java.nio.file.Path normalize()>",
+    "<edu.thu.benchmark.annotated.service.impl.FileServiceImpl: boolean isPathSafe(java.nio.file.Path)>",
+    "<java.io.IOException: void <init>(java.lang.String)>",
+    "<java.nio.file.Files: byte[] readAllBytes(java.nio.file.Path)>",
+    "<java.lang.String: void <init>(byte[])>"
+  ],
+  "<edu.thu.benchmark.annotated.util.MyBatisSqlExtractor: java.lang.String generateMethodCall(java.lang.String)>": [
+    "<java.lang.String: int lastIndexOf(int)>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String)>",
+    "<java.lang.String: java.lang.String substring(int,int)>",
+    "<edu.thu.benchmark.annotated.util.MyBatisSqlExtractor: java.lang.String convertToVariableName(java.lang.String)>",
+    "<java.lang.String: java.lang.String substring(int)>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String,java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.util.MyBatisCompiler: void saveToExampleFile()>": [
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String)>",
+    "<java.io.FileWriter: void <init>(java.lang.String)>",
+    "<java.io.Writer: void write(java.lang.String)>",
+    "<java.util.Map: java.util.Set keySet()>",
+    "<java.util.Set: java.util.Iterator iterator()>",
+    "<java.util.Iterator: boolean hasNext()>",
+    "<java.util.Iterator: java.lang.Object next()>",
+    "<java.lang.String: int lastIndexOf(int)>",
+    "<java.lang.String: java.lang.String substring(int)>",
+    "<java.lang.String: char charAt(int)>",
+    "<java.lang.Character: char toLowerCase(char)>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(char,java.lang.String)>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String,java.lang.String)>",
+    "<java.util.Map: java.util.Set entrySet()>",
+    "<java.util.Map$Entry: java.lang.Object getKey()>",
+    "<java.util.Map$Entry: java.lang.Object getValue()>",
+    "<java.util.List: java.util.Iterator iterator()>",
+    "<edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo: java.lang.String getSqlType()>",
+    "<edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo: java.lang.String getMethodName()>",
+    "<java.lang.String: boolean equals(java.lang.Object)>",
+    "<edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo: java.lang.String getResultType()>",
+    "<edu.thu.benchmark.annotated.util.MyBatisCompiler: java.lang.String getSimpleTypeName(java.lang.String)>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String,java.lang.String,java.lang.String)>",
+    "<edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo: java.lang.String getFullPath()>",
+    "<java.io.OutputStreamWriter: void close()>",
+    "<java.lang.Throwable: void addSuppressed(java.lang.Throwable)>",
+    "<java.lang.Throwable: java.lang.String getMessage()>",
+    "<java.io.PrintStream: void println(java.lang.String)>",
+    "<java.lang.Throwable: void printStackTrace()>"
+  ],
+  "<edu.thu.benchmark.annotated.'annotation'.VulnerabilityType: void <clinit>()>": [
+    "<edu.thu.benchmark.annotated.'annotation'.VulnerabilityType: void <init>(java.lang.String,int,java.lang.String,int)>",
+    "<edu.thu.benchmark.annotated.'annotation'.VulnerabilityType: edu.thu.benchmark.annotated.'annotation'.VulnerabilityType[] $values()>"
+  ],
+  "<edu.thu.benchmark.annotated.util.MyBatisMapperScanner: java.lang.String getSimpleTypeName(java.lang.String)>": [
+    "<java.lang.String: int lastIndexOf(int)>",
+    "<java.lang.String: java.lang.String substring(int)>"
+  ],
+  "<edu.thu.benchmark.annotated.service.CommandService: java.lang.String readProcessOutput(java.lang.Process)>": [
+    "<java.lang.Process: java.io.InputStream getInputStream()>",
+    "<java.io.InputStreamReader: void <init>(java.io.InputStream)>",
+    "<java.io.BufferedReader: void <init>(java.io.Reader)>",
+    "<java.lang.StringBuilder: void <init>()>",
+    "<java.io.BufferedReader: java.lang.String readLine()>",
+    "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>",
+    "<java.lang.StringBuilder: java.lang.String toString()>",
+    "<java.io.BufferedReader: void close()>",
+    "<java.lang.Throwable: void addSuppressed(java.lang.Throwable)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithFullValidation07(java.lang.String)>": [
+    "<java.lang.String: java.lang.String[] split(java.lang.String)>",
+    "<java.lang.String: java.lang.String[] split(java.lang.String,int)>",
+    "<java.util.Arrays: java.util.List asList(java.lang.Object[])>",
+    "<java.util.List: boolean contains(java.lang.Object)>",
+    "<java.lang.String: boolean matches(java.lang.String)>",
+    "<java.lang.ProcessBuilder: void <init>(java.lang.String[])>",
+    "<java.lang.ProcessBuilder: java.lang.ProcessBuilder command(java.lang.String[])>",
+    "<java.lang.ProcessBuilder: java.lang.Process start()>",
+    "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String readProcessOutput(java.lang.Process)>"
+  ],
+  "<edu.thu.benchmark.annotated.'annotation'.VulnerabilityLevel: void <clinit>()>": [
+    "<edu.thu.benchmark.annotated.'annotation'.VulnerabilityLevel: void <init>(java.lang.String,int,java.lang.String,int)>",
+    "<edu.thu.benchmark.annotated.'annotation'.VulnerabilityLevel: edu.thu.benchmark.annotated.'annotation'.VulnerabilityLevel[] $values()>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.lang.String getXmlFile06(java.lang.String)>": [
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String,java.lang.String)>",
+    "<java.io.File: void <init>(java.lang.String)>",
+    "<java.io.File: java.nio.file.Path toPath()>",
+    "<java.nio.file.Files: byte[] readAllBytes(java.nio.file.Path)>",
+    "<java.lang.String: void <init>(byte[])>"
+  ],
+  "<edu.thu.benchmark.annotated.service.TemplateService: java.lang.String getNestedTemplateUnsafe(java.lang.String)>": [
+    "<java.io.File: void <init>(java.lang.String,java.lang.String)>",
+    "<java.io.File: java.nio.file.Path toPath()>",
+    "<java.nio.file.Files: byte[] readAllBytes(java.nio.file.Path)>",
+    "<java.lang.String: void <init>(byte[])>",
+    "<java.lang.Throwable: java.lang.String getMessage()>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.entity.User: void <init>(java.lang.Integer,java.lang.String,java.lang.String,java.lang.String)>": [
+    "<java.lang.Object: void <init>()>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.UserController: java.util.List findByCondition(java.lang.String)>": [
+    "<edu.thu.benchmark.annotated.service.UserService: java.util.List findUsersByCondition(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.FileController: org.springframework.http.ResponseEntity downloadFile(java.lang.Integer)>": [
+    "<edu.thu.benchmark.annotated.service.FileService: org.springframework.core.io.Resource loadById(java.lang.Integer)>",
+    "<org.springframework.core.io.Resource: boolean exists()>",
+    "<org.springframework.http.ResponseEntity: org.springframework.http.ResponseEntity$BodyBuilder ok()>",
+    "<org.springframework.http.MediaType: org.springframework.http.MediaType parseMediaType(java.lang.String)>",
+    "<org.springframework.http.ResponseEntity$BodyBuilder: org.springframework.http.ResponseEntity$BodyBuilder contentType(org.springframework.http.MediaType)>",
+    "<org.springframework.core.io.Resource: java.lang.String getFilename()>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String)>",
+    "<org.springframework.http.ResponseEntity$BodyBuilder: org.springframework.http.ResponseEntity$HeadersBuilder header(java.lang.String,java.lang.String[])>",
+    "<org.springframework.http.ResponseEntity$BodyBuilder: org.springframework.http.ResponseEntity body(java.lang.Object)>",
+    "<org.springframework.http.ResponseEntity: org.springframework.http.ResponseEntity$BodyBuilder badRequest()>",
+    "<org.springframework.http.ResponseEntity$BodyBuilder: org.springframework.http.ResponseEntity build()>",
+    "<org.springframework.http.ResponseEntity: org.springframework.http.ResponseEntity$HeadersBuilder notFound()>",
+    "<org.springframework.http.ResponseEntity$HeadersBuilder: org.springframework.http.ResponseEntity build()>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithWhitelistSafe02(java.lang.String)>": [
+    "<java.util.Arrays: java.util.List asList(java.lang.Object[])>",
+    "<java.util.List: boolean contains(java.lang.Object)>",
+    "<java.lang.Runtime: java.lang.Runtime getRuntime()>",
+    "<java.lang.Runtime: java.lang.Process exec(java.lang.String)>",
+    "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String readProcessOutput(java.lang.Process)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.util.Map getConfigFile08(java.lang.String)>": [
+    "<java.util.Properties: void <init>()>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String,java.lang.String)>",
+    "<java.io.FileInputStream: void <init>(java.lang.String)>",
+    "<java.util.Properties: void load(java.io.InputStream)>",
+    "<java.io.FileInputStream: void close()>",
+    "<java.lang.Throwable: void addSuppressed(java.lang.Throwable)>"
+  ],
+  "<edu.thu.benchmark.annotated.util.MyBatisCompiler: java.lang.String getSimpleTypeName(java.lang.String)>": [
+    "<java.lang.String: boolean contains(java.lang.CharSequence)>",
+    "<java.lang.String: int indexOf(int)>",
+    "<java.lang.String: java.lang.String substring(int,int)>",
+    "<java.lang.String: int lastIndexOf(int)>",
+    "<edu.thu.benchmark.annotated.util.MyBatisCompiler: java.lang.String getSimpleTypeName(java.lang.String)>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String,java.lang.String)>",
+    "<java.lang.String: java.lang.String substring(int)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.UserController: java.lang.String getUserById(java.lang.Integer,org.springframework.ui.Model)>": [
+    "<edu.thu.benchmark.annotated.service.UserService: edu.thu.benchmark.annotated.entity.User getUserById(java.lang.Integer)>",
+    "<org.springframework.ui.Model: org.springframework.ui.Model addAttribute(java.lang.String,java.lang.Object)>"
+  ],
+  "<edu.thu.benchmark.annotated.service.TemplateService: java.lang.String getTemplateSafe(java.lang.String)>": [
+    "<java.util.regex.Pattern: java.util.regex.Matcher matcher(java.lang.CharSequence)>",
+    "<java.util.regex.Matcher: boolean matches()>",
+    "<java.lang.SecurityException: void <init>(java.lang.String)>",
+    "<java.nio.file.Paths: java.nio.file.Path get(java.lang.String,java.lang.String[])>",
+    "<java.nio.file.Path: java.nio.file.Path toAbsolutePath()>",
+    "<java.nio.file.Path: java.nio.file.Path normalize()>",
+    "<java.nio.file.Path: java.nio.file.Path resolve(java.lang.String)>",
+    "<java.nio.file.Path: boolean startsWith(java.nio.file.Path)>",
+    "<java.nio.file.Files: boolean isRegularFile(java.nio.file.Path,java.nio.file.LinkOption[])>",
+    "<java.io.IOException: void <init>(java.lang.String)>",
+    "<java.nio.file.Files: byte[] readAllBytes(java.nio.file.Path)>",
+    "<java.lang.String: void <init>(byte[])>",
+    "<java.lang.Throwable: java.lang.String getMessage()>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.service.ZipService: void lambda$extractZipUnsafe$0(java.io.File,java.util.zip.ZipFile,java.util.zip.ZipEntry)>": [
+    "<java.util.zip.ZipEntry: java.lang.String getName()>",
+    "<java.io.File: void <init>(java.io.File,java.lang.String)>",
+    "<java.util.zip.ZipEntry: boolean isDirectory()>",
+    "<java.io.File: boolean mkdirs()>",
+    "<java.io.File: java.io.File getParentFile()>",
+    "<java.util.zip.ZipFile: java.io.InputStream getInputStream(java.util.zip.ZipEntry)>",
+    "<java.io.FileOutputStream: void <init>(java.io.File)>",
+    "<java.io.InputStream: int read(byte[])>",
+    "<java.io.FileOutputStream: void write(byte[],int,int)>",
+    "<java.io.FileOutputStream: void close()>",
+    "<java.lang.Throwable: void addSuppressed(java.lang.Throwable)>",
+    "<java.io.InputStream: void close()>"
+  ],
+  "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: edu.thu.benchmark.annotated.entity.User findUserByCredentialsSafe(java.lang.String,java.lang.String)>": [
+    "<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: edu.thu.benchmark.annotated.entity.User findUserByCredentialsSafe(java.lang.String,java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.aspect.CommandExecutionAspect: void <clinit>()>": [
+    "<java.util.Arrays: java.util.List asList(java.lang.Object[])>"
+  ],
+  "<edu.thu.benchmark.annotated.util.FileUtils: java.lang.String joinPathsUnsafe(java.lang.String,java.lang.String)>": [
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String,java.lang.String,java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.service.PathTraversalService: java.lang.String readFileSafe(java.lang.String)>": [
+    "<java.lang.StringBuilder: void <init>()>",
+    "<java.nio.file.Paths: java.nio.file.Path get(java.lang.String,java.lang.String[])>",
+    "<java.nio.file.Path: java.nio.file.Path toAbsolutePath()>",
+    "<java.nio.file.Path: java.nio.file.Path normalize()>",
+    "<java.nio.file.Path: java.nio.file.Path resolve(java.lang.String)>",
+    "<java.nio.file.Path: boolean startsWith(java.nio.file.Path)>",
+    "<java.lang.SecurityException: void <init>(java.lang.String)>",
+    "<java.nio.file.Files: boolean isRegularFile(java.nio.file.Path,java.nio.file.LinkOption[])>",
+    "<java.io.IOException: void <init>(java.lang.String)>",
+    "<java.nio.file.Files: byte[] readAllBytes(java.nio.file.Path)>",
+    "<java.lang.String: void <init>(byte[])>",
+    "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>",
+    "<java.lang.Throwable: java.lang.String getMessage()>",
+    "<java.lang.StringBuilder: java.lang.String toString()>"
+  ],
+  "<edu.thu.benchmark.annotated.entity.CommandExecution: void <init>()>": [
+    "<java.lang.Object: void <init>()>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.HttpController: void <init>()>": [
+    "<java.lang.Object: void <init>()>",
+    "<org.springframework.web.client.RestTemplate: void <init>()>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithProcessBuilderSafe06(java.lang.String,java.lang.String)>": [
+    "<java.util.ArrayList: void <init>()>",
+    "<java.util.List: boolean add(java.lang.Object)>",
+    "<java.lang.String: boolean matches(java.lang.String)>",
+    "<java.lang.String: int length()>",
+    "<java.lang.ProcessBuilder: void <init>(java.util.List)>",
+    "<java.lang.String: boolean isEmpty()>",
+    "<java.lang.String: boolean contains(java.lang.CharSequence)>",
+    "<java.io.File: void <init>(java.lang.String)>",
+    "<java.lang.ProcessBuilder: java.lang.ProcessBuilder directory(java.io.File)>",
+    "<java.lang.ProcessBuilder: java.lang.Process start()>",
+    "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String readProcessOutput(java.lang.Process)>"
+  ],
+  "<edu.thu.benchmark.annotated.util.MyBatisXmlParser: boolean lambda$parseDirectory$0(java.nio.file.Path)>": [
+    "<java.nio.file.Files: boolean isRegularFile(java.nio.file.Path,java.nio.file.LinkOption[])>"
+  ],
+  "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersByMultipleConditionsSafe(java.lang.Integer,java.lang.String,java.lang.String)>": [
+    "<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: java.util.List findUsersByMultipleConditionsSafe(java.lang.Integer,java.lang.String,java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.service.ZipService: void lambda$extractZipSafe$1(java.nio.file.Path,java.util.zip.ZipFile,java.util.zip.ZipEntry)>": [
+    "<java.util.zip.ZipEntry: java.lang.String getName()>",
+    "<java.nio.file.Path: java.nio.file.Path resolve(java.lang.String)>",
+    "<java.nio.file.Path: java.nio.file.Path normalize()>",
+    "<java.nio.file.Path: boolean startsWith(java.nio.file.Path)>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String)>",
+    "<java.lang.SecurityException: void <init>(java.lang.String)>",
+    "<java.util.zip.ZipEntry: boolean isDirectory()>",
+    "<java.nio.file.Files: java.nio.file.Path createDirectories(java.nio.file.Path,java.nio.file.attribute.FileAttribute[])>",
+    "<java.nio.file.Path: java.nio.file.Path getParent()>",
+    "<java.util.zip.ZipFile: java.io.InputStream getInputStream(java.util.zip.ZipEntry)>",
+    "<java.nio.file.Files: long copy(java.io.InputStream,java.nio.file.Path,java.nio.file.CopyOption[])>",
+    "<java.io.InputStream: void close()>",
+    "<java.lang.Throwable: void addSuppressed(java.lang.Throwable)>",
+    "<java.lang.Throwable: java.lang.String getMessage()>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String,java.lang.String)>",
+    "<java.io.PrintStream: void println(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.PathTraversalController: org.springframework.http.ResponseEntity getImage02(java.lang.String)>": [
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String,java.lang.String)>",
+    "<java.io.File: void <init>(java.lang.String)>",
+    "<org.springframework.http.ResponseEntity: org.springframework.http.ResponseEntity$BodyBuilder ok()>",
+    "<org.springframework.http.ResponseEntity$BodyBuilder: org.springframework.http.ResponseEntity$BodyBuilder contentType(org.springframework.http.MediaType)>",
+    "<org.springframework.core.io.FileSystemResource: void <init>(java.io.File)>",
+    "<org.springframework.http.ResponseEntity$BodyBuilder: org.springframework.http.ResponseEntity body(java.lang.Object)>"
+  ],
+  "<edu.thu.benchmark.annotated.service.impl.FileServiceImpl: java.lang.String readFileContentUnsafe(java.lang.String)>": [
+    "<java.nio.file.Paths: java.nio.file.Path get(java.lang.String,java.lang.String[])>",
+    "<java.nio.file.Files: byte[] readAllBytes(java.nio.file.Path)>",
+    "<java.lang.String: void <init>(byte[])>"
+  ],
+  "<edu.thu.benchmark.annotated.service.impl.FileServiceImpl: boolean deleteFile(java.lang.Integer)>": [
+    "<java.util.Collection: java.util.stream.Stream stream()>",
+    "<edu.thu.benchmark.annotated.service.impl.FileServiceImpl$lambda_deleteFile_1__8: java.util.function.Predicate bootstrap$(java.lang.Integer)>",
+    "<java.util.stream.Stream: java.util.stream.Stream filter(java.util.function.Predicate)>",
+    "<java.util.stream.Stream: java.util.Optional findFirst()>",
+    "<java.util.Optional: java.lang.Object orElse(java.lang.Object)>",
+    "<edu.thu.benchmark.annotated.entity.FileInfo: java.lang.String getFilepath()>",
+    "<java.nio.file.Paths: java.nio.file.Path get(java.lang.String,java.lang.String[])>",
+    "<java.nio.file.Files: boolean deleteIfExists(java.nio.file.Path)>",
+    "<java.util.List: boolean remove(java.lang.Object)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.FileController: java.util.Map deleteFile(java.lang.Integer)>": [
+    "<java.util.HashMap: void <init>()>",
+    "<edu.thu.benchmark.annotated.service.FileService: boolean deleteFile(java.lang.Integer)>",
+    "<java.lang.Boolean: java.lang.Boolean valueOf(boolean)>",
+    "<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>"
+  ],
+  "<edu.thu.benchmark.annotated.config.AppConfig: void <init>()>": [
+    "<java.lang.Object: void <init>()>"
+  ],
+  "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersByJdbcSafe(java.lang.String,java.lang.String)>": [
+    "<org.springframework.jdbc.core.JdbcTemplate: java.util.List queryForList(java.lang.String,java.lang.Object[])>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.HttpController: org.springframework.http.ResponseEntity fetchUrlSafe(java.lang.String)>": [
+    "<java.net.URL: void <init>(java.lang.String)>",
+    "<java.net.URL: java.lang.String getHost()>",
+    "<java.util.regex.Pattern: java.util.regex.Matcher matcher(java.lang.CharSequence)>",
+    "<java.util.regex.Matcher: boolean matches()>",
+    "<org.springframework.http.ResponseEntity: org.springframework.http.ResponseEntity$BodyBuilder badRequest()>",
+    "<org.springframework.http.ResponseEntity$BodyBuilder: org.springframework.http.ResponseEntity body(java.lang.Object)>",
+    "<java.net.URL: java.lang.String getProtocol()>",
+    "<java.lang.String: boolean equalsIgnoreCase(java.lang.String)>",
+    "<edu.thu.benchmark.annotated.controller.HttpController: boolean isAllowedHost(java.lang.String)>",
+    "<org.springframework.web.client.RestTemplate: java.lang.Object getForObject(java.lang.String,java.lang.Class,java.lang.Object[])>",
+    "<org.springframework.http.ResponseEntity: org.springframework.http.ResponseEntity ok(java.lang.Object)>",
+    "<java.lang.Throwable: java.lang.String getMessage()>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.CommandController: java.lang.String pingHost(java.lang.String)>": [
+    "<java.lang.StringBuilder: void <init>()>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String)>",
+    "<java.lang.Runtime: java.lang.Runtime getRuntime()>",
+    "<java.lang.Runtime: java.lang.Process exec(java.lang.String)>",
+    "<java.lang.Process: java.io.InputStream getInputStream()>",
+    "<java.io.InputStreamReader: void <init>(java.io.InputStream)>",
+    "<java.io.BufferedReader: void <init>(java.io.Reader)>",
+    "<java.io.BufferedReader: java.lang.String readLine()>",
+    "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>",
+    "<java.lang.Process: boolean waitFor(long,java.util.concurrent.TimeUnit)>",
+    "<java.lang.StringBuilder: java.lang.String toString()>",
+    "<java.lang.Throwable: java.lang.String getMessage()>"
+  ],
+  "<edu.thu.benchmark.annotated.entity.Product: void <init>(java.lang.Integer,java.lang.String,java.lang.String,java.math.BigDecimal,java.lang.String,java.lang.Integer)>": [
+    "<java.lang.Object: void <init>()>"
+  ],
+  "<edu.thu.benchmark.annotated.util.MyBatisSqlExtractor: void <init>()>": [
+    "<java.lang.Object: void <init>()>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.util.Map readPropertiesSafe09(java.lang.String)>": [
+    "<java.lang.String: boolean endsWith(java.lang.String)>",
+    "<java.lang.SecurityException: void <init>(java.lang.String)>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String)>",
+    "<org.springframework.core.io.ClassPathResource: void <init>(java.lang.String)>",
+    "<java.util.Properties: void <init>()>",
+    "<org.springframework.core.io.ClassPathResource: java.io.InputStream getInputStream()>",
+    "<java.util.Properties: void load(java.io.InputStream)>",
+    "<java.io.InputStream: void close()>",
+    "<java.lang.Throwable: void addSuppressed(java.lang.Throwable)>"
+  ],
+  "<edu.thu.benchmark.annotated.service.impl.UserServiceImpl: void <init>()>": [
+    "<java.lang.Object: void <init>()>"
+  ],
+  "<edu.thu.benchmark.annotated.aspect.CommandExecutionAspect: void <init>()>": [
+    "<java.lang.Object: void <init>()>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.CommandController: void <init>()>": [
+    "<java.lang.Object: void <init>()>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.UserController: java.lang.String updateUser(java.lang.Integer,java.lang.String)>": [
+    "<edu.thu.benchmark.annotated.service.UserService: int updateUser(java.lang.Integer,java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.service.impl.UserServiceImpl: edu.thu.benchmark.annotated.entity.User getUserByEmail(java.lang.String)>": [
+    "<edu.thu.benchmark.annotated.mapper.UserMapper: edu.thu.benchmark.annotated.entity.User getUserByEmail(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.AnnotatedBenchmarkApplication: org.springframework.boot.builder.SpringApplicationBuilder configure(org.springframework.boot.builder.SpringApplicationBuilder)>": [
+    "<org.springframework.boot.builder.SpringApplicationBuilder: org.springframework.boot.builder.SpringApplicationBuilder sources(java.lang.Class[])>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: int lambda$testCase40$1(edu.thu.benchmark.annotated.entity.User,edu.thu.benchmark.annotated.entity.User)>": [
+    "<edu.thu.benchmark.annotated.entity.User: java.lang.String getEmail()>",
+    "<java.lang.String: int compareTo(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.entity.User: java.lang.String toString()>": [
+    "<java.lang.String: java.lang.String valueOf(java.lang.Object)>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase20(java.lang.String,java.lang.String,java.lang.String,java.lang.String)>": [
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String,java.lang.String,java.lang.String,java.lang.String)>",
+    "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersByMultipleConditionsUnsafe(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.service.PathTraversalService: java.lang.String lambda$listFilesSafe$0(java.nio.file.Path)>": [
+    "<java.nio.file.Path: java.nio.file.Path getFileName()>",
+    "<java.nio.file.Path: java.lang.String toString()>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeViaUtilsSafe08(java.lang.String)>": [
+    "<edu.thu.benchmark.annotated.util.CommandUtils: java.lang.String executeSafe(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.XmlController: java.util.Map parseXmlSafe(java.lang.String)>": [
+    "<java.util.HashMap: void <init>()>",
+    "<javax.xml.parsers.DocumentBuilderFactory: javax.xml.parsers.DocumentBuilderFactory newInstance()>",
+    "<javax.xml.parsers.DocumentBuilderFactory: void setFeature(java.lang.String,boolean)>",
+    "<javax.xml.parsers.DocumentBuilderFactory: void setXIncludeAware(boolean)>",
+    "<javax.xml.parsers.DocumentBuilderFactory: void setExpandEntityReferences(boolean)>",
+    "<javax.xml.parsers.DocumentBuilderFactory: javax.xml.parsers.DocumentBuilder newDocumentBuilder()>",
+    "<java.io.StringReader: void <init>(java.lang.String)>",
+    "<org.xml.sax.InputSource: void <init>(java.io.Reader)>",
+    "<javax.xml.parsers.DocumentBuilder: org.w3c.dom.Document parse(org.xml.sax.InputSource)>",
+    "<org.w3c.dom.Document: org.w3c.dom.Element getDocumentElement()>",
+    "<org.w3c.dom.Node: java.lang.String getNodeName()>",
+    "<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>",
+    "<org.w3c.dom.Element: org.w3c.dom.NodeList getElementsByTagName(java.lang.String)>",
+    "<org.w3c.dom.NodeList: int getLength()>",
+    "<org.w3c.dom.NodeList: org.w3c.dom.Node item(int)>",
+    "<org.w3c.dom.Node: java.lang.String getTextContent()>",
+    "<java.lang.Boolean: java.lang.Boolean valueOf(boolean)>",
+    "<java.lang.Throwable: java.lang.String getMessage()>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.PathTraversalController: org.springframework.http.ResponseEntity downloadFileSafe03(java.lang.String)>": [
+    "<java.nio.file.Paths: java.nio.file.Path get(java.lang.String,java.lang.String[])>",
+    "<java.nio.file.Path: java.nio.file.Path toAbsolutePath()>",
+    "<java.nio.file.Path: java.nio.file.Path normalize()>",
+    "<java.nio.file.Path: java.nio.file.Path resolve(java.lang.String)>",
+    "<java.nio.file.Path: boolean startsWith(java.nio.file.Path)>",
+    "<java.lang.SecurityException: void <init>(java.lang.String)>",
+    "<java.nio.file.Files: boolean exists(java.nio.file.Path,java.nio.file.LinkOption[])>",
+    "<java.io.FileNotFoundException: void <init>(java.lang.String)>",
+    "<org.springframework.http.ResponseEntity: org.springframework.http.ResponseEntity$BodyBuilder ok()>",
+    "<java.nio.file.Path: java.nio.file.Path getFileName()>",
+    "<java.lang.String: java.lang.String valueOf(java.lang.Object)>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String)>",
+    "<org.springframework.http.ResponseEntity$BodyBuilder: org.springframework.http.ResponseEntity$HeadersBuilder header(java.lang.String,java.lang.String[])>",
+    "<java.nio.file.Path: java.io.File toFile()>",
+    "<org.springframework.core.io.FileSystemResource: void <init>(java.io.File)>",
+    "<org.springframework.http.ResponseEntity$BodyBuilder: org.springframework.http.ResponseEntity body(java.lang.Object)>"
+  ],
+  "<edu.thu.benchmark.annotated.util.FileUtils: void <init>()>": [
+    "<java.lang.Object: void <init>()>"
+  ],
+  "<edu.thu.benchmark.annotated.service.impl.FileServiceImpl: boolean lambda$loadById$0(java.lang.Integer,edu.thu.benchmark.annotated.entity.FileInfo)>": [
+    "<edu.thu.benchmark.annotated.entity.FileInfo: java.lang.Integer getId()>",
+    "<java.lang.Integer: boolean equals(java.lang.Object)>"
+  ],
+  "<edu.thu.benchmark.annotated.service.impl.FileServiceImpl: org.springframework.core.io.Resource loadByFilename(java.lang.String)>": [
+    "<java.nio.file.Path: java.nio.file.Path resolve(java.lang.String)>",
+    "<java.nio.file.Path: java.net.URI toUri()>",
+    "<org.springframework.core.io.UrlResource: void <init>(java.net.URI)>",
+    "<org.springframework.core.io.Resource: boolean exists()>",
+    "<org.springframework.core.io.Resource: boolean isReadable()>"
+  ],
+  "<edu.thu.benchmark.annotated.service.ZipService: java.lang.String extractZipUnsafe(java.lang.String)>": [
+    "<java.io.File: void <init>(java.lang.String,java.lang.String)>",
+    "<java.io.File: boolean exists()>",
+    "<java.util.zip.ZipFile: void <init>(java.io.File)>",
+    "<java.io.File: void <init>(java.lang.String)>",
+    "<java.io.File: boolean mkdirs()>",
+    "<java.util.zip.ZipFile: java.util.stream.Stream stream()>",
+    "<edu.thu.benchmark.annotated.service.ZipService$lambda_extractZipUnsafe_0__11: java.util.function.Consumer bootstrap$(java.io.File,java.util.zip.ZipFile)>",
+    "<java.util.stream.Stream: void forEach(java.util.function.Consumer)>",
+    "<java.util.zip.ZipFile: void close()>",
+    "<java.lang.Throwable: java.lang.String getMessage()>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase18(java.lang.String,java.lang.String,java.lang.String)>": [
+    "<java.lang.StringBuilder: void <init>()>",
+    "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>",
+    "<java.lang.StringBuilder: int length()>",
+    "<java.lang.StringBuilder: java.lang.String toString()>",
+    "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersByMultipleConditionsUnsafe(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase30(java.lang.String,java.lang.String)>": [
+    "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List searchUsersSafe(java.lang.String,java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.util.MyBatisCompiler: void compile()>": [
+    "<java.util.List: java.util.Iterator iterator()>",
+    "<java.util.Iterator: boolean hasNext()>",
+    "<java.util.Iterator: java.lang.Object next()>",
+    "<edu.thu.benchmark.annotated.util.MyBatisXmlParser$MapperInfo: java.lang.String getNamespace()>",
+    "<java.util.ArrayList: void <init>()>",
+    "<edu.thu.benchmark.annotated.util.MyBatisXmlParser$MapperInfo: java.util.List getSqlInfoList()>",
+    "<edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo: void <init>()>",
+    "<edu.thu.benchmark.annotated.util.MyBatisXmlParser$SqlInfo: java.lang.String getId()>",
+    "<edu.thu.benchmark.annotated.util.MyBatisXmlParser: java.lang.String getFullMethodPath(java.lang.String,java.lang.String)>",
+    "<edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo: void setFullPath(java.lang.String)>",
+    "<edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo: void setMapperClass(java.lang.String)>",
+    "<edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo: void setMethodName(java.lang.String)>",
+    "<edu.thu.benchmark.annotated.util.MyBatisXmlParser$SqlInfo: java.lang.String getType()>",
+    "<java.lang.String: java.lang.String toUpperCase()>",
+    "<edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo: void setSqlType(java.lang.String)>",
+    "<edu.thu.benchmark.annotated.util.MyBatisXmlParser$SqlInfo: java.lang.String getResultType()>",
+    "<edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo: void setResultType(java.lang.String)>",
+    "<edu.thu.benchmark.annotated.util.MyBatisXmlParser$SqlInfo: java.lang.String getParameterType()>",
+    "<edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo: void setParameterType(java.lang.String)>",
+    "<edu.thu.benchmark.annotated.util.MyBatisXmlParser$SqlInfo: java.lang.String getSqlContent()>",
+    "<edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo: void setSqlContent(java.lang.String)>",
+    "<java.util.List: boolean add(java.lang.Object)>",
+    "<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>"
+  ],
+  "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: edu.thu.benchmark.annotated.entity.User findUserByCredentialsUnsafe(java.lang.String,java.lang.String)>": [
+    "<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: edu.thu.benchmark.annotated.entity.User findUserByCredentialsUnsafe(java.lang.String,java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.service.impl.UserServiceImpl: java.util.List getAllUsers()>": [
+    "<edu.thu.benchmark.annotated.mapper.UserMapper: java.util.List getAllUsers()>"
+  ],
+  "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findByNamedParamsUnsafe(java.lang.String,java.util.Map)>": [
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String)>",
+    "<org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate: java.util.List queryForList(java.lang.String,java.util.Map)>"
+  ],
+  "<edu.thu.benchmark.annotated.service.impl.UserServiceImpl: edu.thu.benchmark.annotated.entity.User getUserByUsername(java.lang.String)>": [
+    "<edu.thu.benchmark.annotated.mapper.UserMapper: edu.thu.benchmark.annotated.entity.User getUserByUsername(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.service.TemplateService: void <clinit>()>": [
+    "<java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.util.MyBatisCompiler: void <init>(java.lang.String)>": [
+    "<java.lang.Object: void <init>()>",
+    "<java.util.HashMap: void <init>()>",
+    "<java.util.ArrayList: void <init>()>",
+    "<java.io.File: void <init>(java.lang.String)>",
+    "<java.io.File: boolean mkdirs()>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase15(java.lang.String,java.lang.String)>": [
+    "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List searchUsersSemiSafe(java.lang.String,java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.service.TemplateService: java.lang.String getTemplateUnsafe(java.lang.String)>": [
+    "<java.io.File: void <init>(java.lang.String,java.lang.String)>",
+    "<java.io.File: java.nio.file.Path toPath()>",
+    "<java.nio.file.Files: byte[] readAllBytes(java.nio.file.Path)>",
+    "<java.lang.String: void <init>(byte[])>",
+    "<java.lang.Throwable: java.lang.String getMessage()>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.service.PathTraversalService: java.lang.String[] listFilesUnsafe(java.lang.String)>": [
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String,java.lang.String)>",
+    "<java.io.File: void <init>(java.lang.String)>",
+    "<java.io.File: java.lang.String[] list()>"
+  ],
+  "<edu.thu.benchmark.annotated.service.FileUploadService: void <init>()>": [
+    "<java.lang.Object: void <init>()>"
+  ],
+  "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: edu.thu.benchmark.annotated.entity.User findUserByEmailUnsafe(java.lang.String)>": [
+    "<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: edu.thu.benchmark.annotated.entity.User findUserByEmailUnsafe(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.util.MyBatisMapperScanner$SqlMethod: void <init>(java.lang.String,java.lang.String,java.lang.String)>": [
+    "<java.lang.Object: void <init>()>"
+  ],
+  "<edu.thu.benchmark.annotated.util.CommandUtils: java.lang.String executeUnsafe(java.lang.String)>": [
+    "<java.lang.Runtime: java.lang.Runtime getRuntime()>",
+    "<java.lang.Runtime: java.lang.Process exec(java.lang.String)>",
+    "<edu.thu.benchmark.annotated.util.CommandUtils: java.lang.String readProcessOutput(java.lang.Process)>",
+    "<java.lang.Throwable: java.lang.String getMessage()>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.config.WebMvcConfig: void addResourceHandlers(org.springframework.web.servlet.config.'annotation'.ResourceHandlerRegistry)>": [
+    "<org.springframework.web.servlet.config.'annotation'.ResourceHandlerRegistry: org.springframework.web.servlet.config.'annotation'.ResourceHandlerRegistration addResourceHandler(java.lang.String[])>",
+    "<org.springframework.web.servlet.config.'annotation'.ResourceHandlerRegistration: org.springframework.web.servlet.config.'annotation'.ResourceHandlerRegistration addResourceLocations(java.lang.String[])>"
+  ],
+  "<edu.thu.benchmark.annotated.util.MyBatisXmlParser: edu.thu.benchmark.annotated.util.MyBatisXmlParser$MapperInfo parseXml(java.lang.String)>": [
+    "<edu.thu.benchmark.annotated.util.MyBatisXmlParser$MapperInfo: void <init>()>",
+    "<javax.xml.parsers.DocumentBuilderFactory: javax.xml.parsers.DocumentBuilderFactory newInstance()>",
+    "<javax.xml.parsers.DocumentBuilderFactory: javax.xml.parsers.DocumentBuilder newDocumentBuilder()>",
+    "<java.io.File: void <init>(java.lang.String)>",
+    "<javax.xml.parsers.DocumentBuilder: org.w3c.dom.Document parse(java.io.File)>",
+    "<org.w3c.dom.Document: org.w3c.dom.Element getDocumentElement()>",
+    "<org.w3c.dom.Node: void normalize()>",
+    "<org.w3c.dom.Element: java.lang.String getAttribute(java.lang.String)>",
+    "<edu.thu.benchmark.annotated.util.MyBatisXmlParser$MapperInfo: void setNamespace(java.lang.String)>",
+    "<org.w3c.dom.Document: org.w3c.dom.NodeList getElementsByTagName(java.lang.String)>",
+    "<org.w3c.dom.NodeList: int getLength()>",
+    "<org.w3c.dom.NodeList: org.w3c.dom.Node item(int)>",
+    "<edu.thu.benchmark.annotated.util.MyBatisXmlParser$SqlInfo: void <init>()>",
+    "<edu.thu.benchmark.annotated.util.MyBatisXmlParser$SqlInfo: void setId(java.lang.String)>",
+    "<edu.thu.benchmark.annotated.util.MyBatisXmlParser$SqlInfo: void setType(java.lang.String)>",
+    "<java.lang.String: boolean isEmpty()>",
+    "<edu.thu.benchmark.annotated.util.MyBatisXmlParser$SqlInfo: void setResultType(java.lang.String)>",
+    "<edu.thu.benchmark.annotated.util.MyBatisXmlParser$SqlInfo: void setParameterType(java.lang.String)>",
+    "<org.w3c.dom.Node: java.lang.String getTextContent()>",
+    "<java.lang.String: java.lang.String trim()>",
+    "<edu.thu.benchmark.annotated.util.MyBatisXmlParser$SqlInfo: void setSqlContent(java.lang.String)>",
+    "<edu.thu.benchmark.annotated.util.MyBatisXmlParser$MapperInfo: void addSqlInfo(edu.thu.benchmark.annotated.util.MyBatisXmlParser$SqlInfo)>",
+    "<java.lang.Throwable: java.lang.String getMessage()>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String)>",
+    "<java.io.PrintStream: void println(java.lang.String)>",
+    "<java.lang.Throwable: void printStackTrace()>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.lang.String getTemplateFileSafe10(java.lang.String)>": [
+    "<java.lang.String: boolean matches(java.lang.String)>",
+    "<java.lang.SecurityException: void <init>(java.lang.String)>",
+    "<edu.thu.benchmark.annotated.service.TemplateService: java.lang.String getTemplateSafe(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.util.MyBatisSqlExtractor: boolean lambda$extractMethodPathsFromDirectory$0(java.io.File,java.lang.String)>": [
+    "<java.lang.String: java.lang.String toLowerCase()>",
+    "<java.lang.String: boolean endsWith(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.util.CommandUtils: void <clinit>()>": [
+    "<java.util.Arrays: java.util.List asList(java.lang.Object[])>"
+  ],
+  "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: edu.thu.benchmark.annotated.entity.User findUserByEmailSafe(java.lang.String)>": [
+    "<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: edu.thu.benchmark.annotated.entity.User findUserByEmailSafe(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.util.Map readProperties09(java.lang.String)>": [
+    "<java.util.Properties: void <init>()>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String)>",
+    "<java.io.File: void <init>(java.lang.String)>",
+    "<java.io.FileInputStream: void <init>(java.io.File)>",
+    "<java.util.Properties: void load(java.io.InputStream)>",
+    "<java.io.FileInputStream: void close()>",
+    "<java.lang.Throwable: void addSuppressed(java.lang.Throwable)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: void <init>()>": [
+    "<java.lang.Object: void <init>()>"
+  ],
+  "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersByJdbcUnsafe(java.lang.String)>": [
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String)>",
+    "<org.springframework.jdbc.core.JdbcTemplate: java.util.List queryForList(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.UserController: java.lang.String getAllUsers(org.springframework.ui.Model)>": [
+    "<edu.thu.benchmark.annotated.service.UserService: java.util.List getAllUsers()>",
+    "<org.springframework.ui.Model: org.springframework.ui.Model addAttribute(java.lang.String,java.lang.Object)>"
+  ],
+  "<edu.thu.benchmark.annotated.util.FileUtils: java.util.List listDirectorySafe(java.lang.String,java.lang.String)>": [
+    "<java.util.ArrayList: void <init>()>",
+    "<java.nio.file.Paths: java.nio.file.Path get(java.lang.String,java.lang.String[])>",
+    "<java.nio.file.Path: java.nio.file.Path toAbsolutePath()>",
+    "<java.nio.file.Path: java.nio.file.Path normalize()>",
+    "<java.nio.file.Path: java.nio.file.Path resolve(java.lang.String)>",
+    "<java.nio.file.Path: boolean startsWith(java.nio.file.Path)>",
+    "<java.lang.SecurityException: void <init>(java.lang.String)>",
+    "<java.nio.file.Files: boolean isDirectory(java.nio.file.Path,java.nio.file.LinkOption[])>",
+    "<java.io.IOException: void <init>(java.lang.String)>",
+    "<java.nio.file.Files: java.util.stream.Stream list(java.nio.file.Path)>",
+    "<edu.thu.benchmark.annotated.util.FileUtils$lambda_listDirectorySafe_0__2: java.util.function.Consumer bootstrap$(java.util.List)>",
+    "<java.util.stream.Stream: void forEach(java.util.function.Consumer)>",
+    "<java.lang.Throwable: java.lang.String getMessage()>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String)>",
+    "<java.util.List: boolean add(java.lang.Object)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase35(java.lang.String,java.lang.String)>": [
+    "<java.util.HashMap: void <init>()>",
+    "<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>",
+    "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findByNamedParamsSafe(java.util.Map)>"
+  ],
+  "<edu.thu.benchmark.annotated.util.MyBatisXmlParser: void <init>()>": [
+    "<java.lang.Object: void <init>()>"
+  ],
+  "<edu.thu.benchmark.annotated.service.impl.UserServiceImpl: edu.thu.benchmark.annotated.entity.User getUserById(java.lang.Integer)>": [
+    "<edu.thu.benchmark.annotated.mapper.UserMapper: edu.thu.benchmark.annotated.entity.User getUserById(java.lang.Integer)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.HttpController: org.springframework.http.ResponseEntity fetchUrl(java.lang.String)>": [
+    "<org.springframework.web.client.RestTemplate: java.lang.Object getForObject(java.lang.String,java.lang.Class,java.lang.Object[])>",
+    "<org.springframework.http.ResponseEntity: org.springframework.http.ResponseEntity ok(java.lang.Object)>",
+    "<org.springframework.http.ResponseEntity: org.springframework.http.ResponseEntity$BodyBuilder badRequest()>",
+    "<java.lang.Throwable: java.lang.String getMessage()>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String)>",
+    "<org.springframework.http.ResponseEntity$BodyBuilder: org.springframework.http.ResponseEntity body(java.lang.Object)>"
+  ],
+  "<edu.thu.benchmark.annotated.util.MyBatisMapperScanner: void <init>(java.lang.String)>": [
+    "<java.lang.Object: void <init>()>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersWithLimitSafe(int,int)>": [
+    "<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: java.util.List findUsersWithLimitSafe(int,int)>"
+  ],
+  "<edu.thu.benchmark.annotated.aspect.FileAccessAspect: void <init>()>": [
+    "<java.lang.Object: void <init>()>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithConfigPrefix07(java.lang.String)>": [
+    "<java.lang.String: java.lang.String[] split(java.lang.String)>",
+    "<java.lang.String: java.lang.String[] split(java.lang.String,int)>",
+    "<java.util.Arrays: java.util.List asList(java.lang.Object[])>",
+    "<java.util.List: boolean contains(java.lang.Object)>",
+    "<java.lang.Runtime: java.lang.Runtime getRuntime()>",
+    "<java.lang.Runtime: java.lang.Process exec(java.lang.String)>",
+    "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String readProcessOutput(java.lang.Process)>"
+  ],
+  "<edu.thu.benchmark.annotated.aspect.FileAccessAspect: void logFileAccessUnsafe(org.aspectj.lang.JoinPoint)>": [
+    "<org.aspectj.lang.JoinPoint: java.lang.Object[] getArgs()>",
+    "<java.io.File: void <init>(java.lang.String,java.lang.String)>",
+    "<java.io.File: java.nio.file.Path toPath()>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String)>",
+    "<java.lang.String: byte[] getBytes()>",
+    "<java.nio.file.Files: java.nio.file.Path write(java.nio.file.Path,byte[],java.nio.file.OpenOption[])>",
+    "<java.lang.Throwable: java.lang.String getMessage()>",
+    "<java.io.PrintStream: void println(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase23(java.util.List)>": [
+    "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersInListSafe(java.util.List)>"
+  ],
+  "<edu.thu.benchmark.annotated.config.WebMvcConfig: void configureViewResolvers(org.springframework.web.servlet.config.'annotation'.ViewResolverRegistry)>": [
+    "<org.springframework.web.servlet.view.InternalResourceViewResolver: void <init>()>",
+    "<org.springframework.web.servlet.view.InternalResourceViewResolver: void setPrefix(java.lang.String)>",
+    "<org.springframework.web.servlet.view.InternalResourceViewResolver: void setSuffix(java.lang.String)>",
+    "<org.springframework.web.servlet.config.'annotation'.ViewResolverRegistry: void viewResolver(org.springframework.web.servlet.ViewResolver)>"
+  ],
+  "<edu.thu.benchmark.annotated.AnnotatedBenchmarkApplication: void main(java.lang.String[])>": [
+    "<org.springframework.boot.SpringApplication: org.springframework.context.ConfigurableApplicationContext run(java.lang.Class,java.lang.String[])>"
+  ],
+  "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: int deleteUsersSafe(java.lang.Integer)>": [
+    "<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: int deleteUsersSafe(java.lang.Integer)>"
+  ],
+  "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List testAspectUnsafeMethod(java.lang.String)>": [
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String)>",
+    "<java.io.PrintStream: void println(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.HomeController: void <init>()>": [
+    "<java.lang.Object: void <init>()>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase17(java.lang.String,java.lang.String)>": [
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String,java.lang.String)>",
+    "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersByJdbcUnsafe(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.'annotation'.VulnerabilityLevel: void <init>(java.lang.String,int,java.lang.String,int)>": [
+    "<java.lang.Enum: void <init>(java.lang.String,int)>"
+  ],
+  "<edu.thu.benchmark.annotated.service.CommandService: java.lang.String executeCommandUnsafe(java.lang.String)>": [
+    "<java.lang.Runtime: java.lang.Runtime getRuntime()>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String,java.lang.String)>",
+    "<java.lang.Runtime: java.lang.Process exec(java.lang.String)>",
+    "<java.lang.Process: java.io.InputStream getInputStream()>",
+    "<java.io.InputStreamReader: void <init>(java.io.InputStream)>",
+    "<java.io.BufferedReader: void <init>(java.io.Reader)>",
+    "<java.lang.StringBuilder: void <init>()>",
+    "<java.io.BufferedReader: java.lang.String readLine()>",
+    "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>",
+    "<java.lang.StringBuilder: java.lang.String toString()>"
+  ],
+  "<edu.thu.benchmark.annotated.service.impl.FileServiceImpl: org.springframework.core.io.Resource loadByPath(java.lang.String)>": [
+    "<java.nio.file.Paths: java.nio.file.Path get(java.lang.String,java.lang.String[])>",
+    "<java.nio.file.Path: java.net.URI toUri()>",
+    "<org.springframework.core.io.UrlResource: void <init>(java.net.URI)>",
+    "<org.springframework.core.io.Resource: boolean exists()>",
+    "<org.springframework.core.io.Resource: boolean isReadable()>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String fileOperationWithCommand10(java.lang.String)>": [
+    "<java.lang.Runtime: java.lang.Runtime getRuntime()>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String)>",
+    "<java.lang.Runtime: java.lang.Process exec(java.lang.String)>",
+    "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String readProcessOutput(java.lang.Process)>"
+  ],
+  "<edu.thu.benchmark.annotated.service.impl.FileServiceImpl: java.nio.file.Path getFilePath(java.lang.String)>": [
+    "<java.nio.file.Path: java.nio.file.Path resolve(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.UserController: void welcome(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>": [
+    "<javax.servlet.http.HttpServletRequest: java.lang.String getParameter(java.lang.String)>",
+    "<javax.servlet.http.HttpServletResponse: void setContentType(java.lang.String)>",
+    "<javax.servlet.http.HttpServletResponse: java.io.PrintWriter getWriter()>",
+    "<java.io.PrintWriter: void println(java.lang.String)>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String)>",
+    "<java.io.PrintWriter: void close()>"
+  ],
+  "<edu.thu.benchmark.annotated.service.PathTraversalService: java.lang.String[] listFilesSafe(java.lang.String)>": [
+    "<java.nio.file.Paths: java.nio.file.Path get(java.lang.String,java.lang.String[])>",
+    "<java.nio.file.Path: java.nio.file.Path toAbsolutePath()>",
+    "<java.nio.file.Path: java.nio.file.Path normalize()>",
+    "<java.nio.file.Path: java.nio.file.Path resolve(java.lang.String)>",
+    "<java.nio.file.Path: boolean startsWith(java.nio.file.Path)>",
+    "<java.lang.SecurityException: void <init>(java.lang.String)>",
+    "<java.nio.file.Files: boolean isDirectory(java.nio.file.Path,java.nio.file.LinkOption[])>",
+    "<java.io.IOException: void <init>(java.lang.String)>",
+    "<java.nio.file.Files: java.util.stream.Stream list(java.nio.file.Path)>",
+    "<edu.thu.benchmark.annotated.service.PathTraversalService$lambda_listFilesSafe_0__9: java.util.function.Function bootstrap$()>",
+    "<java.util.stream.Stream: java.util.stream.Stream map(java.util.function.Function)>",
+    "<edu.thu.benchmark.annotated.service.PathTraversalService$lambda_listFilesSafe_1__10: java.util.function.IntFunction bootstrap$()>",
+    "<java.util.stream.Stream: java.lang.Object[] toArray(java.util.function.IntFunction)>",
+    "<java.lang.Throwable: java.lang.String getMessage()>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.aspect.SqlInjectionAspect: void beforeUnsafeSqlExecution()>": [
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String)>",
+    "<java.io.PrintStream: void println(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.'annotation'.VulnerabilityLevel: edu.thu.benchmark.annotated.'annotation'.VulnerabilityLevel[] values()>": [
+    "<java.lang.Object: java.lang.Object clone()>"
+  ],
+  "<edu.thu.benchmark.annotated.service.impl.FileServiceImpl: void <init>(java.lang.String)>": [
+    "<java.lang.Object: void <init>()>",
+    "<java.util.ArrayList: void <init>()>",
+    "<java.util.concurrent.atomic.AtomicInteger: void <init>(int)>",
+    "<java.nio.file.Paths: java.nio.file.Path get(java.lang.String,java.lang.String[])>"
+  ],
+  "<edu.thu.benchmark.annotated.entity.FileInfo: void <init>()>": [
+    "<java.lang.Object: void <init>()>"
+  ],
+  "<edu.thu.benchmark.annotated.util.MyBatisMapperScanner: java.util.Map scanMapperXml()>": [
+    "<java.util.HashMap: void <init>()>",
+    "<java.nio.file.Paths: java.nio.file.Path get(java.lang.String,java.lang.String[])>",
+    "<java.nio.file.Files: java.util.stream.Stream walk(java.nio.file.Path,java.nio.file.FileVisitOption[])>",
+    "<edu.thu.benchmark.annotated.util.MyBatisMapperScanner$lambda_scanMapperXml_0__3: java.util.function.Predicate bootstrap$()>",
+    "<java.util.stream.Stream: java.util.stream.Stream filter(java.util.function.Predicate)>",
+    "<edu.thu.benchmark.annotated.util.MyBatisMapperScanner$lambda_scanMapperXml_1__4: java.util.function.Predicate bootstrap$()>",
+    "<java.util.stream.Collectors: java.util.stream.Collector toList()>",
+    "<java.util.stream.Stream: java.lang.Object collect(java.util.stream.Collector)>",
+    "<java.util.List: java.util.Iterator iterator()>",
+    "<java.util.Iterator: boolean hasNext()>",
+    "<java.util.Iterator: java.lang.Object next()>",
+    "<java.nio.file.Files: java.lang.String readString(java.nio.file.Path)>",
+    "<java.util.regex.Pattern: java.util.regex.Matcher matcher(java.lang.CharSequence)>",
+    "<java.util.regex.Matcher: boolean find()>",
+    "<java.util.regex.Matcher: java.lang.String group(int)>",
+    "<java.util.ArrayList: void <init>()>",
+    "<edu.thu.benchmark.annotated.util.MyBatisMapperScanner$SqlMethod: void <init>(java.lang.String,java.lang.String,java.lang.String)>",
+    "<java.lang.String: int indexOf(java.lang.String)>",
+    "<java.lang.String: int indexOf(java.lang.String,int)>",
+    "<java.lang.String: java.lang.String substring(int,int)>",
+    "<edu.thu.benchmark.annotated.util.MyBatisMapperScanner$SqlMethod: void setParameterType(java.lang.String)>",
+    "<edu.thu.benchmark.annotated.util.MyBatisMapperScanner$SqlMethod: void setResultType(java.lang.String)>",
+    "<java.util.List: boolean add(java.lang.Object)>",
+    "<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>",
+    "<java.lang.String: java.lang.String valueOf(java.lang.Object)>",
+    "<java.lang.Throwable: java.lang.String getMessage()>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String,java.lang.String)>",
+    "<java.io.PrintStream: void println(java.lang.String)>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: void <init>()>": [
+    "<java.lang.Object: void <init>()>"
+  ],
+  "<edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo: void <init>()>": [
+    "<java.lang.Object: void <init>()>"
+  ],
+  "<edu.thu.benchmark.annotated.aspect.SqlInjectionAspect: java.util.List executeSafeSql()>": [
+    "<org.springframework.jdbc.core.JdbcTemplate: java.util.List queryForList(java.lang.String,java.lang.Object[])>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithSystemProperty02(java.lang.String)>": [
+    "<java.lang.System: java.lang.String getProperty(java.lang.String)>",
+    "<java.lang.Runtime: java.lang.Runtime getRuntime()>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String,java.lang.String)>",
+    "<java.lang.Runtime: java.lang.Process exec(java.lang.String)>",
+    "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String readProcessOutput(java.lang.Process)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.FileController: void <init>(edu.thu.benchmark.annotated.service.FileService)>": [
+    "<java.lang.Object: void <init>()>"
+  ],
+  "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List searchUsersUnsafe(java.lang.String,java.lang.String)>": [
+    "<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: java.util.List searchUsersUnsafe(java.lang.String,java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.util.MyBatisXmlParser$MapperInfo: void addSqlInfo(edu.thu.benchmark.annotated.util.MyBatisXmlParser$SqlInfo)>": [
+    "<java.util.List: boolean add(java.lang.Object)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.lang.String getXmlFileSafe06(java.lang.String)>": [
+    "<java.lang.String: boolean contains(java.lang.CharSequence)>",
+    "<java.lang.SecurityException: void <init>(java.lang.String)>",
+    "<java.lang.String: java.lang.String toLowerCase()>",
+    "<java.lang.String: boolean endsWith(java.lang.String)>",
+    "<java.nio.file.Paths: java.nio.file.Path get(java.lang.String,java.lang.String[])>",
+    "<java.nio.file.Path: java.nio.file.Path toAbsolutePath()>",
+    "<java.nio.file.Path: java.nio.file.Path normalize()>",
+    "<java.nio.file.Path: java.nio.file.Path resolve(java.lang.String)>",
+    "<java.nio.file.Path: boolean startsWith(java.nio.file.Path)>",
+    "<java.nio.file.Files: byte[] readAllBytes(java.nio.file.Path)>",
+    "<java.lang.String: void <init>(byte[])>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase16(java.lang.String,java.lang.String)>": [
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String,java.lang.String)>",
+    "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersByMultipleConditionsUnsafe(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.util.FileUtils: void lambda$listDirectorySafe$0(java.util.List,java.nio.file.Path)>": [
+    "<java.nio.file.Path: java.nio.file.Path getFileName()>",
+    "<java.nio.file.Path: java.lang.String toString()>",
+    "<java.util.List: boolean add(java.lang.Object)>"
+  ],
+  "<edu.thu.benchmark.annotated.service.impl.UserServiceImpl: int updateUser(java.lang.Integer,java.lang.String)>": [
+    "<edu.thu.benchmark.annotated.mapper.UserMapper: int updateUser(java.lang.Integer,java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase02(java.lang.String)>": [
+    "<edu.thu.benchmark.annotated.aspect.SqlInjectionAspect: java.util.List executeUnsafeSql(java.lang.String)>",
+    "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersSortedUnsafe(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.config.DatabaseConfig: void <init>()>": [
+    "<java.lang.Object: void <init>()>"
+  ],
+  "<edu.thu.benchmark.annotated.util.CommandUtils: void <init>()>": [
+    "<java.lang.Object: void <init>()>"
+  ],
+  "<edu.thu.benchmark.annotated.util.MyBatisCompiler: edu.thu.benchmark.annotated.util.MyBatisCompiler parseDirectory(java.lang.String)>": [
+    "<edu.thu.benchmark.annotated.util.MyBatisXmlParser: java.util.List parseDirectory(java.lang.String)>",
+    "<java.util.List: boolean addAll(java.util.Collection)>"
+  ],
+  "<edu.thu.benchmark.annotated.util.FileUtils: java.lang.String readFileSafe(java.lang.String,java.lang.String)>": [
+    "<java.nio.file.Paths: java.nio.file.Path get(java.lang.String,java.lang.String[])>",
+    "<java.nio.file.Path: java.nio.file.Path toAbsolutePath()>",
+    "<java.nio.file.Path: java.nio.file.Path normalize()>",
+    "<java.nio.file.Path: java.nio.file.Path resolve(java.lang.String)>",
+    "<java.nio.file.Path: boolean startsWith(java.nio.file.Path)>",
+    "<java.lang.SecurityException: void <init>(java.lang.String)>",
+    "<java.nio.file.Files: boolean isRegularFile(java.nio.file.Path,java.nio.file.LinkOption[])>",
+    "<java.io.IOException: void <init>(java.lang.String)>",
+    "<java.nio.file.Files: byte[] readAllBytes(java.nio.file.Path)>",
+    "<java.lang.String: void <init>(byte[],java.nio.charset.Charset)>",
+    "<java.lang.Throwable: java.lang.String getMessage()>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.lang.String getTemplateFile10(java.lang.String)>": [
+    "<edu.thu.benchmark.annotated.service.TemplateService: java.lang.String getTemplateUnsafe(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.FileController: java.util.List listFiles()>": [
+    "<edu.thu.benchmark.annotated.service.FileService: java.util.List getAllFiles()>"
+  ],
+  "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersSortedUnsafe(java.lang.String)>": [
+    "<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: java.util.List findUsersSortedUnsafe(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.util.MyBatisMapperScanner: java.util.List checkExistingMappers(java.util.Map)>": [
+    "<java.util.ArrayList: void <init>()>",
+    "<java.util.Map: java.util.Set keySet()>",
+    "<java.util.Set: java.util.Iterator iterator()>",
+    "<java.util.Iterator: boolean hasNext()>",
+    "<java.util.Iterator: java.lang.Object next()>",
+    "<java.lang.String: java.lang.String replace(char,char)>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String,java.lang.String)>",
+    "<java.io.File: void <init>(java.lang.String)>",
+    "<java.io.File: boolean exists()>",
+    "<java.util.List: boolean add(java.lang.Object)>"
+  ],
+  "<edu.thu.benchmark.annotated.config.WebMvcConfig: void <init>()>": [
+    "<java.lang.Object: void <init>()>"
+  ],
+  "<edu.thu.benchmark.annotated.service.impl.UserServiceImpl: int deleteUser(java.lang.Integer)>": [
+    "<edu.thu.benchmark.annotated.mapper.UserMapper: int deleteUser(java.lang.Integer)>"
+  ],
+  "<edu.thu.benchmark.annotated.service.impl.FileServiceImpl: void init()>": [
+    "<java.nio.file.Files: java.nio.file.Path createDirectories(java.nio.file.Path,java.nio.file.attribute.FileAttribute[])>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: int testCase26(int,java.lang.String,java.lang.String,java.lang.String)>": [
+    "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: int updateUserDynamicSafe(int,java.lang.String,java.lang.String,java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.util.MyBatisXmlParser$SqlInfo: void <init>()>": [
+    "<java.lang.Object: void <init>()>"
+  ],
+  "<edu.thu.benchmark.annotated.service.impl.FileServiceImpl: edu.thu.benchmark.annotated.entity.FileInfo store(org.springframework.web.multipart.MultipartFile)>": [
+    "<org.springframework.web.multipart.MultipartFile: boolean isEmpty()>",
+    "<java.io.IOException: void <init>(java.lang.String)>",
+    "<org.springframework.web.multipart.MultipartFile: java.lang.String getOriginalFilename()>",
+    "<java.lang.String: boolean contains(java.lang.CharSequence)>",
+    "<java.nio.file.Path: java.nio.file.Path resolve(java.lang.String)>",
+    "<java.nio.file.Path: java.nio.file.Path normalize()>",
+    "<java.nio.file.Path: java.nio.file.Path getParent()>",
+    "<java.nio.file.Path: boolean equals(java.lang.Object)>",
+    "<org.springframework.web.multipart.MultipartFile: java.io.InputStream getInputStream()>",
+    "<java.nio.file.Files: long copy(java.io.InputStream,java.nio.file.Path,java.nio.file.CopyOption[])>",
+    "<java.io.InputStream: void close()>",
+    "<java.lang.Throwable: void addSuppressed(java.lang.Throwable)>",
+    "<java.nio.file.Path: java.lang.String toString()>",
+    "<org.springframework.web.multipart.MultipartFile: java.lang.String getContentType()>",
+    "<org.springframework.web.multipart.MultipartFile: long getSize()>",
+    "<java.lang.Long: java.lang.Long valueOf(long)>",
+    "<edu.thu.benchmark.annotated.entity.FileInfo: void <init>(java.lang.String,java.lang.String,java.lang.String,java.lang.Long)>",
+    "<java.util.concurrent.atomic.AtomicInteger: int getAndIncrement()>",
+    "<java.lang.Integer: java.lang.Integer valueOf(int)>",
+    "<edu.thu.benchmark.annotated.entity.FileInfo: void setId(java.lang.Integer)>",
+    "<java.util.List: boolean add(java.lang.Object)>"
+  ],
+  "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersByNameSafe(java.lang.String)>": [
+    "<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: java.util.List findUsersByNameSafe(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.lang.String getLogFileSafe07(java.lang.String)>": [
+    "<java.lang.String: boolean contains(java.lang.CharSequence)>",
+    "<java.lang.SecurityException: void <init>(java.lang.String)>",
+    "<java.lang.String: java.lang.String toLowerCase()>",
+    "<java.lang.String: boolean endsWith(java.lang.String)>",
+    "<edu.thu.benchmark.annotated.aspect.FileAccessAspect: java.lang.String accessLogFileSafe(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: edu.thu.benchmark.annotated.entity.User testCase28(java.lang.String)>": [
+    "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: edu.thu.benchmark.annotated.entity.User findUserByEmailSafe(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.UserController: java.lang.String findByEmail(java.lang.String,org.springframework.ui.Model)>": [
+    "<edu.thu.benchmark.annotated.service.UserService: edu.thu.benchmark.annotated.entity.User getUserByEmail(java.lang.String)>",
+    "<org.springframework.ui.Model: org.springframework.ui.Model addAttribute(java.lang.String,java.lang.Object)>"
+  ],
+  "<edu.thu.benchmark.annotated.util.MyBatisCompiler: void saveToConstantsFile()>": [
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String)>",
+    "<java.io.FileWriter: void <init>(java.lang.String)>",
+    "<java.io.Writer: void write(java.lang.String)>",
+    "<java.util.Map: java.util.Set entrySet()>",
+    "<java.util.Set: java.util.Iterator iterator()>",
+    "<java.util.Iterator: boolean hasNext()>",
+    "<java.util.Iterator: java.lang.Object next()>",
+    "<java.util.Map$Entry: java.lang.Object getKey()>",
+    "<java.util.Map$Entry: java.lang.Object getValue()>",
+    "<java.lang.String: int lastIndexOf(int)>",
+    "<java.lang.String: java.lang.String substring(int)>",
+    "<java.util.List: java.util.Iterator iterator()>",
+    "<edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo: java.lang.String getSqlType()>",
+    "<edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo: java.lang.String getMethodName()>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String,java.lang.String)>",
+    "<edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo: java.lang.String getResultType()>",
+    "<edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo: java.lang.String getParameterType()>",
+    "<edu.thu.benchmark.annotated.util.MyBatisCompiler: java.lang.String toConstantName(java.lang.String)>",
+    "<edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo: java.lang.String getFullPath()>",
+    "<java.io.OutputStreamWriter: void close()>",
+    "<java.lang.Throwable: void addSuppressed(java.lang.Throwable)>",
+    "<java.lang.Throwable: java.lang.String getMessage()>",
+    "<java.io.PrintStream: void println(java.lang.String)>",
+    "<java.lang.Throwable: void printStackTrace()>"
+  ],
+  "<edu.thu.benchmark.annotated.aspect.SqlInjectionAspect: void afterSafeSqlExecution()>": [
+    "<org.springframework.jdbc.core.JdbcTemplate: java.util.List queryForList(java.lang.String)>",
+    "<java.io.PrintStream: void println(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeArrayWithInjection03(java.lang.String)>": [
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String)>",
+    "<java.lang.Runtime: java.lang.Runtime getRuntime()>",
+    "<java.lang.Runtime: java.lang.Process exec(java.lang.String[])>",
+    "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String readProcessOutput(java.lang.Process)>"
+  ],
+  "<edu.thu.benchmark.annotated.util.FileUtils: java.lang.String readFileUnsafe(java.lang.String,java.lang.String)>": [
+    "<java.io.File: void <init>(java.lang.String,java.lang.String)>",
+    "<java.io.File: long length()>",
+    "<java.io.FileInputStream: void <init>(java.io.File)>",
+    "<java.io.FileInputStream: int read(byte[])>",
+    "<java.io.FileInputStream: void close()>",
+    "<java.lang.Throwable: void addSuppressed(java.lang.Throwable)>",
+    "<java.lang.String: void <init>(byte[],java.nio.charset.Charset)>",
+    "<java.lang.Throwable: java.lang.String getMessage()>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.lang.String readFileContentSafe04(java.lang.String)>": [
+    "<java.nio.file.Paths: java.nio.file.Path get(java.lang.String,java.lang.String[])>",
+    "<java.nio.file.Path: java.nio.file.Path toAbsolutePath()>",
+    "<java.nio.file.Path: java.nio.file.Path normalize()>",
+    "<java.nio.file.Path: java.nio.file.Path resolve(java.lang.String)>",
+    "<java.nio.file.Path: boolean startsWith(java.nio.file.Path)>",
+    "<java.lang.SecurityException: void <init>(java.lang.String)>",
+    "<java.nio.file.Files: boolean isRegularFile(java.nio.file.Path,java.nio.file.LinkOption[])>",
+    "<java.io.FileNotFoundException: void <init>(java.lang.String)>",
+    "<java.nio.file.Files: byte[] readAllBytes(java.nio.file.Path)>",
+    "<java.lang.String: void <init>(byte[])>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeViaService04(java.lang.String)>": [
+    "<edu.thu.benchmark.annotated.service.CommandService: java.lang.String executeCommandUnsafe(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.util.CommandUtils: java.lang.String executeSafe(java.lang.String)>": [
+    "<java.lang.String: java.lang.String[] split(java.lang.String,int)>",
+    "<java.util.List: boolean contains(java.lang.Object)>",
+    "<java.lang.String: boolean matches(java.lang.String)>",
+    "<java.lang.ProcessBuilder: void <init>(java.lang.String[])>",
+    "<java.lang.ProcessBuilder: java.lang.ProcessBuilder command(java.lang.String[])>",
+    "<java.lang.ProcessBuilder: java.lang.Process start()>",
+    "<edu.thu.benchmark.annotated.util.CommandUtils: java.lang.String readProcessOutput(java.lang.Process)>",
+    "<java.lang.Throwable: java.lang.String getMessage()>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: int updateUserDynamicUnsafe(int,java.lang.String)>": [
+    "<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: int updateUserDynamicUnsafe(int,java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: int lambda$testCase40$2(edu.thu.benchmark.annotated.entity.User,edu.thu.benchmark.annotated.entity.User)>": [
+    "<edu.thu.benchmark.annotated.entity.User: java.lang.Integer getId()>",
+    "<java.lang.Integer: int compareTo(java.lang.Integer)>"
+  ],
+  "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersByTemplateSafe(java.lang.String)>": [
+    "<org.springframework.jdbc.core.JdbcTemplate: java.util.List queryForList(java.lang.String,java.lang.Object[])>"
+  ],
+  "<edu.thu.benchmark.annotated.aspect.FileAccessAspect: void logFileAccessSafe(org.aspectj.lang.JoinPoint)>": [
+    "<org.aspectj.lang.JoinPoint: java.lang.Object[] getArgs()>",
+    "<java.lang.String: java.lang.String replaceAll(java.lang.String,java.lang.String)>",
+    "<java.nio.file.Paths: java.nio.file.Path get(java.lang.String,java.lang.String[])>",
+    "<java.nio.file.Path: java.nio.file.Path normalize()>",
+    "<java.nio.file.Path: java.nio.file.Path getParent()>",
+    "<java.nio.file.Files: java.nio.file.Path createDirectories(java.nio.file.Path,java.nio.file.attribute.FileAttribute[])>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String)>",
+    "<java.lang.String: byte[] getBytes()>",
+    "<java.nio.file.Files: java.nio.file.Path write(java.nio.file.Path,byte[],java.nio.file.OpenOption[])>",
+    "<java.lang.Throwable: java.lang.String getMessage()>",
+    "<java.io.PrintStream: void println(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.PathTraversalController: org.springframework.http.ResponseEntity getImageSafe02(java.lang.String)>": [
+    "<java.lang.String: boolean contains(java.lang.CharSequence)>",
+    "<java.lang.SecurityException: void <init>(java.lang.String)>",
+    "<java.lang.String: java.lang.String toLowerCase()>",
+    "<java.lang.String: boolean endsWith(java.lang.String)>",
+    "<java.nio.file.Paths: java.nio.file.Path get(java.lang.String,java.lang.String[])>",
+    "<java.nio.file.Path: java.nio.file.Path toAbsolutePath()>",
+    "<java.nio.file.Path: java.nio.file.Path normalize()>",
+    "<java.nio.file.Path: java.nio.file.Path resolve(java.lang.String)>",
+    "<org.springframework.http.ResponseEntity: org.springframework.http.ResponseEntity$BodyBuilder ok()>",
+    "<org.springframework.http.ResponseEntity$BodyBuilder: org.springframework.http.ResponseEntity$BodyBuilder contentType(org.springframework.http.MediaType)>",
+    "<java.nio.file.Path: java.io.File toFile()>",
+    "<org.springframework.core.io.FileSystemResource: void <init>(java.io.File)>",
+    "<org.springframework.http.ResponseEntity$BodyBuilder: org.springframework.http.ResponseEntity body(java.lang.Object)>"
+  ],
+  "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersByNameUnsafe(java.lang.String)>": [
+    "<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: java.util.List findUsersByNameUnsafe(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.service.impl.UserServiceImpl: java.util.List findUsersByCondition(java.lang.String)>": [
+    "<edu.thu.benchmark.annotated.mapper.UserMapper: java.util.List findUsersByCondition(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.entity.User: void <init>()>": [
+    "<java.lang.Object: void <init>()>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: edu.thu.benchmark.annotated.entity.User testCase19(java.lang.String)>": [
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String)>",
+    "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersByMultipleConditionsUnsafe(java.lang.String)>",
+    "<java.util.List: boolean isEmpty()>",
+    "<java.util.List: java.lang.Object get(int)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.PathTraversalController: org.springframework.http.ResponseEntity downloadFile03(java.lang.String)>": [
+    "<java.io.File: void <init>(java.lang.String,java.lang.String)>",
+    "<org.springframework.http.ResponseEntity: org.springframework.http.ResponseEntity$BodyBuilder ok()>",
+    "<java.io.File: java.lang.String getName()>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String)>",
+    "<org.springframework.http.ResponseEntity$BodyBuilder: org.springframework.http.ResponseEntity$HeadersBuilder header(java.lang.String,java.lang.String[])>",
+    "<org.springframework.core.io.FileSystemResource: void <init>(java.io.File)>",
+    "<org.springframework.http.ResponseEntity$BodyBuilder: org.springframework.http.ResponseEntity body(java.lang.Object)>"
+  ],
+  "<edu.thu.benchmark.annotated.service.FileUploadService: boolean isAllowedFileType(java.lang.String)>": [
+    "<java.lang.String: boolean isEmpty()>",
+    "<java.lang.String: int lastIndexOf(java.lang.String)>",
+    "<java.lang.String: java.lang.String substring(int)>",
+    "<java.lang.String: java.lang.String toLowerCase()>",
+    "<java.lang.String: java.lang.String[] split(java.lang.String)>",
+    "<java.lang.String: java.lang.String trim()>",
+    "<java.lang.String: boolean equals(java.lang.Object)>"
+  ],
+  "<edu.thu.benchmark.annotated.entity.FileInfo: java.lang.String toString()>": [
+    "<java.lang.String: java.lang.String valueOf(java.lang.Object)>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,java.lang.Long,java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.service.impl.FileServiceImpl: boolean lambda$deleteFile$1(java.lang.Integer,edu.thu.benchmark.annotated.entity.FileInfo)>": [
+    "<edu.thu.benchmark.annotated.entity.FileInfo: java.lang.Integer getId()>",
+    "<java.lang.Integer: boolean equals(java.lang.Object)>"
+  ],
+  "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersByMultipleConditionsUnsafe(java.lang.String)>": [
+    "<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: java.util.List findUsersByMultipleConditionsUnsafe(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: int testCase07(java.lang.String)>": [
+    "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: int deleteUsersUnsafe(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.service.CommandService: void <clinit>()>": [
+    "<java.util.Arrays: java.util.List asList(java.lang.Object[])>"
+  ],
+  "<edu.thu.benchmark.annotated.aspect.FileAccessAspect: void beforeSafeFileAccess(org.aspectj.lang.JoinPoint)>": [
+    "<org.aspectj.lang.JoinPoint: java.lang.Object[] getArgs()>",
+    "<java.nio.file.Paths: java.nio.file.Path get(java.lang.String,java.lang.String[])>",
+    "<java.nio.file.Path: java.nio.file.Path toAbsolutePath()>",
+    "<java.nio.file.Path: java.nio.file.Path normalize()>",
+    "<java.nio.file.Path: java.nio.file.Path resolve(java.lang.String)>",
+    "<java.nio.file.Path: boolean startsWith(java.nio.file.Path)>",
+    "<java.nio.file.Files: boolean exists(java.nio.file.Path,java.nio.file.LinkOption[])>",
+    "<java.lang.String: java.lang.String valueOf(java.lang.Object)>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String)>",
+    "<java.io.PrintStream: void println(java.lang.String)>",
+    "<java.lang.SecurityException: void <init>(java.lang.String)>",
+    "<java.lang.Throwable: java.lang.String getMessage()>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase04(java.lang.String)>": [
+    "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersByMultipleConditionsUnsafe(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.service.PathTraversalService: void <init>()>": [
+    "<java.lang.Object: void <init>()>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.PathTraversalController: org.springframework.http.ResponseEntity getFileSafe01(java.lang.String)>": [
+    "<java.nio.file.Paths: java.nio.file.Path get(java.lang.String,java.lang.String[])>",
+    "<java.nio.file.Path: java.nio.file.Path toAbsolutePath()>",
+    "<java.nio.file.Path: java.nio.file.Path normalize()>",
+    "<java.nio.file.Path: java.nio.file.Path resolve(java.lang.String)>",
+    "<java.nio.file.Path: boolean startsWith(java.nio.file.Path)>",
+    "<java.lang.SecurityException: void <init>(java.lang.String)>",
+    "<java.nio.file.Files: boolean exists(java.nio.file.Path,java.nio.file.LinkOption[])>",
+    "<java.io.FileNotFoundException: void <init>(java.lang.String)>",
+    "<org.springframework.http.ResponseEntity: org.springframework.http.ResponseEntity$BodyBuilder ok()>",
+    "<java.nio.file.Path: java.nio.file.Path getFileName()>",
+    "<java.lang.String: java.lang.String valueOf(java.lang.Object)>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String)>",
+    "<org.springframework.http.ResponseEntity$BodyBuilder: org.springframework.http.ResponseEntity$HeadersBuilder header(java.lang.String,java.lang.String[])>",
+    "<java.nio.file.Path: java.io.File toFile()>",
+    "<org.springframework.core.io.FileSystemResource: void <init>(java.io.File)>",
+    "<org.springframework.http.ResponseEntity$BodyBuilder: org.springframework.http.ResponseEntity body(java.lang.Object)>"
+  ],
+  "<edu.thu.benchmark.annotated.util.MyBatisMapperScanner: java.lang.String extractGenericType(java.lang.String)>": [
+    "<java.lang.String: boolean contains(java.lang.CharSequence)>",
+    "<java.lang.String: int indexOf(int)>",
+    "<java.lang.String: int lastIndexOf(int)>",
+    "<java.lang.String: java.lang.String substring(int,int)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: edu.thu.benchmark.annotated.entity.User testCase08(java.lang.String)>": [
+    "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: edu.thu.benchmark.annotated.entity.User findUserByEmailUnsafe(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase38(java.lang.String,java.lang.String)>": [
+    "<java.lang.Integer: int parseInt(java.lang.String)>",
+    "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersWithLimitSafe(int,int)>"
+  ],
+  "<edu.thu.benchmark.annotated.util.MyBatisSqlExtractor: void main(java.lang.String[])>": [
+    "<java.io.PrintStream: void println(java.lang.String)>",
+    "<java.io.File: void <init>(java.lang.String)>",
+    "<java.io.File: boolean isDirectory()>",
+    "<edu.thu.benchmark.annotated.util.MyBatisSqlExtractor: java.util.Map extractMethodPathsFromDirectory(java.io.File)>",
+    "<java.util.Map: java.util.Set entrySet()>",
+    "<java.util.Set: java.util.Iterator iterator()>",
+    "<java.util.Iterator: boolean hasNext()>",
+    "<java.util.Iterator: java.lang.Object next()>",
+    "<java.util.Map$Entry: java.lang.Object getKey()>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String)>",
+    "<java.util.Map$Entry: java.lang.Object getValue()>",
+    "<java.util.List: java.util.Iterator iterator()>",
+    "<edu.thu.benchmark.annotated.util.MyBatisSqlExtractor: java.lang.String generateMethodCall(java.lang.String)>",
+    "<java.io.File: boolean isFile()>",
+    "<java.io.File: java.lang.String getName()>",
+    "<java.lang.String: java.lang.String toLowerCase()>",
+    "<java.lang.String: boolean endsWith(java.lang.String)>",
+    "<edu.thu.benchmark.annotated.util.MyBatisSqlExtractor: java.util.List extractMethodPaths(java.io.File)>"
+  ],
+  "<edu.thu.benchmark.annotated.util.FileUtils: java.lang.String joinPathsSafe(java.lang.String,java.lang.String)>": [
+    "<java.nio.file.Paths: java.nio.file.Path get(java.lang.String,java.lang.String[])>",
+    "<java.nio.file.Path: java.nio.file.Path toAbsolutePath()>",
+    "<java.nio.file.Path: java.nio.file.Path normalize()>",
+    "<java.nio.file.Path: java.nio.file.Path resolve(java.lang.String)>",
+    "<java.nio.file.Path: boolean startsWith(java.nio.file.Path)>",
+    "<java.lang.SecurityException: void <init>(java.lang.String)>",
+    "<java.nio.file.Path: java.lang.String toString()>"
+  ],
+  "<edu.thu.benchmark.annotated.service.CommandService: java.lang.String executeCommandSafe(java.lang.String)>": [
+    "<java.lang.String: java.lang.String[] split(java.lang.String,int)>",
+    "<java.util.List: boolean contains(java.lang.Object)>",
+    "<java.lang.String: boolean matches(java.lang.String)>",
+    "<java.lang.ProcessBuilder: void <init>(java.lang.String[])>",
+    "<java.lang.ProcessBuilder: java.lang.ProcessBuilder command(java.lang.String[])>",
+    "<java.lang.ProcessBuilder: java.lang.Process start()>",
+    "<edu.thu.benchmark.annotated.service.CommandService: java.lang.String readProcessOutput(java.lang.Process)>",
+    "<java.lang.Throwable: java.lang.String getMessage()>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithProcessBuilder06(java.lang.String)>": [
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String)>",
+    "<java.lang.ProcessBuilder: void <init>(java.lang.String[])>",
+    "<java.lang.ProcessBuilder: java.lang.Process start()>",
+    "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String readProcessOutput(java.lang.Process)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String lambda$executeWithJavaApiSafe09$1(java.nio.file.Path)>": [
+    "<java.nio.file.Path: java.nio.file.Path getFileName()>",
+    "<java.nio.file.Path: java.lang.String toString()>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase37(java.lang.String)>": [
+    "<java.util.List: java.util.List of(java.lang.Object,java.lang.Object,java.lang.Object)>",
+    "<java.util.List: boolean contains(java.lang.Object)>",
+    "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersSortedSafe(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.entity.FileInfo: void <init>(java.lang.String,java.lang.String,java.lang.String,java.lang.Long)>": [
+    "<java.lang.Object: void <init>()>",
+    "<java.time.LocalDateTime: java.time.LocalDateTime now()>"
+  ],
+  "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersSortedSafe(java.lang.String)>": [
+    "<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: java.util.List findUsersSortedSafe(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase31(java.lang.String,java.lang.String)>": [
+    "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersByJdbcSafe(java.lang.String,java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.service.FileUploadService: java.lang.String saveFileSafe(org.springframework.web.multipart.MultipartFile)>": [
+    "<org.springframework.web.multipart.MultipartFile: long getSize()>",
+    "<java.lang.IllegalArgumentException: void <init>(java.lang.String)>",
+    "<org.springframework.web.multipart.MultipartFile: java.lang.String getOriginalFilename()>",
+    "<edu.thu.benchmark.annotated.service.FileUploadService: boolean isAllowedFileType(java.lang.String)>",
+    "<java.io.File: void <init>(java.lang.String)>",
+    "<java.io.File: boolean exists()>",
+    "<java.io.File: boolean mkdirs()>",
+    "<java.lang.String: boolean contains(java.lang.CharSequence)>",
+    "<java.lang.String: int lastIndexOf(java.lang.String)>",
+    "<java.lang.String: java.lang.String substring(int)>",
+    "<java.util.UUID: java.util.UUID randomUUID()>",
+    "<java.util.UUID: java.lang.String toString()>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String,java.lang.String)>",
+    "<java.nio.file.Paths: java.nio.file.Path get(java.lang.String,java.lang.String[])>",
+    "<org.springframework.web.multipart.MultipartFile: byte[] getBytes()>",
+    "<java.nio.file.Files: java.nio.file.Path write(java.nio.file.Path,byte[],java.nio.file.OpenOption[])>",
+    "<java.nio.file.Path: java.lang.String toString()>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.HttpController: boolean isAllowedHost(java.lang.String)>": [
+    "<java.lang.String: boolean endsWith(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.PathTraversalController: void <init>()>": [
+    "<java.lang.Object: void <init>()>"
+  ],
+  "<edu.thu.benchmark.annotated.util.MyBatisSqlExtractor: java.util.List extractMethodPaths(java.io.File)>": [
+    "<java.util.ArrayList: void <init>()>",
+    "<javax.xml.parsers.DocumentBuilderFactory: javax.xml.parsers.DocumentBuilderFactory newInstance()>",
+    "<javax.xml.parsers.DocumentBuilderFactory: void setFeature(java.lang.String,boolean)>",
+    "<javax.xml.parsers.DocumentBuilderFactory: void setXIncludeAware(boolean)>",
+    "<javax.xml.parsers.DocumentBuilderFactory: void setExpandEntityReferences(boolean)>",
+    "<javax.xml.parsers.DocumentBuilderFactory: javax.xml.parsers.DocumentBuilder newDocumentBuilder()>",
+    "<javax.xml.parsers.DocumentBuilder: org.w3c.dom.Document parse(java.io.File)>",
+    "<org.w3c.dom.Document: org.w3c.dom.Element getDocumentElement()>",
+    "<org.w3c.dom.Element: java.lang.String getAttribute(java.lang.String)>",
+    "<org.w3c.dom.Document: org.w3c.dom.NodeList getElementsByTagName(java.lang.String)>",
+    "<org.w3c.dom.NodeList: int getLength()>",
+    "<org.w3c.dom.NodeList: org.w3c.dom.Node item(int)>",
+    "<java.lang.String: boolean isEmpty()>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String,java.lang.String)>",
+    "<java.util.List: boolean add(java.lang.Object)>",
+    "<java.io.File: java.lang.String getName()>",
+    "<java.lang.Throwable: java.lang.String getMessage()>",
+    "<java.io.PrintStream: void println(java.lang.String)>",
+    "<java.lang.Throwable: void printStackTrace()>"
+  ],
+  "<edu.thu.benchmark.annotated.util.MyBatisCompiler: void main(java.lang.String[])>": [
+    "<java.io.PrintStream: void println(java.lang.String)>",
+    "<edu.thu.benchmark.annotated.util.MyBatisCompiler: void <init>(java.lang.String)>",
+    "<edu.thu.benchmark.annotated.util.MyBatisCompiler: edu.thu.benchmark.annotated.util.MyBatisCompiler parseDirectory(java.lang.String)>",
+    "<edu.thu.benchmark.annotated.util.MyBatisCompiler: void compile()>",
+    "<edu.thu.benchmark.annotated.util.MyBatisCompiler: void saveToConstantsFile()>",
+    "<edu.thu.benchmark.annotated.util.MyBatisCompiler: void saveToExampleFile()>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase14(java.lang.String)>": [
+    "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersByAspectUnsafe(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.'annotation'.VulnerabilityType: void <init>(java.lang.String,int,java.lang.String,int)>": [
+    "<java.lang.Enum: void <init>(java.lang.String,int)>"
+  ],
+  "<edu.thu.benchmark.annotated.util.MyBatisXmlParser$MapperInfo: void <init>()>": [
+    "<java.lang.Object: void <init>()>",
+    "<java.util.ArrayList: void <init>()>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.lang.String readFileContent04(java.lang.String)>": [
+    "<java.lang.StringBuilder: void <init>()>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String,java.lang.String)>",
+    "<java.io.FileInputStream: void <init>(java.lang.String)>",
+    "<java.io.InputStreamReader: void <init>(java.io.InputStream)>",
+    "<java.io.BufferedReader: void <init>(java.io.Reader)>",
+    "<java.io.BufferedReader: java.lang.String readLine()>",
+    "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>",
+    "<java.io.BufferedReader: void close()>",
+    "<java.lang.Throwable: void addSuppressed(java.lang.Throwable)>",
+    "<java.io.FileInputStream: void close()>",
+    "<java.lang.StringBuilder: java.lang.String toString()>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.XmlController: java.util.Map parseXml(java.lang.String)>": [
+    "<java.util.HashMap: void <init>()>",
+    "<javax.xml.parsers.DocumentBuilderFactory: javax.xml.parsers.DocumentBuilderFactory newInstance()>",
+    "<javax.xml.parsers.DocumentBuilderFactory: javax.xml.parsers.DocumentBuilder newDocumentBuilder()>",
+    "<java.io.StringReader: void <init>(java.lang.String)>",
+    "<org.xml.sax.InputSource: void <init>(java.io.Reader)>",
+    "<javax.xml.parsers.DocumentBuilder: org.w3c.dom.Document parse(org.xml.sax.InputSource)>",
+    "<org.w3c.dom.Document: org.w3c.dom.Element getDocumentElement()>",
+    "<org.w3c.dom.Node: java.lang.String getNodeName()>",
+    "<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>",
+    "<org.w3c.dom.Element: org.w3c.dom.NodeList getElementsByTagName(java.lang.String)>",
+    "<org.w3c.dom.NodeList: int getLength()>",
+    "<org.w3c.dom.NodeList: org.w3c.dom.Node item(int)>",
+    "<org.w3c.dom.Node: java.lang.String getTextContent()>",
+    "<java.lang.Boolean: java.lang.Boolean valueOf(boolean)>",
+    "<java.lang.Throwable: java.lang.String getMessage()>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: edu.thu.benchmark.annotated.entity.User testCase29(java.lang.String,java.lang.String)>": [
+    "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: edu.thu.benchmark.annotated.entity.User findUserByCredentialsSafe(java.lang.String,java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.util.MyBatisCompiler: java.lang.String toConstantName(java.lang.String)>": [
+    "<java.lang.StringBuilder: void <init>()>",
+    "<java.lang.String: int length()>",
+    "<java.lang.String: char charAt(int)>",
+    "<java.lang.Character: boolean isUpperCase(char)>",
+    "<java.lang.StringBuilder: java.lang.StringBuilder append(char)>",
+    "<java.lang.Character: char toUpperCase(char)>",
+    "<java.lang.StringBuilder: java.lang.String toString()>"
+  ],
+  "<edu.thu.benchmark.annotated.util.FileUtils: java.util.List listDirectoryUnsafe(java.lang.String,java.lang.String)>": [
+    "<java.util.ArrayList: void <init>()>",
+    "<java.io.File: void <init>(java.lang.String,java.lang.String)>",
+    "<java.io.File: java.io.File[] listFiles()>",
+    "<java.io.File: java.lang.String getName()>",
+    "<java.util.List: boolean add(java.lang.Object)>",
+    "<java.lang.Throwable: java.lang.String getMessage()>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase42(java.lang.String)>": [
+    "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List testAspectSafeMethod(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.'annotation'.VulnerabilityLevel: edu.thu.benchmark.annotated.'annotation'.VulnerabilityLevel valueOf(java.lang.String)>": [
+    "<java.lang.Enum: java.lang.Enum valueOf(java.lang.Class,java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.CommandController: java.lang.String executeSystemCommand(java.lang.String)>": [
+    "<java.lang.StringBuilder: void <init>()>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String,java.lang.String)>",
+    "<java.lang.Runtime: java.lang.Runtime getRuntime()>",
+    "<java.lang.Runtime: java.lang.Process exec(java.lang.String)>",
+    "<java.lang.Process: java.io.InputStream getInputStream()>",
+    "<java.io.InputStreamReader: void <init>(java.io.InputStream)>",
+    "<java.io.BufferedReader: void <init>(java.io.Reader)>",
+    "<java.io.BufferedReader: java.lang.String readLine()>",
+    "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>",
+    "<java.lang.Process: boolean waitFor(long,java.util.concurrent.TimeUnit)>",
+    "<java.lang.StringBuilder: java.lang.String toString()>",
+    "<java.lang.Throwable: java.lang.String getMessage()>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.lang.String getFileWithInjectionSafe05(java.lang.String)>": [
+    "<edu.thu.benchmark.annotated.service.PathTraversalService: java.lang.String readFileSafe(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithJavaApiSafe09(java.lang.String,java.lang.String)>": [
+    "<java.nio.file.Paths: java.nio.file.Path get(java.lang.String,java.lang.String[])>",
+    "<java.nio.file.Path: java.nio.file.Path normalize()>",
+    "<java.nio.file.Path: boolean startsWith(java.nio.file.Path)>",
+    "<java.nio.file.Files: java.util.stream.Stream list(java.nio.file.Path)>",
+    "<edu.thu.benchmark.annotated.controller.CommandInjectionController$lambda_executeWithJavaApiSafe09_0__13: java.util.function.Predicate bootstrap$(java.lang.String)>",
+    "<java.util.stream.Stream: java.util.stream.Stream filter(java.util.function.Predicate)>",
+    "<edu.thu.benchmark.annotated.controller.CommandInjectionController$lambda_executeWithJavaApiSafe09_1__14: java.util.function.Function bootstrap$()>",
+    "<java.util.stream.Stream: java.util.stream.Stream map(java.util.function.Function)>",
+    "<java.util.stream.Collectors: java.util.stream.Collector joining(java.lang.CharSequence)>",
+    "<java.util.stream.Stream: java.lang.Object collect(java.util.stream.Collector)>",
+    "<java.lang.Throwable: java.lang.String getMessage()>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.entity.CommandExecution: java.lang.String toString()>": [
+    "<java.lang.String: java.lang.String valueOf(java.lang.Object)>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List searchUsersSafe(java.lang.String,java.lang.String)>": [
+    "<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: java.util.List searchUsersSafe(java.lang.String,java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.HttpController: void <clinit>()>": [
+    "<java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.aspect.FileAccessAspect: java.lang.String accessLogFile(java.lang.String)>": [
+    "<java.io.File: void <init>(java.lang.String)>",
+    "<java.io.File: java.nio.file.Path toPath()>",
+    "<java.nio.file.Files: byte[] readAllBytes(java.nio.file.Path)>",
+    "<java.lang.String: void <init>(byte[])>",
+    "<java.lang.Throwable: java.lang.String getMessage()>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersInListUnsafe(java.lang.String)>": [
+    "<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: java.util.List findUsersInListUnsafe(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.service.impl.UserServiceImpl: int insertUser(edu.thu.benchmark.annotated.entity.User)>": [
+    "<edu.thu.benchmark.annotated.mapper.UserMapper: int insertUser(edu.thu.benchmark.annotated.entity.User)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.FileController: org.springframework.http.ResponseEntity readFile(java.lang.String)>": [
+    "<edu.thu.benchmark.annotated.service.FileService: org.springframework.core.io.Resource loadByPath(java.lang.String)>",
+    "<org.springframework.core.io.Resource: boolean exists()>",
+    "<java.nio.file.Paths: java.nio.file.Path get(java.lang.String,java.lang.String[])>",
+    "<java.nio.file.Files: byte[] readAllBytes(java.nio.file.Path)>",
+    "<java.lang.String: void <init>(byte[])>",
+    "<org.springframework.http.ResponseEntity: org.springframework.http.ResponseEntity ok(java.lang.Object)>",
+    "<org.springframework.http.ResponseEntity: org.springframework.http.ResponseEntity$HeadersBuilder notFound()>",
+    "<org.springframework.http.ResponseEntity$HeadersBuilder: org.springframework.http.ResponseEntity build()>",
+    "<org.springframework.http.ResponseEntity: org.springframework.http.ResponseEntity$BodyBuilder badRequest()>",
+    "<java.lang.Throwable: java.lang.String getMessage()>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String)>",
+    "<org.springframework.http.ResponseEntity$BodyBuilder: org.springframework.http.ResponseEntity body(java.lang.Object)>"
+  ],
+  "<edu.thu.benchmark.annotated.service.FileUploadService: java.lang.String saveFileUnsafe(org.springframework.web.multipart.MultipartFile,java.lang.String)>": [
+    "<java.io.File: void <init>(java.lang.String)>",
+    "<java.io.File: boolean exists()>",
+    "<java.io.File: boolean mkdirs()>",
+    "<org.springframework.web.multipart.MultipartFile: java.lang.String getOriginalFilename()>",
+    "<java.nio.file.Paths: java.nio.file.Path get(java.lang.String,java.lang.String[])>",
+    "<org.springframework.web.multipart.MultipartFile: byte[] getBytes()>",
+    "<java.nio.file.Files: java.nio.file.Path write(java.nio.file.Path,byte[],java.nio.file.OpenOption[])>",
+    "<java.nio.file.Path: java.lang.String toString()>"
+  ],
+  "<edu.thu.benchmark.annotated.util.MyBatisXmlParser: java.util.List parseDirectory(java.lang.String)>": [
+    "<java.util.ArrayList: void <init>()>",
+    "<java.nio.file.Paths: java.nio.file.Path get(java.lang.String,java.lang.String[])>",
+    "<java.nio.file.Files: java.util.stream.Stream walk(java.nio.file.Path,java.nio.file.FileVisitOption[])>",
+    "<edu.thu.benchmark.annotated.util.MyBatisXmlParser$lambda_parseDirectory_0__5: java.util.function.Predicate bootstrap$()>",
+    "<java.util.stream.Stream: java.util.stream.Stream filter(java.util.function.Predicate)>",
+    "<edu.thu.benchmark.annotated.util.MyBatisXmlParser$lambda_parseDirectory_1__6: java.util.function.Predicate bootstrap$()>",
+    "<java.util.stream.Collectors: java.util.stream.Collector toList()>",
+    "<java.util.stream.Stream: java.lang.Object collect(java.util.stream.Collector)>",
+    "<java.util.List: java.util.Iterator iterator()>",
+    "<java.util.Iterator: boolean hasNext()>",
+    "<java.util.Iterator: java.lang.Object next()>",
+    "<java.nio.file.Path: java.lang.String toString()>",
+    "<edu.thu.benchmark.annotated.util.MyBatisXmlParser: edu.thu.benchmark.annotated.util.MyBatisXmlParser$MapperInfo parseXml(java.lang.String)>",
+    "<edu.thu.benchmark.annotated.util.MyBatisXmlParser$MapperInfo: java.lang.String getNamespace()>",
+    "<java.lang.String: boolean isEmpty()>",
+    "<java.util.List: boolean add(java.lang.Object)>",
+    "<java.lang.Throwable: java.lang.String getMessage()>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String)>",
+    "<java.io.PrintStream: void println(java.lang.String)>",
+    "<java.lang.Throwable: void printStackTrace()>"
+  ],
+  "<edu.thu.benchmark.annotated.service.ZipService: java.lang.String getZipEntrySafe(java.lang.String,java.lang.String)>": [
+    "<java.nio.file.Paths: java.nio.file.Path get(java.lang.String,java.lang.String[])>",
+    "<java.nio.file.Path: java.nio.file.Path toAbsolutePath()>",
+    "<java.nio.file.Path: java.nio.file.Path normalize()>",
+    "<java.nio.file.Path: java.nio.file.Path resolve(java.lang.String)>",
+    "<java.nio.file.Path: boolean startsWith(java.nio.file.Path)>",
+    "<java.lang.SecurityException: void <init>(java.lang.String)>",
+    "<java.nio.file.Files: boolean isRegularFile(java.nio.file.Path,java.nio.file.LinkOption[])>",
+    "<java.io.IOException: void <init>(java.lang.String)>",
+    "<java.lang.String: boolean contains(java.lang.CharSequence)>",
+    "<java.nio.file.Path: java.io.File toFile()>",
+    "<java.util.zip.ZipFile: void <init>(java.io.File)>",
+    "<java.util.zip.ZipFile: java.util.zip.ZipEntry getEntry(java.lang.String)>",
+    "<java.util.zip.ZipFile: void close()>",
+    "<java.lang.StringBuilder: void <init>()>",
+    "<java.util.zip.ZipFile: java.io.InputStream getInputStream(java.util.zip.ZipEntry)>",
+    "<java.io.InputStream: int read(byte[])>",
+    "<java.lang.String: void <init>(byte[],int,int)>",
+    "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>",
+    "<java.io.InputStream: void close()>",
+    "<java.lang.Throwable: void addSuppressed(java.lang.Throwable)>",
+    "<java.lang.StringBuilder: java.lang.String toString()>",
+    "<java.lang.Throwable: java.lang.String getMessage()>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase01(java.lang.String)>": [
+    "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: void <init>()>",
+    "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersByNameUnsafe(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.XmlController: java.util.Map processXml(java.lang.String)>": [
+    "<java.util.HashMap: void <init>()>",
+    "<javax.xml.parsers.DocumentBuilderFactory: javax.xml.parsers.DocumentBuilderFactory newInstance()>",
+    "<javax.xml.parsers.DocumentBuilderFactory: void setFeature(java.lang.String,boolean)>",
+    "<javax.xml.parsers.DocumentBuilderFactory: javax.xml.parsers.DocumentBuilder newDocumentBuilder()>",
+    "<java.io.StringReader: void <init>(java.lang.String)>",
+    "<org.xml.sax.InputSource: void <init>(java.io.Reader)>",
+    "<javax.xml.parsers.DocumentBuilder: org.w3c.dom.Document parse(org.xml.sax.InputSource)>",
+    "<org.w3c.dom.Document: org.w3c.dom.Element getDocumentElement()>",
+    "<org.w3c.dom.Node: java.lang.String getNodeName()>",
+    "<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>",
+    "<java.lang.Boolean: java.lang.Boolean valueOf(boolean)>",
+    "<java.lang.Throwable: java.lang.String getMessage()>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String fileOperationWithApiSafe10(java.lang.String)>": [
+    "<java.nio.file.Paths: java.nio.file.Path get(java.lang.String,java.lang.String[])>",
+    "<java.nio.file.Path: java.nio.file.Path normalize()>",
+    "<java.nio.file.Path: boolean startsWith(java.nio.file.Path)>",
+    "<java.nio.file.Files: byte[] readAllBytes(java.nio.file.Path)>",
+    "<java.lang.String: void <init>(byte[])>",
+    "<java.lang.Throwable: java.lang.String getMessage()>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.util.MyBatisMapperScanner: void <clinit>()>": [
+    "<java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.service.impl.FileServiceImpl: org.springframework.core.io.Resource loadById(java.lang.Integer)>": [
+    "<java.util.Collection: java.util.stream.Stream stream()>",
+    "<edu.thu.benchmark.annotated.service.impl.FileServiceImpl$lambda_loadById_0__7: java.util.function.Predicate bootstrap$(java.lang.Integer)>",
+    "<java.util.stream.Stream: java.util.stream.Stream filter(java.util.function.Predicate)>",
+    "<java.util.stream.Stream: java.util.Optional findFirst()>",
+    "<java.util.Optional: java.lang.Object orElse(java.lang.Object)>",
+    "<edu.thu.benchmark.annotated.entity.FileInfo: java.lang.String getFilepath()>",
+    "<java.nio.file.Paths: java.nio.file.Path get(java.lang.String,java.lang.String[])>",
+    "<java.nio.file.Path: java.net.URI toUri()>",
+    "<org.springframework.core.io.UrlResource: void <init>(java.net.URI)>",
+    "<org.springframework.core.io.Resource: boolean exists()>",
+    "<org.springframework.core.io.Resource: boolean isReadable()>"
+  ],
+  "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: int updateUserDynamicSafe(int,java.lang.String,java.lang.String,java.lang.String)>": [
+    "<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: int updateUserDynamicSafe(int,java.lang.String,java.lang.String,java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase03(java.lang.String)>": [
+    "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersInListUnsafe(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.'annotation'.VulnerabilityType: edu.thu.benchmark.annotated.'annotation'.VulnerabilityType[] values()>": [
+    "<java.lang.Object: java.lang.Object clone()>"
+  ],
+  "<edu.thu.benchmark.annotated.util.MyBatisSqlExtractor: java.lang.String convertToVariableName(java.lang.String)>": [
+    "<java.lang.String: boolean isEmpty()>",
+    "<java.lang.String: int lastIndexOf(int)>",
+    "<java.lang.String: java.lang.String substring(int,int)>",
+    "<java.lang.String: java.lang.String toLowerCase()>",
+    "<java.lang.String: java.lang.String substring(int)>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String,java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeViaAspect05(java.lang.String)>": [
+    "<edu.thu.benchmark.annotated.aspect.CommandExecutionAspect: java.lang.String executeCommandUnsafe(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase34(java.lang.String)>": [
+    "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersByAspectSafe(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: int testCase27(java.lang.Integer)>": [
+    "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: int deleteUsersSafe(java.lang.Integer)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase32(java.lang.String)>": [
+    "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersByTemplateSafe(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase11(java.lang.String)>": [
+    "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersByJdbcUnsafe(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.aspect.CommandExecutionAspect: java.lang.String executeCommandSafe(java.lang.String)>": [
+    "<java.lang.String: java.lang.String[] split(java.lang.String,int)>",
+    "<java.util.List: boolean contains(java.lang.Object)>",
+    "<java.lang.String: boolean matches(java.lang.String)>",
+    "<java.lang.ProcessBuilder: void <init>(java.lang.String[])>",
+    "<java.lang.ProcessBuilder: java.lang.ProcessBuilder command(java.lang.String[])>",
+    "<java.lang.ProcessBuilder: java.lang.Process start()>",
+    "<edu.thu.benchmark.annotated.aspect.CommandExecutionAspect: java.lang.String readProcessOutput(java.lang.Process)>",
+    "<java.lang.Throwable: java.lang.String getMessage()>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.aspect.FileAccessAspect: void beforeUnsafeFileAccess(org.aspectj.lang.JoinPoint)>": [
+    "<org.aspectj.lang.JoinPoint: java.lang.Object[] getArgs()>",
+    "<java.io.File: void <init>(java.lang.String)>",
+    "<java.io.File: boolean exists()>",
+    "<java.io.File: java.lang.String getAbsolutePath()>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String)>",
+    "<java.io.PrintStream: void println(java.lang.String)>",
+    "<java.lang.Throwable: java.lang.String getMessage()>"
+  ],
+  "<edu.thu.benchmark.annotated.service.ZipService: java.lang.String extractZipSafe(java.lang.String)>": [
+    "<java.nio.file.Paths: java.nio.file.Path get(java.lang.String,java.lang.String[])>",
+    "<java.nio.file.Path: java.nio.file.Path toAbsolutePath()>",
+    "<java.nio.file.Path: java.nio.file.Path normalize()>",
+    "<java.nio.file.Path: java.nio.file.Path resolve(java.lang.String)>",
+    "<java.nio.file.Path: boolean startsWith(java.nio.file.Path)>",
+    "<java.lang.SecurityException: void <init>(java.lang.String)>",
+    "<java.nio.file.Files: boolean isRegularFile(java.nio.file.Path,java.nio.file.LinkOption[])>",
+    "<java.io.IOException: void <init>(java.lang.String)>",
+    "<java.nio.file.Path: java.io.File toFile()>",
+    "<java.util.zip.ZipFile: void <init>(java.io.File)>",
+    "<java.nio.file.Files: boolean exists(java.nio.file.Path,java.nio.file.LinkOption[])>",
+    "<java.nio.file.Files: java.nio.file.Path createDirectories(java.nio.file.Path,java.nio.file.attribute.FileAttribute[])>",
+    "<java.util.zip.ZipFile: java.util.stream.Stream stream()>",
+    "<edu.thu.benchmark.annotated.service.ZipService$lambda_extractZipSafe_1__12: java.util.function.Consumer bootstrap$(java.nio.file.Path,java.util.zip.ZipFile)>",
+    "<java.util.stream.Stream: void forEach(java.util.function.Consumer)>",
+    "<java.util.zip.ZipFile: void close()>",
+    "<java.lang.Throwable: java.lang.String getMessage()>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.util.MyBatisMapperScanner$SqlMethod: java.lang.String getFullMethodPath()>": [
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String,java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.UserController: void searchByUsername(java.lang.String,javax.servlet.http.HttpServletResponse)>": [
+    "<edu.thu.benchmark.annotated.service.UserService: edu.thu.benchmark.annotated.entity.User getUserByUsername(java.lang.String)>",
+    "<javax.servlet.http.HttpServletResponse: void setContentType(java.lang.String)>",
+    "<javax.servlet.http.HttpServletResponse: java.io.PrintWriter getWriter()>",
+    "<java.io.PrintWriter: void println(java.lang.String)>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String)>",
+    "<edu.thu.benchmark.annotated.entity.User: java.lang.Integer getId()>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.Integer)>",
+    "<edu.thu.benchmark.annotated.entity.User: java.lang.String getUsername()>",
+    "<edu.thu.benchmark.annotated.entity.User: java.lang.String getEmail()>",
+    "<java.io.PrintWriter: void close()>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.util.Map getConfigFileSafe08(java.lang.String)>": [
+    "<java.lang.String: boolean contains(java.lang.CharSequence)>",
+    "<java.lang.SecurityException: void <init>(java.lang.String)>",
+    "<java.lang.String: java.lang.String toLowerCase()>",
+    "<java.lang.String: boolean endsWith(java.lang.String)>",
+    "<java.nio.file.Paths: java.nio.file.Path get(java.lang.String,java.lang.String[])>",
+    "<java.nio.file.Path: java.nio.file.Path toAbsolutePath()>",
+    "<java.nio.file.Path: java.nio.file.Path normalize()>",
+    "<java.nio.file.Path: java.nio.file.Path resolve(java.lang.String)>",
+    "<java.nio.file.Path: boolean startsWith(java.nio.file.Path)>",
+    "<java.util.Properties: void <init>()>",
+    "<java.nio.file.Path: java.io.File toFile()>",
+    "<java.io.FileInputStream: void <init>(java.io.File)>",
+    "<java.util.Properties: void load(java.io.InputStream)>",
+    "<java.io.FileInputStream: void close()>",
+    "<java.lang.Throwable: void addSuppressed(java.lang.Throwable)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeViaUtils08(java.lang.String)>": [
+    "<edu.thu.benchmark.annotated.util.CommandUtils: java.lang.String executeUnsafe(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeCommandSafe01(java.lang.String)>": [
+    "<java.lang.ProcessBuilder: void <init>(java.lang.String[])>",
+    "<java.lang.ProcessBuilder: java.lang.Process start()>",
+    "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String readProcessOutput(java.lang.Process)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase13(java.lang.String)>": [
+    "<java.util.HashMap: void <init>()>",
+    "<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>",
+    "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findByNamedParamsUnsafe(java.lang.String,java.util.Map)>"
+  ],
+  "<edu.thu.benchmark.annotated.service.PathTraversalService: java.lang.String readFileUnsafe(java.lang.String)>": [
+    "<java.lang.StringBuilder: void <init>()>",
+    "<java.io.File: void <init>(java.lang.String,java.lang.String)>",
+    "<java.io.FileReader: void <init>(java.io.File)>",
+    "<java.io.BufferedReader: void <init>(java.io.Reader)>",
+    "<java.io.BufferedReader: java.lang.String readLine()>",
+    "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>",
+    "<java.io.BufferedReader: void close()>",
+    "<java.lang.Throwable: void addSuppressed(java.lang.Throwable)>",
+    "<java.lang.Throwable: java.lang.String getMessage()>",
+    "<java.lang.StringBuilder: java.lang.String toString()>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeViaServiceSafe04(java.lang.String)>": [
+    "<edu.thu.benchmark.annotated.service.CommandService: java.lang.String executeCommandSafe(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.UserController: java.lang.String addUserForm(org.springframework.ui.Model)>": [
+    "<edu.thu.benchmark.annotated.entity.User: void <init>()>",
+    "<org.springframework.ui.Model: org.springframework.ui.Model addAttribute(java.lang.String,java.lang.Object)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String readProcessOutput(java.lang.Process)>": [
+    "<java.lang.Process: java.io.InputStream getInputStream()>",
+    "<java.io.InputStreamReader: void <init>(java.io.InputStream)>",
+    "<java.io.BufferedReader: void <init>(java.io.Reader)>",
+    "<java.lang.StringBuilder: void <init>()>",
+    "<java.io.BufferedReader: java.lang.String readLine()>",
+    "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>",
+    "<java.lang.StringBuilder: java.lang.String toString()>",
+    "<java.io.BufferedReader: void close()>",
+    "<java.lang.Throwable: void addSuppressed(java.lang.Throwable)>"
+  ],
+  "<edu.thu.benchmark.annotated.util.MyBatisMapperScanner: void generateJavaInterfaces(java.util.Map)>": [
+    "<java.io.File: void <init>(java.lang.String)>",
+    "<java.io.File: boolean exists()>",
+    "<java.io.File: boolean mkdirs()>",
+    "<java.util.Map: java.util.Set entrySet()>",
+    "<java.util.Set: java.util.Iterator iterator()>",
+    "<java.util.Iterator: boolean hasNext()>",
+    "<java.util.Iterator: java.lang.Object next()>",
+    "<java.util.Map$Entry: java.lang.Object getKey()>",
+    "<java.util.Map$Entry: java.lang.Object getValue()>",
+    "<java.lang.String: int lastIndexOf(int)>",
+    "<java.lang.String: java.lang.String substring(int,int)>",
+    "<java.lang.String: java.lang.String substring(int)>",
+    "<java.lang.String: java.lang.String replace(char,char)>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String,java.lang.String)>",
+    "<java.io.FileWriter: void <init>(java.lang.String)>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String)>",
+    "<java.io.Writer: void write(java.lang.String)>",
+    "<java.util.List: java.util.Iterator iterator()>",
+    "<edu.thu.benchmark.annotated.util.MyBatisMapperScanner$SqlMethod: java.lang.String getSqlId()>",
+    "<edu.thu.benchmark.annotated.util.MyBatisMapperScanner$SqlMethod: java.lang.String getSqlType()>",
+    "<edu.thu.benchmark.annotated.util.MyBatisMapperScanner$SqlMethod: java.lang.String getParameterType()>",
+    "<edu.thu.benchmark.annotated.util.MyBatisMapperScanner$SqlMethod: java.lang.String getResultType()>",
+    "<edu.thu.benchmark.annotated.util.MyBatisMapperScanner: java.lang.String getSimpleTypeName(java.lang.String)>",
+    "<java.lang.String: boolean equals(java.lang.Object)>",
+    "<java.lang.String: boolean contains(java.lang.CharSequence)>",
+    "<edu.thu.benchmark.annotated.util.MyBatisMapperScanner: java.lang.String extractGenericType(java.lang.String)>",
+    "<java.io.OutputStreamWriter: void close()>",
+    "<java.lang.Throwable: void addSuppressed(java.lang.Throwable)>",
+    "<java.lang.Throwable: java.lang.String getMessage()>",
+    "<java.io.PrintStream: void println(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.util.MyBatisSqlExtractor: java.util.Map extractMethodPathsFromDirectory(java.io.File)>": [
+    "<java.util.HashMap: void <init>()>",
+    "<java.io.File: boolean isDirectory()>",
+    "<java.io.File: java.lang.String getAbsolutePath()>",
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String)>",
+    "<java.io.PrintStream: void println(java.lang.String)>",
+    "<edu.thu.benchmark.annotated.util.MyBatisSqlExtractor$lambda_extractMethodPathsFromDirectory_0__1: java.io.FilenameFilter bootstrap$()>",
+    "<java.io.File: java.io.File[] listFiles(java.io.FilenameFilter)>",
+    "<edu.thu.benchmark.annotated.util.MyBatisSqlExtractor: java.util.List extractMethodPaths(java.io.File)>",
+    "<java.io.File: java.lang.String getName()>",
+    "<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>"
+  ],
+  "<edu.thu.benchmark.annotated.util.MyBatisXmlParser: boolean lambda$parseDirectory$1(java.nio.file.Path)>": [
+    "<java.nio.file.Path: java.lang.String toString()>",
+    "<java.lang.String: java.lang.String toLowerCase()>",
+    "<java.lang.String: boolean endsWith(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.FileController: java.lang.String filePage(org.springframework.ui.Model)>": [
+    "<edu.thu.benchmark.annotated.service.FileService: java.util.List getAllFiles()>",
+    "<org.springframework.ui.Model: org.springframework.ui.Model addAttribute(java.lang.String,java.lang.Object)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase21(java.lang.String)>": [
+    "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersByNameSafe(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.util.MyBatisCompiler: edu.thu.benchmark.annotated.util.MyBatisCompiler parseXmlFiles(java.util.List)>": [
+    "<java.util.List: java.util.Iterator iterator()>",
+    "<java.util.Iterator: boolean hasNext()>",
+    "<java.util.Iterator: java.lang.Object next()>",
+    "<edu.thu.benchmark.annotated.util.MyBatisXmlParser: edu.thu.benchmark.annotated.util.MyBatisXmlParser$MapperInfo parseXml(java.lang.String)>",
+    "<edu.thu.benchmark.annotated.util.MyBatisXmlParser$MapperInfo: java.lang.String getNamespace()>",
+    "<java.lang.String: boolean isEmpty()>",
+    "<java.util.List: boolean add(java.lang.Object)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase39(java.lang.String)>": [
+    "<java.util.ArrayList: void <init>()>",
+    "<java.lang.String: java.lang.String[] split(java.lang.String)>",
+    "<java.lang.String: java.lang.String trim()>",
+    "<java.lang.Integer: int parseInt(java.lang.String)>",
+    "<java.lang.Integer: java.lang.Integer valueOf(int)>",
+    "<java.util.List: boolean add(java.lang.Object)>",
+    "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersInListSafe(java.util.List)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase36(java.lang.Integer,java.lang.String,java.lang.String)>": [
+    "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersByMultipleConditionsSafe(java.lang.Integer,java.lang.String,java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersByAspectSafe(java.lang.String)>": [
+    "<org.springframework.jdbc.core.JdbcTemplate: java.util.List queryForList(java.lang.String,java.lang.Object[])>"
+  ],
+  "<edu.thu.benchmark.annotated.aspect.SqlInjectionAspect: java.util.List executeUnsafeSql(java.lang.String)>": [
+    "<soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String)>",
+    "<org.springframework.jdbc.core.JdbcTemplate: java.util.List queryForList(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: int lambda$testCase40$0(edu.thu.benchmark.annotated.entity.User,edu.thu.benchmark.annotated.entity.User)>": [
+    "<edu.thu.benchmark.annotated.entity.User: java.lang.String getUsername()>",
+    "<java.lang.String: int compareTo(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase22(java.lang.String)>": [
+    "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersSortedSafe(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.UserController: java.lang.String deleteUser(java.lang.Integer)>": [
+    "<edu.thu.benchmark.annotated.service.UserService: int deleteUser(java.lang.Integer)>"
+  ],
+  "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: edu.thu.benchmark.annotated.entity.User testCase09(java.lang.String,java.lang.String)>": [
+    "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: edu.thu.benchmark.annotated.entity.User findUserByCredentialsUnsafe(java.lang.String,java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.aspect.SqlInjectionAspect: void <init>()>": [
+    "<java.lang.Object: void <init>()>"
+  ],
+  "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersByTemplateUnsafe(java.lang.String)>": [
+    "<java.lang.String: java.lang.String format(java.lang.String,java.lang.Object[])>",
+    "<org.springframework.jdbc.core.JdbcTemplate: java.util.List queryForList(java.lang.String)>"
+  ],
+  "<edu.thu.benchmark.annotated.service.TemplateService: void <init>()>": [
+    "<java.lang.Object: void <init>()>"
+  ]
+}

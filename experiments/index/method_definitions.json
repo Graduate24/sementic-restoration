@@ -1,0 +1,3615 @@
+{
+  "testCase22": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+      "memberName": "testCase22",
+      "signature": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase22(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController.java",
+      "lineNumber": -1
+    }
+  ],
+  "setPassword": [
+    {
+      "className": "edu.thu.benchmark.annotated.entity.User",
+      "memberName": "setPassword",
+      "signature": "<edu.thu.benchmark.annotated.entity.User: void setPassword(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.User.java",
+      "lineNumber": -1
+    }
+  ],
+  "processXml": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.XmlController",
+      "memberName": "processXml",
+      "signature": "<edu.thu.benchmark.annotated.controller.XmlController: java.util.Map processXml(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.XmlController.java",
+      "lineNumber": -1
+    }
+  ],
+  "testCase23": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+      "memberName": "testCase23",
+      "signature": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase23(java.util.List)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController.java",
+      "lineNumber": -1
+    }
+  ],
+  "testCase20": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+      "memberName": "testCase20",
+      "signature": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase20(java.lang.String,java.lang.String,java.lang.String,java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController.java",
+      "lineNumber": -1
+    }
+  ],
+  "testCase21": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+      "memberName": "testCase21",
+      "signature": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase21(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController.java",
+      "lineNumber": -1
+    }
+  ],
+  "getAllowedExtensions": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.FileUploadService",
+      "memberName": "getAllowedExtensions",
+      "signature": "<edu.thu.benchmark.annotated.service.FileUploadService: java.lang.String getAllowedExtensions()>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.FileUploadService.java",
+      "lineNumber": -1
+    }
+  ],
+  "getTemplateFile10": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+      "memberName": "getTemplateFile10",
+      "signature": "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.lang.String getTemplateFile10(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.PathTraversalController.java",
+      "lineNumber": -1
+    }
+  ],
+  "testCase26": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+      "memberName": "testCase26",
+      "signature": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: int testCase26(int,java.lang.String,java.lang.String,java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController.java",
+      "lineNumber": -1
+    }
+  ],
+  "testCase27": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+      "memberName": "testCase27",
+      "signature": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: int testCase27(java.lang.Integer)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController.java",
+      "lineNumber": -1
+    }
+  ],
+  "testCase24": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+      "memberName": "testCase24",
+      "signature": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase24(java.lang.Integer,java.lang.String,java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController.java",
+      "lineNumber": -1
+    }
+  ],
+  "testCase25": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+      "memberName": "testCase25",
+      "signature": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase25(int,int)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController.java",
+      "lineNumber": -1
+    }
+  ],
+  "testCase28": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+      "memberName": "testCase28",
+      "signature": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: edu.thu.benchmark.annotated.entity.User testCase28(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController.java",
+      "lineNumber": -1
+    }
+  ],
+  "testCase29": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+      "memberName": "testCase29",
+      "signature": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: edu.thu.benchmark.annotated.entity.User testCase29(java.lang.String,java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController.java",
+      "lineNumber": -1
+    }
+  ],
+  "getCommandWhitelist": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.CommandService",
+      "memberName": "getCommandWhitelist",
+      "signature": "<edu.thu.benchmark.annotated.service.CommandService: java.lang.String getCommandWhitelist()>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.CommandService.java",
+      "lineNumber": -1
+    }
+  ],
+  "filePage": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.FileController",
+      "memberName": "filePage",
+      "signature": "<edu.thu.benchmark.annotated.controller.FileController: java.lang.String filePage(org.springframework.ui.Model)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.FileController.java",
+      "lineNumber": -1
+    }
+  ],
+  "getParameterType": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisXmlParser$SqlInfo",
+      "memberName": "getParameterType",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisXmlParser$SqlInfo: java.lang.String getParameterType()>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisXmlParser$SqlInfo.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo",
+      "memberName": "getParameterType",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo: java.lang.String getParameterType()>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisMapperScanner$SqlMethod",
+      "memberName": "getParameterType",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisMapperScanner$SqlMethod: java.lang.String getParameterType()>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisMapperScanner$SqlMethod.java",
+      "lineNumber": -1
+    }
+  ],
+  "joinPathsSafe": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.FileUtils",
+      "memberName": "joinPathsSafe",
+      "signature": "<edu.thu.benchmark.annotated.util.FileUtils: java.lang.String joinPathsSafe(java.lang.String,java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.FileUtils.java",
+      "lineNumber": -1
+    }
+  ],
+  "setCategory": [
+    {
+      "className": "edu.thu.benchmark.annotated.entity.Product",
+      "memberName": "setCategory",
+      "signature": "<edu.thu.benchmark.annotated.entity.Product: void setCategory(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.Product.java",
+      "lineNumber": -1
+    }
+  ],
+  "fileOperationWithApiSafe10": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+      "memberName": "fileOperationWithApiSafe10",
+      "signature": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String fileOperationWithApiSafe10(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.CommandInjectionController.java",
+      "lineNumber": -1
+    }
+  ],
+  "executeSafeSql": [
+    {
+      "className": "edu.thu.benchmark.annotated.aspect.SqlInjectionAspect",
+      "memberName": "executeSafeSql",
+      "signature": "<edu.thu.benchmark.annotated.aspect.SqlInjectionAspect: java.util.List executeSafeSql()>",
+      "sourceFile": "edu.thu.benchmark.annotated.aspect.SqlInjectionAspect.java",
+      "lineNumber": -1
+    }
+  ],
+  "getExecutionTime": [
+    {
+      "className": "edu.thu.benchmark.annotated.entity.CommandExecution",
+      "memberName": "getExecutionTime",
+      "signature": "<edu.thu.benchmark.annotated.entity.CommandExecution: java.time.LocalDateTime getExecutionTime()>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.CommandExecution.java",
+      "lineNumber": -1
+    }
+  ],
+  "welcome": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.UserController",
+      "memberName": "welcome",
+      "signature": "<edu.thu.benchmark.annotated.controller.UserController: void welcome(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.UserController.java",
+      "lineNumber": -1
+    }
+  ],
+  "testCase30": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+      "memberName": "testCase30",
+      "signature": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase30(java.lang.String,java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController.java",
+      "lineNumber": -1
+    }
+  ],
+  "findUsersByTemplateSafe": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.SqlInjectionTestService",
+      "memberName": "findUsersByTemplateSafe",
+      "signature": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersByTemplateSafe(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.SqlInjectionTestService.java",
+      "lineNumber": -1
+    }
+  ],
+  "testCase11": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+      "memberName": "testCase11",
+      "signature": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase11(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController.java",
+      "lineNumber": -1
+    }
+  ],
+  "loadById": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.impl.FileServiceImpl",
+      "memberName": "loadById",
+      "signature": "<edu.thu.benchmark.annotated.service.impl.FileServiceImpl: org.springframework.core.io.Resource loadById(java.lang.Integer)>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.impl.FileServiceImpl.java",
+      "lineNumber": -1
+    }
+  ],
+  "getAllUsers": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.impl.UserServiceImpl",
+      "memberName": "getAllUsers",
+      "signature": "<edu.thu.benchmark.annotated.service.impl.UserServiceImpl: java.util.List getAllUsers()>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.impl.UserServiceImpl.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.controller.UserController",
+      "memberName": "getAllUsers",
+      "signature": "<edu.thu.benchmark.annotated.controller.UserController: java.lang.String getAllUsers(org.springframework.ui.Model)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.UserController.java",
+      "lineNumber": -1
+    }
+  ],
+  "testCase12": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+      "memberName": "testCase12",
+      "signature": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase12(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController.java",
+      "lineNumber": -1
+    }
+  ],
+  "getDatasourceUrl": [
+    {
+      "className": "edu.thu.benchmark.annotated.config.AppConfig",
+      "memberName": "getDatasourceUrl",
+      "signature": "<edu.thu.benchmark.annotated.config.AppConfig: java.lang.String getDatasourceUrl()>",
+      "sourceFile": "edu.thu.benchmark.annotated.config.AppConfig.java",
+      "lineNumber": -1
+    }
+  ],
+  "executeViaUtils08": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+      "memberName": "executeViaUtils08",
+      "signature": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeViaUtils08(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.CommandInjectionController.java",
+      "lineNumber": -1
+    }
+  ],
+  "testCase10": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+      "memberName": "testCase10",
+      "signature": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase10(java.lang.String,java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController.java",
+      "lineNumber": -1
+    }
+  ],
+  "getMethodName": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo",
+      "memberName": "getMethodName",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo: java.lang.String getMethodName()>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo.java",
+      "lineNumber": -1
+    }
+  ],
+  "testCase15": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+      "memberName": "testCase15",
+      "signature": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase15(java.lang.String,java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController.java",
+      "lineNumber": -1
+    }
+  ],
+  "executeWithWhitelistSafe02": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+      "memberName": "executeWithWhitelistSafe02",
+      "signature": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithWhitelistSafe02(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.CommandInjectionController.java",
+      "lineNumber": -1
+    }
+  ],
+  "testCase16": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+      "memberName": "testCase16",
+      "signature": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase16(java.lang.String,java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController.java",
+      "lineNumber": -1
+    }
+  ],
+  "testCase13": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+      "memberName": "testCase13",
+      "signature": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase13(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController.java",
+      "lineNumber": -1
+    }
+  ],
+  "testCase14": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+      "memberName": "testCase14",
+      "signature": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase14(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController.java",
+      "lineNumber": -1
+    }
+  ],
+  "testCase19": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+      "memberName": "testCase19",
+      "signature": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: edu.thu.benchmark.annotated.entity.User testCase19(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController.java",
+      "lineNumber": -1
+    }
+  ],
+  "listDirectorySafe": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.FileUtils",
+      "memberName": "listDirectorySafe",
+      "signature": "<edu.thu.benchmark.annotated.util.FileUtils: java.util.List listDirectorySafe(java.lang.String,java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.FileUtils.java",
+      "lineNumber": -1
+    }
+  ],
+  "testCase17": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+      "memberName": "testCase17",
+      "signature": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase17(java.lang.String,java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController.java",
+      "lineNumber": -1
+    }
+  ],
+  "testCase18": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+      "memberName": "testCase18",
+      "signature": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase18(java.lang.String,java.lang.String,java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController.java",
+      "lineNumber": -1
+    }
+  ],
+  "<init>": [
+    {
+      "className": "edu.thu.benchmark.annotated.AnnotatedBenchmarkApplication",
+      "memberName": "<init>",
+      "signature": "<edu.thu.benchmark.annotated.AnnotatedBenchmarkApplication: void <init>()>",
+      "sourceFile": "edu.thu.benchmark.annotated.AnnotatedBenchmarkApplication.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.config.WebMvcConfig",
+      "memberName": "<init>",
+      "signature": "<edu.thu.benchmark.annotated.config.WebMvcConfig: void <init>()>",
+      "sourceFile": "edu.thu.benchmark.annotated.config.WebMvcConfig.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.config.AppConfig",
+      "memberName": "<init>",
+      "signature": "<edu.thu.benchmark.annotated.config.AppConfig: void <init>()>",
+      "sourceFile": "edu.thu.benchmark.annotated.config.AppConfig.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.config.DatabaseConfig",
+      "memberName": "<init>",
+      "signature": "<edu.thu.benchmark.annotated.config.DatabaseConfig: void <init>()>",
+      "sourceFile": "edu.thu.benchmark.annotated.config.DatabaseConfig.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.entity.Product",
+      "memberName": "<init>",
+      "signature": "<edu.thu.benchmark.annotated.entity.Product: void <init>()>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.Product.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.entity.Product",
+      "memberName": "<init>",
+      "signature": "<edu.thu.benchmark.annotated.entity.Product: void <init>(java.lang.Integer,java.lang.String,java.lang.String,java.math.BigDecimal,java.lang.String,java.lang.Integer)>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.Product.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.entity.FileInfo",
+      "memberName": "<init>",
+      "signature": "<edu.thu.benchmark.annotated.entity.FileInfo: void <init>()>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.FileInfo.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.entity.FileInfo",
+      "memberName": "<init>",
+      "signature": "<edu.thu.benchmark.annotated.entity.FileInfo: void <init>(java.lang.String,java.lang.String,java.lang.String,java.lang.Long)>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.FileInfo.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.entity.User",
+      "memberName": "<init>",
+      "signature": "<edu.thu.benchmark.annotated.entity.User: void <init>()>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.User.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.entity.User",
+      "memberName": "<init>",
+      "signature": "<edu.thu.benchmark.annotated.entity.User: void <init>(java.lang.Integer,java.lang.String,java.lang.String,java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.User.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.entity.CommandExecution",
+      "memberName": "<init>",
+      "signature": "<edu.thu.benchmark.annotated.entity.CommandExecution: void <init>()>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.CommandExecution.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.entity.CommandExecution",
+      "memberName": "<init>",
+      "signature": "<edu.thu.benchmark.annotated.entity.CommandExecution: void <init>(java.lang.String,java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.CommandExecution.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisXmlParser$MapperInfo",
+      "memberName": "<init>",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisXmlParser$MapperInfo: void <init>()>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisXmlParser$MapperInfo.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisSqlExtractor",
+      "memberName": "<init>",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisSqlExtractor: void <init>()>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisSqlExtractor.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisXmlParser$SqlInfo",
+      "memberName": "<init>",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisXmlParser$SqlInfo: void <init>()>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisXmlParser$SqlInfo.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo",
+      "memberName": "<init>",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo: void <init>()>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisMapperScanner$SqlMethod",
+      "memberName": "<init>",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisMapperScanner$SqlMethod: void <init>(java.lang.String,java.lang.String,java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisMapperScanner$SqlMethod.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.util.CommandUtils",
+      "memberName": "<init>",
+      "signature": "<edu.thu.benchmark.annotated.util.CommandUtils: void <init>()>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.CommandUtils.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisCompiler",
+      "memberName": "<init>",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisCompiler: void <init>(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisCompiler.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.util.FileUtils",
+      "memberName": "<init>",
+      "signature": "<edu.thu.benchmark.annotated.util.FileUtils: void <init>()>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.FileUtils.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisMapperScanner",
+      "memberName": "<init>",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisMapperScanner: void <init>(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisMapperScanner.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisXmlParser",
+      "memberName": "<init>",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisXmlParser: void <init>()>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisXmlParser.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.aspect.FileAccessAspect",
+      "memberName": "<init>",
+      "signature": "<edu.thu.benchmark.annotated.aspect.FileAccessAspect: void <init>()>",
+      "sourceFile": "edu.thu.benchmark.annotated.aspect.FileAccessAspect.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.aspect.CommandExecutionAspect",
+      "memberName": "<init>",
+      "signature": "<edu.thu.benchmark.annotated.aspect.CommandExecutionAspect: void <init>()>",
+      "sourceFile": "edu.thu.benchmark.annotated.aspect.CommandExecutionAspect.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.aspect.SqlInjectionAspect",
+      "memberName": "<init>",
+      "signature": "<edu.thu.benchmark.annotated.aspect.SqlInjectionAspect: void <init>()>",
+      "sourceFile": "edu.thu.benchmark.annotated.aspect.SqlInjectionAspect.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.service.impl.FileServiceImpl",
+      "memberName": "<init>",
+      "signature": "<edu.thu.benchmark.annotated.service.impl.FileServiceImpl: void <init>(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.impl.FileServiceImpl.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.service.impl.UserServiceImpl",
+      "memberName": "<init>",
+      "signature": "<edu.thu.benchmark.annotated.service.impl.UserServiceImpl: void <init>()>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.impl.UserServiceImpl.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.service.FileUploadService",
+      "memberName": "<init>",
+      "signature": "<edu.thu.benchmark.annotated.service.FileUploadService: void <init>()>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.FileUploadService.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.service.TemplateService",
+      "memberName": "<init>",
+      "signature": "<edu.thu.benchmark.annotated.service.TemplateService: void <init>()>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.TemplateService.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.service.CommandService",
+      "memberName": "<init>",
+      "signature": "<edu.thu.benchmark.annotated.service.CommandService: void <init>()>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.CommandService.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.service.PathTraversalService",
+      "memberName": "<init>",
+      "signature": "<edu.thu.benchmark.annotated.service.PathTraversalService: void <init>()>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.PathTraversalService.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.service.ZipService",
+      "memberName": "<init>",
+      "signature": "<edu.thu.benchmark.annotated.service.ZipService: void <init>()>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.ZipService.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.service.SqlInjectionTestService",
+      "memberName": "<init>",
+      "signature": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: void <init>()>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.SqlInjectionTestService.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.annotation.VulnerabilityLevel",
+      "memberName": "<init>",
+      "signature": "<edu.thu.benchmark.annotated.'annotation'.VulnerabilityLevel: void <init>(java.lang.String,int,java.lang.String,int)>",
+      "sourceFile": "edu.thu.benchmark.annotated.annotation.VulnerabilityLevel.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.annotation.VulnerabilityType",
+      "memberName": "<init>",
+      "signature": "<edu.thu.benchmark.annotated.'annotation'.VulnerabilityType: void <init>(java.lang.String,int,java.lang.String,int)>",
+      "sourceFile": "edu.thu.benchmark.annotated.annotation.VulnerabilityType.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.controller.XmlController",
+      "memberName": "<init>",
+      "signature": "<edu.thu.benchmark.annotated.controller.XmlController: void <init>()>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.XmlController.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.controller.UserController",
+      "memberName": "<init>",
+      "signature": "<edu.thu.benchmark.annotated.controller.UserController: void <init>()>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.UserController.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.controller.HttpController",
+      "memberName": "<init>",
+      "signature": "<edu.thu.benchmark.annotated.controller.HttpController: void <init>()>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.HttpController.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+      "memberName": "<init>",
+      "signature": "<edu.thu.benchmark.annotated.controller.PathTraversalController: void <init>()>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.PathTraversalController.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.controller.HomeController",
+      "memberName": "<init>",
+      "signature": "<edu.thu.benchmark.annotated.controller.HomeController: void <init>()>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.HomeController.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+      "memberName": "<init>",
+      "signature": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: void <init>()>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.CommandInjectionController.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.controller.FileController",
+      "memberName": "<init>",
+      "signature": "<edu.thu.benchmark.annotated.controller.FileController: void <init>()>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.FileController.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+      "memberName": "<init>",
+      "signature": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: void <init>()>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.controller.CommandController",
+      "memberName": "<init>",
+      "signature": "<edu.thu.benchmark.annotated.controller.CommandController: void <init>()>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.CommandController.java",
+      "lineNumber": -1
+    }
+  ],
+  "setFullPath": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo",
+      "memberName": "setFullPath",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo: void setFullPath(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo.java",
+      "lineNumber": -1
+    }
+  ],
+  "generateJavaExample": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisXmlParser",
+      "memberName": "generateJavaExample",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisXmlParser: java.lang.String generateJavaExample(java.util.List)>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisXmlParser.java",
+      "lineNumber": -1
+    }
+  ],
+  "downloadFile": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.FileController",
+      "memberName": "downloadFile",
+      "signature": "<edu.thu.benchmark.annotated.controller.FileController: org.springframework.http.ResponseEntity downloadFile(java.lang.Integer)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.FileController.java",
+      "lineNumber": -1
+    }
+  ],
+  "joinPathsUnsafe": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.FileUtils",
+      "memberName": "joinPathsUnsafe",
+      "signature": "<edu.thu.benchmark.annotated.util.FileUtils: java.lang.String joinPathsUnsafe(java.lang.String,java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.FileUtils.java",
+      "lineNumber": -1
+    }
+  ],
+  "saveFileUnsafe": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.FileUploadService",
+      "memberName": "saveFileUnsafe",
+      "signature": "<edu.thu.benchmark.annotated.service.FileUploadService: java.lang.String saveFileUnsafe(org.springframework.web.multipart.MultipartFile,java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.FileUploadService.java",
+      "lineNumber": -1
+    }
+  ],
+  "getXmlFile06": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+      "memberName": "getXmlFile06",
+      "signature": "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.lang.String getXmlFile06(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.PathTraversalController.java",
+      "lineNumber": -1
+    }
+  ],
+  "isSecurityEnabled": [
+    {
+      "className": "edu.thu.benchmark.annotated.config.AppConfig",
+      "memberName": "isSecurityEnabled",
+      "signature": "<edu.thu.benchmark.annotated.config.AppConfig: boolean isSecurityEnabled()>",
+      "sourceFile": "edu.thu.benchmark.annotated.config.AppConfig.java",
+      "lineNumber": -1
+    }
+  ],
+  "getType": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisXmlParser$SqlInfo",
+      "memberName": "getType",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisXmlParser$SqlInfo: java.lang.String getType()>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisXmlParser$SqlInfo.java",
+      "lineNumber": -1
+    }
+  ],
+  "lambda$deleteFile$1": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.impl.FileServiceImpl",
+      "memberName": "lambda$deleteFile$1",
+      "signature": "<edu.thu.benchmark.annotated.service.impl.FileServiceImpl: boolean lambda$deleteFile$1(java.lang.Integer,edu.thu.benchmark.annotated.entity.FileInfo)>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.impl.FileServiceImpl.java",
+      "lineNumber": -1
+    }
+  ],
+  "getImageSafe02": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+      "memberName": "getImageSafe02",
+      "signature": "<edu.thu.benchmark.annotated.controller.PathTraversalController: org.springframework.http.ResponseEntity getImageSafe02(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.PathTraversalController.java",
+      "lineNumber": -1
+    }
+  ],
+  "getMapperClass": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo",
+      "memberName": "getMapperClass",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo: java.lang.String getMapperClass()>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo.java",
+      "lineNumber": -1
+    }
+  ],
+  "executeSafe": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.CommandUtils",
+      "memberName": "executeSafe",
+      "signature": "<edu.thu.benchmark.annotated.util.CommandUtils: java.lang.String executeSafe(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.CommandUtils.java",
+      "lineNumber": -1
+    }
+  ],
+  "setName": [
+    {
+      "className": "edu.thu.benchmark.annotated.entity.Product",
+      "memberName": "setName",
+      "signature": "<edu.thu.benchmark.annotated.entity.Product: void setName(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.Product.java",
+      "lineNumber": -1
+    }
+  ],
+  "testCase42": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+      "memberName": "testCase42",
+      "signature": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase42(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController.java",
+      "lineNumber": -1
+    }
+  ],
+  "getUserById": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.impl.UserServiceImpl",
+      "memberName": "getUserById",
+      "signature": "<edu.thu.benchmark.annotated.service.impl.UserServiceImpl: edu.thu.benchmark.annotated.entity.User getUserById(java.lang.Integer)>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.impl.UserServiceImpl.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.controller.UserController",
+      "memberName": "getUserById",
+      "signature": "<edu.thu.benchmark.annotated.controller.UserController: java.lang.String getUserById(java.lang.Integer,org.springframework.ui.Model)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.UserController.java",
+      "lineNumber": -1
+    }
+  ],
+  "configureViewResolvers": [
+    {
+      "className": "edu.thu.benchmark.annotated.config.WebMvcConfig",
+      "memberName": "configureViewResolvers",
+      "signature": "<edu.thu.benchmark.annotated.config.WebMvcConfig: void configureViewResolvers(org.springframework.web.servlet.config.'annotation'.ViewResolverRegistry)>",
+      "sourceFile": "edu.thu.benchmark.annotated.config.WebMvcConfig.java",
+      "lineNumber": -1
+    }
+  ],
+  "setMethodName": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo",
+      "memberName": "setMethodName",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo: void setMethodName(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo.java",
+      "lineNumber": -1
+    }
+  ],
+  "getStock": [
+    {
+      "className": "edu.thu.benchmark.annotated.entity.Product",
+      "memberName": "getStock",
+      "signature": "<edu.thu.benchmark.annotated.entity.Product: java.lang.Integer getStock()>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.Product.java",
+      "lineNumber": -1
+    }
+  ],
+  "getLogFileSafe07": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+      "memberName": "getLogFileSafe07",
+      "signature": "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.lang.String getLogFileSafe07(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.PathTraversalController.java",
+      "lineNumber": -1
+    }
+  ],
+  "setSqlContent": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisXmlParser$SqlInfo",
+      "memberName": "setSqlContent",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisXmlParser$SqlInfo: void setSqlContent(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisXmlParser$SqlInfo.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo",
+      "memberName": "setSqlContent",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo: void setSqlContent(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo.java",
+      "lineNumber": -1
+    }
+  ],
+  "generateJavaInterfaces": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisMapperScanner",
+      "memberName": "generateJavaInterfaces",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisMapperScanner: void generateJavaInterfaces(java.util.Map)>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisMapperScanner.java",
+      "lineNumber": -1
+    }
+  ],
+  "pingHost": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.CommandController",
+      "memberName": "pingHost",
+      "signature": "<edu.thu.benchmark.annotated.controller.CommandController: java.lang.String pingHost(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.CommandController.java",
+      "lineNumber": -1
+    }
+  ],
+  "setFilename": [
+    {
+      "className": "edu.thu.benchmark.annotated.entity.FileInfo",
+      "memberName": "setFilename",
+      "signature": "<edu.thu.benchmark.annotated.entity.FileInfo: void setFilename(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.FileInfo.java",
+      "lineNumber": -1
+    }
+  ],
+  "getUsername": [
+    {
+      "className": "edu.thu.benchmark.annotated.entity.User",
+      "memberName": "getUsername",
+      "signature": "<edu.thu.benchmark.annotated.entity.User: java.lang.String getUsername()>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.User.java",
+      "lineNumber": -1
+    }
+  ],
+  "executeCommandSafe01": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+      "memberName": "executeCommandSafe01",
+      "signature": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeCommandSafe01(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.CommandInjectionController.java",
+      "lineNumber": -1
+    }
+  ],
+  "extractGenericType": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisMapperScanner",
+      "memberName": "extractGenericType",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisMapperScanner: java.lang.String extractGenericType(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisMapperScanner.java",
+      "lineNumber": -1
+    }
+  ],
+  "getTimeout": [
+    {
+      "className": "edu.thu.benchmark.annotated.config.AppConfig",
+      "memberName": "getTimeout",
+      "signature": "<edu.thu.benchmark.annotated.config.AppConfig: int getTimeout()>",
+      "sourceFile": "edu.thu.benchmark.annotated.config.AppConfig.java",
+      "lineNumber": -1
+    }
+  ],
+  "loadByFilename": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.impl.FileServiceImpl",
+      "memberName": "loadByFilename",
+      "signature": "<edu.thu.benchmark.annotated.service.impl.FileServiceImpl: org.springframework.core.io.Resource loadByFilename(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.impl.FileServiceImpl.java",
+      "lineNumber": -1
+    }
+  ],
+  "getExecutedBy": [
+    {
+      "className": "edu.thu.benchmark.annotated.entity.CommandExecution",
+      "memberName": "getExecutedBy",
+      "signature": "<edu.thu.benchmark.annotated.entity.CommandExecution: java.lang.String getExecutedBy()>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.CommandExecution.java",
+      "lineNumber": -1
+    }
+  ],
+  "beforeSafeFileAccess": [
+    {
+      "className": "edu.thu.benchmark.annotated.aspect.FileAccessAspect",
+      "memberName": "beforeSafeFileAccess",
+      "signature": "<edu.thu.benchmark.annotated.aspect.FileAccessAspect: void beforeSafeFileAccess(org.aspectj.lang.JoinPoint)>",
+      "sourceFile": "edu.thu.benchmark.annotated.aspect.FileAccessAspect.java",
+      "lineNumber": -1
+    }
+  ],
+  "setOutput": [
+    {
+      "className": "edu.thu.benchmark.annotated.entity.CommandExecution",
+      "memberName": "setOutput",
+      "signature": "<edu.thu.benchmark.annotated.entity.CommandExecution: void setOutput(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.CommandExecution.java",
+      "lineNumber": -1
+    }
+  ],
+  "getUploadDirectory": [
+    {
+      "className": "edu.thu.benchmark.annotated.config.AppConfig",
+      "memberName": "getUploadDirectory",
+      "signature": "<edu.thu.benchmark.annotated.config.AppConfig: java.lang.String getUploadDirectory()>",
+      "sourceFile": "edu.thu.benchmark.annotated.config.AppConfig.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.service.FileUploadService",
+      "memberName": "getUploadDirectory",
+      "signature": "<edu.thu.benchmark.annotated.service.FileUploadService: java.lang.String getUploadDirectory()>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.FileUploadService.java",
+      "lineNumber": -1
+    }
+  ],
+  "lambda$loadById$0": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.impl.FileServiceImpl",
+      "memberName": "lambda$loadById$0",
+      "signature": "<edu.thu.benchmark.annotated.service.impl.FileServiceImpl: boolean lambda$loadById$0(java.lang.Integer,edu.thu.benchmark.annotated.entity.FileInfo)>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.impl.FileServiceImpl.java",
+      "lineNumber": -1
+    }
+  ],
+  "findUsersInListUnsafe": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.SqlInjectionTestService",
+      "memberName": "findUsersInListUnsafe",
+      "signature": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersInListUnsafe(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.SqlInjectionTestService.java",
+      "lineNumber": -1
+    }
+  ],
+  "testCase33": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+      "memberName": "testCase33",
+      "signature": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase33(java.lang.String,java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController.java",
+      "lineNumber": -1
+    }
+  ],
+  "uploadFile": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.FileController",
+      "memberName": "uploadFile",
+      "signature": "<edu.thu.benchmark.annotated.controller.FileController: java.util.Map uploadFile(org.springframework.web.multipart.MultipartFile)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.FileController.java",
+      "lineNumber": -1
+    }
+  ],
+  "testCase34": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+      "memberName": "testCase34",
+      "signature": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase34(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController.java",
+      "lineNumber": -1
+    }
+  ],
+  "setStock": [
+    {
+      "className": "edu.thu.benchmark.annotated.entity.Product",
+      "memberName": "setStock",
+      "signature": "<edu.thu.benchmark.annotated.entity.Product: void setStock(java.lang.Integer)>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.Product.java",
+      "lineNumber": -1
+    }
+  ],
+  "executeWithProcessBuilderSafe06": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+      "memberName": "executeWithProcessBuilderSafe06",
+      "signature": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithProcessBuilderSafe06(java.lang.String,java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.CommandInjectionController.java",
+      "lineNumber": -1
+    }
+  ],
+  "testCase31": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+      "memberName": "testCase31",
+      "signature": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase31(java.lang.String,java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController.java",
+      "lineNumber": -1
+    }
+  ],
+  "saveToConstantsFile": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisCompiler",
+      "memberName": "saveToConstantsFile",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisCompiler: void saveToConstantsFile()>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisCompiler.java",
+      "lineNumber": -1
+    }
+  ],
+  "findUsersByMultipleConditionsSafe": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.SqlInjectionTestService",
+      "memberName": "findUsersByMultipleConditionsSafe",
+      "signature": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersByMultipleConditionsSafe(java.lang.Integer,java.lang.String,java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.SqlInjectionTestService.java",
+      "lineNumber": -1
+    }
+  ],
+  "testCase32": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+      "memberName": "testCase32",
+      "signature": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase32(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController.java",
+      "lineNumber": -1
+    }
+  ],
+  "searchUsersSemiSafe": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.SqlInjectionTestService",
+      "memberName": "searchUsersSemiSafe",
+      "signature": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List searchUsersSemiSafe(java.lang.String,java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.SqlInjectionTestService.java",
+      "lineNumber": -1
+    }
+  ],
+  "testCase37": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+      "memberName": "testCase37",
+      "signature": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase37(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController.java",
+      "lineNumber": -1
+    }
+  ],
+  "testCase38": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+      "memberName": "testCase38",
+      "signature": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase38(java.lang.String,java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController.java",
+      "lineNumber": -1
+    }
+  ],
+  "testCase35": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+      "memberName": "testCase35",
+      "signature": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase35(java.lang.String,java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController.java",
+      "lineNumber": -1
+    }
+  ],
+  "executeSystemCommand": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.CommandController",
+      "memberName": "executeSystemCommand",
+      "signature": "<edu.thu.benchmark.annotated.controller.CommandController: java.lang.String executeSystemCommand(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.CommandController.java",
+      "lineNumber": -1
+    }
+  ],
+  "testCase36": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+      "memberName": "testCase36",
+      "signature": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase36(java.lang.Integer,java.lang.String,java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController.java",
+      "lineNumber": -1
+    }
+  ],
+  "executeViaAspect05": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+      "memberName": "executeViaAspect05",
+      "signature": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeViaAspect05(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.CommandInjectionController.java",
+      "lineNumber": -1
+    }
+  ],
+  "updateUser": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.impl.UserServiceImpl",
+      "memberName": "updateUser",
+      "signature": "<edu.thu.benchmark.annotated.service.impl.UserServiceImpl: int updateUser(java.lang.Integer,java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.impl.UserServiceImpl.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.controller.UserController",
+      "memberName": "updateUser",
+      "signature": "<edu.thu.benchmark.annotated.controller.UserController: java.lang.String updateUser(java.lang.Integer,java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.UserController.java",
+      "lineNumber": -1
+    }
+  ],
+  "testCase39": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+      "memberName": "testCase39",
+      "signature": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase39(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController.java",
+      "lineNumber": -1
+    }
+  ],
+  "store": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.impl.FileServiceImpl",
+      "memberName": "store",
+      "signature": "<edu.thu.benchmark.annotated.service.impl.FileServiceImpl: edu.thu.benchmark.annotated.entity.FileInfo store(org.springframework.web.multipart.MultipartFile)>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.impl.FileServiceImpl.java",
+      "lineNumber": -1
+    }
+  ],
+  "listDirectoryUnsafe": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.FileUtils",
+      "memberName": "listDirectoryUnsafe",
+      "signature": "<edu.thu.benchmark.annotated.util.FileUtils: java.util.List listDirectoryUnsafe(java.lang.String,java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.FileUtils.java",
+      "lineNumber": -1
+    }
+  ],
+  "getFile01": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+      "memberName": "getFile01",
+      "signature": "<edu.thu.benchmark.annotated.controller.PathTraversalController: org.springframework.http.ResponseEntity getFile01(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.PathTraversalController.java",
+      "lineNumber": -1
+    }
+  ],
+  "getQueryTemplate": [
+    {
+      "className": "edu.thu.benchmark.annotated.config.AppConfig",
+      "memberName": "getQueryTemplate",
+      "signature": "<edu.thu.benchmark.annotated.config.AppConfig: java.lang.String getQueryTemplate()>",
+      "sourceFile": "edu.thu.benchmark.annotated.config.AppConfig.java",
+      "lineNumber": -1
+    }
+  ],
+  "findByNamedParamsUnsafe": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.SqlInjectionTestService",
+      "memberName": "findByNamedParamsUnsafe",
+      "signature": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findByNamedParamsUnsafe(java.lang.String,java.util.Map)>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.SqlInjectionTestService.java",
+      "lineNumber": -1
+    }
+  ],
+  "getUserByEmail": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.impl.UserServiceImpl",
+      "memberName": "getUserByEmail",
+      "signature": "<edu.thu.benchmark.annotated.service.impl.UserServiceImpl: edu.thu.benchmark.annotated.entity.User getUserByEmail(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.impl.UserServiceImpl.java",
+      "lineNumber": -1
+    }
+  ],
+  "getPassword": [
+    {
+      "className": "edu.thu.benchmark.annotated.entity.User",
+      "memberName": "getPassword",
+      "signature": "<edu.thu.benchmark.annotated.entity.User: java.lang.String getPassword()>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.User.java",
+      "lineNumber": -1
+    }
+  ],
+  "getFileSafe01": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+      "memberName": "getFileSafe01",
+      "signature": "<edu.thu.benchmark.annotated.controller.PathTraversalController: org.springframework.http.ResponseEntity getFileSafe01(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.PathTraversalController.java",
+      "lineNumber": -1
+    }
+  ],
+  "executeCommandSafe": [
+    {
+      "className": "edu.thu.benchmark.annotated.aspect.CommandExecutionAspect",
+      "memberName": "executeCommandSafe",
+      "signature": "<edu.thu.benchmark.annotated.aspect.CommandExecutionAspect: java.lang.String executeCommandSafe(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.aspect.CommandExecutionAspect.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.service.CommandService",
+      "memberName": "executeCommandSafe",
+      "signature": "<edu.thu.benchmark.annotated.service.CommandService: java.lang.String executeCommandSafe(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.CommandService.java",
+      "lineNumber": -1
+    }
+  ],
+  "getFullMethodPath": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisXmlParser$SqlInfo",
+      "memberName": "getFullMethodPath",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisXmlParser$SqlInfo: java.lang.String getFullMethodPath(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisXmlParser$SqlInfo.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisMapperScanner$SqlMethod",
+      "memberName": "getFullMethodPath",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisMapperScanner$SqlMethod: java.lang.String getFullMethodPath()>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisMapperScanner$SqlMethod.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisXmlParser",
+      "memberName": "getFullMethodPath",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisXmlParser: java.lang.String getFullMethodPath(java.lang.String,java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisXmlParser.java",
+      "lineNumber": -1
+    }
+  ],
+  "fetchUrl": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.HttpController",
+      "memberName": "fetchUrl",
+      "signature": "<edu.thu.benchmark.annotated.controller.HttpController: org.springframework.http.ResponseEntity fetchUrl(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.HttpController.java",
+      "lineNumber": -1
+    }
+  ],
+  "readFile": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.FileController",
+      "memberName": "readFile",
+      "signature": "<edu.thu.benchmark.annotated.controller.FileController: org.springframework.http.ResponseEntity readFile(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.FileController.java",
+      "lineNumber": -1
+    }
+  ],
+  "executeUnsafe": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.CommandUtils",
+      "memberName": "executeUnsafe",
+      "signature": "<edu.thu.benchmark.annotated.util.CommandUtils: java.lang.String executeUnsafe(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.CommandUtils.java",
+      "lineNumber": -1
+    }
+  ],
+  "toString": [
+    {
+      "className": "edu.thu.benchmark.annotated.entity.Product",
+      "memberName": "toString",
+      "signature": "<edu.thu.benchmark.annotated.entity.Product: java.lang.String toString()>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.Product.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.entity.FileInfo",
+      "memberName": "toString",
+      "signature": "<edu.thu.benchmark.annotated.entity.FileInfo: java.lang.String toString()>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.FileInfo.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.entity.User",
+      "memberName": "toString",
+      "signature": "<edu.thu.benchmark.annotated.entity.User: java.lang.String toString()>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.User.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.entity.CommandExecution",
+      "memberName": "toString",
+      "signature": "<edu.thu.benchmark.annotated.entity.CommandExecution: java.lang.String toString()>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.CommandExecution.java",
+      "lineNumber": -1
+    }
+  ],
+  "testCase40": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+      "memberName": "testCase40",
+      "signature": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase40(java.lang.Integer,java.lang.String,java.lang.String,java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController.java",
+      "lineNumber": -1
+    }
+  ],
+  "testCase41": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+      "memberName": "testCase41",
+      "signature": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase41(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController.java",
+      "lineNumber": -1
+    }
+  ],
+  "deleteUsersUnsafe": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.SqlInjectionTestService",
+      "memberName": "deleteUsersUnsafe",
+      "signature": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: int deleteUsersUnsafe(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.SqlInjectionTestService.java",
+      "lineNumber": -1
+    }
+  ],
+  "viewFile": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.FileController",
+      "memberName": "viewFile",
+      "signature": "<edu.thu.benchmark.annotated.controller.FileController: org.springframework.http.ResponseEntity viewFile(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.FileController.java",
+      "lineNumber": -1
+    }
+  ],
+  "listFilesUnsafe": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.PathTraversalService",
+      "memberName": "listFilesUnsafe",
+      "signature": "<edu.thu.benchmark.annotated.service.PathTraversalService: java.lang.String[] listFilesUnsafe(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.PathTraversalService.java",
+      "lineNumber": -1
+    }
+  ],
+  "getName": [
+    {
+      "className": "edu.thu.benchmark.annotated.entity.Product",
+      "memberName": "getName",
+      "signature": "<edu.thu.benchmark.annotated.entity.Product: java.lang.String getName()>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.Product.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.annotation.VulnerabilityLevel",
+      "memberName": "getName",
+      "signature": "<edu.thu.benchmark.annotated.'annotation'.VulnerabilityLevel: java.lang.String getName()>",
+      "sourceFile": "edu.thu.benchmark.annotated.annotation.VulnerabilityLevel.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.annotation.VulnerabilityType",
+      "memberName": "getName",
+      "signature": "<edu.thu.benchmark.annotated.'annotation'.VulnerabilityType: java.lang.String getName()>",
+      "sourceFile": "edu.thu.benchmark.annotated.annotation.VulnerabilityType.java",
+      "lineNumber": -1
+    }
+  ],
+  "executeViaAspectSafe05": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+      "memberName": "executeViaAspectSafe05",
+      "signature": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeViaAspectSafe05(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.CommandInjectionController.java",
+      "lineNumber": -1
+    }
+  ],
+  "getSimpleTypeName": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisCompiler",
+      "memberName": "getSimpleTypeName",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisCompiler: java.lang.String getSimpleTypeName(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisCompiler.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisMapperScanner",
+      "memberName": "getSimpleTypeName",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisMapperScanner: java.lang.String getSimpleTypeName(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisMapperScanner.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisXmlParser",
+      "memberName": "getSimpleTypeName",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisXmlParser: java.lang.String getSimpleTypeName(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisXmlParser.java",
+      "lineNumber": -1
+    }
+  ],
+  "downloadFile03": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+      "memberName": "downloadFile03",
+      "signature": "<edu.thu.benchmark.annotated.controller.PathTraversalController: org.springframework.http.ResponseEntity downloadFile03(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.PathTraversalController.java",
+      "lineNumber": -1
+    }
+  ],
+  "convertToVariableName": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisSqlExtractor",
+      "memberName": "convertToVariableName",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisSqlExtractor: java.lang.String convertToVariableName(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisSqlExtractor.java",
+      "lineNumber": -1
+    }
+  ],
+  "listFilesSafe": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.PathTraversalService",
+      "memberName": "listFilesSafe",
+      "signature": "<edu.thu.benchmark.annotated.service.PathTraversalService: java.lang.String[] listFilesSafe(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.PathTraversalService.java",
+      "lineNumber": -1
+    }
+  ],
+  "searchUsersUnsafe": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.SqlInjectionTestService",
+      "memberName": "searchUsersUnsafe",
+      "signature": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List searchUsersUnsafe(java.lang.String,java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.SqlInjectionTestService.java",
+      "lineNumber": -1
+    }
+  ],
+  "executeViaService04": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+      "memberName": "executeViaService04",
+      "signature": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeViaService04(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.CommandInjectionController.java",
+      "lineNumber": -1
+    }
+  ],
+  "executeWithJavaApiSafe09": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+      "memberName": "executeWithJavaApiSafe09",
+      "signature": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithJavaApiSafe09(java.lang.String,java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.CommandInjectionController.java",
+      "lineNumber": -1
+    }
+  ],
+  "checkExistingMappers": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisMapperScanner",
+      "memberName": "checkExistingMappers",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisMapperScanner: java.util.List checkExistingMappers(java.util.Map)>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisMapperScanner.java",
+      "lineNumber": -1
+    }
+  ],
+  "compile": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisCompiler",
+      "memberName": "compile",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisCompiler: void compile()>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisCompiler.java",
+      "lineNumber": -1
+    }
+  ],
+  "findUserByEmailSafe": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.SqlInjectionTestService",
+      "memberName": "findUserByEmailSafe",
+      "signature": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: edu.thu.benchmark.annotated.entity.User findUserByEmailSafe(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.SqlInjectionTestService.java",
+      "lineNumber": -1
+    }
+  ],
+  "setContentType": [
+    {
+      "className": "edu.thu.benchmark.annotated.entity.FileInfo",
+      "memberName": "setContentType",
+      "signature": "<edu.thu.benchmark.annotated.entity.FileInfo: void setContentType(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.FileInfo.java",
+      "lineNumber": -1
+    }
+  ],
+  "getNestedTemplateUnsafe": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.TemplateService",
+      "memberName": "getNestedTemplateUnsafe",
+      "signature": "<edu.thu.benchmark.annotated.service.TemplateService: java.lang.String getNestedTemplateUnsafe(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.TemplateService.java",
+      "lineNumber": -1
+    }
+  ],
+  "lambda$scanMapperXml$1": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisMapperScanner",
+      "memberName": "lambda$scanMapperXml$1",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisMapperScanner: boolean lambda$scanMapperXml$1(java.nio.file.Path)>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisMapperScanner.java",
+      "lineNumber": -1
+    }
+  ],
+  "lambda$scanMapperXml$0": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisMapperScanner",
+      "memberName": "lambda$scanMapperXml$0",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisMapperScanner: boolean lambda$scanMapperXml$0(java.nio.file.Path)>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisMapperScanner.java",
+      "lineNumber": -1
+    }
+  ],
+  "findUsersInListSafe": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.SqlInjectionTestService",
+      "memberName": "findUsersInListSafe",
+      "signature": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersInListSafe(java.util.List)>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.SqlInjectionTestService.java",
+      "lineNumber": -1
+    }
+  ],
+  "getSqlContent": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisXmlParser$SqlInfo",
+      "memberName": "getSqlContent",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisXmlParser$SqlInfo: java.lang.String getSqlContent()>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisXmlParser$SqlInfo.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo",
+      "memberName": "getSqlContent",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo: java.lang.String getSqlContent()>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo.java",
+      "lineNumber": -1
+    }
+  ],
+  "getConfigFileSafe08": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+      "memberName": "getConfigFileSafe08",
+      "signature": "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.util.Map getConfigFileSafe08(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.PathTraversalController.java",
+      "lineNumber": -1
+    }
+  ],
+  "getUpdatedAt": [
+    {
+      "className": "edu.thu.benchmark.annotated.entity.User",
+      "memberName": "getUpdatedAt",
+      "signature": "<edu.thu.benchmark.annotated.entity.User: java.time.LocalDateTime getUpdatedAt()>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.User.java",
+      "lineNumber": -1
+    }
+  ],
+  "beforeUnsafeSqlExecution": [
+    {
+      "className": "edu.thu.benchmark.annotated.aspect.SqlInjectionAspect",
+      "memberName": "beforeUnsafeSqlExecution",
+      "signature": "<edu.thu.benchmark.annotated.aspect.SqlInjectionAspect: void beforeUnsafeSqlExecution()>",
+      "sourceFile": "edu.thu.benchmark.annotated.aspect.SqlInjectionAspect.java",
+      "lineNumber": -1
+    }
+  ],
+  "executeArraySafe03": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+      "memberName": "executeArraySafe03",
+      "signature": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeArraySafe03(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.CommandInjectionController.java",
+      "lineNumber": -1
+    }
+  ],
+  "getCategory": [
+    {
+      "className": "edu.thu.benchmark.annotated.entity.Product",
+      "memberName": "getCategory",
+      "signature": "<edu.thu.benchmark.annotated.entity.Product: java.lang.String getCategory()>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.Product.java",
+      "lineNumber": -1
+    }
+  ],
+  "parseXml": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisXmlParser",
+      "memberName": "parseXml",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisXmlParser: edu.thu.benchmark.annotated.util.MyBatisXmlParser$MapperInfo parseXml(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisXmlParser.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.controller.XmlController",
+      "memberName": "parseXml",
+      "signature": "<edu.thu.benchmark.annotated.controller.XmlController: java.util.Map parseXml(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.XmlController.java",
+      "lineNumber": -1
+    }
+  ],
+  "findUsersByJdbcUnsafe": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.SqlInjectionTestService",
+      "memberName": "findUsersByJdbcUnsafe",
+      "signature": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersByJdbcUnsafe(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.SqlInjectionTestService.java",
+      "lineNumber": -1
+    }
+  ],
+  "setEmail": [
+    {
+      "className": "edu.thu.benchmark.annotated.entity.User",
+      "memberName": "setEmail",
+      "signature": "<edu.thu.benchmark.annotated.entity.User: void setEmail(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.User.java",
+      "lineNumber": -1
+    }
+  ],
+  "getNamespace": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisXmlParser$MapperInfo",
+      "memberName": "getNamespace",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisXmlParser$MapperInfo: java.lang.String getNamespace()>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisXmlParser$MapperInfo.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisMapperScanner$SqlMethod",
+      "memberName": "getNamespace",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisMapperScanner$SqlMethod: java.lang.String getNamespace()>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisMapperScanner$SqlMethod.java",
+      "lineNumber": -1
+    }
+  ],
+  "setResultType": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisXmlParser$SqlInfo",
+      "memberName": "setResultType",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisXmlParser$SqlInfo: void setResultType(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisXmlParser$SqlInfo.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo",
+      "memberName": "setResultType",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo: void setResultType(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisMapperScanner$SqlMethod",
+      "memberName": "setResultType",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisMapperScanner$SqlMethod: void setResultType(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisMapperScanner$SqlMethod.java",
+      "lineNumber": -1
+    }
+  ],
+  "getContentType": [
+    {
+      "className": "edu.thu.benchmark.annotated.entity.FileInfo",
+      "memberName": "getContentType",
+      "signature": "<edu.thu.benchmark.annotated.entity.FileInfo: java.lang.String getContentType()>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.FileInfo.java",
+      "lineNumber": -1
+    }
+  ],
+  "generateSampleUsage": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisMapperScanner",
+      "memberName": "generateSampleUsage",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisMapperScanner: java.lang.String generateSampleUsage(java.util.Map)>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisMapperScanner.java",
+      "lineNumber": -1
+    }
+  ],
+  "getFileWithInjectionSafe05": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+      "memberName": "getFileWithInjectionSafe05",
+      "signature": "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.lang.String getFileWithInjectionSafe05(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.PathTraversalController.java",
+      "lineNumber": -1
+    }
+  ],
+  "<clinit>": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisSqlExtractor",
+      "memberName": "<clinit>",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisSqlExtractor: void <clinit>()>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisSqlExtractor.java",
+      "lineNumber": 21
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.util.CommandUtils",
+      "memberName": "<clinit>",
+      "signature": "<edu.thu.benchmark.annotated.util.CommandUtils: void <clinit>()>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.CommandUtils.java",
+      "lineNumber": 15
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisMapperScanner",
+      "memberName": "<clinit>",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisMapperScanner: void <clinit>()>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisMapperScanner.java",
+      "lineNumber": 24
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisXmlParser",
+      "memberName": "<clinit>",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisXmlParser: void <clinit>()>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisXmlParser.java",
+      "lineNumber": 28
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.aspect.CommandExecutionAspect",
+      "memberName": "<clinit>",
+      "signature": "<edu.thu.benchmark.annotated.aspect.CommandExecutionAspect: void <clinit>()>",
+      "sourceFile": "edu.thu.benchmark.annotated.aspect.CommandExecutionAspect.java",
+      "lineNumber": 20
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.service.TemplateService",
+      "memberName": "<clinit>",
+      "signature": "<edu.thu.benchmark.annotated.service.TemplateService: void <clinit>()>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.TemplateService.java",
+      "lineNumber": 24
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.service.CommandService",
+      "memberName": "<clinit>",
+      "signature": "<edu.thu.benchmark.annotated.service.CommandService: void <clinit>()>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.CommandService.java",
+      "lineNumber": 36
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.annotation.VulnerabilityLevel",
+      "memberName": "<clinit>",
+      "signature": "<edu.thu.benchmark.annotated.'annotation'.VulnerabilityLevel: void <clinit>()>",
+      "sourceFile": "edu.thu.benchmark.annotated.annotation.VulnerabilityLevel.java",
+      "lineNumber": 10
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.annotation.VulnerabilityType",
+      "memberName": "<clinit>",
+      "signature": "<edu.thu.benchmark.annotated.'annotation'.VulnerabilityType: void <clinit>()>",
+      "sourceFile": "edu.thu.benchmark.annotated.annotation.VulnerabilityType.java",
+      "lineNumber": 10
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.controller.HttpController",
+      "memberName": "<clinit>",
+      "signature": "<edu.thu.benchmark.annotated.controller.HttpController: void <clinit>()>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.HttpController.java",
+      "lineNumber": 25
+    }
+  ],
+  "testCase01": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+      "memberName": "testCase01",
+      "signature": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase01(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController.java",
+      "lineNumber": -1
+    }
+  ],
+  "lambda$listDirectorySafe$0": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.FileUtils",
+      "memberName": "lambda$listDirectorySafe$0",
+      "signature": "<edu.thu.benchmark.annotated.util.FileUtils: void lambda$listDirectorySafe$0(java.util.List,java.nio.file.Path)>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.FileUtils.java",
+      "lineNumber": -1
+    }
+  ],
+  "setExecutedBy": [
+    {
+      "className": "edu.thu.benchmark.annotated.entity.CommandExecution",
+      "memberName": "setExecutedBy",
+      "signature": "<edu.thu.benchmark.annotated.entity.CommandExecution: void setExecutedBy(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.CommandExecution.java",
+      "lineNumber": -1
+    }
+  ],
+  "readProcessOutput": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.CommandUtils",
+      "memberName": "readProcessOutput",
+      "signature": "<edu.thu.benchmark.annotated.util.CommandUtils: java.lang.String readProcessOutput(java.lang.Process)>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.CommandUtils.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.aspect.CommandExecutionAspect",
+      "memberName": "readProcessOutput",
+      "signature": "<edu.thu.benchmark.annotated.aspect.CommandExecutionAspect: java.lang.String readProcessOutput(java.lang.Process)>",
+      "sourceFile": "edu.thu.benchmark.annotated.aspect.CommandExecutionAspect.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.service.CommandService",
+      "memberName": "readProcessOutput",
+      "signature": "<edu.thu.benchmark.annotated.service.CommandService: java.lang.String readProcessOutput(java.lang.Process)>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.CommandService.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+      "memberName": "readProcessOutput",
+      "signature": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String readProcessOutput(java.lang.Process)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.CommandInjectionController.java",
+      "lineNumber": -1
+    }
+  ],
+  "lambda$extractZipUnsafe$0": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.ZipService",
+      "memberName": "lambda$extractZipUnsafe$0",
+      "signature": "<edu.thu.benchmark.annotated.service.ZipService: void lambda$extractZipUnsafe$0(java.io.File,java.util.zip.ZipFile,java.util.zip.ZipEntry)>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.ZipService.java",
+      "lineNumber": -1
+    }
+  ],
+  "testCase04": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+      "memberName": "testCase04",
+      "signature": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase04(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController.java",
+      "lineNumber": -1
+    }
+  ],
+  "testCase05": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+      "memberName": "testCase05",
+      "signature": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase05(java.lang.String,java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController.java",
+      "lineNumber": -1
+    }
+  ],
+  "getResultType": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisXmlParser$SqlInfo",
+      "memberName": "getResultType",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisXmlParser$SqlInfo: java.lang.String getResultType()>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisXmlParser$SqlInfo.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo",
+      "memberName": "getResultType",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo: java.lang.String getResultType()>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisMapperScanner$SqlMethod",
+      "memberName": "getResultType",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisMapperScanner$SqlMethod: java.lang.String getResultType()>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisMapperScanner$SqlMethod.java",
+      "lineNumber": -1
+    }
+  ],
+  "testCase02": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+      "memberName": "testCase02",
+      "signature": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase02(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController.java",
+      "lineNumber": -1
+    }
+  ],
+  "testCase03": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+      "memberName": "testCase03",
+      "signature": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase03(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController.java",
+      "lineNumber": -1
+    }
+  ],
+  "executeWithFullValidation07": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+      "memberName": "executeWithFullValidation07",
+      "signature": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithFullValidation07(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.CommandInjectionController.java",
+      "lineNumber": -1
+    }
+  ],
+  "testCase08": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+      "memberName": "testCase08",
+      "signature": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: edu.thu.benchmark.annotated.entity.User testCase08(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController.java",
+      "lineNumber": -1
+    }
+  ],
+  "testCase09": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+      "memberName": "testCase09",
+      "signature": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: edu.thu.benchmark.annotated.entity.User testCase09(java.lang.String,java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController.java",
+      "lineNumber": -1
+    }
+  ],
+  "getId": [
+    {
+      "className": "edu.thu.benchmark.annotated.entity.Product",
+      "memberName": "getId",
+      "signature": "<edu.thu.benchmark.annotated.entity.Product: java.lang.Integer getId()>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.Product.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.entity.FileInfo",
+      "memberName": "getId",
+      "signature": "<edu.thu.benchmark.annotated.entity.FileInfo: java.lang.Integer getId()>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.FileInfo.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.entity.User",
+      "memberName": "getId",
+      "signature": "<edu.thu.benchmark.annotated.entity.User: java.lang.Integer getId()>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.User.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.entity.CommandExecution",
+      "memberName": "getId",
+      "signature": "<edu.thu.benchmark.annotated.entity.CommandExecution: java.lang.Integer getId()>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.CommandExecution.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisXmlParser$SqlInfo",
+      "memberName": "getId",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisXmlParser$SqlInfo: java.lang.String getId()>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisXmlParser$SqlInfo.java",
+      "lineNumber": -1
+    }
+  ],
+  "testCase06": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+      "memberName": "testCase06",
+      "signature": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: int testCase06(int,java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController.java",
+      "lineNumber": -1
+    }
+  ],
+  "getMaxFileSize": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.FileUploadService",
+      "memberName": "getMaxFileSize",
+      "signature": "<edu.thu.benchmark.annotated.service.FileUploadService: long getMaxFileSize()>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.FileUploadService.java",
+      "lineNumber": -1
+    }
+  ],
+  "testCase07": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+      "memberName": "testCase07",
+      "signature": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: int testCase07(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController.java",
+      "lineNumber": -1
+    }
+  ],
+  "fetchUrlSafe": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.HttpController",
+      "memberName": "fetchUrlSafe",
+      "signature": "<edu.thu.benchmark.annotated.controller.HttpController: org.springframework.http.ResponseEntity fetchUrlSafe(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.HttpController.java",
+      "lineNumber": -1
+    }
+  ],
+  "updateUserDynamicSafe": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.SqlInjectionTestService",
+      "memberName": "updateUserDynamicSafe",
+      "signature": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: int updateUserDynamicSafe(int,java.lang.String,java.lang.String,java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.SqlInjectionTestService.java",
+      "lineNumber": -1
+    }
+  ],
+  "getLogFile07": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+      "memberName": "getLogFile07",
+      "signature": "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.lang.String getLogFile07(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.PathTraversalController.java",
+      "lineNumber": -1
+    }
+  ],
+  "getConfigFile08": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+      "memberName": "getConfigFile08",
+      "signature": "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.util.Map getConfigFile08(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.PathTraversalController.java",
+      "lineNumber": -1
+    }
+  ],
+  "setMapperClass": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo",
+      "memberName": "setMapperClass",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo: void setMapperClass(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo.java",
+      "lineNumber": -1
+    }
+  ],
+  "testAspectSafeMethod": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.SqlInjectionTestService",
+      "memberName": "testAspectSafeMethod",
+      "signature": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List testAspectSafeMethod(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.SqlInjectionTestService.java",
+      "lineNumber": -1
+    }
+  ],
+  "findUsersSortedSafe": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.SqlInjectionTestService",
+      "memberName": "findUsersSortedSafe",
+      "signature": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersSortedSafe(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.SqlInjectionTestService.java",
+      "lineNumber": -1
+    }
+  ],
+  "getDefaultCwe": [
+    {
+      "className": "edu.thu.benchmark.annotated.annotation.VulnerabilityType",
+      "memberName": "getDefaultCwe",
+      "signature": "<edu.thu.benchmark.annotated.'annotation'.VulnerabilityType: int getDefaultCwe()>",
+      "sourceFile": "edu.thu.benchmark.annotated.annotation.VulnerabilityType.java",
+      "lineNumber": -1
+    }
+  ],
+  "isPathSafe": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.impl.FileServiceImpl",
+      "memberName": "isPathSafe",
+      "signature": "<edu.thu.benchmark.annotated.service.impl.FileServiceImpl: boolean isPathSafe(java.nio.file.Path)>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.impl.FileServiceImpl.java",
+      "lineNumber": -1
+    }
+  ],
+  "findUserByCredentialsUnsafe": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.SqlInjectionTestService",
+      "memberName": "findUserByCredentialsUnsafe",
+      "signature": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: edu.thu.benchmark.annotated.entity.User findUserByCredentialsUnsafe(java.lang.String,java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.SqlInjectionTestService.java",
+      "lineNumber": -1
+    }
+  ],
+  "setParameterType": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisXmlParser$SqlInfo",
+      "memberName": "setParameterType",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisXmlParser$SqlInfo: void setParameterType(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisXmlParser$SqlInfo.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo",
+      "memberName": "setParameterType",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo: void setParameterType(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisMapperScanner$SqlMethod",
+      "memberName": "setParameterType",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisMapperScanner$SqlMethod: void setParameterType(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisMapperScanner$SqlMethod.java",
+      "lineNumber": -1
+    }
+  ],
+  "getOutput": [
+    {
+      "className": "edu.thu.benchmark.annotated.entity.CommandExecution",
+      "memberName": "getOutput",
+      "signature": "<edu.thu.benchmark.annotated.entity.CommandExecution: java.lang.String getOutput()>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.CommandExecution.java",
+      "lineNumber": -1
+    }
+  ],
+  "saveToExampleFile": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisCompiler",
+      "memberName": "saveToExampleFile",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisCompiler: void saveToExampleFile()>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisCompiler.java",
+      "lineNumber": -1
+    }
+  ],
+  "deleteFile": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.impl.FileServiceImpl",
+      "memberName": "deleteFile",
+      "signature": "<edu.thu.benchmark.annotated.service.impl.FileServiceImpl: boolean deleteFile(java.lang.Integer)>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.impl.FileServiceImpl.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.controller.FileController",
+      "memberName": "deleteFile",
+      "signature": "<edu.thu.benchmark.annotated.controller.FileController: java.util.Map deleteFile(java.lang.Integer)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.FileController.java",
+      "lineNumber": -1
+    }
+  ],
+  "lambda$listFilesSafe$0": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.PathTraversalService",
+      "memberName": "lambda$listFilesSafe$0",
+      "signature": "<edu.thu.benchmark.annotated.service.PathTraversalService: java.lang.String lambda$listFilesSafe$0(java.nio.file.Path)>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.PathTraversalService.java",
+      "lineNumber": -1
+    }
+  ],
+  "lambda$listFilesSafe$1": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.PathTraversalService",
+      "memberName": "lambda$listFilesSafe$1",
+      "signature": "<edu.thu.benchmark.annotated.service.PathTraversalService: java.lang.String[] lambda$listFilesSafe$1(int)>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.PathTraversalService.java",
+      "lineNumber": -1
+    }
+  ],
+  "setFilepath": [
+    {
+      "className": "edu.thu.benchmark.annotated.entity.FileInfo",
+      "memberName": "setFilepath",
+      "signature": "<edu.thu.benchmark.annotated.entity.FileInfo: void setFilepath(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.FileInfo.java",
+      "lineNumber": -1
+    }
+  ],
+  "valueOf": [
+    {
+      "className": "edu.thu.benchmark.annotated.annotation.VulnerabilityLevel",
+      "memberName": "valueOf",
+      "signature": "<edu.thu.benchmark.annotated.'annotation'.VulnerabilityLevel: edu.thu.benchmark.annotated.'annotation'.VulnerabilityLevel valueOf(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.annotation.VulnerabilityLevel.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.annotation.VulnerabilityType",
+      "memberName": "valueOf",
+      "signature": "<edu.thu.benchmark.annotated.'annotation'.VulnerabilityType: edu.thu.benchmark.annotated.'annotation'.VulnerabilityType valueOf(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.annotation.VulnerabilityType.java",
+      "lineNumber": -1
+    }
+  ],
+  "configure": [
+    {
+      "className": "edu.thu.benchmark.annotated.AnnotatedBenchmarkApplication",
+      "memberName": "configure",
+      "signature": "<edu.thu.benchmark.annotated.AnnotatedBenchmarkApplication: org.springframework.boot.builder.SpringApplicationBuilder configure(org.springframework.boot.builder.SpringApplicationBuilder)>",
+      "sourceFile": "edu.thu.benchmark.annotated.AnnotatedBenchmarkApplication.java",
+      "lineNumber": -1
+    }
+  ],
+  "setType": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisXmlParser$SqlInfo",
+      "memberName": "setType",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisXmlParser$SqlInfo: void setType(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisXmlParser$SqlInfo.java",
+      "lineNumber": -1
+    }
+  ],
+  "findUsersByNameUnsafe": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.SqlInjectionTestService",
+      "memberName": "findUsersByNameUnsafe",
+      "signature": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersByNameUnsafe(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.SqlInjectionTestService.java",
+      "lineNumber": -1
+    }
+  ],
+  "lambda$extractZipSafe$1": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.ZipService",
+      "memberName": "lambda$extractZipSafe$1",
+      "signature": "<edu.thu.benchmark.annotated.service.ZipService: void lambda$extractZipSafe$1(java.nio.file.Path,java.util.zip.ZipFile,java.util.zip.ZipEntry)>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.ZipService.java",
+      "lineNumber": -1
+    }
+  ],
+  "getValue": [
+    {
+      "className": "edu.thu.benchmark.annotated.annotation.VulnerabilityLevel",
+      "memberName": "getValue",
+      "signature": "<edu.thu.benchmark.annotated.'annotation'.VulnerabilityLevel: int getValue()>",
+      "sourceFile": "edu.thu.benchmark.annotated.annotation.VulnerabilityLevel.java",
+      "lineNumber": -1
+    }
+  ],
+  "executeWithMultipleParams09": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+      "memberName": "executeWithMultipleParams09",
+      "signature": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithMultipleParams09(java.lang.String,java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.CommandInjectionController.java",
+      "lineNumber": -1
+    }
+  ],
+  "getSqlId": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisMapperScanner$SqlMethod",
+      "memberName": "getSqlId",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisMapperScanner$SqlMethod: java.lang.String getSqlId()>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisMapperScanner$SqlMethod.java",
+      "lineNumber": -1
+    }
+  ],
+  "addUserForm": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.UserController",
+      "memberName": "addUserForm",
+      "signature": "<edu.thu.benchmark.annotated.controller.UserController: java.lang.String addUserForm(org.springframework.ui.Model)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.UserController.java",
+      "lineNumber": -1
+    }
+  ],
+  "parseXmlSafe": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.XmlController",
+      "memberName": "parseXmlSafe",
+      "signature": "<edu.thu.benchmark.annotated.controller.XmlController: java.util.Map parseXmlSafe(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.XmlController.java",
+      "lineNumber": -1
+    }
+  ],
+  "generateMethodCall": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisSqlExtractor",
+      "memberName": "generateMethodCall",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisSqlExtractor: java.lang.String generateMethodCall(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisSqlExtractor.java",
+      "lineNumber": -1
+    }
+  ],
+  "fileOperationWithCommand10": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+      "memberName": "fileOperationWithCommand10",
+      "signature": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String fileOperationWithCommand10(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.CommandInjectionController.java",
+      "lineNumber": -1
+    }
+  ],
+  "setSqlType": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo",
+      "memberName": "setSqlType",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo: void setSqlType(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo.java",
+      "lineNumber": -1
+    }
+  ],
+  "findUsersSortedUnsafe": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.SqlInjectionTestService",
+      "memberName": "findUsersSortedUnsafe",
+      "signature": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersSortedUnsafe(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.SqlInjectionTestService.java",
+      "lineNumber": -1
+    }
+  ],
+  "$values": [
+    {
+      "className": "edu.thu.benchmark.annotated.annotation.VulnerabilityLevel",
+      "memberName": "$values",
+      "signature": "<edu.thu.benchmark.annotated.'annotation'.VulnerabilityLevel: edu.thu.benchmark.annotated.'annotation'.VulnerabilityLevel[] $values()>",
+      "sourceFile": "edu.thu.benchmark.annotated.annotation.VulnerabilityLevel.java",
+      "lineNumber": 6
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.annotation.VulnerabilityType",
+      "memberName": "$values",
+      "signature": "<edu.thu.benchmark.annotated.'annotation'.VulnerabilityType: edu.thu.benchmark.annotated.'annotation'.VulnerabilityType[] $values()>",
+      "sourceFile": "edu.thu.benchmark.annotated.annotation.VulnerabilityType.java",
+      "lineNumber": 6
+    }
+  ],
+  "lambda$extractMethodPathsFromDirectory$0": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisSqlExtractor",
+      "memberName": "lambda$extractMethodPathsFromDirectory$0",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisSqlExtractor: boolean lambda$extractMethodPathsFromDirectory$0(java.io.File,java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisSqlExtractor.java",
+      "lineNumber": -1
+    }
+  ],
+  "findByNamedParamsSafe": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.SqlInjectionTestService",
+      "memberName": "findByNamedParamsSafe",
+      "signature": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findByNamedParamsSafe(java.util.Map)>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.SqlInjectionTestService.java",
+      "lineNumber": -1
+    }
+  ],
+  "sqlInjectionServiceMethods": [
+    {
+      "className": "edu.thu.benchmark.annotated.aspect.SqlInjectionAspect",
+      "memberName": "sqlInjectionServiceMethods",
+      "signature": "<edu.thu.benchmark.annotated.aspect.SqlInjectionAspect: void sqlInjectionServiceMethods()>",
+      "sourceFile": "edu.thu.benchmark.annotated.aspect.SqlInjectionAspect.java",
+      "lineNumber": -1
+    }
+  ],
+  "updateUserDynamicUnsafe": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.SqlInjectionTestService",
+      "memberName": "updateUserDynamicUnsafe",
+      "signature": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: int updateUserDynamicUnsafe(int,java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.SqlInjectionTestService.java",
+      "lineNumber": -1
+    }
+  ],
+  "getStatus": [
+    {
+      "className": "edu.thu.benchmark.annotated.entity.CommandExecution",
+      "memberName": "getStatus",
+      "signature": "<edu.thu.benchmark.annotated.entity.CommandExecution: java.lang.String getStatus()>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.CommandExecution.java",
+      "lineNumber": -1
+    }
+  ],
+  "executeViaServiceSafe04": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+      "memberName": "executeViaServiceSafe04",
+      "signature": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeViaServiceSafe04(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.CommandInjectionController.java",
+      "lineNumber": -1
+    }
+  ],
+  "executeWithSystemProperty02": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+      "memberName": "executeWithSystemProperty02",
+      "signature": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithSystemProperty02(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.CommandInjectionController.java",
+      "lineNumber": -1
+    }
+  ],
+  "findUsersByJdbcSafe": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.SqlInjectionTestService",
+      "memberName": "findUsersByJdbcSafe",
+      "signature": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersByJdbcSafe(java.lang.String,java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.SqlInjectionTestService.java",
+      "lineNumber": -1
+    }
+  ],
+  "getFilepath": [
+    {
+      "className": "edu.thu.benchmark.annotated.entity.FileInfo",
+      "memberName": "getFilepath",
+      "signature": "<edu.thu.benchmark.annotated.entity.FileInfo: java.lang.String getFilepath()>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.FileInfo.java",
+      "lineNumber": -1
+    }
+  ],
+  "readProperties09": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+      "memberName": "readProperties09",
+      "signature": "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.util.Map readProperties09(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.PathTraversalController.java",
+      "lineNumber": -1
+    }
+  ],
+  "extractZipUnsafe": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.ZipService",
+      "memberName": "extractZipUnsafe",
+      "signature": "<edu.thu.benchmark.annotated.service.ZipService: java.lang.String extractZipUnsafe(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.ZipService.java",
+      "lineNumber": -1
+    }
+  ],
+  "findUsersByTemplateUnsafe": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.SqlInjectionTestService",
+      "memberName": "findUsersByTemplateUnsafe",
+      "signature": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersByTemplateUnsafe(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.SqlInjectionTestService.java",
+      "lineNumber": -1
+    }
+  ],
+  "readFileUnsafe": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.FileUtils",
+      "memberName": "readFileUnsafe",
+      "signature": "<edu.thu.benchmark.annotated.util.FileUtils: java.lang.String readFileUnsafe(java.lang.String,java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.FileUtils.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.service.PathTraversalService",
+      "memberName": "readFileUnsafe",
+      "signature": "<edu.thu.benchmark.annotated.service.PathTraversalService: java.lang.String readFileUnsafe(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.PathTraversalService.java",
+      "lineNumber": -1
+    }
+  ],
+  "getZipEntrySafe": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.ZipService",
+      "memberName": "getZipEntrySafe",
+      "signature": "<edu.thu.benchmark.annotated.service.ZipService: java.lang.String getZipEntrySafe(java.lang.String,java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.ZipService.java",
+      "lineNumber": -1
+    }
+  ],
+  "init": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.impl.FileServiceImpl",
+      "memberName": "init",
+      "signature": "<edu.thu.benchmark.annotated.service.impl.FileServiceImpl: void init()>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.impl.FileServiceImpl.java",
+      "lineNumber": -1
+    }
+  ],
+  "getTemplateUnsafe": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.TemplateService",
+      "memberName": "getTemplateUnsafe",
+      "signature": "<edu.thu.benchmark.annotated.service.TemplateService: java.lang.String getTemplateUnsafe(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.TemplateService.java",
+      "lineNumber": -1
+    }
+  ],
+  "index": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.HomeController",
+      "memberName": "index",
+      "signature": "<edu.thu.benchmark.annotated.controller.HomeController: java.lang.String index()>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.HomeController.java",
+      "lineNumber": -1
+    }
+  ],
+  "executeWithProcessBuilder06": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+      "memberName": "executeWithProcessBuilder06",
+      "signature": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithProcessBuilder06(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.CommandInjectionController.java",
+      "lineNumber": -1
+    }
+  ],
+  "executeCommandUnsafe": [
+    {
+      "className": "edu.thu.benchmark.annotated.aspect.CommandExecutionAspect",
+      "memberName": "executeCommandUnsafe",
+      "signature": "<edu.thu.benchmark.annotated.aspect.CommandExecutionAspect: java.lang.String executeCommandUnsafe(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.aspect.CommandExecutionAspect.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.service.CommandService",
+      "memberName": "executeCommandUnsafe",
+      "signature": "<edu.thu.benchmark.annotated.service.CommandService: java.lang.String executeCommandUnsafe(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.CommandService.java",
+      "lineNumber": -1
+    }
+  ],
+  "extractMethodPaths": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisSqlExtractor",
+      "memberName": "extractMethodPaths",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisSqlExtractor: java.util.List extractMethodPaths(java.io.File)>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisSqlExtractor.java",
+      "lineNumber": -1
+    }
+  ],
+  "getUserHome": [
+    {
+      "className": "edu.thu.benchmark.annotated.config.AppConfig",
+      "memberName": "getUserHome",
+      "signature": "<edu.thu.benchmark.annotated.config.AppConfig: java.lang.String getUserHome()>",
+      "sourceFile": "edu.thu.benchmark.annotated.config.AppConfig.java",
+      "lineNumber": -1
+    }
+  ],
+  "getServerPort": [
+    {
+      "className": "edu.thu.benchmark.annotated.config.AppConfig",
+      "memberName": "getServerPort",
+      "signature": "<edu.thu.benchmark.annotated.config.AppConfig: int getServerPort()>",
+      "sourceFile": "edu.thu.benchmark.annotated.config.AppConfig.java",
+      "lineNumber": -1
+    }
+  ],
+  "getFilePath": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.impl.FileServiceImpl",
+      "memberName": "getFilePath",
+      "signature": "<edu.thu.benchmark.annotated.service.impl.FileServiceImpl: java.nio.file.Path getFilePath(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.impl.FileServiceImpl.java",
+      "lineNumber": -1
+    }
+  ],
+  "findUsersWithLimitSafe": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.SqlInjectionTestService",
+      "memberName": "findUsersWithLimitSafe",
+      "signature": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersWithLimitSafe(int,int)>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.SqlInjectionTestService.java",
+      "lineNumber": -1
+    }
+  ],
+  "readFileSafe": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.FileUtils",
+      "memberName": "readFileSafe",
+      "signature": "<edu.thu.benchmark.annotated.util.FileUtils: java.lang.String readFileSafe(java.lang.String,java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.FileUtils.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.service.PathTraversalService",
+      "memberName": "readFileSafe",
+      "signature": "<edu.thu.benchmark.annotated.service.PathTraversalService: java.lang.String readFileSafe(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.PathTraversalService.java",
+      "lineNumber": -1
+    }
+  ],
+  "deleteUser": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.impl.UserServiceImpl",
+      "memberName": "deleteUser",
+      "signature": "<edu.thu.benchmark.annotated.service.impl.UserServiceImpl: int deleteUser(java.lang.Integer)>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.impl.UserServiceImpl.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.controller.UserController",
+      "memberName": "deleteUser",
+      "signature": "<edu.thu.benchmark.annotated.controller.UserController: java.lang.String deleteUser(java.lang.Integer)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.UserController.java",
+      "lineNumber": -1
+    }
+  ],
+  "httpPage": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.HttpController",
+      "memberName": "httpPage",
+      "signature": "<edu.thu.benchmark.annotated.controller.HttpController: java.lang.String httpPage()>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.HttpController.java",
+      "lineNumber": -1
+    }
+  ],
+  "findUsersByAspectUnsafe": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.SqlInjectionTestService",
+      "memberName": "findUsersByAspectUnsafe",
+      "signature": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersByAspectUnsafe(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.SqlInjectionTestService.java",
+      "lineNumber": -1
+    }
+  ],
+  "searchUsersSafe": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.SqlInjectionTestService",
+      "memberName": "searchUsersSafe",
+      "signature": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List searchUsersSafe(java.lang.String,java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.SqlInjectionTestService.java",
+      "lineNumber": -1
+    }
+  ],
+  "getFileWithInjection05": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+      "memberName": "getFileWithInjection05",
+      "signature": "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.lang.String getFileWithInjection05(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.PathTraversalController.java",
+      "lineNumber": -1
+    }
+  ],
+  "executeWithConfigPrefix07": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+      "memberName": "executeWithConfigPrefix07",
+      "signature": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithConfigPrefix07(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.CommandInjectionController.java",
+      "lineNumber": -1
+    }
+  ],
+  "readFileContentSafe": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.impl.FileServiceImpl",
+      "memberName": "readFileContentSafe",
+      "signature": "<edu.thu.benchmark.annotated.service.impl.FileServiceImpl: java.lang.String readFileContentSafe(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.impl.FileServiceImpl.java",
+      "lineNumber": -1
+    }
+  ],
+  "xmlPage": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.XmlController",
+      "memberName": "xmlPage",
+      "signature": "<edu.thu.benchmark.annotated.controller.XmlController: java.lang.String xmlPage()>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.XmlController.java",
+      "lineNumber": -1
+    }
+  ],
+  "setDescription": [
+    {
+      "className": "edu.thu.benchmark.annotated.entity.Product",
+      "memberName": "setDescription",
+      "signature": "<edu.thu.benchmark.annotated.entity.Product: void setDescription(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.Product.java",
+      "lineNumber": -1
+    }
+  ],
+  "testAspectUnsafeMethod": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.SqlInjectionTestService",
+      "memberName": "testAspectUnsafeMethod",
+      "signature": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List testAspectUnsafeMethod(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.SqlInjectionTestService.java",
+      "lineNumber": -1
+    }
+  ],
+  "parseXmlFiles": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisCompiler",
+      "memberName": "parseXmlFiles",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisCompiler: edu.thu.benchmark.annotated.util.MyBatisCompiler parseXmlFiles(java.util.List)>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisCompiler.java",
+      "lineNumber": -1
+    }
+  ],
+  "scanMapperXml": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisMapperScanner",
+      "memberName": "scanMapperXml",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisMapperScanner: java.util.Map scanMapperXml()>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisMapperScanner.java",
+      "lineNumber": -1
+    }
+  ],
+  "addResourceHandlers": [
+    {
+      "className": "edu.thu.benchmark.annotated.config.WebMvcConfig",
+      "memberName": "addResourceHandlers",
+      "signature": "<edu.thu.benchmark.annotated.config.WebMvcConfig: void addResourceHandlers(org.springframework.web.servlet.config.'annotation'.ResourceHandlerRegistry)>",
+      "sourceFile": "edu.thu.benchmark.annotated.config.WebMvcConfig.java",
+      "lineNumber": -1
+    }
+  ],
+  "getTemplateSafe": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.TemplateService",
+      "memberName": "getTemplateSafe",
+      "signature": "<edu.thu.benchmark.annotated.service.TemplateService: java.lang.String getTemplateSafe(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.TemplateService.java",
+      "lineNumber": -1
+    }
+  ],
+  "afterSafeSqlExecution": [
+    {
+      "className": "edu.thu.benchmark.annotated.aspect.SqlInjectionAspect",
+      "memberName": "afterSafeSqlExecution",
+      "signature": "<edu.thu.benchmark.annotated.aspect.SqlInjectionAspect: void afterSafeSqlExecution()>",
+      "sourceFile": "edu.thu.benchmark.annotated.aspect.SqlInjectionAspect.java",
+      "lineNumber": -1
+    }
+  ],
+  "logFileAccessUnsafe": [
+    {
+      "className": "edu.thu.benchmark.annotated.aspect.FileAccessAspect",
+      "memberName": "logFileAccessUnsafe",
+      "signature": "<edu.thu.benchmark.annotated.aspect.FileAccessAspect: void logFileAccessUnsafe(org.aspectj.lang.JoinPoint)>",
+      "sourceFile": "edu.thu.benchmark.annotated.aspect.FileAccessAspect.java",
+      "lineNumber": -1
+    }
+  ],
+  "readFileContent04": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+      "memberName": "readFileContent04",
+      "signature": "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.lang.String readFileContent04(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.PathTraversalController.java",
+      "lineNumber": -1
+    }
+  ],
+  "showCommandPage": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.CommandController",
+      "memberName": "showCommandPage",
+      "signature": "<edu.thu.benchmark.annotated.controller.CommandController: java.lang.String showCommandPage()>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.CommandController.java",
+      "lineNumber": -1
+    }
+  ],
+  "getMaxConnections": [
+    {
+      "className": "edu.thu.benchmark.annotated.config.AppConfig",
+      "memberName": "getMaxConnections",
+      "signature": "<edu.thu.benchmark.annotated.config.AppConfig: int getMaxConnections()>",
+      "sourceFile": "edu.thu.benchmark.annotated.config.AppConfig.java",
+      "lineNumber": -1
+    }
+  ],
+  "getUserByUsername": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.impl.UserServiceImpl",
+      "memberName": "getUserByUsername",
+      "signature": "<edu.thu.benchmark.annotated.service.impl.UserServiceImpl: edu.thu.benchmark.annotated.entity.User getUserByUsername(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.impl.UserServiceImpl.java",
+      "lineNumber": -1
+    }
+  ],
+  "getCommand": [
+    {
+      "className": "edu.thu.benchmark.annotated.entity.CommandExecution",
+      "memberName": "getCommand",
+      "signature": "<edu.thu.benchmark.annotated.entity.CommandExecution: java.lang.String getCommand()>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.CommandExecution.java",
+      "lineNumber": -1
+    }
+  ],
+  "getAllFiles": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.impl.FileServiceImpl",
+      "memberName": "getAllFiles",
+      "signature": "<edu.thu.benchmark.annotated.service.impl.FileServiceImpl: java.util.List getAllFiles()>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.impl.FileServiceImpl.java",
+      "lineNumber": -1
+    }
+  ],
+  "getSqlInfoList": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisXmlParser$MapperInfo",
+      "memberName": "getSqlInfoList",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisXmlParser$MapperInfo: java.util.List getSqlInfoList()>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisXmlParser$MapperInfo.java",
+      "lineNumber": -1
+    }
+  ],
+  "parseDirectory": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisCompiler",
+      "memberName": "parseDirectory",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisCompiler: edu.thu.benchmark.annotated.util.MyBatisCompiler parseDirectory(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisCompiler.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisXmlParser",
+      "memberName": "parseDirectory",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisXmlParser: java.util.List parseDirectory(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisXmlParser.java",
+      "lineNumber": -1
+    }
+  ],
+  "getCommandExecutor": [
+    {
+      "className": "edu.thu.benchmark.annotated.config.AppConfig",
+      "memberName": "getCommandExecutor",
+      "signature": "<edu.thu.benchmark.annotated.config.AppConfig: java.lang.String getCommandExecutor()>",
+      "sourceFile": "edu.thu.benchmark.annotated.config.AppConfig.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.service.CommandService",
+      "memberName": "getCommandExecutor",
+      "signature": "<edu.thu.benchmark.annotated.service.CommandService: java.lang.String getCommandExecutor()>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.CommandService.java",
+      "lineNumber": -1
+    }
+  ],
+  "setCommand": [
+    {
+      "className": "edu.thu.benchmark.annotated.entity.CommandExecution",
+      "memberName": "setCommand",
+      "signature": "<edu.thu.benchmark.annotated.entity.CommandExecution: void setCommand(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.CommandExecution.java",
+      "lineNumber": -1
+    }
+  ],
+  "getPrice": [
+    {
+      "className": "edu.thu.benchmark.annotated.entity.Product",
+      "memberName": "getPrice",
+      "signature": "<edu.thu.benchmark.annotated.entity.Product: java.math.BigDecimal getPrice()>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.Product.java",
+      "lineNumber": -1
+    }
+  ],
+  "logFileAccessSafe": [
+    {
+      "className": "edu.thu.benchmark.annotated.aspect.FileAccessAspect",
+      "memberName": "logFileAccessSafe",
+      "signature": "<edu.thu.benchmark.annotated.aspect.FileAccessAspect: void logFileAccessSafe(org.aspectj.lang.JoinPoint)>",
+      "sourceFile": "edu.thu.benchmark.annotated.aspect.FileAccessAspect.java",
+      "lineNumber": -1
+    }
+  ],
+  "getFilename": [
+    {
+      "className": "edu.thu.benchmark.annotated.entity.FileInfo",
+      "memberName": "getFilename",
+      "signature": "<edu.thu.benchmark.annotated.entity.FileInfo: java.lang.String getFilename()>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.FileInfo.java",
+      "lineNumber": -1
+    }
+  ],
+  "searchByUsername": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.UserController",
+      "memberName": "searchByUsername",
+      "signature": "<edu.thu.benchmark.annotated.controller.UserController: void searchByUsername(java.lang.String,javax.servlet.http.HttpServletResponse)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.UserController.java",
+      "lineNumber": -1
+    }
+  ],
+  "readFileContentUnsafe": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.impl.FileServiceImpl",
+      "memberName": "readFileContentUnsafe",
+      "signature": "<edu.thu.benchmark.annotated.service.impl.FileServiceImpl: java.lang.String readFileContentUnsafe(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.impl.FileServiceImpl.java",
+      "lineNumber": -1
+    }
+  ],
+  "downloadFileSafe03": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+      "memberName": "downloadFileSafe03",
+      "signature": "<edu.thu.benchmark.annotated.controller.PathTraversalController: org.springframework.http.ResponseEntity downloadFileSafe03(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.PathTraversalController.java",
+      "lineNumber": -1
+    }
+  ],
+  "readPropertiesSafe09": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+      "memberName": "readPropertiesSafe09",
+      "signature": "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.util.Map readPropertiesSafe09(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.PathTraversalController.java",
+      "lineNumber": -1
+    }
+  ],
+  "setNamespace": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisXmlParser$MapperInfo",
+      "memberName": "setNamespace",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisXmlParser$MapperInfo: void setNamespace(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisXmlParser$MapperInfo.java",
+      "lineNumber": -1
+    }
+  ],
+  "extractMethodPathsFromDirectory": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisSqlExtractor",
+      "memberName": "extractMethodPathsFromDirectory",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisSqlExtractor: java.util.Map extractMethodPathsFromDirectory(java.io.File)>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisSqlExtractor.java",
+      "lineNumber": -1
+    }
+  ],
+  "addUser": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.UserController",
+      "memberName": "addUser",
+      "signature": "<edu.thu.benchmark.annotated.controller.UserController: java.lang.String addUser(edu.thu.benchmark.annotated.entity.User)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.UserController.java",
+      "lineNumber": -1
+    }
+  ],
+  "extractZipSafe": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.ZipService",
+      "memberName": "extractZipSafe",
+      "signature": "<edu.thu.benchmark.annotated.service.ZipService: java.lang.String extractZipSafe(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.ZipService.java",
+      "lineNumber": -1
+    }
+  ],
+  "main": [
+    {
+      "className": "edu.thu.benchmark.annotated.AnnotatedBenchmarkApplication",
+      "memberName": "main",
+      "signature": "<edu.thu.benchmark.annotated.AnnotatedBenchmarkApplication: void main(java.lang.String[])>",
+      "sourceFile": "edu.thu.benchmark.annotated.AnnotatedBenchmarkApplication.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisSqlExtractor",
+      "memberName": "main",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisSqlExtractor: void main(java.lang.String[])>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisSqlExtractor.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisCompiler",
+      "memberName": "main",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisCompiler: void main(java.lang.String[])>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisCompiler.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisMapperScanner",
+      "memberName": "main",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisMapperScanner: void main(java.lang.String[])>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisMapperScanner.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisXmlParser",
+      "memberName": "main",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisXmlParser: void main(java.lang.String[])>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisXmlParser.java",
+      "lineNumber": -1
+    }
+  ],
+  "setPrice": [
+    {
+      "className": "edu.thu.benchmark.annotated.entity.Product",
+      "memberName": "setPrice",
+      "signature": "<edu.thu.benchmark.annotated.entity.Product: void setPrice(java.math.BigDecimal)>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.Product.java",
+      "lineNumber": -1
+    }
+  ],
+  "beforeUnsafeFileAccess": [
+    {
+      "className": "edu.thu.benchmark.annotated.aspect.FileAccessAspect",
+      "memberName": "beforeUnsafeFileAccess",
+      "signature": "<edu.thu.benchmark.annotated.aspect.FileAccessAspect: void beforeUnsafeFileAccess(org.aspectj.lang.JoinPoint)>",
+      "sourceFile": "edu.thu.benchmark.annotated.aspect.FileAccessAspect.java",
+      "lineNumber": -1
+    }
+  ],
+  "getZipEntryUnsafe": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.ZipService",
+      "memberName": "getZipEntryUnsafe",
+      "signature": "<edu.thu.benchmark.annotated.service.ZipService: java.lang.String getZipEntryUnsafe(java.lang.String,java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.ZipService.java",
+      "lineNumber": -1
+    }
+  ],
+  "getCreatedAt": [
+    {
+      "className": "edu.thu.benchmark.annotated.entity.Product",
+      "memberName": "getCreatedAt",
+      "signature": "<edu.thu.benchmark.annotated.entity.Product: java.time.LocalDateTime getCreatedAt()>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.Product.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.entity.User",
+      "memberName": "getCreatedAt",
+      "signature": "<edu.thu.benchmark.annotated.entity.User: java.time.LocalDateTime getCreatedAt()>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.User.java",
+      "lineNumber": -1
+    }
+  ],
+  "setCreatedAt": [
+    {
+      "className": "edu.thu.benchmark.annotated.entity.Product",
+      "memberName": "setCreatedAt",
+      "signature": "<edu.thu.benchmark.annotated.entity.Product: void setCreatedAt(java.time.LocalDateTime)>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.Product.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.entity.User",
+      "memberName": "setCreatedAt",
+      "signature": "<edu.thu.benchmark.annotated.entity.User: void setCreatedAt(java.time.LocalDateTime)>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.User.java",
+      "lineNumber": -1
+    }
+  ],
+  "findUsersByAspectSafe": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.SqlInjectionTestService",
+      "memberName": "findUsersByAspectSafe",
+      "signature": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersByAspectSafe(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.SqlInjectionTestService.java",
+      "lineNumber": -1
+    }
+  ],
+  "setUploadTime": [
+    {
+      "className": "edu.thu.benchmark.annotated.entity.FileInfo",
+      "memberName": "setUploadTime",
+      "signature": "<edu.thu.benchmark.annotated.entity.FileInfo: void setUploadTime(java.time.LocalDateTime)>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.FileInfo.java",
+      "lineNumber": -1
+    }
+  ],
+  "saveFileSafe": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.FileUploadService",
+      "memberName": "saveFileSafe",
+      "signature": "<edu.thu.benchmark.annotated.service.FileUploadService: java.lang.String saveFileSafe(org.springframework.web.multipart.MultipartFile)>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.FileUploadService.java",
+      "lineNumber": -1
+    }
+  ],
+  "accessLogFileSafe": [
+    {
+      "className": "edu.thu.benchmark.annotated.aspect.FileAccessAspect",
+      "memberName": "accessLogFileSafe",
+      "signature": "<edu.thu.benchmark.annotated.aspect.FileAccessAspect: java.lang.String accessLogFileSafe(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.aspect.FileAccessAspect.java",
+      "lineNumber": -1
+    }
+  ],
+  "setId": [
+    {
+      "className": "edu.thu.benchmark.annotated.entity.Product",
+      "memberName": "setId",
+      "signature": "<edu.thu.benchmark.annotated.entity.Product: void setId(java.lang.Integer)>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.Product.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.entity.FileInfo",
+      "memberName": "setId",
+      "signature": "<edu.thu.benchmark.annotated.entity.FileInfo: void setId(java.lang.Integer)>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.FileInfo.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.entity.User",
+      "memberName": "setId",
+      "signature": "<edu.thu.benchmark.annotated.entity.User: void setId(java.lang.Integer)>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.User.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.entity.CommandExecution",
+      "memberName": "setId",
+      "signature": "<edu.thu.benchmark.annotated.entity.CommandExecution: void setId(java.lang.Integer)>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.CommandExecution.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisXmlParser$SqlInfo",
+      "memberName": "setId",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisXmlParser$SqlInfo: void setId(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisXmlParser$SqlInfo.java",
+      "lineNumber": -1
+    }
+  ],
+  "dataSourceInitializer": [
+    {
+      "className": "edu.thu.benchmark.annotated.config.DatabaseConfig",
+      "memberName": "dataSourceInitializer",
+      "signature": "<edu.thu.benchmark.annotated.config.DatabaseConfig: org.springframework.jdbc.datasource.init.DataSourceInitializer dataSourceInitializer(javax.sql.DataSource)>",
+      "sourceFile": "edu.thu.benchmark.annotated.config.DatabaseConfig.java",
+      "lineNumber": -1
+    }
+  ],
+  "setUpdatedAt": [
+    {
+      "className": "edu.thu.benchmark.annotated.entity.User",
+      "memberName": "setUpdatedAt",
+      "signature": "<edu.thu.benchmark.annotated.entity.User: void setUpdatedAt(java.time.LocalDateTime)>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.User.java",
+      "lineNumber": -1
+    }
+  ],
+  "lambda$executeWithJavaApiSafe09$1": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+      "memberName": "lambda$executeWithJavaApiSafe09$1",
+      "signature": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String lambda$executeWithJavaApiSafe09$1(java.nio.file.Path)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.CommandInjectionController.java",
+      "lineNumber": -1
+    }
+  ],
+  "lambda$executeWithJavaApiSafe09$0": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+      "memberName": "lambda$executeWithJavaApiSafe09$0",
+      "signature": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: boolean lambda$executeWithJavaApiSafe09$0(java.lang.String,java.nio.file.Path)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.CommandInjectionController.java",
+      "lineNumber": -1
+    }
+  ],
+  "getImage02": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+      "memberName": "getImage02",
+      "signature": "<edu.thu.benchmark.annotated.controller.PathTraversalController: org.springframework.http.ResponseEntity getImage02(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.PathTraversalController.java",
+      "lineNumber": -1
+    }
+  ],
+  "getUploadTime": [
+    {
+      "className": "edu.thu.benchmark.annotated.entity.FileInfo",
+      "memberName": "getUploadTime",
+      "signature": "<edu.thu.benchmark.annotated.entity.FileInfo: java.time.LocalDateTime getUploadTime()>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.FileInfo.java",
+      "lineNumber": -1
+    }
+  ],
+  "executeArrayWithInjection03": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+      "memberName": "executeArrayWithInjection03",
+      "signature": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeArrayWithInjection03(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.CommandInjectionController.java",
+      "lineNumber": -1
+    }
+  ],
+  "addSqlInfo": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisXmlParser$MapperInfo",
+      "memberName": "addSqlInfo",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisXmlParser$MapperInfo: void addSqlInfo(edu.thu.benchmark.annotated.util.MyBatisXmlParser$SqlInfo)>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisXmlParser$MapperInfo.java",
+      "lineNumber": -1
+    }
+  ],
+  "findUsersWithLimitUnsafe": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.SqlInjectionTestService",
+      "memberName": "findUsersWithLimitUnsafe",
+      "signature": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersWithLimitUnsafe(java.lang.String,java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.SqlInjectionTestService.java",
+      "lineNumber": -1
+    }
+  ],
+  "deleteUsersSafe": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.SqlInjectionTestService",
+      "memberName": "deleteUsersSafe",
+      "signature": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: int deleteUsersSafe(java.lang.Integer)>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.SqlInjectionTestService.java",
+      "lineNumber": -1
+    }
+  ],
+  "executeCommand": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.CommandController",
+      "memberName": "executeCommand",
+      "signature": "<edu.thu.benchmark.annotated.controller.CommandController: java.lang.String executeCommand(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.CommandController.java",
+      "lineNumber": -1
+    }
+  ],
+  "toConstantName": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisCompiler",
+      "memberName": "toConstantName",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisCompiler: java.lang.String toConstantName(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisCompiler.java",
+      "lineNumber": -1
+    }
+  ],
+  "getTemplateFileSafe10": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+      "memberName": "getTemplateFileSafe10",
+      "signature": "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.lang.String getTemplateFileSafe10(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.PathTraversalController.java",
+      "lineNumber": -1
+    }
+  ],
+  "insertUser": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.impl.UserServiceImpl",
+      "memberName": "insertUser",
+      "signature": "<edu.thu.benchmark.annotated.service.impl.UserServiceImpl: int insertUser(edu.thu.benchmark.annotated.entity.User)>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.impl.UserServiceImpl.java",
+      "lineNumber": -1
+    }
+  ],
+  "getEmail": [
+    {
+      "className": "edu.thu.benchmark.annotated.entity.User",
+      "memberName": "getEmail",
+      "signature": "<edu.thu.benchmark.annotated.entity.User: java.lang.String getEmail()>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.User.java",
+      "lineNumber": -1
+    }
+  ],
+  "getXmlFileSafe06": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+      "memberName": "getXmlFileSafe06",
+      "signature": "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.lang.String getXmlFileSafe06(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.PathTraversalController.java",
+      "lineNumber": -1
+    }
+  ],
+  "getApplicationName": [
+    {
+      "className": "edu.thu.benchmark.annotated.config.AppConfig",
+      "memberName": "getApplicationName",
+      "signature": "<edu.thu.benchmark.annotated.config.AppConfig: java.lang.String getApplicationName()>",
+      "sourceFile": "edu.thu.benchmark.annotated.config.AppConfig.java",
+      "lineNumber": -1
+    }
+  ],
+  "findUsersByMultipleConditionsUnsafe": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.SqlInjectionTestService",
+      "memberName": "findUsersByMultipleConditionsUnsafe",
+      "signature": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersByMultipleConditionsUnsafe(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.SqlInjectionTestService.java",
+      "lineNumber": -1
+    }
+  ],
+  "getDatasourcePassword": [
+    {
+      "className": "edu.thu.benchmark.annotated.config.AppConfig",
+      "memberName": "getDatasourcePassword",
+      "signature": "<edu.thu.benchmark.annotated.config.AppConfig: java.lang.String getDatasourcePassword()>",
+      "sourceFile": "edu.thu.benchmark.annotated.config.AppConfig.java",
+      "lineNumber": -1
+    }
+  ],
+  "executeUnsafeSql": [
+    {
+      "className": "edu.thu.benchmark.annotated.aspect.SqlInjectionAspect",
+      "memberName": "executeUnsafeSql",
+      "signature": "<edu.thu.benchmark.annotated.aspect.SqlInjectionAspect: java.util.List executeUnsafeSql(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.aspect.SqlInjectionAspect.java",
+      "lineNumber": -1
+    }
+  ],
+  "findUserByCredentialsSafe": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.SqlInjectionTestService",
+      "memberName": "findUserByCredentialsSafe",
+      "signature": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: edu.thu.benchmark.annotated.entity.User findUserByCredentialsSafe(java.lang.String,java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.SqlInjectionTestService.java",
+      "lineNumber": -1
+    }
+  ],
+  "values": [
+    {
+      "className": "edu.thu.benchmark.annotated.annotation.VulnerabilityLevel",
+      "memberName": "values",
+      "signature": "<edu.thu.benchmark.annotated.'annotation'.VulnerabilityLevel: edu.thu.benchmark.annotated.'annotation'.VulnerabilityLevel[] values()>",
+      "sourceFile": "edu.thu.benchmark.annotated.annotation.VulnerabilityLevel.java",
+      "lineNumber": 6
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.annotation.VulnerabilityType",
+      "memberName": "values",
+      "signature": "<edu.thu.benchmark.annotated.'annotation'.VulnerabilityType: edu.thu.benchmark.annotated.'annotation'.VulnerabilityType[] values()>",
+      "sourceFile": "edu.thu.benchmark.annotated.annotation.VulnerabilityType.java",
+      "lineNumber": 6
+    }
+  ],
+  "lambda$parseDirectory$0": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisXmlParser",
+      "memberName": "lambda$parseDirectory$0",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisXmlParser: boolean lambda$parseDirectory$0(java.nio.file.Path)>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisXmlParser.java",
+      "lineNumber": -1
+    }
+  ],
+  "getDescription": [
+    {
+      "className": "edu.thu.benchmark.annotated.entity.Product",
+      "memberName": "getDescription",
+      "signature": "<edu.thu.benchmark.annotated.entity.Product: java.lang.String getDescription()>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.Product.java",
+      "lineNumber": -1
+    }
+  ],
+  "lambda$parseDirectory$1": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisXmlParser",
+      "memberName": "lambda$parseDirectory$1",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisXmlParser: boolean lambda$parseDirectory$1(java.nio.file.Path)>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisXmlParser.java",
+      "lineNumber": -1
+    }
+  ],
+  "findUsersByNameSafe": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.SqlInjectionTestService",
+      "memberName": "findUsersByNameSafe",
+      "signature": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersByNameSafe(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.SqlInjectionTestService.java",
+      "lineNumber": -1
+    }
+  ],
+  "setSize": [
+    {
+      "className": "edu.thu.benchmark.annotated.entity.FileInfo",
+      "memberName": "setSize",
+      "signature": "<edu.thu.benchmark.annotated.entity.FileInfo: void setSize(java.lang.Long)>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.FileInfo.java",
+      "lineNumber": -1
+    }
+  ],
+  "getSqlType": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo",
+      "memberName": "getSqlType",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo: java.lang.String getSqlType()>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisMapperScanner$SqlMethod",
+      "memberName": "getSqlType",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisMapperScanner$SqlMethod: java.lang.String getSqlType()>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisMapperScanner$SqlMethod.java",
+      "lineNumber": -1
+    }
+  ],
+  "findByCondition": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.UserController",
+      "memberName": "findByCondition",
+      "signature": "<edu.thu.benchmark.annotated.controller.UserController: java.util.List findByCondition(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.UserController.java",
+      "lineNumber": -1
+    }
+  ],
+  "isAllowedFileType": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.FileUploadService",
+      "memberName": "isAllowedFileType",
+      "signature": "<edu.thu.benchmark.annotated.service.FileUploadService: boolean isAllowedFileType(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.FileUploadService.java",
+      "lineNumber": -1
+    }
+  ],
+  "executeViaUtilsSafe08": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+      "memberName": "executeViaUtilsSafe08",
+      "signature": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeViaUtilsSafe08(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.CommandInjectionController.java",
+      "lineNumber": -1
+    }
+  ],
+  "listFiles": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.FileController",
+      "memberName": "listFiles",
+      "signature": "<edu.thu.benchmark.annotated.controller.FileController: java.util.List listFiles()>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.FileController.java",
+      "lineNumber": -1
+    }
+  ],
+  "findUsersByCondition": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.impl.UserServiceImpl",
+      "memberName": "findUsersByCondition",
+      "signature": "<edu.thu.benchmark.annotated.service.impl.UserServiceImpl: java.util.List findUsersByCondition(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.impl.UserServiceImpl.java",
+      "lineNumber": -1
+    }
+  ],
+  "lambda$testCase40$0": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+      "memberName": "lambda$testCase40$0",
+      "signature": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: int lambda$testCase40$0(edu.thu.benchmark.annotated.entity.User,edu.thu.benchmark.annotated.entity.User)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController.java",
+      "lineNumber": -1
+    }
+  ],
+  "connectUrl": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.HttpController",
+      "memberName": "connectUrl",
+      "signature": "<edu.thu.benchmark.annotated.controller.HttpController: java.util.Map connectUrl(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.HttpController.java",
+      "lineNumber": -1
+    }
+  ],
+  "getDatasourceUsername": [
+    {
+      "className": "edu.thu.benchmark.annotated.config.AppConfig",
+      "memberName": "getDatasourceUsername",
+      "signature": "<edu.thu.benchmark.annotated.config.AppConfig: java.lang.String getDatasourceUsername()>",
+      "sourceFile": "edu.thu.benchmark.annotated.config.AppConfig.java",
+      "lineNumber": -1
+    }
+  ],
+  "setUsername": [
+    {
+      "className": "edu.thu.benchmark.annotated.entity.User",
+      "memberName": "setUsername",
+      "signature": "<edu.thu.benchmark.annotated.entity.User: void setUsername(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.User.java",
+      "lineNumber": -1
+    }
+  ],
+  "getFullPath": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo",
+      "memberName": "getFullPath",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo: java.lang.String getFullPath()>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo.java",
+      "lineNumber": -1
+    }
+  ],
+  "accessLogFile": [
+    {
+      "className": "edu.thu.benchmark.annotated.aspect.FileAccessAspect",
+      "memberName": "accessLogFile",
+      "signature": "<edu.thu.benchmark.annotated.aspect.FileAccessAspect: java.lang.String accessLogFile(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.aspect.FileAccessAspect.java",
+      "lineNumber": -1
+    }
+  ],
+  "getNestedTemplateSafe": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.TemplateService",
+      "memberName": "getNestedTemplateSafe",
+      "signature": "<edu.thu.benchmark.annotated.service.TemplateService: java.lang.String getNestedTemplateSafe(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.TemplateService.java",
+      "lineNumber": -1
+    }
+  ],
+  "setExecutionTime": [
+    {
+      "className": "edu.thu.benchmark.annotated.entity.CommandExecution",
+      "memberName": "setExecutionTime",
+      "signature": "<edu.thu.benchmark.annotated.entity.CommandExecution: void setExecutionTime(java.time.LocalDateTime)>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.CommandExecution.java",
+      "lineNumber": -1
+    }
+  ],
+  "readFileContentSafe04": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+      "memberName": "readFileContentSafe04",
+      "signature": "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.lang.String readFileContentSafe04(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.PathTraversalController.java",
+      "lineNumber": -1
+    }
+  ],
+  "executeCommand01": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+      "memberName": "executeCommand01",
+      "signature": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeCommand01(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.CommandInjectionController.java",
+      "lineNumber": -1
+    }
+  ],
+  "setStatus": [
+    {
+      "className": "edu.thu.benchmark.annotated.entity.CommandExecution",
+      "memberName": "setStatus",
+      "signature": "<edu.thu.benchmark.annotated.entity.CommandExecution: void setStatus(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.CommandExecution.java",
+      "lineNumber": -1
+    }
+  ],
+  "findUserByEmailUnsafe": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.SqlInjectionTestService",
+      "memberName": "findUserByEmailUnsafe",
+      "signature": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: edu.thu.benchmark.annotated.entity.User findUserByEmailUnsafe(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.SqlInjectionTestService.java",
+      "lineNumber": -1
+    }
+  ],
+  "lambda$testCase40$2": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+      "memberName": "lambda$testCase40$2",
+      "signature": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: int lambda$testCase40$2(edu.thu.benchmark.annotated.entity.User,edu.thu.benchmark.annotated.entity.User)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController.java",
+      "lineNumber": -1
+    }
+  ],
+  "lambda$testCase40$1": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+      "memberName": "lambda$testCase40$1",
+      "signature": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: int lambda$testCase40$1(edu.thu.benchmark.annotated.entity.User,edu.thu.benchmark.annotated.entity.User)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController.java",
+      "lineNumber": -1
+    }
+  ],
+  "getSize": [
+    {
+      "className": "edu.thu.benchmark.annotated.entity.FileInfo",
+      "memberName": "getSize",
+      "signature": "<edu.thu.benchmark.annotated.entity.FileInfo: java.lang.Long getSize()>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.FileInfo.java",
+      "lineNumber": -1
+    }
+  ],
+  "loadByPath": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.impl.FileServiceImpl",
+      "memberName": "loadByPath",
+      "signature": "<edu.thu.benchmark.annotated.service.impl.FileServiceImpl: org.springframework.core.io.Resource loadByPath(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.impl.FileServiceImpl.java",
+      "lineNumber": -1
+    }
+  ],
+  "findByEmail": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.UserController",
+      "memberName": "findByEmail",
+      "signature": "<edu.thu.benchmark.annotated.controller.UserController: java.lang.String findByEmail(java.lang.String,org.springframework.ui.Model)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.UserController.java",
+      "lineNumber": -1
+    }
+  ],
+  "isAllowedHost": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.HttpController",
+      "memberName": "isAllowedHost",
+      "signature": "<edu.thu.benchmark.annotated.controller.HttpController: boolean isAllowedHost(java.lang.String)>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.HttpController.java",
+      "lineNumber": -1
+    }
+  ]
+}

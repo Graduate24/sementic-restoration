@@ -1,0 +1,1086 @@
+{
+  "entryPoints": {
+    "entryPoints": [
+      "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.lang.String getTemplateFile10(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.util.FileUtils: java.lang.String joinPathsSafe(java.lang.String,java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithWhitelistSafe02(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.UserController: java.lang.String getAllUsers(org.springframework.ui.Model)>",
+      "<edu.thu.benchmark.annotated.controller.FileController: org.springframework.http.ResponseEntity downloadFile(java.lang.Integer)>",
+      "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.lang.String getXmlFile06(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.util.MyBatisXmlParser: java.lang.String generateJavaExample(java.util.List)>",
+      "<edu.thu.benchmark.annotated.controller.PathTraversalController: org.springframework.http.ResponseEntity getImageSafe02(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.util.CommandUtils: java.lang.String executeSafe(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.UserController: java.lang.String getUserById(java.lang.Integer,org.springframework.ui.Model)>",
+      "<edu.thu.benchmark.annotated.controller.CommandController: java.lang.String pingHost(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithProcessBuilderSafe06(java.lang.String,java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeViaAspect05(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.util.FileUtils: java.util.List listDirectoryUnsafe(java.lang.String,java.lang.String)>",
+      "<edu.thu.benchmark.annotated.util.MyBatisXmlParser: java.lang.String getFullMethodPath(java.lang.String,java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.FileController: org.springframework.http.ResponseEntity readFile(java.lang.String)>",
+      "<edu.thu.soot.FieldLineNumberFinder: java.lang.String findSourceFile(java.lang.String,java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.PathTraversalController: org.springframework.http.ResponseEntity downloadFile03(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.util.Map getConfigFileSafe08(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeArraySafe03(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithFullValidation07(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.FileController: java.util.Map deleteFile(java.lang.Integer)>",
+      "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithMultipleParams09(java.lang.String,java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.UserController: java.lang.String addUserForm(org.springframework.ui.Model)>",
+      "<edu.thu.benchmark.annotated.controller.XmlController: java.util.Map parseXmlSafe(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.HomeController: java.lang.String index()>",
+      "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithProcessBuilder06(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.util.MyBatisSqlExtractor: java.util.List extractMethodPaths(java.io.File)>",
+      "<edu.thu.benchmark.annotated.controller.UserController: java.lang.String deleteUser(java.lang.Integer)>",
+      "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.lang.String readFileContent04(java.lang.String)>",
+      "<edu.thu.soot.CallGraphGenerator: void main(java.lang.String[])>",
+      "<edu.thu.soot.FieldLineNumberFinder: void main(java.lang.String[])>",
+      "<edu.thu.soot.JimpleGenerator: void main(java.lang.String[])>",
+      "<edu.thu.soot.SootCodeAnalyzer: void main(java.lang.String[])>",
+      "<edu.thu.benchmark.annotated.util.MyBatisCompiler: void main(java.lang.String[])>",
+      "<edu.thu.benchmark.annotated.util.MyBatisMapperScanner: void main(java.lang.String[])>",
+      "<edu.thu.benchmark.annotated.util.MyBatisSqlExtractor: void main(java.lang.String[])>",
+      "<edu.thu.benchmark.annotated.util.MyBatisXmlParser: void main(java.lang.String[])>",
+      "<edu.thu.benchmark.annotated.AnnotatedBenchmarkApplication: void main(java.lang.String[])>",
+      "<unnamed package.Test1: void main(java.lang.String[])>",
+      "<edu.thu.benchmark.annotated.util.MyBatisSqlExtractor: java.util.Map extractMethodPathsFromDirectory(java.io.File)>",
+      "<edu.thu.benchmark.annotated.controller.CommandController: java.lang.String executeCommand(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.lang.String getTemplateFileSafe10(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.lang.String getXmlFileSafe06(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeViaUtilsSafe08(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.FileController: java.util.List listFiles()>",
+      "<edu.thu.benchmark.annotated.controller.HttpController: java.util.Map connectUrl(java.lang.String)>",
+      "<edu.thu.soot.FieldLineNumberFinder: int findFieldLineNumberFromSource(java.lang.String,java.lang.String,java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.lang.String readFileContentSafe04(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.UserController: java.lang.String findByEmail(java.lang.String,org.springframework.ui.Model)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase21(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.XmlController: java.util.Map processXml(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase22(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase20(java.lang.String,java.lang.String,java.lang.String,java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase25(int,int)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: int testCase26(int,java.lang.String,java.lang.String,java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase23(java.util.List)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase24(java.lang.Integer,java.lang.String,java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: edu.thu.benchmark.annotated.entity.User testCase29(java.lang.String,java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.FileController: java.lang.String filePage(org.springframework.ui.Model)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: int testCase27(java.lang.Integer)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: edu.thu.benchmark.annotated.entity.User testCase28(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String fileOperationWithApiSafe10(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.UserController: void welcome(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase10(java.lang.String,java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase11(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeViaUtils08(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase14(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase15(java.lang.String,java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase12(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase13(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase18(java.lang.String,java.lang.String,java.lang.String)>",
+      "<edu.thu.benchmark.annotated.util.FileUtils: java.util.List listDirectorySafe(java.lang.String,java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: edu.thu.benchmark.annotated.entity.User testCase19(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase16(java.lang.String,java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase17(java.lang.String,java.lang.String)>",
+      "<edu.thu.benchmark.annotated.util.FileUtils: java.lang.String joinPathsUnsafe(java.lang.String,java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase41(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase42(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.lang.String getLogFileSafe07(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeCommandSafe01(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase32(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase33(java.lang.String,java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.FileController: java.util.Map uploadFile(org.springframework.web.multipart.MultipartFile)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase30(java.lang.String,java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase31(java.lang.String,java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase36(java.lang.Integer,java.lang.String,java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase37(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase34(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase35(java.lang.String,java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.UserController: java.lang.String updateUser(java.lang.Integer,java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.CommandController: java.lang.String executeSystemCommand(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase38(java.lang.String,java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.PathTraversalController: org.springframework.http.ResponseEntity getFile01(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase39(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.util.CommandUtils: java.lang.String executeUnsafe(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.PathTraversalController: org.springframework.http.ResponseEntity getFileSafe01(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.HttpController: org.springframework.http.ResponseEntity fetchUrl(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase40(java.lang.Integer,java.lang.String,java.lang.String,java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.FileController: org.springframework.http.ResponseEntity viewFile(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeViaAspectSafe05(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithJavaApiSafe09(java.lang.String,java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeViaService04(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.XmlController: java.util.Map parseXml(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.util.MyBatisXmlParser: edu.thu.benchmark.annotated.util.MyBatisXmlParser$MapperInfo parseXml(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.lang.String getFileWithInjectionSafe05(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase03(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase04(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase01(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase02(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: int testCase07(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: edu.thu.benchmark.annotated.entity.User testCase08(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase05(java.lang.String,java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: int testCase06(int,java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.lang.String getLogFile07(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.HttpController: org.springframework.http.ResponseEntity fetchUrlSafe(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: edu.thu.benchmark.annotated.entity.User testCase09(java.lang.String,java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.util.Map getConfigFile08(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.util.MyBatisSqlExtractor: java.lang.String generateMethodCall(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String fileOperationWithCommand10(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.util.FileUtils: java.lang.String readFileSafe(java.lang.String,java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeViaServiceSafe04(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithSystemProperty02(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.util.Map readProperties09(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.util.FileUtils: java.lang.String readFileUnsafe(java.lang.String,java.lang.String)>",
+      "<edu.thu.soot.FieldLineNumberFinder: int findFieldLineNumber(java.lang.String,java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.HttpController: java.lang.String httpPage()>",
+      "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithConfigPrefix07(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.lang.String getFileWithInjection05(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.XmlController: java.lang.String xmlPage()>",
+      "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.util.Map readPropertiesSafe09(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.CommandController: java.lang.String showCommandPage()>",
+      "<edu.thu.benchmark.annotated.util.MyBatisXmlParser: java.util.List parseDirectory(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.PathTraversalController: org.springframework.http.ResponseEntity downloadFileSafe03(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.UserController: void searchByUsername(java.lang.String,javax.servlet.http.HttpServletResponse)>",
+      "<edu.thu.benchmark.annotated.controller.UserController: java.lang.String addUser(edu.thu.benchmark.annotated.entity.User)>",
+      "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeArrayWithInjection03(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.PathTraversalController: org.springframework.http.ResponseEntity getImage02(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.UserController: java.util.List findByCondition(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeCommand01(java.lang.String)>"
+    ],
+    "count": 140.0
+  },
+  "aop": {
+    "afterAspects": [
+      {
+        "targetMethods": [
+          {
+            "signature": "findUsersByAspectSafe(java.lang.String)",
+            "name": "findUsersByAspectSafe",
+            "declaringType": "edu.thu.benchmark.annotated.service.SqlInjectionTestService",
+            "returnType": "java.util.List"
+          }
+        ],
+        "adviceMethod": {
+          "signature": "afterSafeSqlExecution()",
+          "name": "afterSafeSqlExecution",
+          "type": "after",
+          "declaringType": "edu.thu.benchmark.annotated.aspect.SqlInjectionAspect",
+          "returnType": "void"
+        }
+      }
+    ],
+    "aroundAspects": [],
+    "afterReturningAspects": [],
+    "beforeAspects": [
+      {
+        "targetMethods": [
+          {
+            "signature": "getFile01(java.lang.String)",
+            "name": "getFile01",
+            "declaringType": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+            "returnType": "org.springframework.http.ResponseEntity"
+          },
+          {
+            "signature": "getFileSafe01(java.lang.String)",
+            "name": "getFileSafe01",
+            "declaringType": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+            "returnType": "org.springframework.http.ResponseEntity"
+          },
+          {
+            "signature": "getFileWithInjectionSafe05(java.lang.String)",
+            "name": "getFileWithInjectionSafe05",
+            "declaringType": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+            "returnType": "java.lang.String"
+          },
+          {
+            "signature": "getFileWithInjection05(java.lang.String)",
+            "name": "getFileWithInjection05",
+            "declaringType": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+            "returnType": "java.lang.String"
+          }
+        ],
+        "adviceMethod": {
+          "signature": "logFileAccessUnsafe(org.aspectj.lang.JoinPoint)",
+          "name": "logFileAccessUnsafe",
+          "type": "before",
+          "declaringType": "edu.thu.benchmark.annotated.aspect.FileAccessAspect",
+          "returnType": "void"
+        }
+      },
+      {
+        "targetMethods": [
+          {
+            "signature": "getFileSafe01(java.lang.String)",
+            "name": "getFileSafe01",
+            "declaringType": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+            "returnType": "org.springframework.http.ResponseEntity"
+          },
+          {
+            "signature": "getFileWithInjectionSafe05(java.lang.String)",
+            "name": "getFileWithInjectionSafe05",
+            "declaringType": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+            "returnType": "java.lang.String"
+          }
+        ],
+        "adviceMethod": {
+          "signature": "logFileAccessSafe(org.aspectj.lang.JoinPoint)",
+          "name": "logFileAccessSafe",
+          "type": "before",
+          "declaringType": "edu.thu.benchmark.annotated.aspect.FileAccessAspect",
+          "returnType": "void"
+        }
+      },
+      {
+        "targetMethods": [],
+        "adviceMethod": {
+          "signature": "beforeUnsafeFileAccess(org.aspectj.lang.JoinPoint)",
+          "name": "beforeUnsafeFileAccess",
+          "type": "before",
+          "declaringType": "edu.thu.benchmark.annotated.aspect.FileAccessAspect",
+          "returnType": "void"
+        }
+      },
+      {
+        "targetMethods": [],
+        "adviceMethod": {
+          "signature": "beforeSafeFileAccess(org.aspectj.lang.JoinPoint)",
+          "name": "beforeSafeFileAccess",
+          "type": "before",
+          "declaringType": "edu.thu.benchmark.annotated.aspect.FileAccessAspect",
+          "returnType": "void"
+        }
+      },
+      {
+        "targetMethods": [
+          {
+            "signature": "findUsersByAspectSafe(java.lang.String)",
+            "name": "findUsersByAspectSafe",
+            "declaringType": "edu.thu.benchmark.annotated.service.SqlInjectionTestService",
+            "returnType": "java.util.List"
+          }
+        ],
+        "adviceMethod": {
+          "signature": "beforeUnsafeSqlExecution()",
+          "name": "beforeUnsafeSqlExecution",
+          "type": "before",
+          "declaringType": "edu.thu.benchmark.annotated.aspect.SqlInjectionAspect",
+          "returnType": "void"
+        }
+      },
+      {
+        "targetMethods": [
+          {
+            "signature": "findUsersByAspectSafe(java.lang.String)",
+            "name": "findUsersByAspectSafe",
+            "declaringType": "edu.thu.benchmark.annotated.service.SqlInjectionTestService",
+            "returnType": "java.util.List"
+          }
+        ],
+        "adviceMethod": {
+          "signature": "executeUnsafeSql(java.lang.String)",
+          "name": "executeUnsafeSql",
+          "type": "before",
+          "declaringType": "edu.thu.benchmark.annotated.aspect.SqlInjectionAspect",
+          "returnType": "java.util.List"
+        }
+      },
+      {
+        "targetMethods": [
+          {
+            "signature": "findUsersByAspectSafe(java.lang.String)",
+            "name": "findUsersByAspectSafe",
+            "declaringType": "edu.thu.benchmark.annotated.service.SqlInjectionTestService",
+            "returnType": "java.util.List"
+          }
+        ],
+        "adviceMethod": {
+          "signature": "executeSafeSql()",
+          "name": "executeSafeSql",
+          "type": "before",
+          "declaringType": "edu.thu.benchmark.annotated.aspect.SqlInjectionAspect",
+          "returnType": "java.util.List"
+        }
+      }
+    ],
+    "afterThrowingAspects": [],
+    "statistics": {
+      "beforeCount": 9.0,
+      "afterCount": 1.0,
+      "aroundCount": 0.0,
+      "afterThrowingCount": 0.0,
+      "afterReturningCount": 0.0
+    }
+  },
+  "sources": {
+    "sources": [
+      "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.lang.String getTemplateFile10(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithWhitelistSafe02(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.UserController: java.lang.String getAllUsers(org.springframework.ui.Model)>",
+      "<edu.thu.benchmark.annotated.controller.FileController: org.springframework.http.ResponseEntity downloadFile(java.lang.Integer)>",
+      "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.lang.String getXmlFile06(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.PathTraversalController: org.springframework.http.ResponseEntity getImageSafe02(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.UserController: java.lang.String getUserById(java.lang.Integer,org.springframework.ui.Model)>",
+      "<edu.thu.benchmark.annotated.controller.CommandController: java.lang.String pingHost(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithProcessBuilderSafe06(java.lang.String,java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeViaAspect05(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.FileController: org.springframework.http.ResponseEntity readFile(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.PathTraversalController: org.springframework.http.ResponseEntity downloadFile03(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.util.Map getConfigFileSafe08(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeArraySafe03(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithFullValidation07(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.FileController: java.util.Map deleteFile(java.lang.Integer)>",
+      "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithMultipleParams09(java.lang.String,java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.UserController: java.lang.String addUserForm(org.springframework.ui.Model)>",
+      "<edu.thu.benchmark.annotated.controller.XmlController: java.util.Map parseXmlSafe(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.HomeController: java.lang.String index()>",
+      "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithProcessBuilder06(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.UserController: java.lang.String deleteUser(java.lang.Integer)>",
+      "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.lang.String readFileContent04(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.CommandController: java.lang.String executeCommand(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.lang.String getTemplateFileSafe10(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.lang.String getXmlFileSafe06(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeViaUtilsSafe08(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.FileController: java.util.List listFiles()>",
+      "<edu.thu.benchmark.annotated.controller.HttpController: java.util.Map connectUrl(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.lang.String readFileContentSafe04(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.UserController: java.lang.String findByEmail(java.lang.String,org.springframework.ui.Model)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase21(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.XmlController: java.util.Map processXml(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase22(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase20(java.lang.String,java.lang.String,java.lang.String,java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase25(int,int)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: int testCase26(int,java.lang.String,java.lang.String,java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase23(java.util.List)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase24(java.lang.Integer,java.lang.String,java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: edu.thu.benchmark.annotated.entity.User testCase29(java.lang.String,java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.FileController: java.lang.String filePage(org.springframework.ui.Model)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: int testCase27(java.lang.Integer)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: edu.thu.benchmark.annotated.entity.User testCase28(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String fileOperationWithApiSafe10(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.UserController: void welcome(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase10(java.lang.String,java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase11(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeViaUtils08(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase14(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase15(java.lang.String,java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase12(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase13(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase18(java.lang.String,java.lang.String,java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: edu.thu.benchmark.annotated.entity.User testCase19(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase16(java.lang.String,java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase17(java.lang.String,java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase41(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase42(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.lang.String getLogFileSafe07(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeCommandSafe01(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase32(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase33(java.lang.String,java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.FileController: java.util.Map uploadFile(org.springframework.web.multipart.MultipartFile)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase30(java.lang.String,java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase31(java.lang.String,java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase36(java.lang.Integer,java.lang.String,java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase37(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase34(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase35(java.lang.String,java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.UserController: java.lang.String updateUser(java.lang.Integer,java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.CommandController: java.lang.String executeSystemCommand(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase38(java.lang.String,java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.PathTraversalController: org.springframework.http.ResponseEntity getFile01(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase39(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.PathTraversalController: org.springframework.http.ResponseEntity getFileSafe01(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.HttpController: org.springframework.http.ResponseEntity fetchUrl(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase40(java.lang.Integer,java.lang.String,java.lang.String,java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.FileController: org.springframework.http.ResponseEntity viewFile(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeViaAspectSafe05(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithJavaApiSafe09(java.lang.String,java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeViaService04(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.XmlController: java.util.Map parseXml(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.lang.String getFileWithInjectionSafe05(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase03(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase04(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase01(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase02(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: int testCase07(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: edu.thu.benchmark.annotated.entity.User testCase08(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase05(java.lang.String,java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: int testCase06(int,java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.lang.String getLogFile07(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.HttpController: org.springframework.http.ResponseEntity fetchUrlSafe(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: edu.thu.benchmark.annotated.entity.User testCase09(java.lang.String,java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.util.Map getConfigFile08(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String fileOperationWithCommand10(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeViaServiceSafe04(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithSystemProperty02(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.util.Map readProperties09(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.HttpController: java.lang.String httpPage()>",
+      "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithConfigPrefix07(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.lang.String getFileWithInjection05(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.XmlController: java.lang.String xmlPage()>",
+      "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.util.Map readPropertiesSafe09(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.CommandController: java.lang.String showCommandPage()>",
+      "<edu.thu.benchmark.annotated.controller.PathTraversalController: org.springframework.http.ResponseEntity downloadFileSafe03(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.UserController: void searchByUsername(java.lang.String,javax.servlet.http.HttpServletResponse)>",
+      "<edu.thu.benchmark.annotated.controller.UserController: java.lang.String addUser(edu.thu.benchmark.annotated.entity.User)>",
+      "<edu.thu.benchmark.annotated.config.DatabaseConfig: org.springframework.jdbc.datasource.init.DataSourceInitializer dataSourceInitializer(javax.sql.DataSource)>",
+      "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeArrayWithInjection03(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.PathTraversalController: org.springframework.http.ResponseEntity getImage02(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.UserController: java.util.List findByCondition(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeCommand01(java.lang.String)>"
+    ],
+    "count": 113.0
+  },
+  "sinks": {
+    "sinks": [
+      "<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: java.util.List findUsersInListUnsafe(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: int deleteUsersUnsafe(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: java.util.List findUsersByNameUnsafe(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: int updateUserDynamicUnsafe(int,java.lang.String)>",
+      "<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: java.util.List findUsersWithLimitUnsafe(java.lang.String,java.lang.String)>",
+      "<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: java.util.List findUsersByMultipleConditionsUnsafe(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: java.util.List searchUsersSemiSafe(java.lang.String,java.lang.String)>",
+      "<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: java.util.List searchUsersUnsafe(java.lang.String,java.lang.String)>",
+      "<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: edu.thu.benchmark.annotated.entity.User findUserByCredentialsUnsafe(java.lang.String,java.lang.String)>",
+      "<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: java.util.List findUsersSortedUnsafe(java.lang.String)>",
+      "<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: edu.thu.benchmark.annotated.entity.User findUserByEmailUnsafe(java.lang.String)>"
+    ],
+    "count": 11.0
+  },
+  "iocLinker": {
+    "edu.thu.benchmark.annotated.service.CommandService.commandExecutor": {
+      "annotation": "@org.springframework.beans.factory.annotation.Value(\"${app.command.executor}\")",
+      "linkedBeans": [
+        {
+          "name": "app.command.executor",
+          "type": "java.lang.String",
+          "scope": "SINGLETON",
+          "propertyValue": {
+            "commandExecutor": "/bin/bash"
+          },
+          "lazyInit": false,
+          "fromSource": "VALUE_ANNOTATION"
+        }
+      ],
+      "name": "commandExecutor",
+      "declaringType": "edu.thu.benchmark.annotated.service.CommandService",
+      "fieldType": "java.lang.String"
+    },
+    "edu.thu.benchmark.annotated.controller.UserController.userService": {
+      "annotation": "@org.springframework.beans.factory.annotation.Autowired",
+      "linkedBeans": [
+        {
+          "name": "userServiceImpl",
+          "type": "edu.thu.benchmark.annotated.service.impl.UserServiceImpl",
+          "scope": "SINGLETON",
+          "constructors": [
+            "public edu.thu.benchmark.annotated.service.impl.UserServiceImpl(){\n}"
+          ],
+          "properties": [
+            {}
+          ],
+          "lazyInit": false,
+          "fromSource": "SERVICE_ANNOTATION"
+        }
+      ],
+      "name": "userService",
+      "declaringType": "edu.thu.benchmark.annotated.controller.UserController",
+      "fieldType": "edu.thu.benchmark.annotated.service.UserService"
+    },
+    "edu.thu.benchmark.annotated.service.CommandService.commandWhitelist": {
+      "annotation": "@org.springframework.beans.factory.annotation.Value(\"${app.command.whitelist}\")",
+      "linkedBeans": [
+        {
+          "name": "app.command.whitelist",
+          "type": "java.lang.String",
+          "scope": "SINGLETON",
+          "propertyValue": {
+            "commandWhitelist": "ls,dir,pwd,whoami,date,echo"
+          },
+          "lazyInit": false,
+          "fromSource": "VALUE_ANNOTATION"
+        }
+      ],
+      "name": "commandWhitelist",
+      "declaringType": "edu.thu.benchmark.annotated.service.CommandService",
+      "fieldType": "java.lang.String"
+    },
+    "edu.thu.benchmark.annotated.service.FileUploadService.maxFileSize": {
+      "annotation": "@org.springframework.beans.factory.annotation.Value(\"${app.upload.max-size}\")",
+      "linkedBeans": [
+        {
+          "name": "app.upload.max-size",
+          "type": "long",
+          "scope": "SINGLETON",
+          "propertyValue": {
+            "maxFileSize": 1.048576E7
+          },
+          "lazyInit": false,
+          "fromSource": "VALUE_ANNOTATION"
+        }
+      ],
+      "name": "maxFileSize",
+      "declaringType": "edu.thu.benchmark.annotated.service.FileUploadService",
+      "fieldType": "long"
+    },
+    "edu.thu.benchmark.annotated.config.AppConfig.queryTemplate": {
+      "annotation": "@org.springframework.beans.factory.annotation.Value(\"${app.database.query.template}\")",
+      "linkedBeans": [
+        {
+          "name": "app.database.query.template",
+          "type": "java.lang.String",
+          "scope": "SINGLETON",
+          "propertyValue": {
+            "queryTemplate": "SELECT * FROM {table} WHERE {condition}"
+          },
+          "lazyInit": false,
+          "fromSource": "VALUE_ANNOTATION"
+        }
+      ],
+      "name": "queryTemplate",
+      "declaringType": "edu.thu.benchmark.annotated.config.AppConfig",
+      "fieldType": "java.lang.String"
+    },
+    "edu.thu.benchmark.annotated.service.TemplateService.templateDir": {
+      "annotation": "@org.springframework.beans.factory.annotation.Value(\"${template.dir}\")",
+      "linkedBeans": [
+        {
+          "name": "template.dir",
+          "type": "java.lang.String",
+          "scope": "SINGLETON",
+          "propertyValue": {
+            "templateDir": "/tmp/templates"
+          },
+          "lazyInit": false,
+          "fromSource": "VALUE_ANNOTATION"
+        }
+      ],
+      "name": "templateDir",
+      "declaringType": "edu.thu.benchmark.annotated.service.TemplateService",
+      "fieldType": "java.lang.String"
+    },
+    "edu.thu.benchmark.annotated.service.SqlInjectionTestService.userSqlInjectionMapper": {
+      "annotation": "@org.springframework.beans.factory.annotation.Autowired",
+      "linkedBeans": [
+        {
+          "name": "userSqlInjectionMapper",
+          "type": "edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper",
+          "scope": "SINGLETON",
+          "properties": [],
+          "lazyInit": false,
+          "fromSource": "MYBATIS_MAPPER"
+        }
+      ],
+      "name": "userSqlInjectionMapper",
+      "declaringType": "edu.thu.benchmark.annotated.service.SqlInjectionTestService",
+      "fieldType": "edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper"
+    },
+    "edu.thu.benchmark.annotated.service.impl.FileServiceImpl.uploadDir": {
+      "annotation": "@org.springframework.beans.factory.annotation.Value(\"${file.upload.dir}\")",
+      "linkedBeans": [
+        {
+          "name": "file.upload.dir",
+          "type": "java.lang.String",
+          "scope": "SINGLETON",
+          "propertyValue": {
+            "uploadDir": "./uploads"
+          },
+          "lazyInit": false,
+          "fromSource": "VALUE_ANNOTATION"
+        }
+      ],
+      "name": "uploadDir",
+      "declaringType": "edu.thu.benchmark.annotated.service.impl.FileServiceImpl",
+      "fieldType": "java.lang.String"
+    },
+    "edu.thu.benchmark.annotated.service.SqlInjectionTestService.namedParameterJdbcTemplate": {
+      "annotation": "@org.springframework.beans.factory.annotation.Autowired",
+      "linkedBeans": [],
+      "name": "namedParameterJdbcTemplate",
+      "declaringType": "edu.thu.benchmark.annotated.service.SqlInjectionTestService",
+      "fieldType": "org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate"
+    },
+    "edu.thu.benchmark.annotated.controller.CommandInjectionController.commandService": {
+      "annotation": "@org.springframework.beans.factory.annotation.Autowired",
+      "linkedBeans": [
+        {
+          "name": "commandService",
+          "type": "edu.thu.benchmark.annotated.service.CommandService",
+          "scope": "SINGLETON",
+          "constructors": [
+            "public edu.thu.benchmark.annotated.service.CommandService(){\n}"
+          ],
+          "properties": [
+            {},
+            {},
+            {},
+            {}
+          ],
+          "lazyInit": false,
+          "fromSource": "SERVICE_ANNOTATION"
+        }
+      ],
+      "name": "commandService",
+      "declaringType": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+      "fieldType": "edu.thu.benchmark.annotated.service.CommandService"
+    },
+    "edu.thu.benchmark.annotated.service.CommandService.argPattern": {
+      "annotation": "@org.springframework.beans.factory.annotation.Value(\"${app.command.arg-pattern}\")",
+      "linkedBeans": [
+        {
+          "name": "app.command.arg-pattern",
+          "type": "java.lang.String",
+          "scope": "SINGLETON",
+          "propertyValue": {
+            "argPattern": "[a-zA-Z0-9_\\-\\.]*"
+          },
+          "lazyInit": false,
+          "fromSource": "VALUE_ANNOTATION"
+        }
+      ],
+      "name": "argPattern",
+      "declaringType": "edu.thu.benchmark.annotated.service.CommandService",
+      "fieldType": "java.lang.String"
+    },
+    "edu.thu.benchmark.annotated.service.impl.UserServiceImpl.userMapper": {
+      "annotation": "@org.springframework.beans.factory.annotation.Autowired",
+      "linkedBeans": [],
+      "name": "userMapper",
+      "declaringType": "edu.thu.benchmark.annotated.service.impl.UserServiceImpl",
+      "fieldType": "edu.thu.benchmark.annotated.mapper.UserMapper"
+    },
+    "edu.thu.benchmark.annotated.config.AppConfig.datasourceUsername": {
+      "annotation": "@org.springframework.beans.factory.annotation.Value(\"${spring.datasource.username}\")",
+      "linkedBeans": [
+        {
+          "name": "spring.datasource.username",
+          "type": "java.lang.String",
+          "scope": "SINGLETON",
+          "propertyValue": {
+            "datasourceUsername": "sa"
+          },
+          "lazyInit": false,
+          "fromSource": "VALUE_ANNOTATION"
+        }
+      ],
+      "name": "datasourceUsername",
+      "declaringType": "edu.thu.benchmark.annotated.config.AppConfig",
+      "fieldType": "java.lang.String"
+    },
+    "edu.thu.benchmark.annotated.config.AppConfig.maxConnections": {
+      "annotation": "@org.springframework.beans.factory.annotation.Value(\"${app.max-connections}\")",
+      "linkedBeans": [
+        {
+          "name": "app.max-connections",
+          "type": "int",
+          "scope": "SINGLETON",
+          "propertyValue": {
+            "maxConnections": 100.0
+          },
+          "lazyInit": false,
+          "fromSource": "VALUE_ANNOTATION"
+        }
+      ],
+      "name": "maxConnections",
+      "declaringType": "edu.thu.benchmark.annotated.config.AppConfig",
+      "fieldType": "int"
+    },
+    "edu.thu.benchmark.annotated.config.AppConfig.applicationName": {
+      "annotation": "@org.springframework.beans.factory.annotation.Value(\"${spring.application.name}\")",
+      "linkedBeans": [
+        {
+          "name": "spring.application.name",
+          "type": "java.lang.String",
+          "scope": "SINGLETON",
+          "propertyValue": {
+            "applicationName": "java-benchmark"
+          },
+          "lazyInit": false,
+          "fromSource": "VALUE_ANNOTATION"
+        }
+      ],
+      "name": "applicationName",
+      "declaringType": "edu.thu.benchmark.annotated.config.AppConfig",
+      "fieldType": "java.lang.String"
+    },
+    "edu.thu.benchmark.annotated.controller.CommandInjectionController.allowedCommandPrefix": {
+      "annotation": "@org.springframework.beans.factory.annotation.Value(\"${command.allowed.prefix}\")",
+      "linkedBeans": [
+        {
+          "name": "command.allowed.prefix",
+          "type": "java.lang.String",
+          "scope": "SINGLETON",
+          "propertyValue": {
+            "allowedCommandPrefix": "ls,cat,echo,pwd,grep,find"
+          },
+          "lazyInit": false,
+          "fromSource": "VALUE_ANNOTATION"
+        }
+      ],
+      "name": "allowedCommandPrefix",
+      "declaringType": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+      "fieldType": "java.lang.String"
+    },
+    "edu.thu.benchmark.annotated.config.AppConfig.serverPort": {
+      "annotation": "@org.springframework.beans.factory.annotation.Value(\"${server.port}\")",
+      "linkedBeans": [
+        {
+          "name": "server.port",
+          "type": "int",
+          "scope": "SINGLETON",
+          "propertyValue": {
+            "serverPort": 8080.0
+          },
+          "lazyInit": false,
+          "fromSource": "VALUE_ANNOTATION"
+        }
+      ],
+      "name": "serverPort",
+      "declaringType": "edu.thu.benchmark.annotated.config.AppConfig",
+      "fieldType": "int"
+    },
+    "edu.thu.benchmark.annotated.service.ZipService.extractDir": {
+      "annotation": "@org.springframework.beans.factory.annotation.Value(\"${zip.extract.dir}\")",
+      "linkedBeans": [
+        {
+          "name": "zip.extract.dir",
+          "type": "java.lang.String",
+          "scope": "SINGLETON",
+          "propertyValue": {
+            "extractDir": "/tmp/extracts"
+          },
+          "lazyInit": false,
+          "fromSource": "VALUE_ANNOTATION"
+        }
+      ],
+      "name": "extractDir",
+      "declaringType": "edu.thu.benchmark.annotated.service.ZipService",
+      "fieldType": "java.lang.String"
+    },
+    "edu.thu.benchmark.annotated.controller.PathTraversalController.pathTraversalService": {
+      "annotation": "@org.springframework.beans.factory.annotation.Autowired",
+      "linkedBeans": [
+        {
+          "name": "pathTraversalService",
+          "type": "edu.thu.benchmark.annotated.service.PathTraversalService",
+          "scope": "SINGLETON",
+          "constructors": [
+            "public edu.thu.benchmark.annotated.service.PathTraversalService(){\n}"
+          ],
+          "properties": [
+            {}
+          ],
+          "lazyInit": false,
+          "fromSource": "SERVICE_ANNOTATION"
+        }
+      ],
+      "name": "pathTraversalService",
+      "declaringType": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+      "fieldType": "edu.thu.benchmark.annotated.service.PathTraversalService"
+    },
+    "edu.thu.benchmark.annotated.aspect.SqlInjectionAspect.jdbcTemplate": {
+      "annotation": "@org.springframework.beans.factory.annotation.Autowired",
+      "linkedBeans": [],
+      "name": "jdbcTemplate",
+      "declaringType": "edu.thu.benchmark.annotated.aspect.SqlInjectionAspect",
+      "fieldType": "org.springframework.jdbc.core.JdbcTemplate"
+    },
+    "edu.thu.benchmark.annotated.controller.PathTraversalController.fileAccessAspect": {
+      "annotation": "@org.springframework.beans.factory.annotation.Autowired",
+      "linkedBeans": [
+        {
+          "name": "fileAccessAspect",
+          "type": "edu.thu.benchmark.annotated.aspect.FileAccessAspect",
+          "scope": "SINGLETON",
+          "constructors": [
+            "public edu.thu.benchmark.annotated.aspect.FileAccessAspect(){\n}"
+          ],
+          "properties": [
+            {}
+          ],
+          "lazyInit": false,
+          "fromSource": "COMPONENT_ANNOTATION"
+        }
+      ],
+      "name": "fileAccessAspect",
+      "declaringType": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+      "fieldType": "edu.thu.benchmark.annotated.aspect.FileAccessAspect"
+    },
+    "edu.thu.benchmark.annotated.controller.SqlInjectionTestController.sqlInjectionTestService": {
+      "annotation": "@org.springframework.beans.factory.annotation.Autowired",
+      "linkedBeans": [
+        {
+          "name": "sqlInjectionTestService",
+          "type": "edu.thu.benchmark.annotated.service.SqlInjectionTestService",
+          "scope": "SINGLETON",
+          "constructors": [
+            "public edu.thu.benchmark.annotated.service.SqlInjectionTestService(){\n}"
+          ],
+          "properties": [
+            {},
+            {},
+            {},
+            {}
+          ],
+          "lazyInit": false,
+          "fromSource": "SERVICE_ANNOTATION"
+        }
+      ],
+      "name": "sqlInjectionTestService",
+      "declaringType": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+      "fieldType": "edu.thu.benchmark.annotated.service.SqlInjectionTestService"
+    },
+    "edu.thu.benchmark.annotated.controller.PathTraversalController.templateService": {
+      "annotation": "@org.springframework.beans.factory.annotation.Autowired",
+      "linkedBeans": [
+        {
+          "name": "templateService",
+          "type": "edu.thu.benchmark.annotated.service.TemplateService",
+          "scope": "SINGLETON",
+          "constructors": [
+            "public edu.thu.benchmark.annotated.service.TemplateService(){\n}"
+          ],
+          "properties": [
+            {},
+            {}
+          ],
+          "lazyInit": false,
+          "fromSource": "SERVICE_ANNOTATION"
+        }
+      ],
+      "name": "templateService",
+      "declaringType": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+      "fieldType": "edu.thu.benchmark.annotated.service.TemplateService"
+    },
+    "edu.thu.benchmark.annotated.config.AppConfig.uploadDirectory": {
+      "annotation": "@org.springframework.beans.factory.annotation.Value(\"${app.upload.directory}\")",
+      "linkedBeans": [
+        {
+          "name": "app.upload.directory",
+          "type": "java.lang.String",
+          "scope": "SINGLETON",
+          "propertyValue": {
+            "uploadDirectory": "/var/uploads"
+          },
+          "lazyInit": false,
+          "fromSource": "VALUE_ANNOTATION"
+        }
+      ],
+      "name": "uploadDirectory",
+      "declaringType": "edu.thu.benchmark.annotated.config.AppConfig",
+      "fieldType": "java.lang.String"
+    },
+    "edu.thu.benchmark.annotated.config.AppConfig.timeout": {
+      "annotation": "@org.springframework.beans.factory.annotation.Value(\"${app.timeout}\")",
+      "linkedBeans": [
+        {
+          "name": "app.timeout",
+          "type": "int",
+          "scope": "SINGLETON",
+          "propertyValue": {
+            "timeout": 30000.0
+          },
+          "lazyInit": false,
+          "fromSource": "VALUE_ANNOTATION"
+        }
+      ],
+      "name": "timeout",
+      "declaringType": "edu.thu.benchmark.annotated.config.AppConfig",
+      "fieldType": "int"
+    },
+    "edu.thu.benchmark.annotated.controller.FileController.fileService": {
+      "annotation": "@org.springframework.beans.factory.annotation.Autowired",
+      "linkedBeans": [
+        {
+          "name": "fileServiceImpl",
+          "type": "edu.thu.benchmark.annotated.service.impl.FileServiceImpl",
+          "scope": "SINGLETON",
+          "constructors": [
+            "public edu.thu.benchmark.annotated.service.impl.FileServiceImpl(java.lang.String){\n    this.uploadDir = uploadDir;\n    this.rootLocation = java.nio.file.Paths.get(uploadDir);\n}"
+          ],
+          "properties": [
+            {},
+            {},
+            {},
+            {}
+          ],
+          "lazyInit": false,
+          "fromSource": "SERVICE_ANNOTATION"
+        }
+      ],
+      "name": "fileService",
+      "declaringType": "edu.thu.benchmark.annotated.controller.FileController",
+      "fieldType": "edu.thu.benchmark.annotated.service.FileService"
+    },
+    "edu.thu.benchmark.annotated.aspect.FileAccessAspect.logDir": {
+      "annotation": "@org.springframework.beans.factory.annotation.Value(\"${log.dir}\")",
+      "linkedBeans": [
+        {
+          "name": "log.dir",
+          "type": "java.lang.String",
+          "scope": "SINGLETON",
+          "propertyValue": {
+            "logDir": "/tmp/logs"
+          },
+          "lazyInit": false,
+          "fromSource": "VALUE_ANNOTATION"
+        }
+      ],
+      "name": "logDir",
+      "declaringType": "edu.thu.benchmark.annotated.aspect.FileAccessAspect",
+      "fieldType": "java.lang.String"
+    },
+    "edu.thu.benchmark.annotated.config.AppConfig.datasourcePassword": {
+      "annotation": "@org.springframework.beans.factory.annotation.Value(\"${spring.datasource.password}\")",
+      "linkedBeans": [
+        {
+          "name": "spring.datasource.password",
+          "type": "java.lang.String",
+          "scope": "SINGLETON",
+          "propertyValue": {
+            "datasourcePassword": "password"
+          },
+          "lazyInit": false,
+          "fromSource": "VALUE_ANNOTATION"
+        }
+      ],
+      "name": "datasourcePassword",
+      "declaringType": "edu.thu.benchmark.annotated.config.AppConfig",
+      "fieldType": "java.lang.String"
+    },
+    "edu.thu.benchmark.annotated.controller.SqlInjectionTestController.jdbcTemplate": {
+      "annotation": "@org.springframework.beans.factory.annotation.Autowired",
+      "linkedBeans": [],
+      "name": "jdbcTemplate",
+      "declaringType": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+      "fieldType": "org.springframework.jdbc.core.JdbcTemplate"
+    },
+    "edu.thu.benchmark.annotated.service.FileUploadService.allowedExtensions": {
+      "annotation": "@org.springframework.beans.factory.annotation.Value(\"${app.upload.allowed-extensions}\")",
+      "linkedBeans": [
+        {
+          "name": "app.upload.allowed-extensions",
+          "type": "java.lang.String",
+          "scope": "SINGLETON",
+          "propertyValue": {
+            "allowedExtensions": ".jpg,.jpeg,.png,.pdf,.docx"
+          },
+          "lazyInit": false,
+          "fromSource": "VALUE_ANNOTATION"
+        }
+      ],
+      "name": "allowedExtensions",
+      "declaringType": "edu.thu.benchmark.annotated.service.FileUploadService",
+      "fieldType": "java.lang.String"
+    },
+    "edu.thu.benchmark.annotated.config.AppConfig.securityEnabled": {
+      "annotation": "@org.springframework.beans.factory.annotation.Value(\"${app.security.enabled}\")",
+      "linkedBeans": [
+        {
+          "name": "app.security.enabled",
+          "type": "boolean",
+          "scope": "SINGLETON",
+          "propertyValue": {
+            "securityEnabled": true
+          },
+          "lazyInit": false,
+          "fromSource": "VALUE_ANNOTATION"
+        }
+      ],
+      "name": "securityEnabled",
+      "declaringType": "edu.thu.benchmark.annotated.config.AppConfig",
+      "fieldType": "boolean"
+    },
+    "edu.thu.benchmark.annotated.controller.PathTraversalController.baseDir": {
+      "annotation": "@org.springframework.beans.factory.annotation.Value(\"${file.base.dir}\")",
+      "linkedBeans": [
+        {
+          "name": "file.base.dir",
+          "type": "java.lang.String",
+          "scope": "SINGLETON",
+          "propertyValue": {
+            "baseDir": "/tmp/files"
+          },
+          "lazyInit": false,
+          "fromSource": "VALUE_ANNOTATION"
+        }
+      ],
+      "name": "baseDir",
+      "declaringType": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+      "fieldType": "java.lang.String"
+    },
+    "edu.thu.benchmark.annotated.controller.CommandInjectionController.commandExecutionAspect": {
+      "annotation": "@org.springframework.beans.factory.annotation.Autowired",
+      "linkedBeans": [
+        {
+          "name": "commandExecutionAspect",
+          "type": "edu.thu.benchmark.annotated.aspect.CommandExecutionAspect",
+          "scope": "SINGLETON",
+          "constructors": [
+            "public edu.thu.benchmark.annotated.aspect.CommandExecutionAspect(){\n}"
+          ],
+          "properties": [
+            {}
+          ],
+          "lazyInit": false,
+          "fromSource": "COMPONENT_ANNOTATION"
+        }
+      ],
+      "name": "commandExecutionAspect",
+      "declaringType": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+      "fieldType": "edu.thu.benchmark.annotated.aspect.CommandExecutionAspect"
+    },
+    "edu.thu.benchmark.annotated.config.AppConfig.datasourceUrl": {
+      "annotation": "@org.springframework.beans.factory.annotation.Value(\"${spring.datasource.url}\")",
+      "linkedBeans": [
+        {
+          "name": "spring.datasource.url",
+          "type": "java.lang.String",
+          "scope": "SINGLETON",
+          "propertyValue": {
+            "datasourceUrl": "jdbc:h2:mem:testdb"
+          },
+          "lazyInit": false,
+          "fromSource": "VALUE_ANNOTATION"
+        }
+      ],
+      "name": "datasourceUrl",
+      "declaringType": "edu.thu.benchmark.annotated.config.AppConfig",
+      "fieldType": "java.lang.String"
+    },
+    "edu.thu.benchmark.annotated.config.AppConfig.commandExecutor": {
+      "annotation": "@org.springframework.beans.factory.annotation.Value(\"${app.command.executor}\")",
+      "linkedBeans": [
+        {
+          "name": "app.command.executor",
+          "type": "java.lang.String",
+          "scope": "SINGLETON",
+          "propertyValue": {
+            "commandExecutor": "/bin/bash"
+          },
+          "lazyInit": false,
+          "fromSource": "VALUE_ANNOTATION"
+        }
+      ],
+      "name": "commandExecutor",
+      "declaringType": "edu.thu.benchmark.annotated.config.AppConfig",
+      "fieldType": "java.lang.String"
+    },
+    "edu.thu.benchmark.annotated.config.AppConfig.userHome": {
+      "annotation": "@org.springframework.beans.factory.annotation.Value(\"${user.home}\")",
+      "linkedBeans": [],
+      "name": "userHome",
+      "declaringType": "edu.thu.benchmark.annotated.config.AppConfig",
+      "fieldType": "java.lang.String"
+    }
+  },
+  "statistics": {
+    "afterThrowingAop": 0,
+    "afterReturningAop": 0,
+    "singleLinkedCount": 36,
+    "multiLinkedCount": 0,
+    "afterAop": 1,
+    "beforeAop": 9,
+    "annoPointerCount": 42,
+    "sourceCount": 113,
+    "beanDefinitionCount": 23,
+    "zeroLinkedCount": 6,
+    "time": 2.145,
+    "sinkCount": 11,
+    "aroundAop": 0,
+    "entryPointCount": 140
+  }
+}

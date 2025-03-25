@@ -1,0 +1,162 @@
+{
+  "afterAspects": [
+    {
+      "targetMethods": [
+        {
+          "signature": "findUsersByAspectSafe(java.lang.String)",
+          "name": "findUsersByAspectSafe",
+          "declaringType": "edu.thu.benchmark.annotated.service.SqlInjectionTestService",
+          "returnType": "java.util.List"
+        }
+      ],
+      "adviceMethod": {
+        "signature": "afterSafeSqlExecution()",
+        "name": "afterSafeSqlExecution",
+        "type": "after",
+        "declaringType": "edu.thu.benchmark.annotated.aspect.SqlInjectionAspect",
+        "returnType": "void"
+      }
+    }
+  ],
+  "aroundAspects": [],
+  "afterReturningAspects": [],
+  "beforeAspects": [
+    {
+      "targetMethods": [
+        {
+          "signature": "getFile01(java.lang.String)",
+          "name": "getFile01",
+          "declaringType": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+          "returnType": "org.springframework.http.ResponseEntity"
+        },
+        {
+          "signature": "getFileSafe01(java.lang.String)",
+          "name": "getFileSafe01",
+          "declaringType": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+          "returnType": "org.springframework.http.ResponseEntity"
+        },
+        {
+          "signature": "getFileWithInjectionSafe05(java.lang.String)",
+          "name": "getFileWithInjectionSafe05",
+          "declaringType": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+          "returnType": "java.lang.String"
+        },
+        {
+          "signature": "getFileWithInjection05(java.lang.String)",
+          "name": "getFileWithInjection05",
+          "declaringType": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+          "returnType": "java.lang.String"
+        }
+      ],
+      "adviceMethod": {
+        "signature": "logFileAccessUnsafe(org.aspectj.lang.JoinPoint)",
+        "name": "logFileAccessUnsafe",
+        "type": "before",
+        "declaringType": "edu.thu.benchmark.annotated.aspect.FileAccessAspect",
+        "returnType": "void"
+      }
+    },
+    {
+      "targetMethods": [
+        {
+          "signature": "getFileSafe01(java.lang.String)",
+          "name": "getFileSafe01",
+          "declaringType": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+          "returnType": "org.springframework.http.ResponseEntity"
+        },
+        {
+          "signature": "getFileWithInjectionSafe05(java.lang.String)",
+          "name": "getFileWithInjectionSafe05",
+          "declaringType": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+          "returnType": "java.lang.String"
+        }
+      ],
+      "adviceMethod": {
+        "signature": "logFileAccessSafe(org.aspectj.lang.JoinPoint)",
+        "name": "logFileAccessSafe",
+        "type": "before",
+        "declaringType": "edu.thu.benchmark.annotated.aspect.FileAccessAspect",
+        "returnType": "void"
+      }
+    },
+    {
+      "targetMethods": [],
+      "adviceMethod": {
+        "signature": "beforeUnsafeFileAccess(org.aspectj.lang.JoinPoint)",
+        "name": "beforeUnsafeFileAccess",
+        "type": "before",
+        "declaringType": "edu.thu.benchmark.annotated.aspect.FileAccessAspect",
+        "returnType": "void"
+      }
+    },
+    {
+      "targetMethods": [],
+      "adviceMethod": {
+        "signature": "beforeSafeFileAccess(org.aspectj.lang.JoinPoint)",
+        "name": "beforeSafeFileAccess",
+        "type": "before",
+        "declaringType": "edu.thu.benchmark.annotated.aspect.FileAccessAspect",
+        "returnType": "void"
+      }
+    },
+    {
+      "targetMethods": [
+        {
+          "signature": "findUsersByAspectSafe(java.lang.String)",
+          "name": "findUsersByAspectSafe",
+          "declaringType": "edu.thu.benchmark.annotated.service.SqlInjectionTestService",
+          "returnType": "java.util.List"
+        }
+      ],
+      "adviceMethod": {
+        "signature": "beforeUnsafeSqlExecution()",
+        "name": "beforeUnsafeSqlExecution",
+        "type": "before",
+        "declaringType": "edu.thu.benchmark.annotated.aspect.SqlInjectionAspect",
+        "returnType": "void"
+      }
+    },
+    {
+      "targetMethods": [
+        {
+          "signature": "findUsersByAspectSafe(java.lang.String)",
+          "name": "findUsersByAspectSafe",
+          "declaringType": "edu.thu.benchmark.annotated.service.SqlInjectionTestService",
+          "returnType": "java.util.List"
+        }
+      ],
+      "adviceMethod": {
+        "signature": "executeUnsafeSql(java.lang.String)",
+        "name": "executeUnsafeSql",
+        "type": "before",
+        "declaringType": "edu.thu.benchmark.annotated.aspect.SqlInjectionAspect",
+        "returnType": "java.util.List"
+      }
+    },
+    {
+      "targetMethods": [
+        {
+          "signature": "findUsersByAspectSafe(java.lang.String)",
+          "name": "findUsersByAspectSafe",
+          "declaringType": "edu.thu.benchmark.annotated.service.SqlInjectionTestService",
+          "returnType": "java.util.List"
+        }
+      ],
+      "adviceMethod": {
+        "signature": "executeSafeSql()",
+        "name": "executeSafeSql",
+        "type": "before",
+        "declaringType": "edu.thu.benchmark.annotated.aspect.SqlInjectionAspect",
+        "returnType": "java.util.List"
+      }
+    }
+  ],
+  "afterThrowingAspects": [],
+  "statistics": {
+    "beforeCount": 9,
+    "afterCount": 1,
+    "aroundCount": 0,
+    "afterThrowingCount": 0,
+    "afterReturningCount": 0
+  }
+}

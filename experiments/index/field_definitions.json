@@ -1,0 +1,1163 @@
+{
+  "fullPath": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo",
+      "memberName": "fullPath",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo: java.lang.String fullPath>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo.java",
+      "lineNumber": -1
+    }
+  ],
+  "sqlId": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisMapperScanner$SqlMethod",
+      "memberName": "sqlId",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisMapperScanner$SqlMethod: java.lang.String sqlId>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisMapperScanner$SqlMethod.java",
+      "lineNumber": -1
+    }
+  ],
+  "queryTemplate": [
+    {
+      "className": "edu.thu.benchmark.annotated.config.AppConfig",
+      "memberName": "queryTemplate",
+      "signature": "<edu.thu.benchmark.annotated.config.AppConfig: java.lang.String queryTemplate>",
+      "sourceFile": "edu.thu.benchmark.annotated.config.AppConfig.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.service.SqlInjectionTestService",
+      "memberName": "queryTemplate",
+      "signature": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.lang.String queryTemplate>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.SqlInjectionTestService.java",
+      "lineNumber": -1
+    }
+  ],
+  "defaultCwe": [
+    {
+      "className": "edu.thu.benchmark.annotated.annotation.VulnerabilityType",
+      "memberName": "defaultCwe",
+      "signature": "<edu.thu.benchmark.annotated.'annotation'.VulnerabilityType: int defaultCwe>",
+      "sourceFile": "edu.thu.benchmark.annotated.annotation.VulnerabilityType.java",
+      "lineNumber": -1
+    }
+  ],
+  "allowedCommandPrefix": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+      "memberName": "allowedCommandPrefix",
+      "signature": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String allowedCommandPrefix>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.CommandInjectionController.java",
+      "lineNumber": -1
+    }
+  ],
+  "restTemplate": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.HttpController",
+      "memberName": "restTemplate",
+      "signature": "<edu.thu.benchmark.annotated.controller.HttpController: org.springframework.web.client.RestTemplate restTemplate>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.HttpController.java",
+      "lineNumber": -1
+    }
+  ],
+  "INSECURE_DESERIALIZATION": [
+    {
+      "className": "edu.thu.benchmark.annotated.annotation.VulnerabilityType",
+      "memberName": "INSECURE_DESERIALIZATION",
+      "signature": "<edu.thu.benchmark.annotated.'annotation'.VulnerabilityType: edu.thu.benchmark.annotated.'annotation'.VulnerabilityType INSECURE_DESERIALIZATION>",
+      "sourceFile": "edu.thu.benchmark.annotated.annotation.VulnerabilityType.java",
+      "lineNumber": -1
+    }
+  ],
+  "fileInfoList": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.impl.FileServiceImpl",
+      "memberName": "fileInfoList",
+      "signature": "<edu.thu.benchmark.annotated.service.impl.FileServiceImpl: java.util.List fileInfoList>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.impl.FileServiceImpl.java",
+      "lineNumber": -1
+    }
+  ],
+  "fileIdCounter": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.impl.FileServiceImpl",
+      "memberName": "fileIdCounter",
+      "signature": "<edu.thu.benchmark.annotated.service.impl.FileServiceImpl: java.util.concurrent.atomic.AtomicInteger fileIdCounter>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.impl.FileServiceImpl.java",
+      "lineNumber": -1
+    }
+  ],
+  "type": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisXmlParser$SqlInfo",
+      "memberName": "type",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisXmlParser$SqlInfo: java.lang.String type>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisXmlParser$SqlInfo.java",
+      "lineNumber": -1
+    }
+  ],
+  "resourcesDir": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisMapperScanner",
+      "memberName": "resourcesDir",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisMapperScanner: java.lang.String resourcesDir>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisMapperScanner.java",
+      "lineNumber": -1
+    }
+  ],
+  "output": [
+    {
+      "className": "edu.thu.benchmark.annotated.entity.CommandExecution",
+      "memberName": "output",
+      "signature": "<edu.thu.benchmark.annotated.entity.CommandExecution: java.lang.String output>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.CommandExecution.java",
+      "lineNumber": -1
+    }
+  ],
+  "password": [
+    {
+      "className": "edu.thu.benchmark.annotated.entity.User",
+      "memberName": "password",
+      "signature": "<edu.thu.benchmark.annotated.entity.User: java.lang.String password>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.User.java",
+      "lineNumber": -1
+    }
+  ],
+  "INSECURE_CRYPTOGRAPHIC_STORAGE": [
+    {
+      "className": "edu.thu.benchmark.annotated.annotation.VulnerabilityType",
+      "memberName": "INSECURE_CRYPTOGRAPHIC_STORAGE",
+      "signature": "<edu.thu.benchmark.annotated.'annotation'.VulnerabilityType: edu.thu.benchmark.annotated.'annotation'.VulnerabilityType INSECURE_CRYPTOGRAPHIC_STORAGE>",
+      "sourceFile": "edu.thu.benchmark.annotated.annotation.VulnerabilityType.java",
+      "lineNumber": -1
+    }
+  ],
+  "price": [
+    {
+      "className": "edu.thu.benchmark.annotated.entity.Product",
+      "memberName": "price",
+      "signature": "<edu.thu.benchmark.annotated.entity.Product: java.math.BigDecimal price>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.Product.java",
+      "lineNumber": -1
+    }
+  ],
+  "uploadDir": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.impl.FileServiceImpl",
+      "memberName": "uploadDir",
+      "signature": "<edu.thu.benchmark.annotated.service.impl.FileServiceImpl: java.lang.String uploadDir>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.impl.FileServiceImpl.java",
+      "lineNumber": -1
+    }
+  ],
+  "RESULT_TYPE_PATTERN": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisMapperScanner",
+      "memberName": "RESULT_TYPE_PATTERN",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisMapperScanner: java.util.regex.Pattern RESULT_TYPE_PATTERN>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisMapperScanner.java",
+      "lineNumber": -1
+    }
+  ],
+  "jdbcTemplate": [
+    {
+      "className": "edu.thu.benchmark.annotated.aspect.SqlInjectionAspect",
+      "memberName": "jdbcTemplate",
+      "signature": "<edu.thu.benchmark.annotated.aspect.SqlInjectionAspect: org.springframework.jdbc.core.JdbcTemplate jdbcTemplate>",
+      "sourceFile": "edu.thu.benchmark.annotated.aspect.SqlInjectionAspect.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.service.SqlInjectionTestService",
+      "memberName": "jdbcTemplate",
+      "signature": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: org.springframework.jdbc.core.JdbcTemplate jdbcTemplate>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.SqlInjectionTestService.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+      "memberName": "jdbcTemplate",
+      "signature": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: org.springframework.jdbc.core.JdbcTemplate jdbcTemplate>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController.java",
+      "lineNumber": -1
+    }
+  ],
+  "id": [
+    {
+      "className": "edu.thu.benchmark.annotated.entity.Product",
+      "memberName": "id",
+      "signature": "<edu.thu.benchmark.annotated.entity.Product: java.lang.Integer id>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.Product.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.entity.FileInfo",
+      "memberName": "id",
+      "signature": "<edu.thu.benchmark.annotated.entity.FileInfo: java.lang.Integer id>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.FileInfo.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.entity.User",
+      "memberName": "id",
+      "signature": "<edu.thu.benchmark.annotated.entity.User: java.lang.Integer id>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.User.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.entity.CommandExecution",
+      "memberName": "id",
+      "signature": "<edu.thu.benchmark.annotated.entity.CommandExecution: java.lang.Integer id>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.CommandExecution.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisXmlParser$SqlInfo",
+      "memberName": "id",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisXmlParser$SqlInfo: java.lang.String id>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisXmlParser$SqlInfo.java",
+      "lineNumber": -1
+    }
+  ],
+  "PARAM_TYPE_PATTERN": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisMapperScanner",
+      "memberName": "PARAM_TYPE_PATTERN",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisMapperScanner: java.util.regex.Pattern PARAM_TYPE_PATTERN>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisMapperScanner.java",
+      "lineNumber": -1
+    }
+  ],
+  "resultType": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisXmlParser$SqlInfo",
+      "memberName": "resultType",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisXmlParser$SqlInfo: java.lang.String resultType>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisXmlParser$SqlInfo.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo",
+      "memberName": "resultType",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo: java.lang.String resultType>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisMapperScanner$SqlMethod",
+      "memberName": "resultType",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisMapperScanner$SqlMethod: java.lang.String resultType>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisMapperScanner$SqlMethod.java",
+      "lineNumber": -1
+    }
+  ],
+  "VULNERABLE_COMPONENTS": [
+    {
+      "className": "edu.thu.benchmark.annotated.annotation.VulnerabilityType",
+      "memberName": "VULNERABLE_COMPONENTS",
+      "signature": "<edu.thu.benchmark.annotated.'annotation'.VulnerabilityType: edu.thu.benchmark.annotated.'annotation'.VulnerabilityType VULNERABLE_COMPONENTS>",
+      "sourceFile": "edu.thu.benchmark.annotated.annotation.VulnerabilityType.java",
+      "lineNumber": -1
+    }
+  ],
+  "fileAccessAspect": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+      "memberName": "fileAccessAspect",
+      "signature": "<edu.thu.benchmark.annotated.controller.PathTraversalController: edu.thu.benchmark.annotated.aspect.FileAccessAspect fileAccessAspect>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.PathTraversalController.java",
+      "lineNumber": -1
+    }
+  ],
+  "MEDIUM": [
+    {
+      "className": "edu.thu.benchmark.annotated.annotation.VulnerabilityLevel",
+      "memberName": "MEDIUM",
+      "signature": "<edu.thu.benchmark.annotated.'annotation'.VulnerabilityLevel: edu.thu.benchmark.annotated.'annotation'.VulnerabilityLevel MEDIUM>",
+      "sourceFile": "edu.thu.benchmark.annotated.annotation.VulnerabilityLevel.java",
+      "lineNumber": -1
+    }
+  ],
+  "SQL_TYPES": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisSqlExtractor",
+      "memberName": "SQL_TYPES",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisSqlExtractor: java.lang.String[] SQL_TYPES>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisSqlExtractor.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisXmlParser",
+      "memberName": "SQL_TYPES",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisXmlParser: java.lang.String[] SQL_TYPES>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisXmlParser.java",
+      "lineNumber": -1
+    }
+  ],
+  "PATH_TRAVERSAL": [
+    {
+      "className": "edu.thu.benchmark.annotated.annotation.VulnerabilityType",
+      "memberName": "PATH_TRAVERSAL",
+      "signature": "<edu.thu.benchmark.annotated.'annotation'.VulnerabilityType: edu.thu.benchmark.annotated.'annotation'.VulnerabilityType PATH_TRAVERSAL>",
+      "sourceFile": "edu.thu.benchmark.annotated.annotation.VulnerabilityType.java",
+      "lineNumber": -1
+    }
+  ],
+  "sqlInfoList": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisXmlParser$MapperInfo",
+      "memberName": "sqlInfoList",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisXmlParser$MapperInfo: java.util.List sqlInfoList>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisXmlParser$MapperInfo.java",
+      "lineNumber": -1
+    }
+  ],
+  "OS_COMMAND_INJECTION": [
+    {
+      "className": "edu.thu.benchmark.annotated.annotation.VulnerabilityType",
+      "memberName": "OS_COMMAND_INJECTION",
+      "signature": "<edu.thu.benchmark.annotated.'annotation'.VulnerabilityType: edu.thu.benchmark.annotated.'annotation'.VulnerabilityType OS_COMMAND_INJECTION>",
+      "sourceFile": "edu.thu.benchmark.annotated.annotation.VulnerabilityType.java",
+      "lineNumber": -1
+    }
+  ],
+  "userService": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.UserController",
+      "memberName": "userService",
+      "signature": "<edu.thu.benchmark.annotated.controller.UserController: edu.thu.benchmark.annotated.service.UserService userService>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.UserController.java",
+      "lineNumber": -1
+    }
+  ],
+  "allowedExtensions": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.FileUploadService",
+      "memberName": "allowedExtensions",
+      "signature": "<edu.thu.benchmark.annotated.service.FileUploadService: java.lang.String allowedExtensions>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.FileUploadService.java",
+      "lineNumber": -1
+    }
+  ],
+  "filename": [
+    {
+      "className": "edu.thu.benchmark.annotated.entity.FileInfo",
+      "memberName": "filename",
+      "signature": "<edu.thu.benchmark.annotated.entity.FileInfo: java.lang.String filename>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.FileInfo.java",
+      "lineNumber": -1
+    }
+  ],
+  "size": [
+    {
+      "className": "edu.thu.benchmark.annotated.entity.FileInfo",
+      "memberName": "size",
+      "signature": "<edu.thu.benchmark.annotated.entity.FileInfo: java.lang.Long size>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.FileInfo.java",
+      "lineNumber": -1
+    }
+  ],
+  "LOW": [
+    {
+      "className": "edu.thu.benchmark.annotated.annotation.VulnerabilityLevel",
+      "memberName": "LOW",
+      "signature": "<edu.thu.benchmark.annotated.'annotation'.VulnerabilityLevel: edu.thu.benchmark.annotated.'annotation'.VulnerabilityLevel LOW>",
+      "sourceFile": "edu.thu.benchmark.annotated.annotation.VulnerabilityLevel.java",
+      "lineNumber": -1
+    }
+  ],
+  "SQL_ID_PATTERN": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisMapperScanner",
+      "memberName": "SQL_ID_PATTERN",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisMapperScanner: java.util.regex.Pattern SQL_ID_PATTERN>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisMapperScanner.java",
+      "lineNumber": -1
+    }
+  ],
+  "commandExecutor": [
+    {
+      "className": "edu.thu.benchmark.annotated.config.AppConfig",
+      "memberName": "commandExecutor",
+      "signature": "<edu.thu.benchmark.annotated.config.AppConfig: java.lang.String commandExecutor>",
+      "sourceFile": "edu.thu.benchmark.annotated.config.AppConfig.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.service.CommandService",
+      "memberName": "commandExecutor",
+      "signature": "<edu.thu.benchmark.annotated.service.CommandService: java.lang.String commandExecutor>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.CommandService.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.controller.CommandController",
+      "memberName": "commandExecutor",
+      "signature": "<edu.thu.benchmark.annotated.controller.CommandController: java.lang.String commandExecutor>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.CommandController.java",
+      "lineNumber": -1
+    }
+  ],
+  "logDir": [
+    {
+      "className": "edu.thu.benchmark.annotated.aspect.FileAccessAspect",
+      "memberName": "logDir",
+      "signature": "<edu.thu.benchmark.annotated.aspect.FileAccessAspect: java.lang.String logDir>",
+      "sourceFile": "edu.thu.benchmark.annotated.aspect.FileAccessAspect.java",
+      "lineNumber": -1
+    }
+  ],
+  "status": [
+    {
+      "className": "edu.thu.benchmark.annotated.entity.CommandExecution",
+      "memberName": "status",
+      "signature": "<edu.thu.benchmark.annotated.entity.CommandExecution: java.lang.String status>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.CommandExecution.java",
+      "lineNumber": -1
+    }
+  ],
+  "MISSING_FUNCTION_LEVEL_ACCESS_CONTROL": [
+    {
+      "className": "edu.thu.benchmark.annotated.annotation.VulnerabilityType",
+      "memberName": "MISSING_FUNCTION_LEVEL_ACCESS_CONTROL",
+      "signature": "<edu.thu.benchmark.annotated.'annotation'.VulnerabilityType: edu.thu.benchmark.annotated.'annotation'.VulnerabilityType MISSING_FUNCTION_LEVEL_ACCESS_CONTROL>",
+      "sourceFile": "edu.thu.benchmark.annotated.annotation.VulnerabilityType.java",
+      "lineNumber": -1
+    }
+  ],
+  "datasourceUsername": [
+    {
+      "className": "edu.thu.benchmark.annotated.config.AppConfig",
+      "memberName": "datasourceUsername",
+      "signature": "<edu.thu.benchmark.annotated.config.AppConfig: java.lang.String datasourceUsername>",
+      "sourceFile": "edu.thu.benchmark.annotated.config.AppConfig.java",
+      "lineNumber": -1
+    }
+  ],
+  "XXE": [
+    {
+      "className": "edu.thu.benchmark.annotated.annotation.VulnerabilityType",
+      "memberName": "XXE",
+      "signature": "<edu.thu.benchmark.annotated.'annotation'.VulnerabilityType: edu.thu.benchmark.annotated.'annotation'.VulnerabilityType XXE>",
+      "sourceFile": "edu.thu.benchmark.annotated.annotation.VulnerabilityType.java",
+      "lineNumber": -1
+    }
+  ],
+  "ALLOWED_COMMANDS": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.CommandUtils",
+      "memberName": "ALLOWED_COMMANDS",
+      "signature": "<edu.thu.benchmark.annotated.util.CommandUtils: java.util.List ALLOWED_COMMANDS>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.CommandUtils.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.aspect.CommandExecutionAspect",
+      "memberName": "ALLOWED_COMMANDS",
+      "signature": "<edu.thu.benchmark.annotated.aspect.CommandExecutionAspect: java.util.List ALLOWED_COMMANDS>",
+      "sourceFile": "edu.thu.benchmark.annotated.aspect.CommandExecutionAspect.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.service.CommandService",
+      "memberName": "ALLOWED_COMMANDS",
+      "signature": "<edu.thu.benchmark.annotated.service.CommandService: java.util.List ALLOWED_COMMANDS>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.CommandService.java",
+      "lineNumber": -1
+    }
+  ],
+  "serverPort": [
+    {
+      "className": "edu.thu.benchmark.annotated.config.AppConfig",
+      "memberName": "serverPort",
+      "signature": "<edu.thu.benchmark.annotated.config.AppConfig: int serverPort>",
+      "sourceFile": "edu.thu.benchmark.annotated.config.AppConfig.java",
+      "lineNumber": -1
+    }
+  ],
+  "userHome": [
+    {
+      "className": "edu.thu.benchmark.annotated.config.AppConfig",
+      "memberName": "userHome",
+      "signature": "<edu.thu.benchmark.annotated.config.AppConfig: java.lang.String userHome>",
+      "sourceFile": "edu.thu.benchmark.annotated.config.AppConfig.java",
+      "lineNumber": -1
+    }
+  ],
+  "datasourceUrl": [
+    {
+      "className": "edu.thu.benchmark.annotated.config.AppConfig",
+      "memberName": "datasourceUrl",
+      "signature": "<edu.thu.benchmark.annotated.config.AppConfig: java.lang.String datasourceUrl>",
+      "sourceFile": "edu.thu.benchmark.annotated.config.AppConfig.java",
+      "lineNumber": -1
+    }
+  ],
+  "applicationName": [
+    {
+      "className": "edu.thu.benchmark.annotated.config.AppConfig",
+      "memberName": "applicationName",
+      "signature": "<edu.thu.benchmark.annotated.config.AppConfig: java.lang.String applicationName>",
+      "sourceFile": "edu.thu.benchmark.annotated.config.AppConfig.java",
+      "lineNumber": -1
+    }
+  ],
+  "email": [
+    {
+      "className": "edu.thu.benchmark.annotated.entity.User",
+      "memberName": "email",
+      "signature": "<edu.thu.benchmark.annotated.entity.User: java.lang.String email>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.User.java",
+      "lineNumber": -1
+    }
+  ],
+  "mapperClass": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo",
+      "memberName": "mapperClass",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo: java.lang.String mapperClass>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo.java",
+      "lineNumber": -1
+    }
+  ],
+  "executedBy": [
+    {
+      "className": "edu.thu.benchmark.annotated.entity.CommandExecution",
+      "memberName": "executedBy",
+      "signature": "<edu.thu.benchmark.annotated.entity.CommandExecution: java.lang.String executedBy>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.CommandExecution.java",
+      "lineNumber": -1
+    }
+  ],
+  "outputDir": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisCompiler",
+      "memberName": "outputDir",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisCompiler: java.lang.String outputDir>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisCompiler.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisMapperScanner",
+      "memberName": "outputDir",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisMapperScanner: java.lang.String outputDir>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisMapperScanner.java",
+      "lineNumber": -1
+    }
+  ],
+  "projectRoot": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisMapperScanner",
+      "memberName": "projectRoot",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisMapperScanner: java.lang.String projectRoot>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisMapperScanner.java",
+      "lineNumber": -1
+    }
+  ],
+  "UNVALIDATED_REDIRECT": [
+    {
+      "className": "edu.thu.benchmark.annotated.annotation.VulnerabilityType",
+      "memberName": "UNVALIDATED_REDIRECT",
+      "signature": "<edu.thu.benchmark.annotated.'annotation'.VulnerabilityType: edu.thu.benchmark.annotated.'annotation'.VulnerabilityType UNVALIDATED_REDIRECT>",
+      "sourceFile": "edu.thu.benchmark.annotated.annotation.VulnerabilityType.java",
+      "lineNumber": -1
+    }
+  ],
+  "uploadDirectory": [
+    {
+      "className": "edu.thu.benchmark.annotated.config.AppConfig",
+      "memberName": "uploadDirectory",
+      "signature": "<edu.thu.benchmark.annotated.config.AppConfig: java.lang.String uploadDirectory>",
+      "sourceFile": "edu.thu.benchmark.annotated.config.AppConfig.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.service.FileUploadService",
+      "memberName": "uploadDirectory",
+      "signature": "<edu.thu.benchmark.annotated.service.FileUploadService: java.lang.String uploadDirectory>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.FileUploadService.java",
+      "lineNumber": -1
+    }
+  ],
+  "maxFileSize": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.FileUploadService",
+      "memberName": "maxFileSize",
+      "signature": "<edu.thu.benchmark.annotated.service.FileUploadService: long maxFileSize>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.FileUploadService.java",
+      "lineNumber": -1
+    }
+  ],
+  "userMapper": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.impl.UserServiceImpl",
+      "memberName": "userMapper",
+      "signature": "<edu.thu.benchmark.annotated.service.impl.UserServiceImpl: edu.thu.benchmark.annotated.mapper.UserMapper userMapper>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.impl.UserServiceImpl.java",
+      "lineNumber": -1
+    }
+  ],
+  "OTHER": [
+    {
+      "className": "edu.thu.benchmark.annotated.annotation.VulnerabilityType",
+      "memberName": "OTHER",
+      "signature": "<edu.thu.benchmark.annotated.'annotation'.VulnerabilityType: edu.thu.benchmark.annotated.'annotation'.VulnerabilityType OTHER>",
+      "sourceFile": "edu.thu.benchmark.annotated.annotation.VulnerabilityType.java",
+      "lineNumber": -1
+    }
+  ],
+  "sqlType": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo",
+      "memberName": "sqlType",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo: java.lang.String sqlType>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisMapperScanner$SqlMethod",
+      "memberName": "sqlType",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisMapperScanner$SqlMethod: java.lang.String sqlType>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisMapperScanner$SqlMethod.java",
+      "lineNumber": -1
+    }
+  ],
+  "javaSourceDir": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisMapperScanner",
+      "memberName": "javaSourceDir",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisMapperScanner: java.lang.String javaSourceDir>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisMapperScanner.java",
+      "lineNumber": -1
+    }
+  ],
+  "COMMAND_INJECTION": [
+    {
+      "className": "edu.thu.benchmark.annotated.annotation.VulnerabilityType",
+      "memberName": "COMMAND_INJECTION",
+      "signature": "<edu.thu.benchmark.annotated.'annotation'.VulnerabilityType: edu.thu.benchmark.annotated.'annotation'.VulnerabilityType COMMAND_INJECTION>",
+      "sourceFile": "edu.thu.benchmark.annotated.annotation.VulnerabilityType.java",
+      "lineNumber": -1
+    }
+  ],
+  "securityEnabled": [
+    {
+      "className": "edu.thu.benchmark.annotated.config.AppConfig",
+      "memberName": "securityEnabled",
+      "signature": "<edu.thu.benchmark.annotated.config.AppConfig: boolean securityEnabled>",
+      "sourceFile": "edu.thu.benchmark.annotated.config.AppConfig.java",
+      "lineNumber": -1
+    }
+  ],
+  "SQL_INJECTION": [
+    {
+      "className": "edu.thu.benchmark.annotated.annotation.VulnerabilityType",
+      "memberName": "SQL_INJECTION",
+      "signature": "<edu.thu.benchmark.annotated.'annotation'.VulnerabilityType: edu.thu.benchmark.annotated.'annotation'.VulnerabilityType SQL_INJECTION>",
+      "sourceFile": "edu.thu.benchmark.annotated.annotation.VulnerabilityType.java",
+      "lineNumber": -1
+    }
+  ],
+  "HIGH": [
+    {
+      "className": "edu.thu.benchmark.annotated.annotation.VulnerabilityLevel",
+      "memberName": "HIGH",
+      "signature": "<edu.thu.benchmark.annotated.'annotation'.VulnerabilityLevel: edu.thu.benchmark.annotated.'annotation'.VulnerabilityLevel HIGH>",
+      "sourceFile": "edu.thu.benchmark.annotated.annotation.VulnerabilityLevel.java",
+      "lineNumber": -1
+    }
+  ],
+  "extractDir": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.ZipService",
+      "memberName": "extractDir",
+      "signature": "<edu.thu.benchmark.annotated.service.ZipService: java.lang.String extractDir>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.ZipService.java",
+      "lineNumber": -1
+    }
+  ],
+  "xmlMappers": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisCompiler",
+      "memberName": "xmlMappers",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisCompiler: java.util.List xmlMappers>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisCompiler.java",
+      "lineNumber": -1
+    }
+  ],
+  "INFO": [
+    {
+      "className": "edu.thu.benchmark.annotated.annotation.VulnerabilityLevel",
+      "memberName": "INFO",
+      "signature": "<edu.thu.benchmark.annotated.'annotation'.VulnerabilityLevel: edu.thu.benchmark.annotated.'annotation'.VulnerabilityLevel INFO>",
+      "sourceFile": "edu.thu.benchmark.annotated.annotation.VulnerabilityLevel.java",
+      "lineNumber": -1
+    }
+  ],
+  "sqlInjectionTestService": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+      "memberName": "sqlInjectionTestService",
+      "signature": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: edu.thu.benchmark.annotated.service.SqlInjectionTestService sqlInjectionTestService>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController.java",
+      "lineNumber": -1
+    }
+  ],
+  "compiledMethods": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisCompiler",
+      "memberName": "compiledMethods",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisCompiler: java.util.Map compiledMethods>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisCompiler.java",
+      "lineNumber": -1
+    }
+  ],
+  "createdAt": [
+    {
+      "className": "edu.thu.benchmark.annotated.entity.Product",
+      "memberName": "createdAt",
+      "signature": "<edu.thu.benchmark.annotated.entity.Product: java.time.LocalDateTime createdAt>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.Product.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.entity.User",
+      "memberName": "createdAt",
+      "signature": "<edu.thu.benchmark.annotated.entity.User: java.time.LocalDateTime createdAt>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.User.java",
+      "lineNumber": -1
+    }
+  ],
+  "SENSITIVE_DATA_EXPOSURE": [
+    {
+      "className": "edu.thu.benchmark.annotated.annotation.VulnerabilityType",
+      "memberName": "SENSITIVE_DATA_EXPOSURE",
+      "signature": "<edu.thu.benchmark.annotated.'annotation'.VulnerabilityType: edu.thu.benchmark.annotated.'annotation'.VulnerabilityType SENSITIVE_DATA_EXPOSURE>",
+      "sourceFile": "edu.thu.benchmark.annotated.annotation.VulnerabilityType.java",
+      "lineNumber": -1
+    }
+  ],
+  "pathTraversalService": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+      "memberName": "pathTraversalService",
+      "signature": "<edu.thu.benchmark.annotated.controller.PathTraversalController: edu.thu.benchmark.annotated.service.PathTraversalService pathTraversalService>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.PathTraversalController.java",
+      "lineNumber": -1
+    }
+  ],
+  "filepath": [
+    {
+      "className": "edu.thu.benchmark.annotated.entity.FileInfo",
+      "memberName": "filepath",
+      "signature": "<edu.thu.benchmark.annotated.entity.FileInfo: java.lang.String filepath>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.FileInfo.java",
+      "lineNumber": -1
+    }
+  ],
+  "stock": [
+    {
+      "className": "edu.thu.benchmark.annotated.entity.Product",
+      "memberName": "stock",
+      "signature": "<edu.thu.benchmark.annotated.entity.Product: java.lang.Integer stock>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.Product.java",
+      "lineNumber": -1
+    }
+  ],
+  "contentType": [
+    {
+      "className": "edu.thu.benchmark.annotated.entity.FileInfo",
+      "memberName": "contentType",
+      "signature": "<edu.thu.benchmark.annotated.entity.FileInfo: java.lang.String contentType>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.FileInfo.java",
+      "lineNumber": -1
+    }
+  ],
+  "CRITICAL": [
+    {
+      "className": "edu.thu.benchmark.annotated.annotation.VulnerabilityLevel",
+      "memberName": "CRITICAL",
+      "signature": "<edu.thu.benchmark.annotated.'annotation'.VulnerabilityLevel: edu.thu.benchmark.annotated.'annotation'.VulnerabilityLevel CRITICAL>",
+      "sourceFile": "edu.thu.benchmark.annotated.annotation.VulnerabilityLevel.java",
+      "lineNumber": -1
+    }
+  ],
+  "$VALUES": [
+    {
+      "className": "edu.thu.benchmark.annotated.annotation.VulnerabilityLevel",
+      "memberName": "$VALUES",
+      "signature": "<edu.thu.benchmark.annotated.'annotation'.VulnerabilityLevel: edu.thu.benchmark.annotated.'annotation'.VulnerabilityLevel[] $VALUES>",
+      "sourceFile": "edu.thu.benchmark.annotated.annotation.VulnerabilityLevel.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.annotation.VulnerabilityType",
+      "memberName": "$VALUES",
+      "signature": "<edu.thu.benchmark.annotated.'annotation'.VulnerabilityType: edu.thu.benchmark.annotated.'annotation'.VulnerabilityType[] $VALUES>",
+      "sourceFile": "edu.thu.benchmark.annotated.annotation.VulnerabilityType.java",
+      "lineNumber": -1
+    }
+  ],
+  "updatedAt": [
+    {
+      "className": "edu.thu.benchmark.annotated.entity.User",
+      "memberName": "updatedAt",
+      "signature": "<edu.thu.benchmark.annotated.entity.User: java.time.LocalDateTime updatedAt>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.User.java",
+      "lineNumber": -1
+    }
+  ],
+  "LDAP_INJECTION": [
+    {
+      "className": "edu.thu.benchmark.annotated.annotation.VulnerabilityType",
+      "memberName": "LDAP_INJECTION",
+      "signature": "<edu.thu.benchmark.annotated.'annotation'.VulnerabilityType: edu.thu.benchmark.annotated.'annotation'.VulnerabilityType LDAP_INJECTION>",
+      "sourceFile": "edu.thu.benchmark.annotated.annotation.VulnerabilityType.java",
+      "lineNumber": -1
+    }
+  ],
+  "userSqlInjectionMapper": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.SqlInjectionTestService",
+      "memberName": "userSqlInjectionMapper",
+      "signature": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper userSqlInjectionMapper>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.SqlInjectionTestService.java",
+      "lineNumber": -1
+    }
+  ],
+  "argPattern": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.CommandService",
+      "memberName": "argPattern",
+      "signature": "<edu.thu.benchmark.annotated.service.CommandService: java.lang.String argPattern>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.CommandService.java",
+      "lineNumber": -1
+    }
+  ],
+  "commandService": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+      "memberName": "commandService",
+      "signature": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: edu.thu.benchmark.annotated.service.CommandService commandService>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.CommandInjectionController.java",
+      "lineNumber": -1
+    }
+  ],
+  "SSRF": [
+    {
+      "className": "edu.thu.benchmark.annotated.annotation.VulnerabilityType",
+      "memberName": "SSRF",
+      "signature": "<edu.thu.benchmark.annotated.'annotation'.VulnerabilityType: edu.thu.benchmark.annotated.'annotation'.VulnerabilityType SSRF>",
+      "sourceFile": "edu.thu.benchmark.annotated.annotation.VulnerabilityType.java",
+      "lineNumber": -1
+    }
+  ],
+  "name": [
+    {
+      "className": "edu.thu.benchmark.annotated.entity.Product",
+      "memberName": "name",
+      "signature": "<edu.thu.benchmark.annotated.entity.Product: java.lang.String name>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.Product.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.annotation.VulnerabilityLevel",
+      "memberName": "name",
+      "signature": "<edu.thu.benchmark.annotated.'annotation'.VulnerabilityLevel: java.lang.String name>",
+      "sourceFile": "edu.thu.benchmark.annotated.annotation.VulnerabilityLevel.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.annotation.VulnerabilityType",
+      "memberName": "name",
+      "signature": "<edu.thu.benchmark.annotated.'annotation'.VulnerabilityType: java.lang.String name>",
+      "sourceFile": "edu.thu.benchmark.annotated.annotation.VulnerabilityType.java",
+      "lineNumber": -1
+    }
+  ],
+  "XSS": [
+    {
+      "className": "edu.thu.benchmark.annotated.annotation.VulnerabilityType",
+      "memberName": "XSS",
+      "signature": "<edu.thu.benchmark.annotated.'annotation'.VulnerabilityType: edu.thu.benchmark.annotated.'annotation'.VulnerabilityType XSS>",
+      "sourceFile": "edu.thu.benchmark.annotated.annotation.VulnerabilityType.java",
+      "lineNumber": -1
+    }
+  ],
+  "CSRF": [
+    {
+      "className": "edu.thu.benchmark.annotated.annotation.VulnerabilityType",
+      "memberName": "CSRF",
+      "signature": "<edu.thu.benchmark.annotated.'annotation'.VulnerabilityType: edu.thu.benchmark.annotated.'annotation'.VulnerabilityType CSRF>",
+      "sourceFile": "edu.thu.benchmark.annotated.annotation.VulnerabilityType.java",
+      "lineNumber": -1
+    }
+  ],
+  "templateService": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+      "memberName": "templateService",
+      "signature": "<edu.thu.benchmark.annotated.controller.PathTraversalController: edu.thu.benchmark.annotated.service.TemplateService templateService>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.PathTraversalController.java",
+      "lineNumber": -1
+    }
+  ],
+  "description": [
+    {
+      "className": "edu.thu.benchmark.annotated.entity.Product",
+      "memberName": "description",
+      "signature": "<edu.thu.benchmark.annotated.entity.Product: java.lang.String description>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.Product.java",
+      "lineNumber": -1
+    }
+  ],
+  "templateDir": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.TemplateService",
+      "memberName": "templateDir",
+      "signature": "<edu.thu.benchmark.annotated.service.TemplateService: java.lang.String templateDir>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.TemplateService.java",
+      "lineNumber": -1
+    }
+  ],
+  "SAFE_TEMPLATE_PATTERN": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.TemplateService",
+      "memberName": "SAFE_TEMPLATE_PATTERN",
+      "signature": "<edu.thu.benchmark.annotated.service.TemplateService: java.util.regex.Pattern SAFE_TEMPLATE_PATTERN>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.TemplateService.java",
+      "lineNumber": -1
+    }
+  ],
+  "timeout": [
+    {
+      "className": "edu.thu.benchmark.annotated.config.AppConfig",
+      "memberName": "timeout",
+      "signature": "<edu.thu.benchmark.annotated.config.AppConfig: int timeout>",
+      "sourceFile": "edu.thu.benchmark.annotated.config.AppConfig.java",
+      "lineNumber": -1
+    }
+  ],
+  "namedParameterJdbcTemplate": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.SqlInjectionTestService",
+      "memberName": "namedParameterJdbcTemplate",
+      "signature": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate namedParameterJdbcTemplate>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.SqlInjectionTestService.java",
+      "lineNumber": -1
+    }
+  ],
+  "baseDir": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.PathTraversalService",
+      "memberName": "baseDir",
+      "signature": "<edu.thu.benchmark.annotated.service.PathTraversalService: java.lang.String baseDir>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.PathTraversalService.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.service.ZipService",
+      "memberName": "baseDir",
+      "signature": "<edu.thu.benchmark.annotated.service.ZipService: java.lang.String baseDir>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.ZipService.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+      "memberName": "baseDir",
+      "signature": "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.lang.String baseDir>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.PathTraversalController.java",
+      "lineNumber": -1
+    }
+  ],
+  "IP_PATTERN": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.HttpController",
+      "memberName": "IP_PATTERN",
+      "signature": "<edu.thu.benchmark.annotated.controller.HttpController: java.util.regex.Pattern IP_PATTERN>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.HttpController.java",
+      "lineNumber": -1
+    }
+  ],
+  "commandExecutionAspect": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+      "memberName": "commandExecutionAspect",
+      "signature": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: edu.thu.benchmark.annotated.aspect.CommandExecutionAspect commandExecutionAspect>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.CommandInjectionController.java",
+      "lineNumber": -1
+    }
+  ],
+  "datasourcePassword": [
+    {
+      "className": "edu.thu.benchmark.annotated.config.AppConfig",
+      "memberName": "datasourcePassword",
+      "signature": "<edu.thu.benchmark.annotated.config.AppConfig: java.lang.String datasourcePassword>",
+      "sourceFile": "edu.thu.benchmark.annotated.config.AppConfig.java",
+      "lineNumber": -1
+    }
+  ],
+  "commandWhitelist": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.CommandService",
+      "memberName": "commandWhitelist",
+      "signature": "<edu.thu.benchmark.annotated.service.CommandService: java.lang.String commandWhitelist>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.CommandService.java",
+      "lineNumber": -1
+    }
+  ],
+  "value": [
+    {
+      "className": "edu.thu.benchmark.annotated.annotation.VulnerabilityLevel",
+      "memberName": "value",
+      "signature": "<edu.thu.benchmark.annotated.'annotation'.VulnerabilityLevel: int value>",
+      "sourceFile": "edu.thu.benchmark.annotated.annotation.VulnerabilityLevel.java",
+      "lineNumber": -1
+    }
+  ],
+  "maxConnections": [
+    {
+      "className": "edu.thu.benchmark.annotated.config.AppConfig",
+      "memberName": "maxConnections",
+      "signature": "<edu.thu.benchmark.annotated.config.AppConfig: int maxConnections>",
+      "sourceFile": "edu.thu.benchmark.annotated.config.AppConfig.java",
+      "lineNumber": -1
+    }
+  ],
+  "parameterType": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisXmlParser$SqlInfo",
+      "memberName": "parameterType",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisXmlParser$SqlInfo: java.lang.String parameterType>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisXmlParser$SqlInfo.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo",
+      "memberName": "parameterType",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo: java.lang.String parameterType>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisMapperScanner$SqlMethod",
+      "memberName": "parameterType",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisMapperScanner$SqlMethod: java.lang.String parameterType>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisMapperScanner$SqlMethod.java",
+      "lineNumber": -1
+    }
+  ],
+  "methodName": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo",
+      "memberName": "methodName",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo: java.lang.String methodName>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo.java",
+      "lineNumber": -1
+    }
+  ],
+  "fileService": [
+    {
+      "className": "edu.thu.benchmark.annotated.controller.FileController",
+      "memberName": "fileService",
+      "signature": "<edu.thu.benchmark.annotated.controller.FileController: edu.thu.benchmark.annotated.service.FileService fileService>",
+      "sourceFile": "edu.thu.benchmark.annotated.controller.FileController.java",
+      "lineNumber": -1
+    }
+  ],
+  "sqlContent": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisXmlParser$SqlInfo",
+      "memberName": "sqlContent",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisXmlParser$SqlInfo: java.lang.String sqlContent>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisXmlParser$SqlInfo.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo",
+      "memberName": "sqlContent",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo: java.lang.String sqlContent>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisCompiler$MethodInfo.java",
+      "lineNumber": -1
+    }
+  ],
+  "uploadTime": [
+    {
+      "className": "edu.thu.benchmark.annotated.entity.FileInfo",
+      "memberName": "uploadTime",
+      "signature": "<edu.thu.benchmark.annotated.entity.FileInfo: java.time.LocalDateTime uploadTime>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.FileInfo.java",
+      "lineNumber": -1
+    }
+  ],
+  "NAMESPACE_PATTERN": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisMapperScanner",
+      "memberName": "NAMESPACE_PATTERN",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisMapperScanner: java.util.regex.Pattern NAMESPACE_PATTERN>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisMapperScanner.java",
+      "lineNumber": -1
+    }
+  ],
+  "command": [
+    {
+      "className": "edu.thu.benchmark.annotated.entity.CommandExecution",
+      "memberName": "command",
+      "signature": "<edu.thu.benchmark.annotated.entity.CommandExecution: java.lang.String command>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.CommandExecution.java",
+      "lineNumber": -1
+    }
+  ],
+  "executionTime": [
+    {
+      "className": "edu.thu.benchmark.annotated.entity.CommandExecution",
+      "memberName": "executionTime",
+      "signature": "<edu.thu.benchmark.annotated.entity.CommandExecution: java.time.LocalDateTime executionTime>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.CommandExecution.java",
+      "lineNumber": -1
+    }
+  ],
+  "namespace": [
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisXmlParser$MapperInfo",
+      "memberName": "namespace",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisXmlParser$MapperInfo: java.lang.String namespace>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisXmlParser$MapperInfo.java",
+      "lineNumber": -1
+    },
+    {
+      "className": "edu.thu.benchmark.annotated.util.MyBatisMapperScanner$SqlMethod",
+      "memberName": "namespace",
+      "signature": "<edu.thu.benchmark.annotated.util.MyBatisMapperScanner$SqlMethod: java.lang.String namespace>",
+      "sourceFile": "edu.thu.benchmark.annotated.util.MyBatisMapperScanner$SqlMethod.java",
+      "lineNumber": -1
+    }
+  ],
+  "category": [
+    {
+      "className": "edu.thu.benchmark.annotated.entity.Product",
+      "memberName": "category",
+      "signature": "<edu.thu.benchmark.annotated.entity.Product: java.lang.String category>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.Product.java",
+      "lineNumber": -1
+    }
+  ],
+  "rootLocation": [
+    {
+      "className": "edu.thu.benchmark.annotated.service.impl.FileServiceImpl",
+      "memberName": "rootLocation",
+      "signature": "<edu.thu.benchmark.annotated.service.impl.FileServiceImpl: java.nio.file.Path rootLocation>",
+      "sourceFile": "edu.thu.benchmark.annotated.service.impl.FileServiceImpl.java",
+      "lineNumber": -1
+    }
+  ],
+  "username": [
+    {
+      "className": "edu.thu.benchmark.annotated.entity.User",
+      "memberName": "username",
+      "signature": "<edu.thu.benchmark.annotated.entity.User: java.lang.String username>",
+      "sourceFile": "edu.thu.benchmark.annotated.entity.User.java",
+      "lineNumber": -1
+    }
+  ]
+}
