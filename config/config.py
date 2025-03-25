@@ -25,7 +25,7 @@ AVAILABLE_MODELS = {
 # 模型参数配置
 DEFAULT_PARAMS = {
     "temperature": 0.1,     # 较低的温度以确保代码生成的确定性
-    "max_tokens": 8000,     # 最大输出长度
+    "max_tokens": None,     # 最大输出长度
     "top_p": 0.95,          # 概率阈值
     "frequency_penalty": 0, # 频率惩罚
     "presence_penalty": 0,  # 存在惩罚
