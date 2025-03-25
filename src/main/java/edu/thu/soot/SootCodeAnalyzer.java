@@ -3,23 +3,18 @@ package edu.thu.soot;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonObject;
-import org.apache.commons.cli.CommandLine;
-import org.apache.commons.cli.CommandLineParser;
-import org.apache.commons.cli.DefaultParser;
-import org.apache.commons.cli.HelpFormatter;
-import org.apache.commons.cli.Option;
-import org.apache.commons.cli.ParseException;
-import org.objectweb.asm.ClassReader;
+import org.apache.commons.cli.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import soot.*;
 import soot.jimple.*;
+import soot.jimple.spark.pag.AllocNode;
+import soot.jimple.spark.pag.PAG;
 import soot.options.Options;
-import soot.tagkit.*;
-import soot.toolkits.graph.BriefUnitGraph;
+import soot.tagkit.LineNumberTag;
+import soot.tagkit.SourceFileTag;
 import soot.toolkits.graph.DirectedGraph;
 import soot.toolkits.graph.ExceptionalUnitGraph;
-import java.util.Iterator;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -28,13 +23,6 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.*;
-import soot.PointsToSet;
-import soot.PointsToAnalysis;
-import soot.jimple.spark.pag.AllocNode;
-import soot.jimple.spark.pag.Node;
-import soot.jimple.spark.pag.PAG;
-import soot.jimple.spark.sets.P2SetVisitor;
-import soot.jimple.spark.SparkTransformer;
 
 /**
  * Soot代码分析器
@@ -104,11 +92,11 @@ public class SootCodeAnalyzer {
         Options.v().set_output_dir(outputPath);
         Options.v().set_keep_line_number(true);
         Options.v().set_src_prec(Options.src_prec_java);
-        
+
         // 增加变量名称保留和调试信息
         Options.v().set_keep_line_number(true);
         Options.v().set_keep_offset(true);
-        
+
         // 尝试保留变量名
         Options.v().setPhaseOption("jb", "use-original-names:true");
 
@@ -124,7 +112,7 @@ public class SootCodeAnalyzer {
             Options.v().set_whole_program(true);
             Options.v().setPhaseOption("cg", "safe-newinstance:true");
             Options.v().setPhaseOption("cg.spark", "on");
-            
+
             // 针对指针分析的额外配置
             if (generatePointsToAnalysis) {
                 // 增强指针分析配置
@@ -159,8 +147,8 @@ public class SootCodeAnalyzer {
      */
     private List<String> getExcludeList() {
         return Arrays.asList(
-            "java.*", "javax.*", "sun.*", "com.sun.*", "org.xml.*", "org.w3c.*",
-            "apple.awt.*", "com.apple.*"
+                "java.*", "javax.*", "sun.*", "com.sun.*", "org.xml.*", "org.w3c.*",
+                "apple.awt.*", "com.apple.*"
         );
     }
 
@@ -259,12 +247,12 @@ public class SootCodeAnalyzer {
     private void analyzeField(SootField field) {
         SootClass declaringClass = field.getDeclaringClass();
         String className = declaringClass.getName();
-        
+
         // 过滤掉系统类字段
         if (isExcludedClass(className)) {
             return;
         }
-        
+
         String fieldName = field.getName();
         String signature = field.getSignature();
 
@@ -287,12 +275,12 @@ public class SootCodeAnalyzer {
     private void analyzeMethod(SootMethod method) {
         SootClass declaringClass = method.getDeclaringClass();
         String className = declaringClass.getName();
-        
+
         // 过滤掉系统类方法
         if (isExcludedClass(className)) {
             return;
         }
-        
+
         String methodName = method.getName();
         String signature = method.getSignature();
 
@@ -455,60 +443,60 @@ public class SootCodeAnalyzer {
      */
     private void generatePointsToAnalysis() {
         logger.info("生成指针分析结果...");
-        
+
         if (!Options.v().whole_program()) {
             logger.error("指针分析需要设置whole-program选项");
             return;
         }
-        
+
         // 确保Spark已启用并执行指针分析
         if (!Scene.v().hasCallGraph()) {
             logger.info("执行Spark指针分析...");
             // 显式构建调用图
             Scene.v().setEntryPoints(getEntryPoints());
             logger.info("设置入口点完成，共 {} 个入口点", Scene.v().getEntryPoints().size());
-            
+
             // 执行调用图构建
             PackManager.v().getPack("cg").apply();
-            
+
             if (!Scene.v().hasCallGraph()) {
                 logger.error("调用图构建失败");
                 return;
             }
             logger.info("调用图构建完成");
         }
-        
+
         // 获取指针分析器
         PointsToAnalysis pta = Scene.v().getPointsToAnalysis();
         if (pta == null) {
             logger.error("无法获取指针分析器");
             return;
         }
-        
+
         logger.info("使用指针分析器: {}", pta.getClass().getName());
-        
+
         // 检查是否使用的是Spark分析器，以便获取PAG
         PAG pag = getPAG();
         if (pag != null) {
             logger.info("成功获取PAG，将使用更详细的对象分配信息");
         }
-        
+
         // 分析所有变量的指向关系
         logger.info("分析变量的指向关系...");
-        
+
         // 创建应用类的副本以避免并发修改异常
         List<SootClass> applicationClasses = new ArrayList<>(Scene.v().getApplicationClasses());
-        
+
         for (SootClass sootClass : applicationClasses) {
             if (sootClass.isPhantom() || isExcludedClass(sootClass.getName())) {
                 continue;
             }
-            
+
             String className = sootClass.getName();
-            
+
             // 分析静态字段
             analyzeStaticFields(sootClass, pta, pag);
-            
+
             // 遍历所有方法
             for (SootMethod method : sootClass.getMethods()) {
                 if (!method.hasActiveBody()) {
@@ -518,21 +506,21 @@ public class SootCodeAnalyzer {
                         continue;
                     }
                 }
-                
+
                 Body body = method.getActiveBody();
-                
+
                 // 分析局部变量
                 analyzeLocalVariables(className, method, body, pta, pag);
-                
+
                 // 分析字段和数组
                 analyzeFieldsAndArrays(className, method, body, pta, pag);
             }
         }
-        
+
         // 保存指针分析结果
         savePointsToAnalysisResults();
     }
-    
+
     /**
      * 获取PAG分析器实例
      */
@@ -554,7 +542,7 @@ public class SootCodeAnalyzer {
         }
         return null;
     }
-    
+
     /**
      * 分析静态字段
      */
@@ -563,18 +551,18 @@ public class SootCodeAnalyzer {
             if (!field.isStatic() || !(field.getType() instanceof RefLikeType)) {
                 continue;
             }
-            
+
             String fieldKey = sootClass.getName() + "." + field.getName() + " (" + field.getType() + ")";
             Set<String> pointsToSet = new HashSet<>();
             pointsToStaticFields.put(fieldKey, pointsToSet);
-            
+
             // 获取静态字段指向的对象
             PointsToSet pts = pta.reachingObjects(field);
             if (pts == null) {
                 logger.debug("静态字段的指向集合为null: {}", fieldKey);
                 continue;
             }
-            
+
             // 使用详细的分析方法
             if (pag != null) {
                 // 使用PAG获取更详细的对象信息
@@ -583,11 +571,11 @@ public class SootCodeAnalyzer {
                 // 使用基本方法
                 addPointsToTypes(pts, pointsToSet);
             }
-            
+
             logger.debug("静态字段 {} 指向 {} 个对象", fieldKey, pointsToSet.size());
         }
     }
-    
+
     /**
      * 分析局部变量
      */
@@ -595,31 +583,33 @@ public class SootCodeAnalyzer {
         String methodKey = className + "." + method.getName();
         Map<String, Set<String>> localsMap = new HashMap<>();
         pointsToLocals.put(methodKey, localsMap);
-        
+
         // 创建一个本地变量名称映射，用于保存原始变量名
         Map<Local, String> localNameMap = extractOriginalVariableNames(body);
-        
+
         for (Local local : body.getLocals()) {
             if (!(local.getType() instanceof RefLikeType)) {
                 continue; // 只分析引用类型和数组类型
             }
-            
+            if (local.isStackLocal()) {
+                continue;
+            }
             // 尝试使用原始变量名，如果没有则使用Jimple变量名
             String varName = localNameMap.getOrDefault(local, local.getName());
-            
+
             // 尝试记录变量类型以帮助识别
             String varNameWithType = varName + " (" + local.getType().toString() + ")";
-            
+
             Set<String> pointsToSet = new HashSet<>();
             localsMap.put(varNameWithType, pointsToSet);
-            
+
             // 获取变量指向的对象
             PointsToSet pts = pta.reachingObjects(local);
             if (pts == null) {
                 logger.debug("变量的指向集合为null: {}.{}.{}", className, method.getName(), varName);
                 continue;
             }
-            
+
             // 使用详细的分析方法
             if (pag != null) {
                 // 使用PAG获取更详细的对象信息
@@ -628,30 +618,30 @@ public class SootCodeAnalyzer {
                 // 使用基本方法
                 addPointsToTypes(pts, pointsToSet);
             }
-            
+
             logger.debug("变量 {}.{}.{} 指向 {} 个对象", className, method.getName(), varName, pointsToSet.size());
-            
+
             // 处理数组类型
             if (local.getType() instanceof ArrayType) {
                 Map<String, Object> arrayInfo = new HashMap<>();
-                arrayInfo.put("elementType", ((ArrayType)local.getType()).getElementType().toString());
-                
+                arrayInfo.put("elementType", ((ArrayType) local.getType()).getElementType().toString());
+
                 Set<String> arrayPointsTo = new HashSet<>();
                 if (pag != null) {
                     addPointsToFromPAG(pts, arrayPointsTo, pag);
                 } else {
                     addPointsToTypes(pts, arrayPointsTo);
                 }
-                
+
                 arrayInfo.put("pointsTo", arrayPointsTo);
                 arrayInfo.put("pointsToCount", arrayPointsTo.size()); // 添加统计信息
-                
+
                 String arrayKey = methodKey + "." + varName;
                 pointsToArrays.put(arrayKey, arrayInfo);
             }
         }
     }
-    
+
     /**
      * 分析字段和数组访问
      */
@@ -659,26 +649,26 @@ public class SootCodeAnalyzer {
         for (Unit unit : body.getUnits()) {
             for (ValueBox valueBox : unit.getUseAndDefBoxes()) {
                 Value value = valueBox.getValue();
-                
+
                 // 分析实例字段
                 if (value instanceof InstanceFieldRef) {
                     InstanceFieldRef fieldRef = (InstanceFieldRef) value;
                     SootField field = fieldRef.getField();
-                    
+
                     if (!(field.getType() instanceof RefLikeType)) {
                         continue; // 只分析引用类型和数组类型
                     }
-                    
+
                     String fieldKey = field.getDeclaringClass().getName() + "." + field.getName() + " (" + field.getType() + ")";
-                    
+
                     // 已经分析过的字段跳过
                     if (pointsToInstanceFields.containsKey(fieldKey)) {
                         continue;
                     }
-                    
+
                     Set<String> fieldPointsTo = new HashSet<>();
                     pointsToInstanceFields.put(fieldKey, fieldPointsTo);
-                    
+
                     // 获取字段的基对象
                     Local base = (Local) fieldRef.getBase();
                     PointsToSet basePoints = pta.reachingObjects(base);
@@ -686,43 +676,43 @@ public class SootCodeAnalyzer {
                         logger.debug("基对象的指向集合为空: {}.{}", base.getName(), field.getName());
                         continue;
                     }
-                    
+
                     // 获取字段指向的对象
                     PointsToSet fieldPoints = pta.reachingObjects(basePoints, field);
                     if (fieldPoints == null) {
                         logger.debug("字段的指向集合为null: {}", fieldKey);
                         continue;
                     }
-                    
+
                     // 使用详细的分析方法
                     if (pag != null) {
                         addPointsToFromPAG(fieldPoints, fieldPointsTo, pag);
                     } else {
                         addPointsToTypes(fieldPoints, fieldPointsTo);
                     }
-                    
+
                     logger.debug("实例字段 {} 指向 {} 个对象", fieldKey, fieldPointsTo.size());
                 }
                 // 分析数组元素访问
                 else if (value instanceof ArrayRef) {
                     ArrayRef arrayRef = (ArrayRef) value;
                     Local baseArray = (Local) arrayRef.getBase();
-                    
+
                     if (!(baseArray.getType() instanceof ArrayType)) {
                         continue;
                     }
-                    
+
                     String varName = baseArray.getName();
                     String arrayKey = className + "." + method.getName() + "." + varName + " (" + baseArray.getType() + ")";
-                    
+
                     // 已经分析过的数组跳过
                     if (pointsToArrays.containsKey(arrayKey)) {
                         continue;
                     }
-                    
+
                     Map<String, Object> arrayInfo = new HashMap<>();
-                    arrayInfo.put("elementType", ((ArrayType)baseArray.getType()).getElementType().toString());
-                    
+                    arrayInfo.put("elementType", ((ArrayType) baseArray.getType()).getElementType().toString());
+
                     Set<String> arrayPointsTo = new HashSet<>();
                     PointsToSet pts = pta.reachingObjects(baseArray);
                     if (pts == null) {
@@ -735,16 +725,16 @@ public class SootCodeAnalyzer {
                         }
                         logger.debug("数组 {} 指向 {} 个对象", arrayKey, arrayPointsTo.size());
                     }
-                    
+
                     arrayInfo.put("pointsTo", arrayPointsTo);
                     arrayInfo.put("pointsToCount", arrayPointsTo.size());
-                    
+
                     pointsToArrays.put(arrayKey, arrayInfo);
                 }
             }
         }
     }
-    
+
     /**
      * 使用PAG分析器获取详细的对象分配点信息
      */
@@ -752,12 +742,12 @@ public class SootCodeAnalyzer {
         if (pts == null) {
             return;
         }
-        
+
         try {
             // 由于PointsToSetVisitorFactory可能不可用，我们需要尝试其他方式获取分配点
             // 1. 尝试使用反射获取pts内部的数据结构
             boolean added = tryGetAllocationNodesViaReflection(pts, targetSet);
-            
+
             // 2. 如果不成功，尝试使用Spark直接查询某些关键类型的分配节点
             if (!added && pag != null) {
                 // 遍历pts的possibleTypes
@@ -765,13 +755,13 @@ public class SootCodeAnalyzer {
                     if (type instanceof RefType) {
                         RefType refType = (RefType) type;
                         String className = refType.getClassName();
-                        
+
                         // 过滤掉异常和堆栈相关的类型
-                        if (!className.contains("Exception") && 
-                            !className.contains("Error") && 
-                            !className.contains("Throwable") && 
-                            !className.contains("Stack")) {
-                            
+                        if (!className.contains("Exception") &&
+                                !className.contains("Error") &&
+                                !className.contains("Throwable") &&
+                                !className.contains("Stack")) {
+
                             // 尝试找到所有这个类型的分配点 (不一定精确，但可能有用)
                             String objectInfo = "Object: " + className + " (from analysis)";
                             targetSet.add(objectInfo);
@@ -779,13 +769,13 @@ public class SootCodeAnalyzer {
                         }
                     } else if (type instanceof ArrayType) {
                         String typeName = type.toString();
-                        
+
                         // 过滤掉异常和堆栈相关的类型
-                        if (!typeName.contains("Exception") && 
-                            !typeName.contains("Error") && 
-                            !typeName.contains("Throwable") && 
-                            !typeName.contains("Stack")) {
-                            
+                        if (!typeName.contains("Exception") &&
+                                !typeName.contains("Error") &&
+                                !typeName.contains("Throwable") &&
+                                !typeName.contains("Stack")) {
+
                             String objectInfo = "Array: " + typeName + " (from analysis)";
                             targetSet.add(objectInfo);
                             added = true;
@@ -793,7 +783,7 @@ public class SootCodeAnalyzer {
                     }
                 }
             }
-            
+
             // 3. 如果上述方法都失败，回退到基本的toString分析
             if (!added) {
                 addPointsToTypes(pts, targetSet);
@@ -813,14 +803,14 @@ public class SootCodeAnalyzer {
             // 尝试反射获取pts的内部结构
             // 注意: 这依赖于Soot的内部实现，可能会随版本变化而不可用
             String ptsClassName = pts.getClass().getName();
-            
+
             // 尝试获取内部节点集合
             java.lang.reflect.Method method = null;
             Object nodeCollection = null;
-            
+
             // 针对不同的PointsToSet实现，尝试不同的方法
-            if (ptsClassName.contains("HybridPointsToSet") || 
-                ptsClassName.contains("DoublePointsToSet")) {
+            if (ptsClassName.contains("HybridPointsToSet") ||
+                    ptsClassName.contains("DoublePointsToSet")) {
                 // 尝试获取内部的nodeSet
                 try {
                     method = pts.getClass().getMethod("getOldSet");
@@ -848,7 +838,7 @@ public class SootCodeAnalyzer {
                     // 忽略
                 }
             }
-            
+
             // 如果找到了节点集合，遍历并提取信息
             if (nodeCollection != null) {
                 if (nodeCollection instanceof Collection) {
@@ -861,12 +851,12 @@ public class SootCodeAnalyzer {
                             } else {
                                 // 其他类型的节点
                                 String nodeInfo = node.toString();
-                                if (nodeInfo != null && 
-                                    !nodeInfo.contains("Exception") && 
-                                    !nodeInfo.contains("Error") && 
-                                    !nodeInfo.contains("Throwable") && 
-                                    !nodeInfo.contains("Stack")) {
-                                    
+                                if (nodeInfo != null &&
+                                        !nodeInfo.contains("Exception") &&
+                                        !nodeInfo.contains("Error") &&
+                                        !nodeInfo.contains("Throwable") &&
+                                        !nodeInfo.contains("Stack")) {
+
                                     targetSet.add("Node: " + formatNodeInfo(nodeInfo));
                                 }
                             }
@@ -888,7 +878,7 @@ public class SootCodeAnalyzer {
         if (nodeInfo == null) {
             return "null";
         }
-        
+
         // 裁剪过长的信息
         if (nodeInfo.length() > 100) {
             return nodeInfo.substring(0, 97) + "...";
@@ -903,27 +893,27 @@ public class SootCodeAnalyzer {
         if (allocNode == null) {
             return;
         }
-        
+
         try {
             // 获取分配点的新表达式
             Object newExpr = allocNode.getNewExpr();
             String allocInfo = null;
-            
+
             if (newExpr instanceof NewExpr) {
                 // 普通对象创建
                 NewExpr ne = (NewExpr) newExpr;
-                SootClass allocClass = ((RefType)ne.getType()).getSootClass();
+                SootClass allocClass = ((RefType) ne.getType()).getSootClass();
                 SootMethod method = allocNode.getMethod();
-                
+
                 // 过滤掉异常和堆栈相关的对象
                 String className = allocClass.getName();
-                if (className.contains("Exception") || 
-                    className.contains("Error") || 
-                    className.contains("Throwable") || 
-                    className.contains("Stack")) {
+                if (className.contains("Exception") ||
+                        className.contains("Error") ||
+                        className.contains("Throwable") ||
+                        className.contains("Stack")) {
                     return;
                 }
-                
+
                 allocInfo = "Object: " + className;
                 if (method != null) {
                     allocInfo += " created in " + method.getDeclaringClass().getShortName() + "." + method.getName();
@@ -933,15 +923,15 @@ public class SootCodeAnalyzer {
                 NewArrayExpr nae = (NewArrayExpr) newExpr;
                 SootMethod method = allocNode.getMethod();
                 String typeName = nae.getBaseType().toString();
-                
+
                 // 过滤掉异常和堆栈相关的数组
-                if (typeName.contains("Exception") || 
-                    typeName.contains("Error") || 
-                    typeName.contains("Throwable") || 
-                    typeName.contains("Stack")) {
+                if (typeName.contains("Exception") ||
+                        typeName.contains("Error") ||
+                        typeName.contains("Throwable") ||
+                        typeName.contains("Stack")) {
                     return;
                 }
-                
+
                 allocInfo = "Array: " + typeName + "[]";
                 if (method != null) {
                     allocInfo += " created in " + method.getDeclaringClass().getShortName() + "." + method.getName();
@@ -965,7 +955,7 @@ public class SootCodeAnalyzer {
                     allocInfo = allocInfo.substring(0, 97) + "...";
                 }
             }
-            
+
             if (allocInfo != null) {
                 targetSet.add(allocInfo);
             }
@@ -973,7 +963,7 @@ public class SootCodeAnalyzer {
             logger.debug("处理分配节点时出错: {}", e.getMessage());
         }
     }
-    
+
     /**
      * 基本方法：添加指向类型到集合
      * 改进为收集具体对象信息而不仅仅是类型
@@ -983,7 +973,7 @@ public class SootCodeAnalyzer {
         if (pts == null) {
             return count;
         }
-        
+
         try {
             // 获取分配对象的信息
             // 首先尝试直接使用toString()获取原始信息，处理为更友好的格式
@@ -992,16 +982,16 @@ public class SootCodeAnalyzer {
                 // 移除花括号，分离各个对象
                 ptsStr = ptsStr.replaceAll("[{}]", "");
                 String[] objects = ptsStr.split(",");
-                
+
                 for (String objStr : objects) {
                     objStr = objStr.trim();
                     if (!objStr.isEmpty()) {
                         // 过滤掉异常和堆栈相关的对象
-                        if (!objStr.contains("Exception") && 
-                            !objStr.contains("Error") && 
-                            !objStr.contains("Throwable") && 
-                            !objStr.contains("Stack")) {
-                            
+                        if (!objStr.contains("Exception") &&
+                                !objStr.contains("Error") &&
+                                !objStr.contains("Throwable") &&
+                                !objStr.contains("Stack")) {
+
                             // 格式化对象信息
                             String formattedInfo = formatObjectInfo(objStr);
                             targetSet.add(formattedInfo);
@@ -1010,31 +1000,31 @@ public class SootCodeAnalyzer {
                     }
                 }
             }
-            
+
             // 如果无法从toString获取信息，则使用类型信息作为备份
             if (count == 0) {
                 for (Type type : pts.possibleTypes()) {
                     if (type instanceof RefType) {
                         String typeName = ((RefType) type).getClassName();
-                        
+
                         // 过滤掉异常和堆栈相关的类型
-                        if (!typeName.contains("Exception") && 
-                            !typeName.contains("Error") && 
-                            !typeName.contains("Throwable") && 
-                            !typeName.contains("Stack")) {
-                            
+                        if (!typeName.contains("Exception") &&
+                                !typeName.contains("Error") &&
+                                !typeName.contains("Throwable") &&
+                                !typeName.contains("Stack")) {
+
                             targetSet.add("Type: " + typeName);
                             count++;
                         }
                     } else if (type instanceof ArrayType) {
                         String typeName = type.toString();
-                        
+
                         // 过滤掉异常和堆栈相关的数组类型
-                        if (!typeName.contains("Exception") && 
-                            !typeName.contains("Error") && 
-                            !typeName.contains("Throwable") && 
-                            !typeName.contains("Stack")) {
-                            
+                        if (!typeName.contains("Exception") &&
+                                !typeName.contains("Error") &&
+                                !typeName.contains("Throwable") &&
+                                !typeName.contains("Stack")) {
+
                             targetSet.add("ArrayType: " + typeName);
                             count++;
                         }
@@ -1044,7 +1034,7 @@ public class SootCodeAnalyzer {
         } catch (Exception e) {
             logger.debug("处理指向集合时出错: {}", e.getMessage());
         }
-        
+
         return count;
     }
 
@@ -1055,7 +1045,7 @@ public class SootCodeAnalyzer {
         if (objStr == null) {
             return "null";
         }
-        
+
         try {
             // 尝试提取更有用的信息
             if (objStr.contains("NewExpr")) {
@@ -1064,14 +1054,14 @@ public class SootCodeAnalyzer {
                 int typeEnd = objStr.indexOf(")");
                 if (typeStart >= 0 && typeEnd > typeStart) {
                     String type = objStr.substring(typeStart + 1, typeEnd);
-                    
+
                     // 查找创建位置
                     int locStart = objStr.indexOf("in ");
                     String location = "";
                     if (locStart >= 0) {
                         location = " at " + objStr.substring(locStart);
                     }
-                    
+
                     return "Object: " + type + location;
                 }
             } else if (objStr.contains("StringConstant")) {
@@ -1098,10 +1088,10 @@ public class SootCodeAnalyzer {
                     int typeStart = objStr.indexOf("type:");
                     int typeEnd = objStr.indexOf(",", typeStart);
                     if (typeStart >= 0 && (typeEnd > typeStart || typeEnd == -1)) {
-                        String type = typeEnd > typeStart 
-                            ? objStr.substring(typeStart + 5, typeEnd).trim()
-                            : objStr.substring(typeStart + 5).trim();
-                        
+                        String type = typeEnd > typeStart
+                                ? objStr.substring(typeStart + 5, typeEnd).trim()
+                                : objStr.substring(typeStart + 5).trim();
+
                         // 查找创建位置
                         String location = "";
                         int methodStart = objStr.indexOf("method:");
@@ -1111,12 +1101,12 @@ public class SootCodeAnalyzer {
                                 location = " in " + objStr.substring(methodStart + 7, methodEnd + 1);
                             }
                         }
-                        
+
                         return "Allocated: " + type + location;
                     }
                 }
             }
-            
+
             // 尝试从字符串中提取有用的信息
             if (objStr.contains("@")) {
                 // 可能是对象的哈希码引用
@@ -1126,7 +1116,7 @@ public class SootCodeAnalyzer {
                     return "Instance: " + type;
                 }
             }
-            
+
             // 如果无法提取特定信息，返回裁剪过的原始字符串
             if (objStr.length() > 100) {
                 return objStr.substring(0, 97) + "...";
@@ -1145,7 +1135,7 @@ public class SootCodeAnalyzer {
         if (className == null) {
             return true;
         }
-        
+
         // 检查是否是系统类
         for (String excludePattern : getExcludeList()) {
             if (excludePattern.endsWith("*")) {
@@ -1190,7 +1180,7 @@ public class SootCodeAnalyzer {
             LineNumberTag lineNumberTag = (LineNumberTag) method.getTag("LineNumberTag");
             return lineNumberTag.getLineNumber();
         }
-        
+
         // 如果方法上没有行号标签，尝试从方法体的第一条语句获取
         if (method.hasActiveBody()) {
             Body body = method.getActiveBody();
@@ -1199,7 +1189,7 @@ public class SootCodeAnalyzer {
                 return getLineNumber(firstUnit);
             }
         }
-        
+
         return -1;
     }
 
@@ -1219,13 +1209,13 @@ public class SootCodeAnalyzer {
      */
     private List<SootMethod> getEntryPoints() {
         List<SootMethod> entryPoints = new ArrayList<>();
-        
+
         // 遍历所有应用类寻找可能的入口点
         for (SootClass sootClass : Scene.v().getApplicationClasses()) {
             if (sootClass.isPhantom()) {
                 continue;
             }
-            
+
             // 查找main方法
             if (sootClass.declaresMethodByName("main")) {
                 try {
@@ -1238,7 +1228,7 @@ public class SootCodeAnalyzer {
                     logger.warn("处理main方法时出错: {}", e.getMessage());
                 }
             }
-            
+
             // 查找无参构造函数
             if (!sootClass.isInterface() && !sootClass.isAbstract()) {
                 for (SootMethod method : sootClass.getMethods()) {
@@ -1248,7 +1238,7 @@ public class SootCodeAnalyzer {
                     }
                 }
             }
-            
+
             // 查找公共方法
             for (SootMethod method : sootClass.getMethods()) {
                 if (method.isPublic() && !method.isAbstract() && !method.isConstructor()) {
@@ -1257,13 +1247,13 @@ public class SootCodeAnalyzer {
                 }
             }
         }
-        
+
         if (entryPoints.isEmpty()) {
             logger.warn("没有找到入口点，使用默认入口点");
             // 使用Soot的默认入口点
             entryPoints.addAll(EntryPoints.v().all());
         }
-        
+
         return entryPoints;
     }
 
@@ -1272,32 +1262,32 @@ public class SootCodeAnalyzer {
      */
     private void saveIndexResults() {
         logger.info("保存索引结果...");
-        
+
         try {
             Gson gson = new GsonBuilder().setPrettyPrinting().disableHtmlEscaping().create();
-            
+
             // 创建结果目录
             Path indexDir = Paths.get(outputPath, "index");
             if (!Files.exists(indexDir)) {
                 Files.createDirectories(indexDir);
             }
-            
+
             // 保存方法定义索引
             String methodDefsJson = gson.toJson(methodDefinitions);
             Files.write(Paths.get(indexDir.toString(), "method_definitions.json"), methodDefsJson.getBytes());
-            
+
             // 保存方法调用索引
             String methodInvocsJson = gson.toJson(methodInvocations);
             Files.write(Paths.get(indexDir.toString(), "method_invocations.json"), methodInvocsJson.getBytes());
-            
+
             // 保存字段定义索引
             String fieldDefsJson = gson.toJson(fieldDefinitions);
             Files.write(Paths.get(indexDir.toString(), "field_definitions.json"), fieldDefsJson.getBytes());
-            
+
             // 保存字段引用索引
             String fieldRefsJson = gson.toJson(fieldReferences);
             Files.write(Paths.get(indexDir.toString(), "field_references.json"), fieldRefsJson.getBytes());
-            
+
             logger.info("索引结果已保存到：{}", indexDir);
         } catch (IOException e) {
             logger.error("保存索引结果失败：{}", e.getMessage());
@@ -1309,34 +1299,34 @@ public class SootCodeAnalyzer {
      */
     private void savePointsToAnalysisResults() {
         logger.info("保存指针分析结果...");
-        
+
         try {
             Gson gson = new GsonBuilder().setPrettyPrinting().disableHtmlEscaping().create();
-            
+
             // 创建结果对象
             JsonObject resultsObject = new JsonObject();
-            
+
             // 添加局部变量指向分析结果
             JsonObject localsObject = gson.toJsonTree(pointsToLocals).getAsJsonObject();
             resultsObject.add("locals", localsObject);
-            
+
             // 添加实例字段指向分析结果
             JsonObject instanceFieldsObject = gson.toJsonTree(pointsToInstanceFields).getAsJsonObject();
             resultsObject.add("instanceFields", instanceFieldsObject);
-            
+
             // 添加静态字段指向分析结果
             JsonObject staticFieldsObject = gson.toJsonTree(pointsToStaticFields).getAsJsonObject();
             resultsObject.add("staticFields", staticFieldsObject);
-            
+
             // 添加数组指向分析结果
             JsonObject arraysObject = gson.toJsonTree(pointsToArrays).getAsJsonObject();
             resultsObject.add("arrays", arraysObject);
-            
+
             // 写入文件
             String json = gson.toJson(resultsObject);
             Path filePath = Paths.get(outputPath, "points_to_analysis.json");
             Files.write(filePath, json.getBytes());
-            
+
             logger.info("指针分析结果已保存到：{}", filePath);
         } catch (IOException e) {
             logger.error("保存指针分析结果失败：{}", e.getMessage());
@@ -1348,16 +1338,16 @@ public class SootCodeAnalyzer {
      */
     private Map<Local, String> extractOriginalVariableNames(Body body) {
         Map<Local, String> nameMapping = new HashMap<>();
-        
+
         // 由于Soot可能不提供直接访问Local标签的API，使用简单的映射并返回原始变量名
         // 根据需要可以实现更复杂的变量名映射逻辑
         for (Local local : body.getLocals()) {
             nameMapping.put(local, local.getName());
         }
-        
+
         return nameMapping;
     }
-    
+
     /**
      * 主方法
      */
@@ -1393,7 +1383,7 @@ public class SootCodeAnalyzer {
                 .longOpt("index")
                 .desc("生成代码索引")
                 .build());
-                
+
         cliOptions.addOption(Option.builder("p")
                 .longOpt("points-to")
                 .desc("执行指针分析")
@@ -1442,28 +1432,28 @@ public class SootCodeAnalyzer {
             formatter.printHelp("SootCodeAnalyzer", cliOptions);
         }
     }
-    
+
     /**
      * 设置是否生成调用图
      */
     public void setGenerateCallGraph(boolean generateCallGraph) {
         this.generateCallGraph = generateCallGraph;
     }
-    
+
     /**
      * 设置是否生成Jimple IR
      */
     public void setGenerateJimple(boolean generateJimple) {
         this.generateJimple = generateJimple;
     }
-    
+
     /**
      * 设置是否生成代码索引
      */
     public void setGenerateIndex(boolean generateIndex) {
         this.generateIndex = generateIndex;
     }
-    
+
     /**
      * 设置是否执行指针分析
      */
