@@ -473,7 +473,7 @@ def test_semantic_restoration_client():
         modeling_dir=modeling_dir,
         output_dir=output_dir,
         batch_size=1,
-        use_context=True
+        use_context=False
     )
     
     # 加载数据

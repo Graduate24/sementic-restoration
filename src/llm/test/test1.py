@@ -1,5 +1,8 @@
+import json
 import unittest
 
+from src.config.config import system_prompt
+from src.llm.llm_client import LLMClient
 from src.llm.util import ModelingDataProcessor
 
 
@@ -16,10 +19,17 @@ class Test1(unittest.TestCase):
         print(java_files)
 
         # 查看前3个文件
-        for file in java_files[:]:
+        for file in java_files:
             print(f"\n处理文件: {file}")
             prompt_data = processor.gather_file_modeling_data(file)
-            print(prompt_data)
-            # 打印源代码的前100个字符和相关建模数据的统计
+            json_pretty = json.dumps(prompt_data, indent=2)
+            # print(json_pretty)
+            if 'modeling_data' not in prompt_data or (len(prompt_data['modeling_data']['aop_data']) == 0 and len(
+                    prompt_data['modeling_data']['ioc_data'])) == 0:
+                print(f"\n无需处理处理: {file}. 跳过")
+                continue
+            llm = LLMClient()
+            response = llm.generate_completion(json_pretty, system_prompt=system_prompt)
 
-
+            print(f"-----------\n")
+            print(response['choices'][0]['message']['content'])

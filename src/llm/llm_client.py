@@ -6,12 +6,12 @@ import json
 import logging
 import requests
 import time
-from typing import Dict, List, Optional, Union, Any
+from typing import Dict, List, Optional, Any
 
 import sys
 import os
 sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
-from config.config import (
+from src.config.config import (
     OPENROUTER_API_KEY, 
     OPENROUTER_API_BASE, 
     DEFAULT_MODEL, 
@@ -172,7 +172,7 @@ class LLMClient:
                     self.chat_endpoint,
                     headers=self._prepare_headers(),
                     json=request_body,
-                    timeout=60  # 设置超时时间
+                    timeout=300  # 设置超时时间
                 )
                 
                 response.raise_for_status()  # 如果请求失败，抛出异常
@@ -183,10 +183,12 @@ class LLMClient:
                 else:
                     # 解析并返回JSON响应
                     result = response.json()
-                    logger.debug(f"API响应: {json.dumps(result, ensure_ascii=False, indent=2)}")
+                    print(result)
+                    if len(result['choices']) == 0:
+                        raise Exception("没有choice返回")
                     return result
             
-            except requests.exceptions.RequestException as e:
+            except Exception as e:
                 attempt += 1
                 logger.warning(f"请求失败 (尝试 {attempt}/{self.retry_attempts}): {str(e)}")
                 
@@ -208,6 +210,7 @@ class LLMClient:
             提取的文本内容
         """
         try:
+            print(response)
             return response['choices'][0]['message']['content']
         except (KeyError, IndexError) as e:
             logger.error(f"从响应中提取内容失败: {str(e)}")
@@ -285,23 +288,3 @@ class LLMClient:
         except Exception as e:
             logger.error(f"生成补全时出错: {str(e)}")
             return f"错误: 无法获取生成结果 - {str(e)}"
-
-
-# 简单测试函数
-def test_llm_client():
-    """
-    测试LLM客户端是否正常工作
-    """
-    client = LLMClient()
-    prompt = "将下面的Java代码转换为不使用Spring注解的形式: \n\n```java\n@Service\npublic class UserService {\n    @Autowired\n    private UserRepository userRepository;\n    \n    public User findById(Long id) {\n        return userRepository.findById(id).orElse(null);\n    }\n}\n```"
-    
-    system_prompt = "你是一个专门将Spring框架代码转换为纯Java代码的专家。"
-    
-    print("发送请求...")
-    response = client.simple_completion(prompt, system_prompt)
-    print("\n生成结果:\n")
-    print(response)
-
-
-if __name__ == "__main__":
-    test_llm_client() 

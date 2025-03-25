@@ -485,12 +485,12 @@ class ModelingDataProcessor:
         # 收集相关的建模数据
         aop_data = self._find_related_aop(full_class_name)
         ioc_data = self._find_related_ioc(full_class_name)
-        field_def_data = self._find_related_field_definitions(full_class_name)
-        field_ref_data = self._find_related_field_references(full_class_name)
-        method_def_data = self._find_related_method_definitions(full_class_name)
-        method_call_data = self._find_related_method_invocations(full_class_name)
-        call_graph_data = self._find_related_call_graph(full_class_name)
-        mybatis_data = self._find_related_mybatis(full_class_name)
+        # field_def_data = self._find_related_field_definitions(full_class_name)
+        # field_ref_data = self._find_related_field_references(full_class_name)
+        # method_def_data = self._find_related_method_definitions(full_class_name)
+        # method_call_data = self._find_related_method_invocations(full_class_name)
+        # call_graph_data = self._find_related_call_graph(full_class_name)
+        # mybatis_data = self._find_related_mybatis(full_class_name)
 
         # 组装结果
         result = {
@@ -500,11 +500,11 @@ class ModelingDataProcessor:
             "modeling_data": {
                 "aop_data": aop_data,
                 "ioc_data": ioc_data,
-                "field_def_data": field_def_data,
-                "field_ref_data": field_ref_data,
-                "method_def_data": method_def_data,
-                "method_call_data": method_call_data,
-                "call_graph_data": call_graph_data,
+                # "field_def_data": field_def_data,
+                # "field_ref_data": field_ref_data,
+                # "method_def_data": method_def_data,
+                # "method_call_data": method_call_data,
+                # "call_graph_data": call_graph_data,
                 # "mybatis_data": mybatis_data
             }
         }
@@ -535,23 +535,23 @@ class ModelingDataProcessor:
 
         # 格式化数据用于提示词
         prompt_data = {
-            "source_code": source_code,
+            "source_code": "source_code",
             "aop_data": json.dumps(file_data["modeling_data"]["aop_data"], indent=2) if file_data["modeling_data"][
                 "aop_data"] else "{}",
             "ioc_data": json.dumps(file_data["modeling_data"]["ioc_data"], indent=2) if file_data["modeling_data"][
                 "ioc_data"] else "{}",
-            "mybatis_data": json.dumps(file_data["modeling_data"]["mybatis_data"], indent=2) if
-            file_data["modeling_data"]["mybatis_data"] else "{}",
-            "field_def_data": json.dumps(file_data["modeling_data"].get("field_def_data", {}), indent=2) if file_data[
-                "modeling_data"].get("field_def_data") else "{}",
-            "field_ref_data": json.dumps(file_data["modeling_data"].get("field_ref_data", {}), indent=2) if file_data[
-                "modeling_data"].get("field_ref_data") else "{}",
-            "method_def_data": json.dumps(file_data["modeling_data"].get("method_def_data", {}), indent=2) if file_data[
-                "modeling_data"].get("method_def_data") else "{}",
-            "method_call_data": json.dumps(file_data["modeling_data"].get("method_call_data", {}), indent=2) if
-            file_data["modeling_data"].get("method_call_data") else "{}",
-            "call_graph_data": json.dumps(file_data["modeling_data"].get("call_graph_data", {}), indent=2) if file_data[
-                "modeling_data"].get("call_graph_data") else "{}",
+            # "mybatis_data": json.dumps(file_data["modeling_data"]["mybatis_data"], indent=2) if
+            # file_data["modeling_data"]["mybatis_data"] else "{}",
+            # "field_def_data": json.dumps(file_data["modeling_data"].get("field_def_data", {}), indent=2) if file_data[
+            #     "modeling_data"].get("field_def_data") else "{}",
+            # "field_ref_data": json.dumps(file_data["modeling_data"].get("field_ref_data", {}), indent=2) if file_data[
+            #     "modeling_data"].get("field_ref_data") else "{}",
+            # "method_def_data": json.dumps(file_data["modeling_data"].get("method_def_data", {}), indent=2) if file_data[
+            #     "modeling_data"].get("method_def_data") else "{}",
+            # "method_call_data": json.dumps(file_data["modeling_data"].get("method_call_data", {}), indent=2) if
+            # file_data["modeling_data"].get("method_call_data") else "{}",
+            # "call_graph_data": json.dumps(file_data["modeling_data"].get("call_graph_data", {}), indent=2) if file_data[
+            #     "modeling_data"].get("call_graph_data") else "{}",
         }
 
         return prompt_data
@@ -660,172 +660,3 @@ class ModelingDataProcessor:
         # 结果是拓扑排序的逆序，需要反转
         return result[::-1]
 
-
-def test_data_processor():
-    """
-    测试数据处理器
-    """
-    # 示例项目和建模目录
-    project_dir = "/path/to/your/java/project"
-    modeling_dir = "/path/to/your/modeling/data"
-
-    # 创建处理器
-    processor = ModelingDataProcessor(project_dir, modeling_dir)
-
-    # 模拟一些测试数据
-    # 注意：在实际测试中应该使用真实数据
-    processor.method_definitions = {
-        "findById": [
-            {
-                "className": "com.example.service.UserService",
-                "signature": "com.example.service.UserService.findById(Long)",
-                "parameterTypes": ["java.lang.Long"]
-            }
-        ],
-        "save": [
-            {
-                "className": "com.example.service.UserService",
-                "signature": "com.example.service.UserService.save(User)",
-                "parameterTypes": ["com.example.model.User"]
-            }
-        ],
-        "findAll": [
-            {
-                "className": "com.example.repository.UserRepository",
-                "signature": "com.example.repository.UserRepository.findAll()",
-                "parameterTypes": []
-            }
-        ],
-        "logBefore": [
-            {
-                "className": "com.example.aspect.LoggingAspect",
-                "signature": "com.example.aspect.LoggingAspect.logBefore(JoinPoint)",
-                "parameterTypes": ["org.aspectj.lang.JoinPoint"],
-                "body": "System.out.println(\"Before method: \" + joinPoint.getSignature());"
-            }
-        ],
-        "logAfter": [
-            {
-                "className": "com.example.aspect.LoggingAspect",
-                "signature": "com.example.aspect.LoggingAspect.logAfter(JoinPoint)",
-                "parameterTypes": ["org.aspectj.lang.JoinPoint"],
-                "body": "System.out.println(\"After method: \" + joinPoint.getSignature());"
-            }
-        ]
-    }
-
-    # 添加方法调用信息
-    processor.method_invocations = {
-        "findAll": [
-            {
-                "className": "com.example.service.UserService",
-                "methodName": "getAllUsers",
-                "signature": "com.example.repository.UserRepository.findAll()",
-                "targetClassName": "com.example.repository.UserRepository",
-                "lineNumber": 25
-            }
-        ]
-    }
-
-    processor.aop_data = {
-        "beforeAspects": [
-            {
-                "id": "logBefore",
-                "pointcut": "execution(* com.example.service.*.*(..))",
-                "adviceMethod": {
-                    "declaringType": "com.example.aspect.LoggingAspect",
-                    "name": "logBefore",
-                    "signature": "com.example.aspect.LoggingAspect.logBefore(JoinPoint)"
-                },
-                "targetMethods": [
-                    {
-                        "declaringType": "com.example.service.UserService",
-                        "name": "findById",
-                        "signature": "com.example.service.UserService.findById(Long)"
-                    }
-                ],
-                "order": 1
-            }
-        ],
-        "afterAspects": [
-            {
-                "id": "logAfter",
-                "pointcut": "execution(* com.example.service.*.*(..))",
-                "adviceMethod": {
-                    "declaringType": "com.example.aspect.LoggingAspect",
-                    "name": "logAfter",
-                    "signature": "com.example.aspect.LoggingAspect.logAfter(JoinPoint)"
-                },
-                "targetMethods": [
-                    {
-                        "declaringType": "com.example.service.UserService",
-                        "name": "save",
-                        "signature": "com.example.service.UserService.save(User)"
-                    },
-                    {
-                        "declaringType": "com.example.repository.UserRepository",
-                        "name": "findAll",
-                        "signature": "com.example.repository.UserRepository.findAll()"
-                    }
-                ],
-                "order": 2
-            }
-        ],
-        "aroundAspects": [],
-        "afterThrowingAspects": []
-    }
-
-    # 测试改进后的AOP查找方法
-    aop_data = processor._find_related_aop("com.example.service.UserService")
-
-    # 打印AOP数据结构
-    print("\n改进后的AOP数据结构:")
-    print(f"按方法组织的AOP数据: {json.dumps(aop_data['byMethod'], indent=2)}")
-    print(f"按调用点组织的AOP数据: {json.dumps(aop_data['byInvocation'], indent=2)}")
-    print(f"按类型组织的AOP数据: {json.dumps(aop_data['byType'], indent=2)}")
-
-    # 验证是否正确找到了方法级别的切面
-    if "findById" in aop_data["byMethod"]:
-        print("\n在findById方法上找到的切面:")
-        for aspect_type, aspects in aop_data["byMethod"]["findById"].items():
-            if aspects:
-                print(f"- {aspect_type}: {len(aspects)}个切面")
-                for aspect in aspects:
-                    print(f"  - 切面ID: {aspect.get('aspectId')}")
-                    print(f"    通知方法: {aspect.get('adviceMethod', {}).get('name')}")
-                    print(f"    通知方法定义: {aspect.get('adviceMethod', {}).get('definition')}")
-
-    # 验证是否正确找到了调用点级别的切面
-    if aop_data["byInvocation"]:
-        print("\n在方法调用点上找到的切面:")
-        for invocation_key, invocation_data in aop_data["byInvocation"].items():
-            print(f"- 调用点: {invocation_key}")
-            print(f"  源方法: {invocation_data.get('sourceMethod')}")
-            print(f"  调用方法: {invocation_data.get('invokedMethod')}")
-
-            for aspect_type, aspects in invocation_data.get('aspects', {}).items():
-                if aspects:
-                    print(f"  - {aspect_type}: {len(aspects)}个切面")
-                    for aspect in aspects:
-                        print(f"    - 切面ID: {aspect.get('aspectId')}")
-                        print(f"      通知方法: {aspect.get('adviceMethod', {}).get('name')}")
-
-    # 测试整体数据收集
-    java_files = processor.scan_java_files()
-
-    # 查看前3个文件（如果有的话）
-    for file in java_files[:3]:
-        print(f"\n处理文件: {file}")
-        prompt_data = processor.generate_prompt_data(file)
-
-        # 打印源代码的前100个字符和相关建模数据的统计
-        print(f"源代码 (前100个字符): {prompt_data.get('source_code', '')[:100]}...")
-        print(f"AOP数据大小: {len(prompt_data.get('aop_data', '{}'))}")
-        print(f"IoC数据大小: {len(prompt_data.get('ioc_data', '{}'))}")
-        print(f"字段定义数据大小: {len(prompt_data.get('field_def_data', '{}'))}")
-        print(f"方法定义数据大小: {len(prompt_data.get('method_def_data', '{}'))}")
-        print(f"调用图数据大小: {len(prompt_data.get('call_graph_data', '{}'))}")
-
-
-if __name__ == "__main__":
-    test_data_processor()

@@ -8,13 +8,13 @@ import json
 import time
 import logging
 import argparse
-from typing import Dict, List, Optional, Any, Tuple, Set
+from typing import Dict, List, Any
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from src.llm.llm_client import LLMClient
 from src.llm.code_restoration import CodeRestorer
 from utils.modeling_parser import ModelingParser
-from config.config import AVAILABLE_MODELS
+from src.config.config import AVAILABLE_MODELS
 
 # 配置日志
 logging.basicConfig(
