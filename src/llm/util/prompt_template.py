@@ -34,10 +34,10 @@ class PromptTemplate:
 ## 建模数据：
 
 ### AOP建模数据：
-注意：AOP数据包含三部分：
-1. byMethod - 按方法组织，显示每个方法上应用的切面
-2. byInvocation - 按方法调用点组织，显示调用的方法上应用的切面
-3. byType - 按切面类型组织的信息
+注意：AOP数据是一个列表，每个项目包含：
+1. invocations - 方法调用信息，包含调用者、被调用方法和行号
+2. aspect_type - 切面类型（beforeAspects、afterAspects、aroundAspects等）
+3. definitions - 切面方法的定义信息
 
 ```json
 {modeling_data.get('aop_data', '{}')}
@@ -82,10 +82,10 @@ class PromptTemplate:
 请遵循系统提示中的所有规则和指导，生成可以编译运行的纯Java代码。请确保生成的代码尽量不包含任何框架特定的注解，同时保持功能等价性。
 
 注意处理AOP数据时：
-1. 查看byMethod部分，找到每个方法上应用的切面，根据切面类型（前置、后置、环绕、异常）在方法内适当位置添加调用代码
-2. 查看byInvocation部分，找到所有方法调用点上应用的切面，在调用前后添加相应的通知方法调用
-3. 确认切面优先级(order)并按正确顺序添加调用
-4. 利用提供的通知方法定义(adviceMethod.definition)了解通知方法的参数和返回类型
+1. 对于每个AOP条目，查看invocations部分了解被拦截的方法调用
+2. 根据aspect_type（前置、后置、环绕、异常通知）在适当位置添加切面方法调用
+3. 利用definitions了解切面方法的具体实现细节
+4. 在原方法调用前后插入适当的切面方法调用，保持功能等价性
 
 请保持代码结构清晰，并添加适当的注释标识添加的AOP相关代码。
 """
@@ -112,6 +112,11 @@ class PromptTemplate:
 ```
 
 ### 建模数据：
+注意：如果存在AOP数据，它是一个列表，每个项目包含：
+1. invocations - 方法调用信息，包含调用者、被调用方法和行号
+2. aspect_type - 切面类型（beforeAspects、afterAspects、aroundAspects等）
+3. definitions - 切面方法的定义信息
+
 ```json
 {json.dumps(file_data.get('modeling_data', {}), indent=2)}
 ```
@@ -119,6 +124,13 @@ class PromptTemplate:
 """
         
         prompt += """请遵循系统提示中的所有规则和指导，为每个文件生成可以编译运行的纯Java代码。请确保生成的代码不包含任何Spring、MyBatis或其他框架特定的注解，同时保持功能等价性。
+
+注意处理AOP数据时：
+1. 对于每个AOP条目，查看invocations部分了解被拦截的方法调用
+2. 根据aspect_type（前置、后置、环绕、异常通知）在适当位置添加切面方法调用
+3. 利用definitions了解切面方法的具体实现细节
+4. 在原方法调用前后插入适当的切面方法调用，保持功能等价性
+
 请按以下格式返回每个文件的语义还原结果：
 
 ## 文件 1 还原结果:
@@ -221,10 +233,10 @@ class PromptTemplate:
 
 ### 建模数据：
 #### AOP建模数据：
-注意：AOP数据包含三部分：
-1. byMethod - 按方法组织，显示每个方法上应用的切面
-2. byInvocation - 按方法调用点组织，显示调用的方法上应用的切面
-3. byType - 按切面类型组织的信息
+注意：AOP数据是一个列表，每个项目包含：
+1. invocations - 方法调用信息，包含调用者、被调用方法和行号
+2. aspect_type - 切面类型（beforeAspects、afterAspects、aroundAspects等）
+3. definitions - 切面方法的定义信息
 
 ```json
 {json.dumps(target_file_data.get('modeling_data', {}).get('aop_data', {}), indent=2)}
@@ -277,10 +289,10 @@ class PromptTemplate:
         prompt += """请遵循系统提示中的所有规则和指导，仅对目标文件生成可以编译运行的纯Java代码。请确保生成的代码不包含任何Spring、MyBatis或其他框架特定的注解，同时保持功能等价性。上下文文件仅供参考，帮助你理解代码之间的联系，不需要对它们进行还原。
 
 注意处理AOP数据时：
-1. 查看byMethod部分，找到每个方法上应用的切面，根据切面类型（前置、后置、环绕、异常）在方法内适当位置添加调用代码
-2. 查看byInvocation部分，找到所有方法调用点上应用的切面，在调用前后添加相应的通知方法调用
-3. 确认切面优先级(order)并按正确顺序添加调用
-4. 利用提供的通知方法定义(adviceMethod.definition)了解通知方法的参数和返回类型
+1. 对于每个AOP条目，查看invocations部分了解被拦截的方法调用
+2. 根据aspect_type（前置、后置、环绕、异常通知）在适当位置添加切面方法调用
+3. 利用definitions了解切面方法的具体实现细节
+4. 在原方法调用前后插入适当的切面方法调用，保持功能等价性
 
 请保持代码结构清晰，并添加适当的注释标识添加的AOP相关代码。
 

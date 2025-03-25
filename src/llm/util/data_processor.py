@@ -496,7 +496,7 @@ class ModelingDataProcessor:
         result = {
             "file_path": file_path,
             "full_class_name": full_class_name,
-            # "source_code": source_code,
+            "source_code": source_code,
             "modeling_data": {
                 "aop_data": aop_data,
                 "ioc_data": ioc_data,
