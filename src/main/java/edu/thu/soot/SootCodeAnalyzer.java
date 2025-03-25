@@ -261,7 +261,7 @@ public class SootCodeAnalyzer {
         int lineNumber = getLineNumber(field);
 
         // 添加到字段定义索引
-        IndexEntry entry = new IndexEntry(className, fieldName, signature, sourceFile, lineNumber);
+        IndexEntry entry = new IndexEntry(className, fieldName, signature, declaringClass.getName()+".java", lineNumber);
 
         if (!fieldDefinitions.containsKey(fieldName)) {
             fieldDefinitions.put(fieldName, new ArrayList<>());
@@ -289,7 +289,7 @@ public class SootCodeAnalyzer {
         int lineNumber = getLineNumber(method);
 
         // 添加到方法定义索引
-        IndexEntry entry = new IndexEntry(className, methodName, signature, sourceFile, lineNumber);
+        IndexEntry entry = new IndexEntry(className, methodName, signature, declaringClass.getName()+".java", lineNumber);
 
         if (!methodDefinitions.containsKey(methodName)) {
             methodDefinitions.put(methodName, new ArrayList<>());
@@ -363,7 +363,7 @@ public class SootCodeAnalyzer {
                     }
 
                     // 添加到方法调用索引
-                    IndexEntry entry = new IndexEntry(calledClassName, calledMethodName, calledSignature, sourceFile, lineNumber);
+                    IndexEntry entry = new IndexEntry(calledClassName, calledMethodName, calledSignature, declaringClass.getName()+".java", lineNumber);
 
                     if (!methodInvocations.containsKey(calledMethodName)) {
                         methodInvocations.put(calledMethodName, new ArrayList<>());
@@ -389,7 +389,7 @@ public class SootCodeAnalyzer {
                     }
 
                     // 添加到字段引用索引
-                    IndexEntry entry = new IndexEntry(fieldClassName, fieldName, fieldSignature, sourceFile, lineNumber);
+                    IndexEntry entry = new IndexEntry(fieldClassName, fieldName, fieldSignature, declaringClass.getName()+".java", lineNumber);
 
                     if (!fieldReferences.containsKey(fieldName)) {
                         fieldReferences.put(fieldName, new ArrayList<>());
