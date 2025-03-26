@@ -1,7 +1,7 @@
 import json
 import unittest
 
-vfrom src.config.config import system_prompt_semantic_restoration
+from src.config.config import system_prompt_semantic_restoration
 from src.llm.llm_client import LLMClient
 from src.llm.util import ModelingDataProcessor
 
