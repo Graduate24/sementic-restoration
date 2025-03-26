@@ -1,6 +1,13 @@
+/opt/miniconda/envs/langchain-env/bin/python /home/ran/Documents/work/graduate/sementic-restoration/experiments/evaluate_flowdroid_optimized.py 
+已加载 20 条 CWE-22 的真值表数据
+已加载 20 条 CWE-78 的真值表数据
+已加载 42 条 CWE-89 的真值表数据
+跳过重复路径: CommandInjectionController:executeWithMultipleParams09 -> CommandInjectionController:executeWithMultipleParams09
+跳过重复路径: CommandInjectionController:executeViaUtilsSafe08 -> CommandUtils:executeSafe
+跳过重复路径: CommandInjectionController:executeWithFullValidation07 -> CommandInjectionController:executeWithFullValidation07
 已加载并去重 FlowDroid 结果数据
-  CWE-22: 10 个不重复漏洞
-  CWE-78: 17 个不重复漏洞
+  CWE-22: 8 个不重复漏洞
+  CWE-78: 14 个不重复漏洞
   CWE-89: 0 个不重复漏洞
 详细评估结果已保存到 flowdroid_detailed_results_optimized.json
 
@@ -8,23 +15,23 @@
 
 ## 路径遍历 (CWE-22) ##
 真阳性 (TP): 7
-假阳性 (FP): 3
+假阳性 (FP): 1
 真阴性 (TN): 10
 假阴性 (FN): 3
-精确率 (Precision): 0.7000
+精确率 (Precision): 0.8750
 召回率 (Recall): 0.7000
-F1分数: 0.7000
-准确率 (Accuracy): 0.7391
+F1分数: 0.7778
+准确率 (Accuracy): 0.8095
 
 ## 命令注入 (CWE-78) ##
 真阳性 (TP): 8
-假阳性 (FP): 9
+假阳性 (FP): 6
 真阴性 (TN): 4
 假阴性 (FN): 2
-精确率 (Precision): 0.4706
+精确率 (Precision): 0.5714
 召回率 (Recall): 0.8000
-F1分数: 0.5926
-准确率 (Accuracy): 0.5217
+F1分数: 0.6667
+准确率 (Accuracy): 0.6000
 
 ## SQL注入 (CWE-89) ##
 真阳性 (TP): 0
@@ -38,10 +45,14 @@ F1分数: 0.0000
 
 ## 总体评估 ##
 真阳性 (TP): 15
-假阳性 (FP): 12
+假阳性 (FP): 7
 真阴性 (TN): 35
 假阴性 (FN): 26
-精确率 (Precision): 0.5556
+精确率 (Precision): 0.6818
 召回率 (Recall): 0.3659
-F1分数: 0.4412
-准确率 (Accuracy): 0.5682
+F1分数: 0.4762
+准确率 (Accuracy): 0.6024
+
+评估结果已保存到 flowdroid_evaluation_results_optimized.json
+
+Process finished with exit code 0

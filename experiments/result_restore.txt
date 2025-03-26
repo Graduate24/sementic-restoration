@@ -1,6 +1,26 @@
+/opt/miniconda/envs/langchain-env/bin/python /home/ran/Documents/work/graduate/sementic-restoration/experiments/evaluate_flowdroid_optimized.py 
+已加载 20 条 CWE-22 的真值表数据
+已加载 20 条 CWE-78 的真值表数据
+已加载 42 条 CWE-89 的真值表数据
+跳过重复路径: CommandInjectionController:executeWithFullValidation07 -> CommandInjectionController:executeWithFullValidation07
+跳过重复路径: CommandInjectionController:executeWithMultipleParams09 -> CommandInjectionController:executeWithMultipleParams09
+跳过重复路径: CommandInjectionController:executeViaServiceSafe04 -> CommandService:executeCommandSafe
+跳过重复路径: CommandInjectionController:executeViaAspectSafe05 -> CommandExecutionAspect:executeCommandSafe
+跳过重复路径: CommandInjectionController:executeViaUtilsSafe08 -> CommandUtils:executeSafe
+跳过重复路径: PathTraversalController:getFileWithInjection05 -> PathTraversalService:readFileUnsafe
+跳过重复路径: SqlInjectionTestController:testCase10 -> SqlInjectionTestService:searchUsersUnsafe
+跳过重复路径: SqlInjectionTestController:testCase05 -> SqlInjectionTestService:findUsersWithLimitUnsafe
+跳过重复路径: SqlInjectionTestController:testCase16 -> SqlInjectionTestService:findUsersByMultipleConditionsUnsafe
+跳过重复路径: SqlInjectionTestController:testCase20 -> SqlInjectionTestService:findUsersByMultipleConditionsUnsafe
+跳过重复路径: SqlInjectionTestController:testCase20 -> SqlInjectionTestService:findUsersByMultipleConditionsUnsafe
+跳过重复路径: SqlInjectionTestController:testCase20 -> SqlInjectionTestService:findUsersByMultipleConditionsUnsafe
+跳过重复路径: SqlInjectionTestController:testCase09 -> SqlInjectionTestService:findUserByCredentialsUnsafe
+跳过重复路径: SqlInjectionTestController:testCase17 -> SqlInjectionTestService:findUsersByJdbcUnsafe
+跳过重复路径: SqlInjectionTestController:testCase15 -> SqlInjectionTestService:searchUsersSemiSafe
+跳过重复路径: SqlInjectionTestController:testCase06 -> SqlInjectionTestService:updateUserDynamicUnsafe
 已加载并去重 FlowDroid 结果数据
-  CWE-22: 13 个不重复漏洞
-  CWE-78: 21 个不重复漏洞
+  CWE-22: 11 个不重复漏洞
+  CWE-78: 18 个不重复漏洞
   CWE-89: 16 个不重复漏洞
 详细评估结果已保存到 flowdroid_detailed_results_optimized.json
 
@@ -8,23 +28,23 @@
 
 ## 路径遍历 (CWE-22) ##
 真阳性 (TP): 10
-假阳性 (FP): 3
+假阳性 (FP): 1
 真阴性 (TN): 10
 假阴性 (FN): 0
-精确率 (Precision): 0.7692
+精确率 (Precision): 0.9091
 召回率 (Recall): 1.0000
-F1分数: 0.8696
-准确率 (Accuracy): 0.8696
+F1分数: 0.9524
+准确率 (Accuracy): 0.9524
 
 ## 命令注入 (CWE-78) ##
 真阳性 (TP): 10
-假阳性 (FP): 11
+假阳性 (FP): 8
 真阴性 (TN): 2
 假阴性 (FN): 0
-精确率 (Precision): 0.4762
+精确率 (Precision): 0.5556
 召回率 (Recall): 1.0000
-F1分数: 0.6452
-准确率 (Accuracy): 0.5217
+F1分数: 0.7143
+准确率 (Accuracy): 0.6000
 
 ## SQL注入 (CWE-89) ##
 真阳性 (TP): 16
@@ -38,10 +58,14 @@ F1分数: 0.8649
 
 ## 总体评估 ##
 真阳性 (TP): 36
-假阳性 (FP): 14
+假阳性 (FP): 9
 真阴性 (TN): 33
 假阴性 (FN): 5
-精确率 (Precision): 0.7200
+精确率 (Precision): 0.8000
 召回率 (Recall): 0.8780
-F1分数: 0.7912
-准确率 (Accuracy): 0.7841
+F1分数: 0.8372
+准确率 (Accuracy): 0.8313
+
+评估结果已保存到 flowdroid_evaluation_results_optimized.json
+
+Process finished with exit code 0

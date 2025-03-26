@@ -17,7 +17,7 @@ TRUTH_DATA_PATHS = {
 }
 
 # FlowDroid结果文件路径
-FLOWDROID_RESULTS_PATH = 'test_result.json'
+FLOWDROID_RESULTS_PATH = 'test_result_restore.json'
 
 def load_truth_data():
     """加载真值表数据"""
