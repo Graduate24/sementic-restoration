@@ -40,3 +40,4 @@ build/
 output
 analysis-result
 .idea
+.env

@@ -32,7 +32,7 @@ DEFAULT_PARAMS = {
 }
 
 # 系统角色提示词 - 可针对不同任务定制
-system_prompt = """
+system_prompt_semantic_restoration = """
 你是一个专门用于Java代码语义还原的AI助手。你的任务是将使用注解的Java代码转换为不使用注解但保留等效功能的直接Java代码。
 
 ## 任务背景
