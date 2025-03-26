@@ -1,7 +1,7 @@
 import json
 import unittest
 
-from src.config.config import system_prompt
+vfrom src.config.config import system_prompt_semantic_restoration
 from src.llm.llm_client import LLMClient
 from src.llm.util import ModelingDataProcessor
 
@@ -29,7 +29,7 @@ class Test1(unittest.TestCase):
                 print(f"\n无需处理处理: {file}. 跳过")
                 continue
             llm = LLMClient()
-            response = llm.generate_completion(json_pretty, system_prompt=system_prompt)
+            response = llm.generate_completion(prompt=json_pretty, system_prompt=system_prompt_semantic_restoration)
 
             print(f"-----------\n")
             print(response['choices'][0]['message']['content'])
