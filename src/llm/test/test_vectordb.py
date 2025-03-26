@@ -1,13 +1,11 @@
-import unittest
-import chromadb
-import torch
-from chromadb.config import Settings
-from sentence_transformers import SentenceTransformer
 import re
-import ast
-import numpy as np
-from chromadb.utils import embedding_functions
+import unittest
+
+import torch
 from transformers import AutoTokenizer, AutoModel
+
+import chromadb
+
 
 class CustomEmbeddingFunction:
     def __init__(self, model_path):
@@ -34,12 +32,11 @@ class TestVectorDB(unittest.TestCase):
     def setUp(self):
         """初始化向量数据库客户端"""
         # 使用CodeBERT作为embeddings模型
+        # /home/ran/Documents/work/graduate/graphcodebert
         self.embedding_function = CustomEmbeddingFunction('/home/ran/Documents/work/graduate/llm-agent/models/codebert')
 
-        self.client = chromadb.Client(Settings(
-            persist_directory="./test_chroma_db",
-            anonymized_telemetry=False
-        ))
+        self.client = chromadb.PersistentClient('./chromadb')
+
         self.collection = self.client.create_collection(
             name="code_snippets",
             metadata={"description": "存储代码片段的集合"},
