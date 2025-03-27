@@ -93,16 +93,19 @@ class VectorDB:
         # create 3 collections
         # 1. semantic collection
         self.semantic_collection = self.client.get_or_create_collection('semantic',
-                                                                        metadata={"description": "语义信息数据库","hnsw:space": "cosine"},
+                                                                        metadata={"description": "语义信息数据库",
+                                                                                  "hnsw:space": "l2"},
                                                                         embedding_function=self.default_embedding_function)
         # 2. code collection
         self.code_collection = self.client.get_or_create_collection('code',
-                                                                    metadata={"description": "代码特征数据库","hnsw:space": "cosine"},
+                                                                    metadata={"description": "代码特征数据库",
+                                                                              "hnsw:space": "l2"},
                                                                     embedding_function=self.embedding_function)
 
         # 3. context collection
         self.context_collection = self.client.get_or_create_collection('context',
-                                                                       metadata={"description": "上下文信息数据库","hnsw:space": "cosine"},
+                                                                       metadata={"description": "上下文信息数据库",
+                                                                                 "hnsw:space": "l2"},
                                                                        embedding_function=self.embedding_function)
 
     def build_code_input(self, code):

@@ -161,9 +161,9 @@ def extract_class_and_method(function_str):
     return None, None
 
 def extract_full_class_and_method(function_str):
-    """从函数签名字符串中提取完整的类名（带包名）和方法名"""
+    """从函数签名字符串中提取完整的类名（带包名）、方法名、返回类型和参数列表"""
     if not function_str:
-        return None, None
+        return None, None, None, None
     
     try:
         # 处理形如 "<edu.thu.benchmark.annotated.controller.CommandInjectionController: void executeCommand01(...)>" 的字符串
@@ -171,15 +171,88 @@ def extract_full_class_and_method(function_str):
             # 提取类的完整路径
             class_part = function_str.split('<')[1].split(':')[0].strip()
             
-            # 提取方法名
+            # 提取方法完整部分（包含返回类型、方法名和参数）
             method_part = function_str.split(':')[1].strip()
-            method_name = method_part.split(' ')[1].split('(')[0] if ' ' in method_part else method_part.split('(')[0]
             
-            return class_part, method_name
+            # 提取方法完整签名，包括返回类型、方法名和参数
+            if '>' in method_part:
+                method_part = method_part[:-1]  # 去除结尾的'>'
+            
+            # 查找返回类型和方法名（包括参数）的分隔位置
+            space_pos = method_part.find(' ')
+            if space_pos != -1:
+                return_type = method_part[:space_pos].strip()
+                method_with_params = method_part[space_pos+1:].strip()
+                
+                # 提取方法名（不带参数）
+                if '(' in method_with_params:
+                    method_name = method_with_params.split('(')[0].strip()
+                else:
+                    method_name = method_with_params
+                
+                return class_part, method_name, return_type, method_with_params
+            else:
+                # 如果没有空格分隔符，可能是非标准格式
+                return class_part, method_part, "void", method_part
+            
     except Exception as e:
         print(f"解析函数签名失败: {e} - {function_str}")
     
-    return None, None
+    return None, None, None, None
+
+def generate_soot_signature(full_class_path, method_with_params=None, return_type="java.lang.Object", method_name=None):
+    """生成Soot格式的方法签名
+    
+    格式：<package.ClassName: ReturnType methodName(ParamType1,ParamType2)>
+    保留完整的参数类型列表
+    """
+    # 如果提供了完整的方法签名（含参数），优先使用
+    if method_with_params and '(' in method_with_params:
+        return f"<{full_class_path}: {return_type} {method_with_params}>"
+    
+    # 否则使用方法名构建基本签名（带空括号）
+    method_to_use = method_name if method_name else "unknown"
+    return f"<{full_class_path}: {return_type} {method_to_use}()>"
+
+def extract_package_and_class(file_path, class_name):
+    """从文件路径和类名尝试推断包名和完整类路径"""
+    if not file_path or not class_name:
+        return "", class_name
+    
+    try:
+        # 尝试从文件路径推断包名
+        if 'src/main/java/' in file_path:
+            package_path = file_path.split('src/main/java/')[1]
+            # 去掉文件名部分
+            package_path = '/'.join(package_path.split('/')[:-1])
+            # 将路径分隔符替换为点
+            package_name = package_path.replace('/', '.')
+            # 构建完整类名
+            full_class_path = f"{package_name}.{class_name}" if package_name else class_name
+            return package_name, full_class_path
+    except Exception as e:
+        print(f"从文件路径提取包名失败: {e} - {file_path}")
+    
+    # 无法提取时，尝试从文件路径猜测包名
+    try:
+        file_name = file_path.split('/')[-1]
+        if file_name.endswith('.java'):
+            base_name = file_name[:-5]  # 去掉.java后缀
+            if base_name == class_name:
+                # 从目录结构猜测包名
+                if 'controller' in file_path.lower():
+                    return "edu.thu.benchmark.annotated.controller", f"edu.thu.benchmark.annotated.controller.{class_name}"
+                elif 'service' in file_path.lower():
+                    return "edu.thu.benchmark.annotated.service", f"edu.thu.benchmark.annotated.service.{class_name}"
+                elif 'util' in file_path.lower():
+                    return "edu.thu.benchmark.annotated.util", f"edu.thu.benchmark.annotated.util.{class_name}"
+                elif 'aspect' in file_path.lower():
+                    return "edu.thu.benchmark.annotated.aspect", f"edu.thu.benchmark.annotated.aspect.{class_name}"
+    except Exception:
+        pass
+    
+    # 如果无法提取，返回默认包名和类名
+    return "edu.thu.benchmark.annotated", f"edu.thu.benchmark.annotated.{class_name}"
 
 def normalize_path(path):
     """标准化文件路径以便比较"""
@@ -406,12 +479,52 @@ def save_detailed_results(detailed_results, base_output_name):
                 }
             
             if result['flowdroid_item']:
+                # 获取类名、方法名和文件路径
+                class_name = result['flowdroid_item'].get('class_name', '')
+                method_name = result['flowdroid_item'].get('method_name', '')
+                file_path = result['flowdroid_item'].get('file_path', '')
+                
+                # 直接使用原始的函数签名（如果存在且格式正确）
+                sink_function = result['flowdroid_item'].get('function', '')
+                if sink_function and sink_function.startswith('<') and sink_function.endswith('>') and ':' in sink_function:
+                    # 已经是标准Soot格式，直接使用
+                    soot_signature = sink_function
+                else:
+                    # 从函数签名中提取信息
+                    full_class_path = None
+                    return_type = "java.lang.Object"
+                    method_with_params = None
+                    
+                    # 查看调用链中是否有更完整的函数签名信息
+                    path = result['flowdroid_item'].get('path', [])
+                    best_signature = None
+                    
+                    for point in path:
+                        point_function = point.get('function', '')
+                        if point_function and '(' in point_function and ')' in point_function:
+                            best_signature = point_function
+                            break
+                    
+                    # 使用找到的最佳签名
+                    if best_signature:
+                        full_class_path, method_name, return_type, method_with_params = extract_full_class_and_method(best_signature)
+                    elif sink_function:
+                        full_class_path, method_name, return_type, method_with_params = extract_full_class_and_method(sink_function)
+                    
+                    # 如果仍然无法提取，尝试从文件路径推断
+                    if not full_class_path:
+                        _, full_class_path = extract_package_and_class(file_path, class_name)
+                    
+                    # 生成Soot签名
+                    soot_signature = generate_soot_signature(full_class_path, method_with_params, return_type, method_name)
+                
                 simplified_item['flowdroid_item'] = {
-                    'file_path': result['flowdroid_item'].get('file_path', ''),
-                    'class_name': result['flowdroid_item'].get('class_name', ''),
-                    'method_name': result['flowdroid_item'].get('method_name', ''),
+                    'file_path': file_path,
+                    'class_name': class_name,
+                    'method_name': method_name,
                     'line_number': result['flowdroid_item'].get('line_number', 0),
-                    'path_signature': result['flowdroid_item'].get('path_signature', '')  # 添加路径签名用于调试
+                    'path_signature': result['flowdroid_item'].get('path_signature', ''),
+                    'soot_signature': soot_signature
                 }
             
             simplified_results[cwe].append(simplified_item)

@@ -3,6 +3,9 @@ import os.path
 import subprocess
 import unittest
 import time
+import uuid
+
+from numpy.ma.extras import average
 
 from src.config.config import system_prompt_sfpp_to_semantic, system_prompt_code_to_semantic
 from src.llm.db.vector_db import VectorDB
@@ -262,14 +265,16 @@ class TestSFPPP2Code(unittest.TestCase):
                 write_string_to_file(res['code'], os.path.join(ret_dir, f"SFPP.java"))
                 write_string_to_file(res['semantic'], os.path.join(ret_dir, f"SFPP.semantic"))
 
+    # TODO 保存<semantic,code>对
     def test_save_vectordb(self):
         base_dir = '/home/ran/Documents/work/graduate/sementic-restoration/experiments/sfppexp/'
         for d in os.listdir(base_dir):
             if os.path.isdir(os.path.join(base_dir, d)) and os.path.exists(os.path.join(base_dir, d, "SFPP.java")):
+                union_id = str(uuid.uuid4())
                 with open(os.path.join(base_dir, d, "SFPP.java"), 'r') as f:
-                    self.db.save_code([f.read()], [{"cwe": "78", "type": "SFPP"}])
+                    self.db.save_code([f.read()], [{"cwe": "78", "type": "SFPP", "id": union_id}])
                 with open(os.path.join(base_dir, d, "SFPP.semantic"), 'r') as f:
-                    self.db.save_semantic([f.read()], [{"cwe": "78", "type": "SFPP"}])
+                    self.db.save_semantic([f.read()], [{"cwe": "78", "type": "SFPP", "id": union_id}])
 
     def test_query1(self):
         # 查询示例
@@ -292,16 +297,16 @@ class TestSFPPP2Code(unittest.TestCase):
             print(f"元数据: {metadata}")
             print(f"距离分数: {distance}")
 
-    # TODO 获取cwe78检测结果
+    # TODO 获取cwe78检测结果,尝试sfpp匹配
     def test_retrieve_defects_codes(self):
         base_dir = '/home/ran/Documents/work/graduate/sementic-restoration/experiments/'
-        detect_result = os.path.join(base_dir, 'result_simple.json')
+        detect_result = os.path.join(base_dir, 'restore_detailed_results.json')
         cwe78_results = []
         with open(detect_result, 'r') as f:
-            result_list = json.loads(f.read())
+            result_list = json.loads(f.read())['78']
             for result in result_list:
-                if result['cwe'] == "78":
-                    cwe78_results.append(result)
+                if result['result_type'] == "TP" or result['result_type'] == "FP":
+                    cwe78_results.append(result['flowdroid_item'])
         if not cwe78_results:
             print("cwe78_result is None!")
             return
@@ -321,7 +326,7 @@ class TestSFPPP2Code(unittest.TestCase):
             max_retries = 3
             retry_count = 0
             retry_delay = 5  # 重试间隔5秒
-            
+
             while retry_count < max_retries:
                 try:
                     response = llm.generate_completion(prompt=code, system_prompt=system_prompt_code_to_semantic)
@@ -331,25 +336,25 @@ class TestSFPPP2Code(unittest.TestCase):
                     break
                 except KeyError as key_err:
                     # 返回数据结构错误
-                    error_msg = f"返回数据结构错误 (尝试 {retry_count+1}/{max_retries}): {key_err}"
+                    error_msg = f"返回数据结构错误 (尝试 {retry_count + 1}/{max_retries}): {key_err}"
                     print(error_msg)
                 except Exception as e:
                     # 其他异常
-                    error_msg = f"API调用异常 (尝试 {retry_count+1}/{max_retries}): {str(e)}"
+                    error_msg = f"API调用异常 (尝试 {retry_count + 1}/{max_retries}): {str(e)}"
                     print(error_msg)
-                
+
                 # 增加重试计数
                 retry_count += 1
-                
+
                 # 如果已经尝试了最大次数，则抛出最后一个异常
                 if retry_count >= max_retries:
                     print(f"达到最大重试次数 ({max_retries})，操作失败")
                     raise Exception(f"LLM API调用失败，已重试{max_retries}次")
-                
+
                 # 等待一段时间后重试
                 print(f"等待 {retry_delay} 秒后重试...")
                 time.sleep(retry_delay)
-            
+
             filtered_result = self.db.semantic_collection.query(
                 query_texts=[res],
                 where={"cwe": "78"},
@@ -360,6 +365,7 @@ class TestSFPPP2Code(unittest.TestCase):
                 "cwe": "78"
             }
             semantic_result = {}
+            union_id = None
             # 打印详细结果
             for i, (doc, metadata, distance) in enumerate(zip(
                     filtered_result['documents'][0],
@@ -368,27 +374,40 @@ class TestSFPPP2Code(unittest.TestCase):
             )):
                 semantic_result['documents'] = doc
                 semantic_result['distance'] = distance
+                union_id = metadata['id']
                 break
 
             query_result['semantic'] = semantic_result
 
-            filtered_result = self.db.code_collection.query(
-                query_texts=[code],
-                where={"cwe": "78"},
-                n_results=1,
-                include=['documents', 'metadatas', 'distances'],  # 包含文档内容、元数据和距离分数
-            )
+            chunks = self.db.build_code_input(code)
+            chunk_score = []
+            for index, chunk in enumerate(chunks):
+                chunk_query = self.db.code_collection.query(
+                    query_texts=chunk,
+                    where={"$and": [
+                        {"cwe": "78"},
+                        {"id": union_id}
+                    ]},
+                    n_results=5,
+                    include=['documents', 'metadatas', 'distances'],  # 包含文档内容、元数据和距离分数
+                )
 
-            code_result = {}
-            for i, (doc, metadata, distance) in enumerate(zip(
-                    filtered_result['documents'][0],
-                    filtered_result['metadatas'][0],
-                    filtered_result['distances'][0]
-            )):
-                code_result['distance'] = distance
-                break
+                # 所有文档相似度平均
+                scores = []
+                for i, (doc, metadata, distance) in enumerate(zip(
+                        chunk_query['documents'][0],
+                        chunk_query['metadatas'][0],
+                        chunk_query['distances'][0]
+                )):
+                    scores.append(distance)
 
-            query_result['code'] = code_result
+                chunk_score.append(scores)
+
+            # 将所有元素展平为一维列表
+            flat_list = [item for sublist in chunk_score for item in sublist]
+            # 计算平均值
+            avg = sum(flat_list) / len(flat_list)
+            query_result['code'] = {'distance': avg}
 
             query_results.append(query_result)
 
@@ -408,3 +427,15 @@ class TestSFPPP2Code(unittest.TestCase):
         | 0.5 - 0.7 | 0.3 - 0.5 | 低相似度 |
         | 0.7 - 1.0 | 0 - 0.3 | 几乎不相关 |
         """
+
+    def test_chunk_code(self):
+        code = """
+        public class SFPP {
+            public static void main(String[] args) {
+                // 创建配置管理器
+                ConfigManager configManager = new ConfigManager();
+                
+             
+        """
+        chunks = self.db.build_code_input(code)
+        print(chunks)

@@ -504,7 +504,7 @@
       }
     },
     {
-      "result_type": "FP",
+      "result_type": "FP_FILTERED",
       "truth_item": {
         "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/CommandInjectionController.java",
         "class_name": "CommandInjectionController",
@@ -520,10 +520,12 @@
         "line_number": 231,
         "path_signature": "CommandInjectionController:executeCommandSafe01 -> CommandInjectionController:executeCommandSafe01",
         "soot_signature": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeCommandSafe01(java.lang.String)>"
-      }
+      },
+      "filter_score": -28.472714440974293,
+      "filter_threshold": -25.0
     },
     {
-      "result_type": "FP",
+      "result_type": "FP_FILTERED",
       "truth_item": {
         "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/CommandInjectionController.java",
         "class_name": "CommandInjectionController",
@@ -539,10 +541,12 @@
         "line_number": 245,
         "path_signature": "CommandInjectionController:executeWithWhitelistSafe02 -> CommandInjectionController:executeWithWhitelistSafe02",
         "soot_signature": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithWhitelistSafe02(java.lang.String)>"
-      }
+      },
+      "filter_score": -28.472714440974293,
+      "filter_threshold": -25.0
     },
     {
-      "result_type": "FP",
+      "result_type": "FP_FILTERED",
       "truth_item": {
         "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/CommandInjectionController.java",
         "class_name": "CommandInjectionController",
@@ -558,10 +562,12 @@
         "line_number": 259,
         "path_signature": "CommandInjectionController:executeArraySafe03 -> CommandInjectionController:executeArraySafe03",
         "soot_signature": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeArraySafe03(java.lang.String)>"
-      }
+      },
+      "filter_score": -28.472714440974293,
+      "filter_threshold": -25.0
     },
     {
-      "result_type": "FP",
+      "result_type": "FP_FILTERED",
       "truth_item": {
         "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/CommandInjectionController.java",
         "class_name": "CommandInjectionController",
@@ -577,10 +583,12 @@
         "line_number": 78,
         "path_signature": "CommandInjectionController:executeViaServiceSafe04 -> CommandService:executeCommandSafe",
         "soot_signature": "<edu.thu.benchmark.annotated.service.CommandService: java.lang.String executeCommandSafe(java.lang.String)>"
-      }
+      },
+      "filter_score": -28.472714440974293,
+      "filter_threshold": -25.0
     },
     {
-      "result_type": "FP",
+      "result_type": "FP_FILTERED",
       "truth_item": {
         "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/CommandInjectionController.java",
         "class_name": "CommandInjectionController",
@@ -596,10 +604,12 @@
         "line_number": 51,
         "path_signature": "CommandInjectionController:executeViaAspectSafe05 -> CommandExecutionAspect:executeCommandSafe",
         "soot_signature": "<edu.thu.benchmark.annotated.aspect.CommandExecutionAspect: java.lang.String executeCommandSafe(java.lang.String)>"
-      }
+      },
+      "filter_score": -28.472714440974293,
+      "filter_threshold": -25.0
     },
     {
-      "result_type": "FP",
+      "result_type": "FP_FILTERED",
       "truth_item": {
         "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/CommandInjectionController.java",
         "class_name": "CommandInjectionController",
@@ -615,10 +625,12 @@
         "line_number": 297,
         "path_signature": "CommandInjectionController:executeWithProcessBuilderSafe06 -> CommandInjectionController:executeWithProcessBuilderSafe06",
         "soot_signature": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithProcessBuilderSafe06(java.lang.String,java.lang.String)>"
-      }
+      },
+      "filter_score": -28.472714440974293,
+      "filter_threshold": -25.0
     },
     {
-      "result_type": "FP",
+      "result_type": "FP_FILTERED",
       "truth_item": {
         "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/CommandInjectionController.java",
         "class_name": "CommandInjectionController",
@@ -634,10 +646,12 @@
         "line_number": 322,
         "path_signature": "CommandInjectionController:executeWithFullValidation07 -> CommandInjectionController:executeWithFullValidation07",
         "soot_signature": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithFullValidation07(java.lang.String)>"
-      }
+      },
+      "filter_score": -28.472714440974293,
+      "filter_threshold": -25.0
     },
     {
-      "result_type": "FP",
+      "result_type": "FP_FILTERED",
       "truth_item": {
         "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/CommandInjectionController.java",
         "class_name": "CommandInjectionController",
@@ -653,7 +667,9 @@
         "line_number": 48,
         "path_signature": "CommandInjectionController:executeViaUtilsSafe08 -> CommandUtils:executeSafe",
         "soot_signature": "<edu.thu.benchmark.annotated.util.CommandUtils: java.lang.String executeSafe(java.lang.String)>"
-      }
+      },
+      "filter_score": -28.472714440974293,
+      "filter_threshold": -25.0
     },
     {
       "result_type": "TN",
