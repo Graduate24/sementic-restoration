@@ -31,64 +31,50 @@ prompt: 命令注入误报,如果代码中有一些对参数的校验,如长度,
 
 sfpp2code:
 
-{
-	"code": "public class SFPP {\n    private static final int MAX_LENGTH = 20;\n    private static final String[] ALLOWED_COMMANDS = {\"list\", \"status\", \"version\", \"help\"};\n\n    public static void main(String[] args) {\n        // 模拟从用户获取输入\n        String userInput = getUserInput(args);\n        \n        try {\n            executeValidatedCommand(userInput);\n        } catch (Exception e) {\n            System.err.println(\"Error executing command: \" + e.getMessage());\n        }\n    }\n    \n    private static String getUserInput(String[] args) {\n        // 在实际应用中，这可能来自HTTP请求、命令行参数等\n        if (args.length > 0) {\n            return args[0];\n        }\n        return \"help\"; // 默认命令\n    }\n    \n    private static void executeValidatedCommand(String input) throws Exception {\n        // 严格的输入验证\n        if (input == null || input.isEmpty()) {\n            throw new IllegalArgumentException(\"Command cannot be empty\");\n        }\n        \n        // 长度检查\n        if (input.length() > MAX_LENGTH) {\n            throw new IllegalArgumentException(\"Command too long\");\n        }\n        \n        // 字符检查 - 只允许字母和数字\n        if (!input.matches(\"^[a-zA-Z0-9]+$\")) {\n            throw new IllegalArgumentException(\"Command contains invalid characters\");\n        }\n        \n        // 白名单检查\n        boolean isAllowed = false;\n        for (String cmd : ALLOWED_COMMANDS) {\n            if (cmd.equals(input)) {\n                isAllowed = true;\n                break;\n            }\n        }\n        \n        if (!isAllowed) {\n            throw new IllegalArgumentException(\"Command not in allowed list\");\n        }\n        \n        // 执行命令 - 这里会被静态分析工具标记为潜在的命令注入\n        String command = \"echo \" + input;\n        Process process = Runtime.getRuntime().exec(command);\n        \n        // 处理命令执行结果\n        int exitCode = process.waitFor();\n        System.out.println(\"Command executed with exit code: \" + exitCode);\n    }\n}",
-	"semantic": "这段代码实现了一个安全的命令执行功能，通过多重验证机制确保只有合法命令才能被执行。代码首先获取用户输入，然后对输入进行严格校验：检查长度限制、使用正则表达式验证只包含字母和数字、通过白名单验证确保命令在预定义的安全列表中。只有通过所有验证后，才会执行系统命令。虽然静态分析工具会将Runtime.exec()与用户输入结合使用标记为命令注入漏洞，但实际上多层验证已完全消除了注入风险。这种模式常见于需要执行系统命令的管理工具、自动化脚本和系统集成场景中。"
-}
+这段代码实现了一个安全的命令执行工具，用于运行预定义的Git命令。它通过三重安全措施防止命令注入：白名单验证（只允许特定命令）、长度限制（防止过长输入）和字符集限制（只允许字母和数字）。这种模式常见于需要调用外部程序但又要确保安全的场景，如DevOps工具、系统管理界面或自动化脚本。尽管代码是安全的，静态分析工具可能会将Runtime.exec()的使用标记为命令注入漏洞，因为它们难以追踪完整的输入验证逻辑链。
+
+import java.io.IOException;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
 public class SFPP {
-    private static final int MAX_LENGTH = 20;
-    private static final String[] ALLOWED_COMMANDS = {"list", "status", "version", "help"};
+    // 定义允许的命令参数白名单
+    private static final Set<String> ALLOWED_COMMANDS = new HashSet<>(Arrays.asList(
+            "status", "version", "help", "list", "info"));
+
+    // 最大参数长度限制
+    private static final int MAX_LENGTH = 10;
 
     public static void main(String[] args) {
-        // 模拟从用户获取输入
-        String userInput = getUserInput(args);
-
         try {
-            executeCommand(userInput);
-        } catch (Exception e) {
+            // 模拟从用户获取输入
+            String userInput = getUserInput(args);
+
+            // 对输入进行严格校验
+            if (isValidInput(userInput)) {
+                // 执行命令 - 这里会被静态分析工具标记为命令注入
+                String command = "git " + userInput;
+                System.out.println("Executing command: " + command);
+                Runtime.getRuntime().exec(command);
+            } else {
+                System.out.println("Invalid input detected. Command execution aborted.");
+            }
+        } catch (IOException e) {
             System.err.println("Error executing command: " + e.getMessage());
         }
     }
 
     private static String getUserInput(String[] args) {
-        // 实际应用中可能从命令行参数、用户界面或API请求获取
-        if (args.length > 0) {
-            return args[0];
-        }
-        return "help"; // 默认命令
+        // 简单模拟获取用户输入
+        return args.length > 0 ? args[0] : "help";
     }
 
-    private static void executeCommand(String input) throws Exception {
-        // 严格的输入验证
-        if (isValidCommand(input)) {
-            // 验证通过后执行命令
-            String command = "cmd /c " + input;
-            System.out.println("Executing: " + command);
-            Runtime.getRuntime().exec(command);
-        } else {
-            throw new IllegalArgumentException("Invalid command: " + input);
-        }
-    }
-
-    private static boolean isValidCommand(String input) {
-        // 1. 检查长度限制
-        if (input == null || input.length() > MAX_LENGTH) {
-            return false;
-        }
-
-        // 2. 检查是否只包含字母和数字
-        if (!input.matches("^[a-zA-Z0-9]+$")) {
-            return false;
-        }
-
-        // 3. 白名单验证
-        for (String allowedCommand : ALLOWED_COMMANDS) {
-            if (allowedCommand.equals(input)) {
-                return true;
-            }
-        }
-
-        return false;
+    private static boolean isValidInput(String input) {
+        // 多重验证：白名单检查、长度检查、字符检查
+        return ALLOWED_COMMANDS.contains(input) &&
+               input.length() <= MAX_LENGTH &&
+               input.matches("^[a-zA-Z0-9]+$");
     }
 }
 
@@ -132,59 +118,37 @@ prompt = "命令注入误报,如果代码中使用命令白名单,然后再执�
   }
 }
 
-这段代码实现了一个安全的命令执行系统，通过预定义的命令和参数白名单来防止命令注入攻击。代码接收用户输入的命令和参数，严格验证它们是否在允许列表中，只有通过验证的命令才会被执行。这种方法确保了即使接收用户输入，也只能执行预期的安全命令。静态分析工具会误报是因为它们通常只检测到Runtime.exec()的调用和用户输入的传递，而无法理解白名单验证的有效性。这种模式常见于需要有限系统命令执行能力的管理工具、自动化脚本或受控环境中的系统操作场景。
+这段代码实现了一个简单的命令执行工具，通过预定义的白名单（ALLOWED_COMMANDS）来限制可执行的系统命令。用户输入命令后，程序会检查该命令是否在白名单中，只有白名单内的命令才会被执行。这种模式常见于需要提供有限系统命令执行能力的应用场景，如管理界面、开发工具或受控环境中的系统操作。虽然代码使用了Runtime.exec()执行命令，但由于严格的白名单验证，实际上不存在命令注入风险。
 
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Scanner;
 
 public class SFPP {
-    // 预定义的命令白名单
     private static final List<String> ALLOWED_COMMANDS = Arrays.asList(
-            "ls", "pwd", "echo", "date", "whoami");
-
-    // 预定义的参数白名单
-    private static final List<String> ALLOWED_PARAMS = Arrays.asList(
-            "-l", "-a", "--help", "--version");
+            "ls", "pwd", "echo hello", "date", "whoami");
 
     public static void main(String[] args) {
-        // 模拟用户输入
-        String userCommand = "ls";
-        String userParam = "-l";
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a command to execute: ");
+        String userInput = scanner.nextLine().trim();
 
-        try {
-            executeCommand(userCommand, userParam);
-        } catch (IOException e) {
-            System.err.println("Command execution failed: " + e.getMessage());
-        }
-    }
-
-    /**
-     * 安全执行系统命令
-     * 只有白名单中的命令和参数才会被执行
-     */
-    private static void executeCommand(String command, String param) throws IOException {
-        // 验证命令是否在白名单中
-        if (!ALLOWED_COMMANDS.contains(command)) {
-            System.out.println("Command not allowed: " + command);
-            return;
+        // 使用白名单验证用户输入的命令
+        if (ALLOWED_COMMANDS.contains(userInput)) {
+            try {
+                System.out.println("Executing command: " + userInput);
+                Process process = Runtime.getRuntime().exec(userInput);
+                int exitCode = process.waitFor();
+                System.out.println("Command executed with exit code: " + exitCode);
+            } catch (IOException | InterruptedException e) {
+                System.err.println("Error executing command: " + e.getMessage());
+            }
+        } else {
+            System.out.println("Command not allowed. Allowed commands are: " + ALLOWED_COMMANDS);
         }
 
-        // 验证参数是否在白名单中
-        if (param != null && !param.isEmpty() && !ALLOWED_PARAMS.contains(param)) {
-            System.out.println("Parameter not allowed: " + param);
-            return;
-        }
-
-        // 构建完整命令
-        String fullCommand = command;
-        if (param != null && !param.isEmpty()) {
-            fullCommand += " " + param;
-        }
-
-        // 执行命令
-        System.out.println("Executing: " + fullCommand);
-        Runtime.getRuntime().exec(fullCommand);
+        scanner.close();
     }
 }
 
@@ -223,7 +187,7 @@ prompt = "命令注入误报,如果代码中使用了java api替代命令行,或
   }
 }
 
-这段代码展示了两种安全处理系统命令的方法：1)使用Java原生API替代命令行操作，如File.exists()代替ls命令，Files.readAllBytes()代替cat命令；2)在执行命令前进行安全验证，包括检查工作目录和命令白名单。代码是安全的，因为它要么完全避免了命令执行，要么在执行前进行了严格的安全检查。静态分析工具会误报，因为它们通常只检测Runtime.exec()或ProcessBuilder的使用，而不能理解周围的安全验证逻辑。这种模式常见于需要文件系统操作或有限系统命令执行的应用程序中。
+这段代码展示了两种避免命令注入的安全实践：使用Java原生API替代命令行操作和在执行命令前进行安全验证。代码首先使用File和Files API进行文件检查和删除操作，避免了使用可能被注入的shell命令。然后通过isInSafeDirectory方法验证命令是否在安全目录中执行，以及通过isAllowedCommand方法检查命令是否在预定义的白名单中且不包含危险字符。这种模式常见于需要系统交互的应用程序，如文件管理工具、系统维护脚本和自动化部署工具中。
 
 import java.io.File;
 import java.io.IOException;
@@ -234,45 +198,48 @@ import java.util.Arrays;
 import java.util.List;
 
 public class SFPP {
-    private static final String SAFE_DIRECTORY = "/safe/directory";
+    private static final String SAFE_DIRECTORY = "/tmp/safe";
     private static final List<String> ALLOWED_COMMANDS = Arrays.asList("ls", "cat", "echo");
 
     public static void main(String[] args) throws IOException {
         // 使用Java API替代命令行执行
         String filePath = "/tmp/test.txt";
         File file = new File(filePath);
-        boolean exists = file.exists(); // 使用Java API代替 'ls' 命令
 
+        // 使用Java API检查文件是否存在，而不是执行"ls"命令
+        boolean exists = file.exists();
+        System.out.println("File exists: " + exists);
+
+        // 使用Java API删除文件，而不是执行"rm"命令
         if (exists) {
-            System.out.println("File exists: " + filePath);
-            // 使用Java API读取文件内容，代替 'cat' 命令
-            String content = new String(Files.readAllBytes(Paths.get(filePath)));
-            System.out.println("File content: " + content);
+            Files.delete(Paths.get(filePath));
+            System.out.println("File deleted using Java API");
         }
 
         // 验证工作目录后执行命令
         String command = "ls -la";
-        if (isInSafeDirectory(command) && isAllowedCommand(command)) {
-            // 静态分析工具可能会在这里报告命令注入漏洞
+        if (isInSafeDirectory(command)) {
+            System.out.println("Executing command in safe directory: " + command);
             Runtime.getRuntime().exec(command);
         }
 
-        // 使用ProcessBuilder并设置安全的工作目录
-        ProcessBuilder pb = new ProcessBuilder("ls", "-la");
-        pb.directory(new File(SAFE_DIRECTORY));
-        pb.start();
+        // 使用白名单验证命令
+        String userCommand = "cat /tmp/safe/config.txt";
+        if (isAllowedCommand(userCommand)) {
+            System.out.println("Executing allowed command: " + userCommand);
+            Runtime.getRuntime().exec(userCommand);
+        }
     }
 
     private static boolean isInSafeDirectory(String command) {
         // 验证命令是否在安全目录中执行
-        return command.contains(SAFE_DIRECTORY) ||
-                new File(SAFE_DIRECTORY).exists();
+        return command.contains(SAFE_DIRECTORY) && !command.contains("..");
     }
 
     private static boolean isAllowedCommand(String command) {
-        // 验证命令是否在白名单中
-        String baseCommand = command.split(" ")[0];
-        return ALLOWED_COMMANDS.contains(baseCommand);
+        // 检查命令是否在白名单中
+        String cmd = command.split(" ")[0];
+        return ALLOWED_COMMANDS.contains(cmd) && !command.contains(";") && !command.contains("|");
     }
 }
 
@@ -308,76 +275,50 @@ prompt = "命令注入误报,如果代码中使用了一些java的类添加命�
   }
 }
 
-这段代码实现了一个安全的命令执行工具，通过多重验证机制确保系统命令执行的安全性。代码首先获取用户输入，然后通过白名单验证和正则表达式模式匹配双重检查输入的安全性，只有通过验证的命令才会被执行。尽管使用了ProcessBuilder执行系统命令，但由于实施了严格的输入验证和参数化执行方式，实际上不存在命令注入风险。静态分析工具可能会因为看到ProcessBuilder.start()调用而误报命令注入漏洞，但忽略了代码中的安全验证逻辑。这种模式常见于需要与操作系统交互的系统管理工具和自动化应用中。
+这段代码实现了一个安全的系统命令执行功能，通过命令白名单和参数正则表达式验证双重防护机制，有效防止命令注入攻击。代码首先验证用户输入的命令是否在预定义的安全命令集合中，然后检查命令参数是否符合安全模式（只包含字母、数字和特定符号）。验证通过后，使用ProcessBuilder的参数化方式执行命令，避免了命令拼接导致的注入风险。这种模式常见于需要调用系统命令的管理工具、自动化脚本和系统集成应用中。
 
-import java.io.IOException;
+
 import java.util.Arrays;
 import java.util.HashSet;
-import java.util.Scanner;
 import java.util.Set;
 import java.util.regex.Pattern;
 
 public class SFPP {
     // 预定义的安全命令白名单
     private static final Set<String> ALLOWED_COMMANDS = new HashSet<>(Arrays.asList(
-            "ls", "dir", "echo", "date", "whoami", "hostname"));
+            "ls", "dir", "echo", "date", "whoami"));
 
-    // 安全字符模式 - 只允许字母、数字、下划线、连字符和点
-    private static final Pattern SAFE_PATTERN = Pattern.compile("^[a-zA-Z0-9_\\-\\.]+$");
+    // 安全的命令参数模式，只允许字母、数字、下划线、连字符和点
+    private static final Pattern SAFE_PARAMETER_PATTERN = Pattern.compile("^[a-zA-Z0-9_\\-\\.]+$");
 
     public static void main(String[] args) {
         try {
-            // 获取用户输入
-            String userInput = getInput();
+            // 模拟从用户获取输入
+            String userCommand = "ls";
+            String userParameter = "-la";
 
-            // 验证输入安全性
-            if (validateInput(userInput)) {
-                System.out.println("执行命令: " + userInput);
-
-                // 使用参数化方式执行命令，避免命令注入
-                String[] cmdArray = {userInput};
-                ProcessBuilder pb = new ProcessBuilder(cmdArray);
-                pb.inheritIO(); // 重定向输出到控制台
-
-                Process process = pb.start();
-                int exitCode = process.waitFor();
-                System.out.println("命令执行完成，退出码: " + exitCode);
-            } else {
-                System.out.println("命令验证失败，拒绝执行不安全的命令");
+            // 验证命令是否在白名单中
+            if (!ALLOWED_COMMANDS.contains(userCommand)) {
+                System.out.println("不允许的命令: " + userCommand);
+                return;
             }
-        } catch (IOException | InterruptedException e) {
-            System.err.println("命令执行错误: " + e.getMessage());
+
+            // 验证参数是否符合安全模式
+            if (!SAFE_PARAMETER_PATTERN.matcher(userParameter).matches()) {
+                System.out.println("不安全的参数: " + userParameter);
+                return;
+            }
+
+            // 使用ProcessBuilder以参数化方式执行命令
+            // 这种方式可以避免命令注入，但静态分析工具可能仍会报警
+            ProcessBuilder pb = new ProcessBuilder(userCommand, userParameter);
+            pb.redirectErrorStream(true);
+            Process process = pb.start();
+
+            // 处理命令执行结果
+            System.out.println("命令执行成功: " + userCommand + " " + userParameter);
+        } catch (Exception e) {
+            System.out.println("命令执行失败: " + e.getMessage());
         }
-    }
-
-    // 获取用户输入
-    private static String getInput() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("请输入要执行的命令: ");
-        String input = scanner.nextLine().trim();
-        scanner.close();
-        return input;
-    }
-
-    // 验证输入是否安全
-    private static boolean validateInput(String input) {
-        // 检查是否为空
-        if (input == null || input.isEmpty()) {
-            return false;
-        }
-
-        // 白名单验证 - 只允许预定义的安全命令
-        if (!ALLOWED_COMMANDS.contains(input)) {
-            System.out.println("命令不在白名单中");
-            return false;
-        }
-
-        // 模式匹配验证 - 确保只包含安全字符
-        if (!SAFE_PATTERN.matcher(input).matches()) {
-            System.out.println("命令包含不安全字符");
-            return false;
-        }
-
-        return true;
     }
 }

@@ -1,4 +1,5 @@
 import json
+import os.path
 import unittest
 
 from src.config.config import system_prompt_sfpp_to_semantic
@@ -38,6 +39,7 @@ def write_string_to_file(content, file_path, encoding="utf-8", create_dirs=True,
         print(f"写入文件时出错: {e}")
         return False
 
+
 class TestSFPPP2Code(unittest.TestCase):
     def test_sfpp2code(self):
         llm = LLMClient()
@@ -76,7 +78,7 @@ class TestSFPPP2Code(unittest.TestCase):
         print(f"-----------\n")
         print(response['choices'][0]['message']['content'])
         res = json.loads(response['choices'][0]['message']['content'])
-        write_string_to_file(res['code'],'./SFPP.java')
+        write_string_to_file(res['code'], './SFPP.java')
 
     def test_sfpp2code2(self):
         llm = LLMClient()
@@ -169,7 +171,6 @@ class TestSFPPP2Code(unittest.TestCase):
         write_string_to_file(res['code'], './SFPP.java')
         print(res['semantic'])
 
-
     def test_sfpp2code4(self):
         llm = LLMClient()
         prompt = """
@@ -210,3 +211,20 @@ class TestSFPPP2Code(unittest.TestCase):
         res = json.loads(response['choices'][0]['message']['content'])
         write_string_to_file(res['code'], './SFPP.java')
         print(res['semantic'])
+
+    def test_sfpp2code5(self):
+        # read sfpp.json
+        base_dir = '/home/ran/Documents/work/graduate/sementic-restoration/experiments/sfppexp/'
+        sfppsource = os.path.join(base_dir, 'sfpp/sfpp.json')
+        with open(sfppsource, 'r') as f:
+            sfpps = json.load(f)
+            for index, sfpp in enumerate(sfpps):
+                print(sfpp)
+                ret_dir = os.path.join(base_dir, f"ret{index}")
+                if not os.path.exists(ret_dir):
+                    os.makedirs(ret_dir)
+                llm = LLMClient()
+                response = llm.generate_completion(prompt=sfpp, system_prompt=system_prompt_sfpp_to_semantic)
+                res = json.loads(response['choices'][0]['message']['content'])
+                write_string_to_file(res['code'], os.path.join(ret_dir, f"SFPP.java"))
+                write_string_to_file(res['semantic'], os.path.join(ret_dir, f"SFPP.semantic"))
