@@ -3,6 +3,7 @@ import os.path
 import unittest
 
 from src.config.config import system_prompt_sfpp_to_semantic
+from src.llm.db.vector_db import VectorDB
 from src.llm.llm_client import LLMClient
 
 
@@ -41,6 +42,9 @@ def write_string_to_file(content, file_path, encoding="utf-8", create_dirs=True,
 
 
 class TestSFPPP2Code(unittest.TestCase):
+    def setUp(self):
+        self.db = VectorDB('/home/ran/Documents/work/graduate/llm-agent/models/codebert')
+
     def test_sfpp2code(self):
         llm = LLMClient()
         prompt = """
@@ -228,3 +232,40 @@ class TestSFPPP2Code(unittest.TestCase):
                 res = json.loads(response['choices'][0]['message']['content'])
                 write_string_to_file(res['code'], os.path.join(ret_dir, f"SFPP.java"))
                 write_string_to_file(res['semantic'], os.path.join(ret_dir, f"SFPP.semantic"))
+
+    def test_save_vectordb(self):
+        base_dir = '/home/ran/Documents/work/graduate/sementic-restoration/experiments/sfppexp/'
+        for d in os.listdir(base_dir):
+            if os.path.isdir(os.path.join(base_dir, d)) and os.path.exists(os.path.join(base_dir, d, "SFPP.java")):
+                with open(os.path.join(base_dir, d, "SFPP.java"), 'r') as f:
+                    self.db.save_code([f.read()], [{"cwe": "78", "type": "SFPP"}])
+                with open(os.path.join(base_dir, d, "SFPP.semantic"), 'r') as f:
+                    self.db.save_semantic([f.read()], [{"cwe": "78", "type": "SFPP"}])
+
+    def test_query1(self):
+        # 查询示例
+      filtered_result = self.db.semantic_collection.query(
+          query_texts=['静态分析'],
+          where={"cwe": "78"},
+          n_results=5,  # 返回前5个最相似的结果
+          include=['documents', 'metadatas', 'distances']  # 包含文档内容、元数据和距离分数
+      )
+      
+      # 打印详细结果
+      print("\n查询结果:")
+      for i, (doc, metadata, distance) in enumerate(zip(
+          filtered_result['documents'][0],
+          filtered_result['metadatas'][0],
+          filtered_result['distances'][0]
+      )):
+          print(f"\n结果 {i+1}:")
+          print(f"文档内容: {doc}")
+          print(f"元数据: {metadata}")
+          print(f"距离分数: {distance}")
+
+        # esults = collection.query(
+        #     query_texts=["查询文本"],
+        #     n_results=5,
+        #     where={"source": "book1"},
+        #     score_threshold=0.8  # 只返回相似度大于0.8的结果
+        # )

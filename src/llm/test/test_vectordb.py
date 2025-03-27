@@ -37,7 +37,7 @@ class TestVectorDB(unittest.TestCase):
 
         self.client = chromadb.PersistentClient('./chromadb')
 
-        self.collection = self.client.create_collection(
+        self.collection = self.client.add.create_collection(
             name="code_snippets",
             metadata={"description": "存储代码片段的集合"},
             embedding_function=self.embedding_function
