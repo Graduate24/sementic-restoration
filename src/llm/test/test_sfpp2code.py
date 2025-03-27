@@ -1,10 +1,38 @@
 import json
 import os.path
+import subprocess
 import unittest
+import time
 
-from src.config.config import system_prompt_sfpp_to_semantic
+from src.config.config import system_prompt_sfpp_to_semantic, system_prompt_code_to_semantic
 from src.llm.db.vector_db import VectorDB
 from src.llm.llm_client import LLMClient
+
+
+def extract_between_markers(text, start_marker="++++++++++++++++++++++++++++++++",
+                            end_marker="-----------------------------"):
+    """提取两个标记之间的内容"""
+    try:
+        # 查找开始标记的位置
+        start_index = text.find(start_marker)
+        if start_index == -1:
+            return None  # 没找到开始标记
+
+        # 计算内容开始的位置（开始标记之后）
+        content_start = start_index + len(start_marker)
+
+        # 从内容开始处查找结束标记
+        end_index = text.find(end_marker, content_start)
+        if end_index == -1:
+            return None  # 没找到结束标记
+
+        # 提取两个标记之间的内容
+        extracted_content = text[content_start:end_index].strip()
+        return extracted_content
+
+    except Exception as e:
+        print(f"提取内容时出错: {e}")
+        return None
 
 
 def write_string_to_file(content, file_path, encoding="utf-8", create_dirs=True, mode="w"):
@@ -216,6 +244,7 @@ class TestSFPPP2Code(unittest.TestCase):
         write_string_to_file(res['code'], './SFPP.java')
         print(res['semantic'])
 
+    # TODO 使用大模型根据SFPP生成语义和代码
     def test_sfpp2code5(self):
         # read sfpp.json
         base_dir = '/home/ran/Documents/work/graduate/sementic-restoration/experiments/sfppexp/'
@@ -244,28 +273,138 @@ class TestSFPPP2Code(unittest.TestCase):
 
     def test_query1(self):
         # 查询示例
-      filtered_result = self.db.semantic_collection.query(
-          query_texts=['静态分析'],
-          where={"cwe": "78"},
-          n_results=5,  # 返回前5个最相似的结果
-          include=['documents', 'metadatas', 'distances']  # 包含文档内容、元数据和距离分数
-      )
-      
-      # 打印详细结果
-      print("\n查询结果:")
-      for i, (doc, metadata, distance) in enumerate(zip(
-          filtered_result['documents'][0],
-          filtered_result['metadatas'][0],
-          filtered_result['distances'][0]
-      )):
-          print(f"\n结果 {i+1}:")
-          print(f"文档内容: {doc}")
-          print(f"元数据: {metadata}")
-          print(f"距离分数: {distance}")
+        filtered_result = self.db.semantic_collection.query(
+            query_texts=['静态分析'],
+            where={"cwe": "78"},
+            n_results=5,  # 返回前5个最相似的结果
+            include=['documents', 'metadatas', 'distances'],  # 包含文档内容、元数据和距离分数
+        )
 
-        # esults = collection.query(
-        #     query_texts=["查询文本"],
-        #     n_results=5,
-        #     where={"source": "book1"},
-        #     score_threshold=0.8  # 只返回相似度大于0.8的结果
-        # )
+        # 打印详细结果
+        print("\n查询结果:")
+        for i, (doc, metadata, distance) in enumerate(zip(
+                filtered_result['documents'][0],
+                filtered_result['metadatas'][0],
+                filtered_result['distances'][0]
+        )):
+            print(f"\n结果 {i + 1}:")
+            print(f"文档内容: {doc}")
+            print(f"元数据: {metadata}")
+            print(f"距离分数: {distance}")
+
+    # TODO 获取cwe78检测结果
+    def test_retrieve_defects_codes(self):
+        base_dir = '/home/ran/Documents/work/graduate/sementic-restoration/experiments/'
+        detect_result = os.path.join(base_dir, 'result_simple.json')
+        cwe78_results = []
+        with open(detect_result, 'r') as f:
+            result_list = json.loads(f.read())
+            for result in result_list:
+                if result['cwe'] == "78":
+                    cwe78_results.append(result)
+        if not cwe78_results:
+            print("cwe78_result is None!")
+            return
+        llm = LLMClient()
+
+        query_results = []
+
+        for result in cwe78_results:
+            # get source code
+            # java -jar target/code-index-1.0-SNAPSHOT.jar  -o ./output -s /home/ran/Documents/work/graduate/annotated-benchmark/src/main/java -extract -m "<edu.thu.benchmark.annotated.controller.XmlController: java.util.Map processXml(java.lang.String)>"
+            # java -jar target/code-index-1.0-SNAPSHOT.jar -s /home/ran/Documents/work/graduate/annotated-benchmark/src/main/java -extract -m "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeArraySafe03(java.lang.String)>"
+            command = f"java -jar /home/ran/Documents/work/graduate/code-index/target/code-index-1.0-SNAPSHOT.jar -s /home/ran/Documents/work/graduate/annotated-benchmark/src/main/java -extract -m \"{result['soot_signature']}\""
+            result = subprocess.run(command, shell=True, capture_output=True, text=True)
+            code = extract_between_markers(result.stdout)
+
+            # 添加异常处理和重试逻辑
+            max_retries = 3
+            retry_count = 0
+            retry_delay = 5  # 重试间隔5秒
+            
+            while retry_count < max_retries:
+                try:
+                    response = llm.generate_completion(prompt=code, system_prompt=system_prompt_code_to_semantic)
+                    # 不再尝试解析为JSON，直接使用文本响应
+                    res = response['choices'][0]['message']['content']
+                    # 成功执行，跳出循环
+                    break
+                except KeyError as key_err:
+                    # 返回数据结构错误
+                    error_msg = f"返回数据结构错误 (尝试 {retry_count+1}/{max_retries}): {key_err}"
+                    print(error_msg)
+                except Exception as e:
+                    # 其他异常
+                    error_msg = f"API调用异常 (尝试 {retry_count+1}/{max_retries}): {str(e)}"
+                    print(error_msg)
+                
+                # 增加重试计数
+                retry_count += 1
+                
+                # 如果已经尝试了最大次数，则抛出最后一个异常
+                if retry_count >= max_retries:
+                    print(f"达到最大重试次数 ({max_retries})，操作失败")
+                    raise Exception(f"LLM API调用失败，已重试{max_retries}次")
+                
+                # 等待一段时间后重试
+                print(f"等待 {retry_delay} 秒后重试...")
+                time.sleep(retry_delay)
+            
+            filtered_result = self.db.semantic_collection.query(
+                query_texts=[res],
+                where={"cwe": "78"},
+                n_results=1,
+                include=['documents', 'metadatas', 'distances'],  # 包含文档内容、元数据和距离分数
+            )
+            query_result = {
+                "cwe": "78"
+            }
+            semantic_result = {}
+            # 打印详细结果
+            for i, (doc, metadata, distance) in enumerate(zip(
+                    filtered_result['documents'][0],
+                    filtered_result['metadatas'][0],
+                    filtered_result['distances'][0]
+            )):
+                semantic_result['documents'] = doc
+                semantic_result['distance'] = distance
+                break
+
+            query_result['semantic'] = semantic_result
+
+            filtered_result = self.db.code_collection.query(
+                query_texts=[code],
+                where={"cwe": "78"},
+                n_results=1,
+                include=['documents', 'metadatas', 'distances'],  # 包含文档内容、元数据和距离分数
+            )
+
+            code_result = {}
+            for i, (doc, metadata, distance) in enumerate(zip(
+                    filtered_result['documents'][0],
+                    filtered_result['metadatas'][0],
+                    filtered_result['distances'][0]
+            )):
+                code_result['distance'] = distance
+                break
+
+            query_result['code'] = code_result
+
+            query_results.append(query_result)
+
+        print(query_results)
+        with open(os.path.join(base_dir, 'query_result.json'), 'w', encoding='utf-8') as ff:
+            json.dump(query_results, ff, ensure_ascii=False, indent=4)
+
+        # Ran 1 test in 153.293s
+
+        """
+        实际应用中的数值解读  
+        | 距离值范围 | 相似度范围 | 解读 |
+        |-----------|-----------|------|
+        | 0 - 0.1 | 0.9 - 1.0 | 非常相似，几乎相同 |
+        | 0.1 - 0.3 | 0.7 - 0.9 | 高度相似 |
+        | 0.3 - 0.5 | 0.5 - 0.7 | 中等相似 |
+        | 0.5 - 0.7 | 0.3 - 0.5 | 低相似度 |
+        | 0.7 - 1.0 | 0 - 0.3 | 几乎不相关 |
+        """

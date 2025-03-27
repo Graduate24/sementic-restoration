@@ -4,6 +4,7 @@
 import os
 import csv
 import json
+import argparse
 from collections import defaultdict
 
 # 要评估的CWE类型
@@ -15,9 +16,6 @@ TRUTH_DATA_PATHS = {
     '78': 'truth_tables/command_injection_cwe78.csv',
     '89': 'truth_tables/sql_injection_cwe89.csv'
 }
-
-# FlowDroid结果文件路径
-FLOWDROID_RESULTS_PATH = 'test_result_restore.json'
 
 def load_truth_data():
     """加载真值表数据"""
@@ -75,16 +73,16 @@ def extract_path_signature(path):
     # 创建路径签名
     return f"{source_class}:{source_method} -> {sink_class}:{sink_method}"
 
-def load_flowdroid_results():
+def load_flowdroid_results(results_file_path):
     """加载FlowDroid的分析结果，并去重处理调用链信息"""
-    if not os.path.exists(FLOWDROID_RESULTS_PATH):
-        print(f"错误：未找到FlowDroid结果文件 {FLOWDROID_RESULTS_PATH}")
+    if not os.path.exists(results_file_path):
+        print(f"错误：未找到FlowDroid结果文件 {results_file_path}")
         return {}
     
     flowdroid_data = defaultdict(list)
     
     try:
-        with open(FLOWDROID_RESULTS_PATH, 'r', encoding='utf-8') as f:
+        with open(results_file_path, 'r', encoding='utf-8') as f:
             data = json.load(f)
             
             # 用于追踪已处理的路径签名
@@ -271,7 +269,7 @@ def is_point_matching(point_info, truth_item):
     
     return True
 
-def calculate_metrics(truth_data, flowdroid_data):
+def calculate_metrics(truth_data, flowdroid_data, base_output_name):
     """计算评估指标，考虑调用链信息"""
     metrics = {}
     total_tp = total_fp = total_tn = total_fn = 0
@@ -380,11 +378,11 @@ def calculate_metrics(truth_data, flowdroid_data):
     }
     
     # 保存详细结果
-    save_detailed_results(detailed_results)
+    save_detailed_results(detailed_results, base_output_name)
     
     return metrics
 
-def save_detailed_results(detailed_results):
+def save_detailed_results(detailed_results, base_output_name):
     """保存详细的评估结果"""
     # 简化详细结果中的数据，只保留必要信息
     simplified_results = {}
@@ -418,10 +416,11 @@ def save_detailed_results(detailed_results):
             
             simplified_results[cwe].append(simplified_item)
     
+    detailed_results_file = f"{base_output_name}_detailed_results.json"
     try:
-        with open('flowdroid_detailed_results_optimized.json', 'w', encoding='utf-8') as f:
+        with open(detailed_results_file, 'w', encoding='utf-8') as f:
             json.dump(simplified_results, f, indent=2, ensure_ascii=False)
-        print(f"详细评估结果已保存到 flowdroid_detailed_results_optimized.json")
+        print(f"详细评估结果已保存到 {detailed_results_file}")
     except Exception as e:
         print(f"保存详细评估结果时出错: {e}")
 
@@ -436,6 +435,14 @@ def print_metrics(metrics):
     
     print("\n===== FlowDroid漏洞检测评估结果（优化版） =====\n")
     
+    # 打印评估指标计算公式说明
+    print("评估指标计算公式说明:")
+    print("- 精确率 (Precision) = TP / (TP + FP) - 所有报告的漏洞中真实漏洞的比例")
+    print("- 召回率 (Recall) = TP / (TP + FN) - 所有真实漏洞中被成功检测到的比例")
+    print("- F1分数 = 2 * (Precision * Recall) / (Precision + Recall) - 精确率和召回率的调和平均值")
+    print("- 准确率 (Accuracy) = (TP + TN) / (TP + TN + FP + FN) - 所有预测中正确预测的比例")
+    print("其中: TP=真阳性, FP=假阳性, TN=真阴性, FN=假阴性\n")
+    
     for cwe, metric in metrics.items():
         cwe_name = cwe_names.get(cwe, f'CWE-{cwe}')
         print(f"## {cwe_name} ##")
@@ -449,19 +456,34 @@ def print_metrics(metrics):
         print(f"准确率 (Accuracy): {metric['Accuracy']:.4f}")
         print("")
 
-def save_evaluation_results(metrics):
+def save_evaluation_results(metrics, base_output_name):
     """保存评估结果到JSON文件"""
+    evaluation_results_file = f"{base_output_name}_evaluation_results.json"
     try:
-        with open('flowdroid_evaluation_results_optimized.json', 'w', encoding='utf-8') as f:
+        with open(evaluation_results_file, 'w', encoding='utf-8') as f:
             json.dump(metrics, f, indent=2, ensure_ascii=False)
-        print(f"评估结果已保存到 flowdroid_evaluation_results_optimized.json")
+        print(f"评估结果已保存到 {evaluation_results_file}")
     except Exception as e:
         print(f"保存评估结果时出错: {e}")
 
 def main():
+    # 解析命令行参数
+    parser = argparse.ArgumentParser(description='评估FlowDroid检测结果')
+    parser.add_argument('--input', '-i', required=True, help='FlowDroid结果JSON文件路径')
+    parser.add_argument('--output', '-o', help='输出文件名前缀，默认基于输入文件名')
+    args = parser.parse_args()
+    
+    # 设置输出文件名前缀
+    if args.output:
+        base_output_name = args.output
+    else:
+        # 从输入文件名生成输出文件名前缀
+        base_name = os.path.basename(args.input)
+        base_output_name = os.path.splitext(base_name)[0]
+    
     # 加载数据
     truth_data = load_truth_data()
-    flowdroid_data = load_flowdroid_results()
+    flowdroid_data = load_flowdroid_results(args.input)
     
     # 检查数据是否加载成功
     if not truth_data or not flowdroid_data:
@@ -469,13 +491,13 @@ def main():
         return
     
     # 计算指标
-    metrics = calculate_metrics(truth_data, flowdroid_data)
+    metrics = calculate_metrics(truth_data, flowdroid_data, base_output_name)
     
     # 打印结果
     print_metrics(metrics)
     
     # 保存评估结果
-    save_evaluation_results(metrics)
+    save_evaluation_results(metrics, base_output_name)
 
 if __name__ == "__main__":
     main() 

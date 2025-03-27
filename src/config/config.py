@@ -728,5 +728,10 @@ system_prompt_sfpp_to_semantic ="""
 
 直接返回json,不需要任何其他内容.
 """
+
+system_prompt_code_to_semantic = """
+你是一个代码专家,你的任务是根据输入的代码片段,生成自然语言的描述的语义.
+你需要解释代码的功能和行为,从开发者意图角度，解释这段代码试图实现什么目标.描述这种代码模式通常出现的编程上下文或场景.这段话限制在200字以内.
+"""
 # 项目路径配置
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) 
