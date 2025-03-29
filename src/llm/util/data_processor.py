@@ -25,6 +25,7 @@ class ModelingDataProcessor:
             self,
             project_dir: str,
             modeling_dir: str,
+            index_dir: str,
             batch_size: int = 1,
             java_ext: str = ".java"
     ):
@@ -39,6 +40,7 @@ class ModelingDataProcessor:
         """
         self.project_dir = os.path.abspath(project_dir)
         self.modeling_dir = os.path.abspath(modeling_dir)
+        self.index_dir = os.path.abspath(index_dir)
         self.batch_size = batch_size
         self.java_ext = java_ext
 
@@ -68,7 +70,7 @@ class ModelingDataProcessor:
         """
         logger.info("开始加载建模数据...")
 
-        model_dir = os.path.join(self.modeling_dir, "model")
+        model_dir = self.modeling_dir
         # 加载AOP数据
         aop_file = os.path.join(model_dir, "aop.json")
         if os.path.exists(aop_file):
@@ -84,7 +86,7 @@ class ModelingDataProcessor:
             logger.info(f"已加载IoC数据: {len(self.ioc_data)} 条记录")
 
         # 加载索引数据
-        index_dir = os.path.join(self.modeling_dir, "index")
+        index_dir = os.path.join(self.index_dir, "index")
 
         # 字段定义
         field_def_file = os.path.join(index_dir, "field_definitions.json")
@@ -115,7 +117,7 @@ class ModelingDataProcessor:
             logger.info(f"已加载方法调用: {len(self.method_invocations)} 条记录")
 
         # 调用图
-        call_graph_file = os.path.join(index_dir, "call_graph.json")
+        call_graph_file = os.path.join(self.index_dir, "call_graph.json")
         if os.path.exists(call_graph_file):
             with open(call_graph_file, 'r', encoding='utf-8') as f:
                 self.call_graph = json.load(f)
@@ -210,8 +212,6 @@ class ModelingDataProcessor:
         if not self.aop_data:
             return result
 
-
-
         # 1. 获取类中的方法调用点
         """
          {
@@ -288,7 +288,8 @@ class ModelingDataProcessor:
                         """
                         if aop['adviceMethod']['name'] in self.method_definitions:
                             for definitions in self.method_definitions[aop['adviceMethod']['name']]:
-                                if definitions['signature'] == f"<{aop['adviceMethod']['declaringType']}: {aop['adviceMethod']['returnType']} {aop['adviceMethod']['signature']}>":
+                                if definitions[
+                                    'signature'] == f"<{aop['adviceMethod']['declaringType']}: {aop['adviceMethod']['returnType']} {aop['adviceMethod']['signature']}>":
                                     r['definitions'] = definitions
                                     break
 
@@ -659,4 +660,3 @@ class ModelingDataProcessor:
 
         # 结果是拓扑排序的逆序，需要反转
         return result[::-1]
-

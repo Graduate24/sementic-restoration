@@ -2,5 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/llm/test/workdir" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/llm/test/workflow_result/project" vcs="Git" />
   </component>
 </project>

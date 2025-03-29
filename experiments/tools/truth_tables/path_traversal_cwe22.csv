@@ -1,0 +1,21 @@
+file_path,class_name,method_name,start_line,end_line,is_vulnerability,vulnerability_description,remediation
+src/main/java/edu/thu/benchmark/annotated/controller/PathTraversalController.java,PathTraversalController,getFile01,65,68,true,直接拼接用户输入的文件名到基本路径中没有进行验证,使用规范化路径并验证最终路径是否在允许的目录内
+src/main/java/edu/thu/benchmark/annotated/controller/PathTraversalController.java,PathTraversalController,getImage02,81,85,true,从请求参数中获取图片名称后直接拼接到路径中,对文件名进行验证，确保不包含../等路径遍历字符
+src/main/java/edu/thu/benchmark/annotated/controller/PathTraversalController.java,PathTraversalController,downloadFile03,97,101,true,通过File构造函数直接使用用户输入的路径,使用Path.normalize()和Path.startsWith()验证路径合法性
+src/main/java/edu/thu/benchmark/annotated/controller/PathTraversalController.java,PathTraversalController,readFileContent04,113,122,true,使用FileInputStream直接读取用户指定的文件而不验证路径,对文件路径进行白名单验证或使用Path API验证路径
+src/main/java/edu/thu/benchmark/annotated/controller/PathTraversalController.java,PathTraversalController,getFileWithInjection05,134,136,true,通过依赖注入的Service直接读取用户提供的文件路径,在Service层实现路径验证逻辑
+src/main/java/edu/thu/benchmark/annotated/controller/PathTraversalController.java,PathTraversalController,getXmlFile06,148,150,true,直接使用XML文件路径而不进行验证,对XML文件路径进行验证，确保在安全目录中
+src/main/java/edu/thu/benchmark/annotated/controller/PathTraversalController.java,PathTraversalController,getLogFile07,162,164,true,通过AOP切面获取日志文件但不验证路径,在AOP切面中实现路径验证逻辑
+src/main/java/edu/thu/benchmark/annotated/controller/PathTraversalController.java,PathTraversalController,getConfigFile08,176,180,true,使用配置文件路径但允许使用../等字符,过滤或规范化输入中的../等路径遍历字符
+src/main/java/edu/thu/benchmark/annotated/controller/PathTraversalController.java,PathTraversalController,readProperties09,192,197,true,读取属性文件时使用拼接的相对路径,使用ClassPathResource或验证路径是否在预期目录
+src/main/java/edu/thu/benchmark/annotated/controller/PathTraversalController.java,PathTraversalController,getTemplateFile10,209,211,true,获取模板文件时未验证路径,对模板文件路径进行白名单验证
+src/main/java/edu/thu/benchmark/annotated/controller/PathTraversalController.java,PathTraversalController,getFileSafe01,223,238,false,使用Path.normalize()和Path.startsWith()保证访问路径在安全目录内,已采用安全实现
+src/main/java/edu/thu/benchmark/annotated/controller/PathTraversalController.java,PathTraversalController,getImageSafe02,245,265,false,使用白名单验证允许的文件名和文件类型,已采用安全实现
+src/main/java/edu/thu/benchmark/annotated/controller/PathTraversalController.java,PathTraversalController,downloadFileSafe03,271,286,false,对文件路径进行规范化和验证确保在安全目录内,已采用安全实现
+src/main/java/edu/thu/benchmark/annotated/controller/PathTraversalController.java,PathTraversalController,readFileContentSafe04,292,307,false,使用Files.isRegularFile和Path验证文件路径,已采用安全实现
+src/main/java/edu/thu/benchmark/annotated/controller/PathTraversalController.java,PathTraversalController,getFileWithInjectionSafe05,313,315,false,使用依赖注入的Service并在Service层验证路径安全性,已采用安全实现
+src/main/java/edu/thu/benchmark/annotated/controller/PathTraversalController.java,PathTraversalController,getXmlFileSafe06,321,339,false,对XML文件路径进行白名单验证,已采用安全实现
+src/main/java/edu/thu/benchmark/annotated/controller/PathTraversalController.java,PathTraversalController,getLogFileSafe07,345,356,false,通过安全的AOP切面获取日志文件,已采用安全实现
+src/main/java/edu/thu/benchmark/annotated/controller/PathTraversalController.java,PathTraversalController,getConfigFileSafe08,362,383,false,过滤特殊字符并验证最终路径是否在安全目录内,已采用安全实现
+src/main/java/edu/thu/benchmark/annotated/controller/PathTraversalController.java,PathTraversalController,readPropertiesSafe09,389,399,false,使用ClassPathResource安全加载属性文件,已采用安全实现
+src/main/java/edu/thu/benchmark/annotated/controller/PathTraversalController.java,PathTraversalController,getTemplateFileSafe10,405,413,false,使用模板名称白名单验证,已采用安全实现

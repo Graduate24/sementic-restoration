@@ -1,0 +1,43 @@
+file_path,class_name,method_name,start_line,end_line,is_vulnerability,vulnerability_description,remediation
+src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java,SqlInjectionTestController,testCase01,37,39,true,使用MyBatis XML中的${username}进行字符串拼接导致SQL注入漏洞,使用#{username}参数绑定代替${username}字符串拼接
+src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java,SqlInjectionTestController,testCase02,47,49,true,在ORDER BY子句中使用${sortField}进行字符串拼接允许注入额外的SQL语句,使用白名单验证排序字段或使用预编译语句
+src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java,SqlInjectionTestController,testCase03,57,59,true,在IN子句中使用${idList}进行字符串拼接允许任意SQL注入,使用<foreach>元素或预处理语句构建IN子句
+src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java,SqlInjectionTestController,testCase04,67,69,true,在WHERE子句中使用${whereClause}进行字符串拼接允许任意SQL注入,使用<where>和<if>元素构建动态查询条件
+src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java,SqlInjectionTestController,testCase05,77,79,true,在LIMIT和OFFSET子句中使用${limit}和${offset}进行字符串拼接允许SQL注入,使用#{limit}和#{offset}参数绑定并验证输入是否为数字
+src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java,SqlInjectionTestController,testCase06,87,89,true,在UPDATE语句的SET子句中使用${setClause}进行字符串拼接允许任意SQL注入,使用<set>和<if>元素构建动态更新语句
+src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java,SqlInjectionTestController,testCase07,97,99,true,在DELETE语句的WHERE子句中使用${condition}进行字符串拼接允许任意SQL注入,使用参数绑定和预编译语句执行删除操作
+src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java,SqlInjectionTestController,testCase08,107,109,true,在@Select注解中使用${email}进行字符串拼接允许SQL注入,使用#{email}参数绑定代替${email}字符串拼接
+src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java,SqlInjectionTestController,testCase09,117,119,true,在@Select注解中对多个参数使用${username}和${password}进行字符串拼接导致SQL注入,使用#{username}和#{password}参数绑定代替字符串拼接
+src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java,SqlInjectionTestController,testCase10,127,129,true,在@Select注解的LIKE子句中使用${column}和${value}进行字符串拼接允许SQL注入,使用白名单验证列名并使用参数绑定处理LIKE模式
+src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java,SqlInjectionTestController,testCase11,137,139,true,使用JDBC直接拼接查询条件允许任意SQL注入,使用PreparedStatement和参数绑定
+src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java,SqlInjectionTestController,testCase12,147,149,true,使用来自配置文件的SQL模板和String.format()进行字符串拼接允许SQL注入,使用PreparedStatement和参数绑定代替String.format()
+src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java,SqlInjectionTestController,testCase13,157,159,true,使用NamedParameterJdbcTemplate但仍然拼接WHERE子句允许SQL注入,所有SQL语句都应使用参数化查询不进行直接拼接
+src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java,SqlInjectionTestController,testCase14,167,169,true,通过AOP切面执行SQL时使用字符串替换而非参数绑定允许SQL注入,使用PreparedStatement和参数绑定代替字符串替换
+src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java,SqlInjectionTestController,testCase15,177,179,true,在LIKE子句中正确使用参数绑定但列名仍然使用${column}字符串拼接允许列名注入,使用白名单验证列名避免拼接列名
+src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java,SqlInjectionTestController,testCase16,187,189,true,手动拼接多个查询条件允许SQL注入,使用参数化查询和动态SQL构建条件
+src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java,SqlInjectionTestController,testCase17,197,199,true,使用Java字符串模板进行SQL拼接允许SQL注入,使用参数化查询替代字符串模板
+src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java,SqlInjectionTestController,testCase18,207,209,true,手动构建复杂的WHERE子句允许SQL注入,使用参数化查询和ORM框架的动态SQL功能
+src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java,SqlInjectionTestController,testCase19,217,219,true,使用+运算符拼接SQL语句允许SQL注入,使用参数化查询和参数绑定
+src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java,SqlInjectionTestController,testCase20,227,229,true,组合多种不安全的SQL拼接方式允许复杂的SQL注入,使用参数化查询和ORM框架的安全特性
+src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java,SqlInjectionTestController,testCase41,627,629,true,使用更新后的@Before切面实现的不安全SQL查询,使用参数化查询和参数绑定
+src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java,SqlInjectionTestController,testCase21,327,329,false,使用MyBatis XML的#{username}参数绑定实现安全查询,已采用安全实现
+src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java,SqlInjectionTestController,testCase22,334,336,false,使用白名单验证排序字段或使用预编译语句,已采用安全实现
+src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java,SqlInjectionTestController,testCase23,341,343,false,使用参数化查询处理IN子句查询,已采用安全实现
+src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java,SqlInjectionTestController,testCase24,348,350,false,使用参数化查询和动态SQL构建安全的多条件查询,已采用安全实现
+src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java,SqlInjectionTestController,testCase25,355,357,false,使用参数绑定和类型验证处理LIMIT和OFFSET,已采用安全实现
+src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java,SqlInjectionTestController,testCase26,362,364,false,使用参数绑定和动态SQL构建安全的UPDATE语句,已采用安全实现
+src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java,SqlInjectionTestController,testCase27,369,371,false,使用参数绑定执行安全的DELETE操作,已采用安全实现
+src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java,SqlInjectionTestController,testCase28,376,378,false,使用MyBatis注解的参数绑定实现安全查询,已采用安全实现
+src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java,SqlInjectionTestController,testCase29,383,385,false,使用参数绑定安全处理多参数查询,已采用安全实现
+src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java,SqlInjectionTestController,testCase30,390,392,false,使用参数绑定和列名白名单验证实现安全的LIKE查询,已采用安全实现
+src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java,SqlInjectionTestController,testCase31,397,399,false,使用PreparedStatement和参数绑定实现安全的JDBC查询,已采用安全实现
+src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java,SqlInjectionTestController,testCase32,404,406,false,使用参数化查询替代字符串模板,已采用安全实现
+src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java,SqlInjectionTestController,testCase33,411,413,false,使用NamedParameterJdbcTemplate的参数映射功能安全实现,已采用安全实现
+src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java,SqlInjectionTestController,testCase34,418,420,false,使用AOP切面和参数绑定安全实现SQL查询,已采用安全实现
+src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java,SqlInjectionTestController,testCase35,425,427,false,使用预处理语句和参数映射安全实现,已采用安全实现
+src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java,SqlInjectionTestController,testCase36,432,434,false,使用ORM框架安全特性实现查询,已采用安全实现
+src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java,SqlInjectionTestController,testCase37,439,441,false,使用白名单校验实现安全的排序,已采用安全实现
+src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java,SqlInjectionTestController,testCase38,446,448,false,使用参数化查询和类型转换安全实现,已采用安全实现
+src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java,SqlInjectionTestController,testCase39,453,455,false,使用参数绑定实现安全的IN查询,已采用安全实现
+src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java,SqlInjectionTestController,testCase40,460,462,false,组合多种安全方式实现查询,已采用安全实现
+src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java,SqlInjectionTestController,testCase42,634,636,false,使用AOP切面安全实现SQL查询,已采用安全实现
