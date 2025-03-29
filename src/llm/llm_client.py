@@ -183,7 +183,6 @@ class LLMClient:
                 else:
                     # 解析并返回JSON响应
                     result = response.json()
-                    print(result)
                     if len(result['choices']) == 0:
                         raise Exception("没有choice返回")
                     return result

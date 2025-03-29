@@ -4,6 +4,7 @@ import shutil
 import subprocess
 from typing import Tuple, Optional
 
+from src.llm.workflow.state import WorkflowState
 from src.llm.workflow.workflow import SemanticRestorationWorkflow
 
 
@@ -43,6 +44,8 @@ class TestSrWorkflow(unittest.TestCase):
         self.base_dir = "/home/ran/Documents/work/graduate/sementic-restoration/experiments"
         self.project_path = "/home/ran/Documents/work/graduate/annotated-benchmark"
         self.output_path = "/home/ran/Documents/work/graduate/sementic-restoration/src/llm/test/workflow_result"
+        self.output_path2 = "/home/ran/Documents/work/graduate/sementic-restoration/src/llm/test/workflow_result2"
+        self.output_path3 = "/home/ran/Documents/work/graduate/sementic-restoration/src/llm/test/workflow_result3"
 
     def test_copy_original(self):
         copy_directory(self.project_path, "./workdir/")
@@ -82,3 +85,39 @@ class TestSrWorkflow(unittest.TestCase):
         workflow = SemanticRestorationWorkflow(self.project_path, self.output_path,
                                                os.path.join(self.base_dir, 'tools'), "claude-3-sonnet")
         workflow.run()
+
+
+    def test_workflow2(self):
+        """
+        AVAILABLE_MODELS = {
+            "claude-3-sonnet": "anthropic/claude-3.7-sonnet",
+            "gpt-4o": "openai/gpt-4o",
+            "o1": "openai/o1",
+            "deepseek": "deepseek/deepseek-r1",
+            "gemini-flash": "google/gemini-2.0-flash-001",
+        }
+        """
+        workflow = SemanticRestorationWorkflow(self.project_path, self.output_path2,
+                                               os.path.join(self.base_dir, 'tools'), "gpt-4o")
+        workflow.run()
+
+
+    def test_workflow3(self):
+        """
+        AVAILABLE_MODELS = {
+            "claude-3-sonnet": "anthropic/claude-3.7-sonnet",
+            "gpt-4o": "openai/gpt-4o",
+            "o1": "openai/o1",
+            "deepseek": "deepseek/deepseek-r1",
+            "gemini-flash": "google/gemini-2.0-flash-001",
+        }
+        """
+        workflow = SemanticRestorationWorkflow(self.project_path, self.output_path3,
+                                               os.path.join(self.base_dir, 'tools'), "deepseek")
+        workflow.run()
+
+
+    def test_workflow_run_state(self):
+        workflow = SemanticRestorationWorkflow(self.project_path, self.output_path2,
+                                               os.path.join(self.base_dir, 'tools'), "gpt-4o")
+        workflow.run_state(WorkflowState.INIT)

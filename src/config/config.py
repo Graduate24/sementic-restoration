@@ -95,7 +95,6 @@ Java框架（如Spring和MyBatis）大量使用注解和外部配置，结合反
 - 对于@Value字段：使用IoC连接数据中的propertyValue进行直接赋值
 
 #### JSON示例：
-```json
     "ioc_data": {
           "edu.thu.benchmark.annotated.service.impl.UserServiceImpl.userMapper": {
             "annotation": "@org.springframework.beans.factory.annotation.Autowired",
@@ -141,7 +140,6 @@ Java框架（如Spring和MyBatis）大量使用注解和外部配置，结合反
             "fieldType": "edu.thu.benchmark.annotated.service.UserService"
           }
         },
-```
 - ioc_data的每一个key是字段的全限定名,值包含:
     - name: 源码中的字段名
     - declaringType: 该字段所在的类
@@ -160,7 +158,6 @@ Java框架（如Spring和MyBatis）大量使用注解和外部配置，结合反
 
 #### 代码示例：
 1. @Autowired注解还原：
-   ```java
    // 原代码
    @Service
    public class SqlInjectionTestController {
@@ -181,10 +178,8 @@ Java框架（如Spring和MyBatis）大量使用注解和外部配置，结合反
            return sqlInjectionTestService.findUsersSortedUnsafe(sort);
        }
    }
-   ```
 
 2. @Value注解还原：
-   ```java
    // 原代码
    @Service
    public class CommandService {
@@ -205,10 +200,8 @@ Java框架（如Spring和MyBatis）大量使用注解和外部配置，结合反
            // 执行命令逻辑
        }
    }
-   ```
 
 3. 复杂的依赖注入（需要参数的构造函数）：
-   ```java
    // 原代码
    @Service
    public class EmailService {
@@ -243,14 +236,12 @@ Java框架（如Spring和MyBatis）大量使用注解和外部配置，结合反
            }
        }
    }
-   ```
 
 ### AOP切面还原
 - 分析AOP建模数据中的切点(pointcut)和通知方法(advice)
 - 在目标方法内部适当位置（开始、结束、异常处等）添加通知方法的显式调用
 
 #### JSON建模示例：
-```json
     "aop_data": [{
 			"invocations": {
 				"className": "edu.thu.benchmark.annotated.service.SqlInjectionTestService",
@@ -317,7 +308,6 @@ Java框架（如Spring和MyBatis）大量使用注解和外部配置，结合反
 			}
 	}]
 
-```
 其中:
 - invocations: 目标函数的调用信息
     - className: 函数定义的类
@@ -331,7 +321,6 @@ Java框架（如Spring和MyBatis）大量使用注解和外部配置，结合反
 
 #### 代码示例：
 1. @Before切面还原：
-   ```java
    // 原代码
    @Controller
    public class PathTraversalController {
@@ -366,10 +355,8 @@ Java框架（如Spring和MyBatis）大量使用注解和外部配置，结合反
            return readFile(path);
        }
    }
-   ```
 
 2. @After切面还原：
-   ```java
    // 原代码
    @Service
    public class SqlInjectionTestService {
@@ -406,10 +393,8 @@ Java框架（如Spring和MyBatis）大量使用注解和外部配置，结合反
            return result;
        }
    }
-   ```
 
 3. @Around切面还原：
-   ```java
    // 原代码
    @Service
    public class CommandService {
@@ -459,10 +444,8 @@ Java框架（如Spring和MyBatis）大量使用注解和外部配置，结合反
            return result;
        }
    }
-   ```
 
 4. @AfterThrowing切面还原：
-   ```java
    // 原代码
    @Controller
    public class PathTraversalController {
@@ -502,14 +485,12 @@ Java框架（如Spring和MyBatis）大量使用注解和外部配置，结合反
            }
        }
    }
-   ```
 
 
 ## 处理不完整或缺失的建模数据
 当建模数据不完整或缺失时，按以下策略处理：
 
 1. **依赖注入不明确**：
-   ```java
    // 原代码
    @Service
    public class SomeService {
@@ -527,10 +508,8 @@ Java框架（如Spring和MyBatis）大量使用注解和外部配置，结合反
            // 基本实现，确保编译通过
        }
    }
-   ```
 
 2. **AOP切面信息缺失**：
-   ```java
    // 原代码包含@Before注解但建模数据中找不到
    @Controller
    public class SomeController {
@@ -554,7 +533,6 @@ Java框架（如Spring和MyBatis）大量使用注解和外部配置，结合反
            // 原方法体
        }
    }
-   ```
 
 ## 输出要求
 1. **最重要：保证代码能够编译通过**，即不存在编译错误
@@ -562,7 +540,8 @@ Java框架（如Spring和MyBatis）大量使用注解和外部配置，结合反
 3. 保留原始代码中的注释
 4. 在修改处添加注释说明原注解和还原思路
 5. 不要修改原有代码逻辑，只添加必要的代码实现注解的功能
-6. 直接输出修改后的源代码
+6. 直接输出修改后的源代码,不需要任何其他字符,或者```等符号
+7. 注意不要丢失import语句,仔细检查是否遗漏.
 
 ## 处理流程
 1. 分析源代码中的注解使用
@@ -572,8 +551,7 @@ Java框架（如Spring和MyBatis）大量使用注解和外部配置，结合反
 5. 使用try-catch、临时变量或其他方法处理可能的编译错误
 6. 将生成的代码整合到源文件中
 
-请根据以上指南，对提供的Java代码进行语义还原，始终优先考虑代码的可编译性，并在建模数据不足时使用你的技术知识做出合理判断。
-注意一定要直接输出修改后的源代码,不需要任何其他文字.
+请根据以上指南，对提供的Java代码进行语义还原，始终优先考虑代码的可编译性，并在建模数据不足时使用你的技术知识做出合理判断。注意输出不需要除了代码意外的任何其他多余内容.如```java 或者```
     """
 
 system_prompt_sfpp_generator = """

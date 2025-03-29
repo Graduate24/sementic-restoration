@@ -14,6 +14,24 @@ from src.llm.util import ModelingDataProcessor
 from src.llm.workflow.state import WorkflowState
 
 
+def strip_code_markers(text: str) -> str:
+    """
+    去掉字符串开头的 ```java 和结尾的 ```
+
+    Args:
+        text: 输入的字符串
+
+    Returns:
+        处理后的字符串
+    """
+    # 方法1：使用 strip() 和 replace()
+    text = text.strip()
+    if text.startswith('```java'):
+        text = text[7:]  # 去掉开头的 ```java
+    if text.endswith('```'):
+        text = text[:-3]  # 去掉结尾的 ```
+    return text.strip()
+
 def copy_directory(source_dir, target_dir):
     # 在源目录创建测试文件
     if os.path.exists(target_dir):
@@ -150,6 +168,10 @@ class SemanticRestorationWorkflow:
 
         self._statistic()
 
+    def run_state(self, state: WorkflowState):
+        if state == WorkflowState.INIT:
+            self._execute_init(False)
+
     def _statistic(self):
         result = {
             "times": self.times,
@@ -178,12 +200,13 @@ class SemanticRestorationWorkflow:
         elif self.state == WorkflowState.EVALUATION:
             self._execute_evaluation()
 
-    def _execute_init(self):
+    def _execute_init(self,copy=True):
         """初始化工作流"""
         self.start_time = time.time()
         self.logger.info("Starting semantic restoration workflow")
-        # copy project to new directory as work directory
-        copy_directory(self.project_path, os.path.join(self.output_path, 'project'))
+        if copy:
+            # copy project to new directory as work directory
+            copy_directory(self.project_path, os.path.join(self.output_path, 'project'))
         self.state = WorkflowState.PROJECT_ANALYSIS
         self.copy_project_path = os.path.join(self.output_path, 'project')
         # 对原始项目首先进行一次编译和静态分析
@@ -230,6 +253,7 @@ class SemanticRestorationWorkflow:
         if return_code != 0:
             raise RuntimeError(f"Error while executing command: {command}")
         if "BUILD SUCCESS" not in stdout:
+            self.logger.error(f"{stdout}")
             raise RuntimeError(f"{stdout}")
         elapsed_time = time.time() - start_time
         self.times["compilation"] = self.times["compilation"] + elapsed_time
@@ -256,9 +280,10 @@ class SemanticRestorationWorkflow:
                 response = self.llm_client.generate_completion(prompt=json_pretty,
                                                                system_prompt=system_prompt_semantic_restoration)
                 self.last_llm_response = response
-                restoration = response['choices'][0]['message']['content']
+                restoration = strip_code_markers(response['choices'][0]['message']['content'])
                 modified = os.path.join(self.copy_project_path, file)
                 self.logger.info(f"write file: {modified}")
+
                 write_string_to_file(restoration, modified)
                 elapsed_time = time.time() - start_time
                 self.times["restoration"] = self.times["restoration"] + elapsed_time
@@ -311,6 +336,7 @@ class SemanticRestorationWorkflow:
         # python3 evaluate_flowdroid_optimized.py --input test_result_restore.json --output restore
         output_name = os.path.join(self.output_path, 'before' if before else 'restored')
         command = f"python3 {self.tool_path}/evaluate_flowdroid_optimized.py --input {self.detected_result_path} --output {output_name}"
+        self.logger.info(f"{command}")
         exit_code, stdout, stderr = execute_command(command, cwd=self.tool_path)
         self.logger.info(f"---- evaluation -----\n {stdout}")
         elapsed_time = time.time() - start_time
