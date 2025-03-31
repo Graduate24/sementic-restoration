@@ -1,0 +1,80 @@
+{
+  "evaluation_metrics": {
+    "total_matches": 39,
+    "tool_results_total": 45,
+    "true_positives": {
+      "total_actual": 31,
+      "tool_reported": 36,
+      "correct": 30,
+      "incorrect": 1,
+      "accuracy": 0.967741935483871
+    },
+    "false_positives": {
+      "total_actual": 8,
+      "tool_reported": 9,
+      "correct": 7,
+      "incorrect": 1,
+      "accuracy": 0.875
+    },
+    "confidence_levels": {
+      "high": 0,
+      "medium": 45,
+      "low": 0
+    },
+    "overall_accuracy": 0.9487179487179487
+  },
+  "summary": {
+    "total_matches": 39,
+    "tool_results_total": 45,
+    "overall_accuracy": "94.87%",
+    "true_positive_accuracy": "96.77%",
+    "false_positive_accuracy": "87.50%",
+    "false_positive_elimination_rate": "87.50%",
+    "false_negative_rate": "3.23%"
+  },
+  "confidence_distribution": {
+    "high": "0.00%",
+    "medium": "100.00%",
+    "low": "0.00%"
+  },
+  "detailed_counts": {
+    "correct_true_positives": 30,
+    "incorrect_true_positives": 1,
+    "correct_false_positives": 7,
+    "incorrect_false_positives": 1
+  },
+  "error_analysis": {
+    "false_positive_errors": [
+      {
+        "method": "CommandUtils.executeSafe",
+        "tool_result": "真实漏洞",
+        "ground_truth": "误报",
+        "confidence": 70,
+        "reason": "我无法给出最终判断，因为我缺少关键信息。我需要查看 `CommandUtils.executeSafe` 方法的源代码，这是判断是否存在真实漏洞的关键。\n\n从污点传播路径可以看出，用户输入通过 `RequestParam` 进入系统，然后传递给 `CommandUtils.executeSafe` 方法，最终在该方法内部的第46行调用了 `ProcessBuilder.command()`。但没有 `executeSafe` 方法的具体实现，我无法判断：\n\n1. 该方法是否对命令进行了有效的安全验证\n2. 是否有白名单检查\n3. 是否有其他安全机制防止命令注入\n\n如果您能提供 `CommandUtils.executeSafe` 方法的源码，我可以给出准确的判断。\n\n```json\n{\n  \"判断\": \"无法确定\",\n  \"原因\": \"缺少关键信息 - CommandUtils.executeSafe 方法的源码\",\n  \"需要信息\": \"CommandUtils.executeSafe 方法的具体实现代码\",\n  \"当前观察\": \"用户输入通过 RequestParam 传入，经过 "
+      },
+      {
+        "method": "SqlInjectionTestService.findUserByCredentialsUnsafe",
+        "tool_result": "误报",
+        "ground_truth": "真实漏洞",
+        "confidence": 70,
+        "reason": "我无法给出最终判断，因为我缺少关键信息。要确定这是真实漏洞还是误报，我需要查看污点传播路径中的关键方法实现，特别是：\n\n1. `SqlInjectionTestService.findUserByCredentialsUnsafe` - 了解服务层如何处理参数\n2. `UserSqlInjectionMapper.findUserByCredentialsUnsafe` - 了解MyBatis映射器如何构造SQL查询\n\n没有这些信息，我无法确定:\n- 用户输入是否经过验证或净化\n- SQL查询是如何构造的(是使用参数绑定还是字符串拼接)\n- 是否存在任何防御措施\n\n虽然控制器方法上的`@Vulnerability`注解暗示这是一个真实漏洞，但我需要查看实际代码实现才能做出专业判断。\n\n```json\n{\n  \"判断\": \"无法确定\",\n  \"原因\": \"缺少关键方法实现代码，无法完成分析\",\n  \"缺少信息\": [\n    \"SqlInjectionTestService.findUserByCredentialsUnsafe方法实现\",\n    \"UserSqlInjectionMa"
+      }
+    ],
+    "true_positive_errors": [
+      {
+        "method": "CommandUtils.executeSafe",
+        "tool_result": "真实漏洞",
+        "ground_truth": "误报",
+        "confidence": 70,
+        "reason": "我无法给出最终判断，因为我缺少关键信息。我需要查看 `CommandUtils.executeSafe` 方法的源代码，这是判断是否存在真实漏洞的关键。\n\n从污点传播路径可以看出，用户输入通过 `RequestParam` 进入系统，然后传递给 `CommandUtils.executeSafe` 方法，最终在该方法内部的第46行调用了 `ProcessBuilder.command()`。但没有 `executeSafe` 方法的具体实现，我无法判断：\n\n1. 该方法是否对命令进行了有效的安全验证\n2. 是否有白名单检查\n3. 是否有其他安全机制防止命令注入\n\n如果您能提供 `CommandUtils.executeSafe` 方法的源码，我可以给出准确的判断。\n\n```json\n{\n  \"判断\": \"无法确定\",\n  \"原因\": \"缺少关键信息 - CommandUtils.executeSafe 方法的源码\",\n  \"需要信息\": \"CommandUtils.executeSafe 方法的具体实现代码\",\n  \"当前观察\": \"用户输入通过 RequestParam 传入，经过 "
+      },
+      {
+        "method": "SqlInjectionTestService.findUserByCredentialsUnsafe",
+        "tool_result": "误报",
+        "ground_truth": "真实漏洞",
+        "confidence": 70,
+        "reason": "我无法给出最终判断，因为我缺少关键信息。要确定这是真实漏洞还是误报，我需要查看污点传播路径中的关键方法实现，特别是：\n\n1. `SqlInjectionTestService.findUserByCredentialsUnsafe` - 了解服务层如何处理参数\n2. `UserSqlInjectionMapper.findUserByCredentialsUnsafe` - 了解MyBatis映射器如何构造SQL查询\n\n没有这些信息，我无法确定:\n- 用户输入是否经过验证或净化\n- SQL查询是如何构造的(是使用参数绑定还是字符串拼接)\n- 是否存在任何防御措施\n\n虽然控制器方法上的`@Vulnerability`注解暗示这是一个真实漏洞，但我需要查看实际代码实现才能做出专业判断。\n\n```json\n{\n  \"判断\": \"无法确定\",\n  \"原因\": \"缺少关键方法实现代码，无法完成分析\",\n  \"缺少信息\": [\n    \"SqlInjectionTestService.findUserByCredentialsUnsafe方法实现\",\n    \"UserSqlInjectionMa"
+      }
+    ]
+  }
+}

@@ -1,0 +1,561 @@
+{
+  "times": {
+    "total": 0.0,
+    "analysis": 1180.7837295532227
+  },
+  "model": "claude-3-sonnet",
+  "results": {
+    "total": 45,
+    "true_positives": 36,
+    "false_positives": 9,
+    "uncertain": 0,
+    "high_confidence": 0,
+    "medium_confidence": 45,
+    "low_confidence": 0,
+    "details": [
+      {
+        "是否误报": true,
+        "置信度": 70,
+        "理由": "```json\n{\n  \"判断结果\": \"误报\",\n  \"理由\": [\n    \"该方法实现了完善的命令注入防御机制，包括命令白名单验证、参数危险字符过滤和安全的命令执行方式\",\n    \"命令白名单验证确保只有预定义的允许命令才能执行，通过allowedCommandPrefix配置控制\",\n    \"参数中的危险字符(;、&、|、`、\\\\、\\\"、'、$等)被明确过滤，防止命令链接或注入\",\n    \"使用ProcessBuilder的安全API方式传递命令和参数，而非字符串拼接，避免了命令注入的可能性\",\n    \"虽然污点确实从源点(@RequestParam)流向了汇点(ProcessBuilder.command())，但在此过程中经过了充分的验证和过滤，消除了安全风险\"\n  ],\n  \"代码安全特性\": [\n    \"命令白名单验证\",\n    \"参数危险字符过滤\",\n    \"命令与参数分离执行\",\n    \"多层防御机制\"\n  ],\n  \"建议\": [\n    \"确保allowedCommandPrefix配置严格限制，只包含必要的安全命令\",\n    \"考虑对参数实施",
+        "原始数据": {
+          "类名": "CommandInjectionController",
+          "方法名": "executeWithFullValidation07",
+          "行号": 322,
+          "源点": "org.springframework.web.bind.annotation.RequestParam",
+          "汇点": "<java.lang.ProcessBuilder: java.lang.ProcessBuilder command(java.lang.String[])>"
+        }
+      },
+      {
+        "是否误报": true,
+        "置信度": 70,
+        "理由": "```json\n{\n  \"漏洞判断\": \"误报\",\n  \"理由\": [\n    \"该代码使用了ProcessBuilder的安全构造方式，将命令('ls')和参数(fileName)作为单独的数组元素传入\",\n    \"这种实现方式下，用户输入的fileName被严格作为ls命令的参数处理，不会被解释为shell命令的一部分\",\n    \"即使fileName包含shell特殊字符(如;, |, &&等)，这些字符也只会被视为文件名的一部分，不会触发命令注入\",\n    \"ProcessBuilder的这种参数化方式不会启动shell解释器，因此避免了命令注入的风险\",\n    \"这是处理外部命令执行的推荐安全实践，符合OWASP等安全指南的建议\"\n  ],\n  \"代码特征\": {\n    \"安全实现模式\": \"命令参数分离模式\",\n    \"命令部分\": \"硬编码('ls')\",\n    \"参数部分\": \"用户输入(fileName)\",\n    \"执行方式\": \"ProcessBuilder参数化构造\"\n  },\n  \"静态分析局限性\": \"静态分析工具可能仅检测到数据从用户输入流",
+        "原始数据": {
+          "类名": "CommandInjectionController",
+          "方法名": "executeCommandSafe01",
+          "行号": 231,
+          "源点": "org.springframework.web.bind.annotation.RequestParam",
+          "汇点": "<java.lang.ProcessBuilder: void <init>(java.lang.String[])>"
+        }
+      },
+      {
+        "是否误报": false,
+        "置信度": 70,
+        "理由": "```json\n{\n  \"verdict\": \"真实漏洞\",\n  \"confidence\": \"高\",\n  \"vulnerability_type\": \"命令注入 (OS Command Injection)\",\n  \"cwe\": \"CWE-78\",\n  \"reasons\": [\n    \"用户输入参数(path)直接拼接到shell命令中，未经任何验证或过滤\",\n    \"污点数据从RequestParam直接流向Runtime.exec()危险函数\",\n    \"代码中没有实施任何输入验证、参数化或转义机制\",\n    \"攻击者可以通过特殊字符(如;、|、&&、$())注入额外命令\",\n    \"代码注释和@Vulnerability注解明确标识这是一个有意设计的漏洞示例\",\n    \"方法名和注释(不安全实现)表明这是一个不安全的实现\"\n  ],\n  \"impact\": \"高\",\n  \"exploit_scenario\": \"攻击者可以通过提供特殊构造的path参数(如';rm -rf /'或'|| cat /etc/passwd')执行任意系统命令\",\n  \"recommend",
+        "原始数据": {
+          "类名": "CommandInjectionController",
+          "方法名": "executeWithSystemProperty02",
+          "行号": 71,
+          "源点": "org.springframework.web.bind.annotation.RequestParam",
+          "汇点": "<java.lang.Runtime: java.lang.Process exec(java.lang.String)>"
+        }
+      },
+      {
+        "是否误报": true,
+        "置信度": 70,
+        "理由": "```json\n{\n  \"判断结果\": \"误报\",\n  \"理由\": [\n    \"代码实现了严格的命令白名单机制，只允许预定义的安全命令执行\",\n    \"参数部分经过正则表达式过滤，阻止了所有常见的命令注入特殊字符(;、&、|、`、\\\\、\\\"、'、$)\",\n    \"使用ProcessBuilder的数组形式构建命令，而非字符串拼接，避免了shell解释器注入\",\n    \"命令和参数分别传递给ProcessBuilder，确保参数不被解释为命令的一部分\",\n    \"完整的异常处理机制防止了错误信息泄露\"\n  ],\n  \"安全措施\": {\n    \"输入验证\": \"命令通过split分割为命令和参数两部分\",\n    \"白名单过滤\": \"验证命令是否在ALLOWED_COMMANDS预定义白名单中\",\n    \"危险字符过滤\": \"使用正则表达式过滤参数中的危险字符\",\n    \"安全API使用\": \"使用ProcessBuilder的安全方式构建命令\"\n  },\n  \"污点分析\": \"虽然用户输入确实流向了ProcessBuilder.command()方法，但在到达该方法前经过",
+        "原始数据": {
+          "类名": "CommandService",
+          "方法名": "executeCommandSafe",
+          "行号": 78,
+          "源点": "org.springframework.web.bind.annotation.RequestParam",
+          "汇点": "<java.lang.ProcessBuilder: java.lang.ProcessBuilder command(java.lang.String[])>"
+        }
+      },
+      {
+        "是否误报": false,
+        "置信度": 70,
+        "理由": "```json\n{\n  \"verdict\": \"真实漏洞\",\n  \"confidence\": \"高\",\n  \"vulnerability_type\": \"命令注入 (OS Command Injection)\",\n  \"cwe_id\": \"CWE-78\",\n  \"reasons\": [\n    \"用户输入通过@RequestParam直接获取，无任何验证或过滤\",\n    \"用户输入直接与命令字符串'ls '拼接，形成完整命令\",\n    \"拼接后的命令直接传递给Runtime.getRuntime().exec()执行\",\n    \"缺少任何形式的输入验证、净化或参数隔离\",\n    \"代码注释和@Vulnerability注解明确标识这是一个有意设计的漏洞示例\"\n  ],\n  \"exploit_scenario\": \"攻击者可以提供如'; rm -rf /'等输入，执行任意系统命令\",\n  \"impact\": \"攻击者可以在服务器上执行任意命令，可能导致数据泄露、系统损坏或完全接管服务器\",\n  \"remediation\": \"使用ProcessBuilder并单独指定每个参数，实",
+        "原始数据": {
+          "类名": "CommandInjectionController",
+          "方法名": "executeCommand01",
+          "行号": 53,
+          "源点": "org.springframework.web.bind.annotation.RequestParam",
+          "汇点": "<java.lang.Runtime: java.lang.Process exec(java.lang.String)>"
+        }
+      },
+      {
+        "是否误报": false,
+        "置信度": 70,
+        "理由": "```json\n{\n  \"漏洞判断\": \"真实漏洞\",\n  \"漏洞类型\": \"命令注入 (OS Command Injection)\",\n  \"CWE编号\": \"CWE-78\",\n  \"判断理由\": [\n    \"用户输入通过@RequestParam直接进入系统，无任何验证\",\n    \"污点数据从控制器方法直接传递到CommandUtils.executeUnsafe方法\",\n    \"executeUnsafe方法将未经处理的用户输入直接传递给Runtime.exec()执行\",\n    \"整个传播路径中没有任何输入验证、过滤或转义机制\",\n    \"方法名和注释明确表明这是不安全实现\",\n    \"代码中的@Vulnerability注解也确认这是一个已知漏洞\"\n  ],\n  \"漏洞严重性\": \"高\",\n  \"漏洞影响\": [\n    \"攻击者可执行任意系统命令\",\n    \"可能导致敏感信息泄露\",\n    \"可能导致系统被完全接管\"\n  ],\n  \"修复建议\": [\n    \"实现命令参数的白名单验证\",\n    \"使用参数化命令执行方式\",\n    \"限制命令执行权限\",",
+        "原始数据": {
+          "类名": "CommandUtils",
+          "方法名": "executeUnsafe",
+          "行号": 24,
+          "源点": "org.springframework.web.bind.annotation.RequestParam",
+          "汇点": "<java.lang.Runtime: java.lang.Process exec(java.lang.String)>"
+        }
+      },
+      {
+        "是否误报": false,
+        "置信度": 70,
+        "理由": "我无法给出最终判断，因为我缺少关键信息。我需要查看 `CommandUtils.executeSafe` 方法的源代码，这是判断是否存在真实漏洞的关键。\n\n从污点传播路径可以看出，用户输入通过 `RequestParam` 进入系统，然后传递给 `CommandUtils.executeSafe` 方法，最终在该方法内部的第46行调用了 `ProcessBuilder.command()`。但没有 `executeSafe` 方法的具体实现，我无法判断：\n\n1. 该方法是否对命令进行了有效的安全验证\n2. 是否有白名单检查\n3. 是否有其他安全机制防止命令注入\n\n如果您能提供 `CommandUtils.executeSafe` 方法的源码，我可以给出准确的判断。\n\n```json\n{\n  \"判断\": \"无法确定\",\n  \"原因\": \"缺少关键信息 - CommandUtils.executeSafe 方法的源码\",\n  \"需要信息\": \"CommandUtils.executeSafe 方法的具体实现代码\",\n  \"当前观察\": \"用户输入通过 RequestParam 传入，经过 ",
+        "原始数据": {
+          "类名": "CommandUtils",
+          "方法名": "executeSafe",
+          "行号": 46,
+          "源点": "org.springframework.web.bind.annotation.RequestParam",
+          "汇点": "<java.lang.ProcessBuilder: java.lang.ProcessBuilder command(java.lang.String[])>"
+        }
+      },
+      {
+        "是否误报": false,
+        "置信度": 70,
+        "理由": "```json\n{\n  \"verdict\": \"真实漏洞\",\n  \"confidence\": \"高\",\n  \"vulnerability_type\": \"命令注入\",\n  \"cwe\": \"CWE-78\",\n  \"reasons\": [\n    \"源点数据（用户输入的file参数）直接流向汇点（Runtime.exec()）\",\n    \"虽然使用了字符串数组形式调用Runtime.exec()，但第一个参数是'/bin/sh'，第二个参数是'-c'，这会导致shell解释执行第三个参数\",\n    \"第三个参数'cat ' + file中的用户输入未经任何验证、过滤或转义\",\n    \"攻击者可以通过输入包含shell特殊字符（如&&、;、|等）的参数执行任意命令\",\n    \"代码注释和@Vulnerability注解也明确标识这是一个真实漏洞\"\n  ],\n  \"impact\": \"高\",\n  \"exploit_scenario\": \"攻击者可以提供如'file.txt && rm -rf /'这样的输入，导致执行恶意命令\",\n  \"fix_recommendation\": \"避免使",
+        "原始数据": {
+          "类名": "CommandInjectionController",
+          "方法名": "executeArrayWithInjection03",
+          "行号": 90,
+          "源点": "org.springframework.web.bind.annotation.RequestParam",
+          "汇点": "<java.lang.Runtime: java.lang.Process exec(java.lang.String[])>"
+        }
+      },
+      {
+        "是否误报": false,
+        "置信度": 70,
+        "理由": "```json\n{\n  \"判断结果\": \"真实漏洞\",\n  \"漏洞类型\": \"命令注入 (CWE-78)\",\n  \"严重程度\": \"中等\",\n  \"理由\": [\n    \"用户输入(arg)直接与命令参数标志('-la')拼接: '-la ' + arg\",\n    \"拼接后的字符串作为单个参数传递给ProcessBuilder构造函数\",\n    \"缺少任何形式的输入验证、过滤或转义机制\",\n    \"攻击者可以通过分号、管道符、命令替换等方式注入额外命令\",\n    \"ProcessBuilder被错误使用 - 应将每个参数作为单独的字符串传递\"\n  ],\n  \"污点传播\": {\n    \"源点\": \"@RequestParam String arg (用户可控输入)\",\n    \"传播过程\": \"字符串拼接: '-la ' + arg\",\n    \"汇点\": \"new ProcessBuilder(\\\"ls\\\", \\\"-la \\\" + arg)\"\n  },\n  \"修复建议\": \"使用ProcessBuilder的正确用法，将每个参数作为单独的字符串传递: new ProcessB",
+        "原始数据": {
+          "类名": "CommandInjectionController",
+          "方法名": "executeWithProcessBuilder06",
+          "行号": 140,
+          "源点": "org.springframework.web.bind.annotation.RequestParam",
+          "汇点": "<java.lang.ProcessBuilder: void <init>(java.lang.String[])>"
+        }
+      },
+      {
+        "是否误报": true,
+        "置信度": 70,
+        "理由": "```json\n{\n  \"漏洞判断\": \"误报\",\n  \"理由\": [\n    \"该方法实现了严格的命令白名单验证机制，只允许预定义的安全命令执行\",\n    \"对命令参数进行了危险字符过滤，阻止了包含 ';', '&', '|', '`', '\\\\', '\\\"', '\\'', '$' 等可用于命令注入的字符\",\n    \"使用ProcessBuilder的安全方式执行命令，将命令和参数分别传入，避免了shell解释导致的注入风险\",\n    \"完整的防护链确保了即使用户提供恶意输入，也无法执行任意命令或注入额外命令\",\n    \"污点确实从用户输入流向了命令执行函数，但中间经过了充分的安全处理和验证\"\n  ],\n  \"安全措施\": [\n    \"命令白名单验证 (ALLOWED_COMMANDS.contains(parts[0]))\",\n    \"参数危险字符过滤 (!parts[1].matches(\\\".*[;&|`\\\\\\\\\\\\\\\"\\\\\\'$].*\\\"))\",\n    \"使用ProcessBuilder的安全API而非直接使用Runtime.exec(String)\",\n   ",
+        "原始数据": {
+          "类名": "CommandExecutionAspect",
+          "方法名": "executeCommandSafe",
+          "行号": 51,
+          "源点": "org.springframework.web.bind.annotation.RequestParam",
+          "汇点": "<java.lang.ProcessBuilder: java.lang.ProcessBuilder command(java.lang.String[])>"
+        }
+      },
+      {
+        "是否误报": true,
+        "置信度": 70,
+        "理由": "```json\n{\n  \"判断结果\": \"误报\",\n  \"漏洞类型\": \"命令注入\",\n  \"理由\": [\n    \"代码使用了Runtime.exec(String[])数组形式执行命令，而非字符串形式\",\n    \"数组形式的exec方法不会启动shell解释器，避免了命令注入的可能性\",\n    \"命令结构固定，第一个参数'cat'是硬编码的，用户无法修改执行的命令本身\",\n    \"用户输入仅作为cat命令的参数，即使包含特殊字符也会被视为文件名的一部分\",\n    \"即使用户输入包含shell命令分隔符(如分号、管道符)，也不会被解释为新命令\",\n    \"该实现遵循了命令执行的安全最佳实践，将命令和参数分开存储\"\n  ],\n  \"代码安全性\": \"安全\",\n  \"建议\": \"保持当前实现方式，继续使用数组形式的Runtime.exec方法执行命令\"\n}\n```",
+        "原始数据": {
+          "类名": "CommandInjectionController",
+          "方法名": "executeArraySafe03",
+          "行号": 259,
+          "源点": "org.springframework.web.bind.annotation.RequestParam",
+          "汇点": "<java.lang.Runtime: java.lang.Process exec(java.lang.String[])>"
+        }
+      },
+      {
+        "是否误报": false,
+        "置信度": 70,
+        "理由": "```json\n{\n  \"verdict\": \"真实漏洞\",\n  \"confidence\": \"高\",\n  \"vulnerability_type\": \"命令注入 (OS Command Injection)\",\n  \"cwe_id\": \"CWE-78\",\n  \"reasons\": [\n    \"用户输入(fileName)直接与命令字符串('cat ')拼接后传递给Runtime.exec()执行\",\n    \"没有实施任何输入验证、过滤或转义机制\",\n    \"攻击者可以通过分号、管道符等字符注入额外命令\",\n    \"污点传播路径清晰可见，从RequestParam参数直接流向Runtime.exec()危险函数\",\n    \"方法上的@Vulnerability注解也明确标识这是一个真实漏洞\"\n  ],\n  \"impact\": \"高 - 可能导致未授权的系统命令执行\",\n  \"exploit_scenario\": \"攻击者可提供'file.txt; rm -rf /'等输入执行恶意命令\",\n  \"remediation\": \"使用Java文件API代替命令行操作，或实施严格的输",
+        "原始数据": {
+          "类名": "CommandInjectionController",
+          "方法名": "fileOperationWithCommand10",
+          "行号": 219,
+          "源点": "org.springframework.web.bind.annotation.RequestParam",
+          "汇点": "<java.lang.Runtime: java.lang.Process exec(java.lang.String)>"
+        }
+      },
+      {
+        "是否误报": true,
+        "置信度": 70,
+        "理由": "```json\n{\n  \"漏洞判断\": \"误报\",\n  \"漏洞类型\": \"命令注入\",\n  \"理由\": [\n    \"代码对用户输入(filter参数)进行了严格的正则表达式验证，过滤了所有常见的命令注入字符(;, &, |, `, \\\\, \\\", ', $)\",\n    \"使用了ProcessBuilder的列表构造函数而非字符串拼接，这是防止命令注入的最佳实践\",\n    \"命令和参数被分别添加到列表中，确保了参数隔离\",\n    \"只有在验证通过后才会将用户输入添加到命令列表中\",\n    \"对目录参数也进行了验证，防止目录遍历攻击\"\n  ],\n  \"代码安全措施\": {\n    \"输入验证\": \"使用正则表达式 filter.matches(\\\".*[;&|`\\\\\\\\\\\\\\\"'$].*\\\") 过滤危险字符\",\n    \"安全API使用\": \"ProcessBuilder(List<String>)构造函数不会通过shell解释命令\",\n    \"参数隔离\": \"命令参数被单独添加到列表，而非字符串拼接\",\n    \"条件执行\": \"只有验证通过后才处理用户输入\",\n    \"目",
+        "原始数据": {
+          "类名": "CommandInjectionController",
+          "方法名": "executeWithProcessBuilderSafe06",
+          "行号": 297,
+          "源点": "org.springframework.web.bind.annotation.RequestParam",
+          "汇点": "<java.lang.ProcessBuilder: void <init>(java.util.List)>"
+        }
+      },
+      {
+        "是否误报": false,
+        "置信度": 70,
+        "理由": "根据已提供的信息，我可以进行初步分析，但由于缺少 `CommandService.executeCommandUnsafe()` 方法的具体实现，我的分析可能不完整。\n\n从污点传播路径和方法名称来看，这很可能是一个真实的命令注入漏洞，原因如下：\n\n1. 方法名 `executeCommandUnsafe` 暗示这是一个不安全的实现\n2. 控制器方法上的注解 `@Vulnerability` 明确标记了这是一个 OS 命令注入漏洞\n3. 污点传播路径显示用户输入直接流向 `Runtime.exec()` 方法\n4. 污点传播路径第3步显示用户输入被拼接到命令字符串中 (`\"\\u0001 -c \\\"\\u0001\\\"\"`)，这是典型的命令注入模式\n5. 注解中的描述明确指出\"在Service层实现命令验证逻辑\"，暗示当前实现缺乏验证\n\n```json\n{\n  \"漏洞判断\": \"真实漏洞\",\n  \"漏洞类型\": \"命令注入 (CWE-78)\",\n  \"严重程度\": \"高\",\n  \"理由\": [\n    \"用户输入通过@RequestParam直接传入控制器方法\",\n    \"输入未经任何验证就",
+        "原始数据": {
+          "类名": "CommandService",
+          "方法名": "executeCommandUnsafe",
+          "行号": 51,
+          "源点": "org.springframework.web.bind.annotation.RequestParam",
+          "汇点": "<java.lang.Runtime: java.lang.Process exec(java.lang.String)>"
+        }
+      },
+      {
+        "是否误报": true,
+        "置信度": 70,
+        "理由": "```json\n{\n  \"漏洞判断\": \"误报\",\n  \"漏洞类型\": \"命令注入\",\n  \"理由\": [\n    \"该方法实现了严格的白名单验证机制，只允许执行预定义的安全命令\",\n    \"用户输入必须与白名单中的命令完全匹配才能执行，使用了contains方法进行严格匹配\",\n    \"白名单包含的命令('ls -l', 'ls -la', 'echo hello', 'date')都是安全的基本命令\",\n    \"不匹配白名单的命令会被拒绝执行，返回'Command not allowed'\",\n    \"没有使用字符串拼接或其他可能绕过验证的操作\"\n  ],\n  \"代码安全措施\": {\n    \"输入验证\": \"白名单验证\",\n    \"执行条件\": \"严格匹配验证\",\n    \"拒绝策略\": \"不匹配则拒绝执行\"\n  },\n  \"误报原因\": \"静态分析工具可能只检测到从用户输入到命令执行的数据流，而没有正确识别或评估白名单验证的有效性\"\n}\n```",
+        "原始数据": {
+          "类名": "CommandInjectionController",
+          "方法名": "executeWithWhitelistSafe02",
+          "行号": 245,
+          "源点": "org.springframework.web.bind.annotation.RequestParam",
+          "汇点": "<java.lang.Runtime: java.lang.Process exec(java.lang.String)>"
+        }
+      },
+      {
+        "是否误报": false,
+        "置信度": 70,
+        "理由": "```json\n{\n  \"漏洞判断\": \"真实漏洞\",\n  \"漏洞类型\": \"命令注入 (OS Command Injection)\",\n  \"CWE编号\": \"CWE-78\",\n  \"风险等级\": \"高\",\n  \"判断理由\": [\n    \"用户输入(HTTP请求参数)直接传递到Runtime.exec()方法，没有任何验证或过滤\",\n    \"完整的污点传播路径清晰可见，从源点(@RequestParam)到汇点(Runtime.exec())\",\n    \"方法名'executeCommandUnsafe'明确表明这是不安全实现\",\n    \"代码中的@Vulnerability注解明确标识这是一个真实漏洞(isRealVulnerability = true)\",\n    \"没有实施任何安全控制措施来防止命令注入\"\n  ],\n  \"技术影响\": [\n    \"攻击者可执行任意系统命令\",\n    \"可能导致服务器完全被控制\",\n    \"可能泄露敏感信息\",\n    \"可能破坏系统完整性\"\n  ],\n  \"修复建议\": [\n    \"实现命令白名单验证\",\n    \"使用参数化",
+        "原始数据": {
+          "类名": "CommandExecutionAspect",
+          "方法名": "executeCommandUnsafe",
+          "行号": 29,
+          "源点": "org.springframework.web.bind.annotation.RequestParam",
+          "汇点": "<java.lang.Runtime: java.lang.Process exec(java.lang.String)>"
+        }
+      },
+      {
+        "是否误报": false,
+        "置信度": 70,
+        "理由": "```json\n{\n  \"verdict\": \"真实漏洞\",\n  \"confidence\": \"高\",\n  \"reasoning\": {\n    \"漏洞类型\": \"命令注入 (CWE-78)\",\n    \"关键发现\": [\n      \"用户输入直接拼接到命令字符串中，没有任何验证或过滤\",\n      \"命令通过/bin/sh -c执行，使shell解释特殊字符\",\n      \"两个参数(dir和filter)都可被攻击者控制\",\n      \"使用&&连接符，为攻击者提供了注入额外命令的机会\"\n    ],\n    \"数据流分析\": {\n      \"源点\": \"两个@RequestParam注解的参数(dir和filter)\",\n      \"传播\": \"通过字符串拼接(\\\"cd \\\" + dir + \\\" && ls \\\" + filter)传递到命令构造\",\n      \"汇点\": \"Runtime.getRuntime().exec()方法执行命令\",\n      \"缺少保护措施\": \"没有输入验证、参数转义或安全API使用\"\n    },\n    \"攻击可行性\": \"攻",
+        "原始数据": {
+          "类名": "CommandInjectionController",
+          "方法名": "executeWithMultipleParams09",
+          "行号": 201,
+          "源点": "org.springframework.web.bind.annotation.RequestParam",
+          "汇点": "<java.lang.Runtime: java.lang.Process exec(java.lang.String[])>"
+        }
+      },
+      {
+        "是否误报": false,
+        "置信度": 70,
+        "理由": "```json\n{\n  \"漏洞判断\": \"真实漏洞\",\n  \"漏洞类型\": \"命令注入 (OS Command Injection)\",\n  \"CWE编号\": \"CWE-78\",\n  \"严重程度\": \"高\",\n  \"理由\": [\n    \"用户输入(command参数)直接传递给Runtime.exec()方法执行，构成了明确的命令注入路径\",\n    \"虽然实现了前缀验证机制，但这种验证不足以防止命令注入，因为它只检查命令的第一部分\",\n    \"攻击者可以使用命令连接符(如&&, ;, |)在允许的前缀后注入恶意命令\",\n    \"代码注释和@Vulnerability注解明确指出这是一个有意设计的漏洞示例\",\n    \"没有对用户输入进行充分的转义或参数化处理\"\n  ],\n  \"攻击示例\": [\n    \"如果'ls'是允许的前缀，攻击者可以发送: ls && rm -rf /important_files\",\n    \"如果'cat'是允许的前缀，攻击者可以发送: cat /etc/passwd; wget malicious-script.sh\"\n  ],\n  \"修复建议\":",
+        "原始数据": {
+          "类名": "CommandInjectionController",
+          "方法名": "executeWithConfigPrefix07",
+          "行号": 163,
+          "源点": "org.springframework.web.bind.annotation.RequestParam",
+          "汇点": "<java.lang.Runtime: java.lang.Process exec(java.lang.String)>"
+        }
+      },
+      {
+        "是否误报": false,
+        "置信度": 70,
+        "理由": "```json\n{\n  \"verdict\": \"真实漏洞\",\n  \"confidence\": \"高\",\n  \"vulnerability_type\": \"路径遍历漏洞 (CWE-22)\",\n  \"reasons\": [\n    \"源点数据(用户输入的filename参数)直接流向汇点(File构造函数)，没有任何验证或过滤\",\n    \"路径构造使用简单字符串拼接：(baseDir + \\\"/\\\") + filename，允许攻击者使用../序列进行目录遍历\",\n    \"缺少路径规范化处理，没有使用getCanonicalPath()验证最终路径\",\n    \"没有验证最终路径是否仍在允许的目录范围内\",\n    \"代码注释明确标识这是'不安全：直接拼接路径'的实现\",\n    \"方法上的@Vulnerability注解明确将其标记为真实漏洞\"\n  ],\n  \"impact\": \"攻击者可以读取服务器上的任意文件，包括敏感配置文件、密码文件等\",\n  \"exploit_scenario\": \"攻击者可以提供filename=../../../etc/passwd等值来访问系统敏感文件",
+        "原始数据": {
+          "类名": "PathTraversalController",
+          "方法名": "getFile01",
+          "行号": 68,
+          "源点": "org.springframework.web.bind.annotation.RequestParam",
+          "汇点": "<java.io.File: void <init>(java.lang.String)>"
+        }
+      },
+      {
+        "是否误报": false,
+        "置信度": 70,
+        "理由": "```json\n{\n  \"漏洞判断\": \"真实漏洞\",\n  \"漏洞类型\": \"路径遍历/文件注入漏洞 (CWE-22)\",\n  \"严重程度\": \"高\",\n  \"判断理由\": [\n    \"用户输入的filePath参数通过@RequestParam直接从控制器传递到服务层，没有任何验证或过滤\",\n    \"PathTraversalService.readFileUnsafe方法中直接将用户输入与baseDir结合创建File对象\",\n    \"没有任何机制防止路径遍历攻击（如检测和过滤'../'序列）\",\n    \"没有对最终访问的文件路径进行规范化和验证，允许访问预期目录之外的文件\",\n    \"方法名和注释明确表明这是不安全实现，代码注释也指出'不安全：直接使用用户提供的路径'\",\n    \"控制器方法上的@Vulnerability注解明确标记这是一个真实的路径遍历漏洞\"\n  ],\n  \"漏洞利用\": \"攻击者可以通过提供包含'../'的路径参数访问服务器上的任意文件，包括敏感系统文件\",\n  \"修复建议\": [\n    \"实现严格的路径验证，拒绝包含路径遍历序列的输入\",\n ",
+        "原始数据": {
+          "类名": "PathTraversalService",
+          "方法名": "readFileUnsafe",
+          "行号": 36,
+          "源点": "org.springframework.web.bind.annotation.RequestParam",
+          "汇点": "<java.io.FileReader: void <init>(java.io.File)>"
+        }
+      },
+      {
+        "是否误报": false,
+        "置信度": 70,
+        "理由": "```json\n{\n  \"verdict\": \"真实漏洞\",\n  \"vulnerability_type\": \"路径遍历/目录遍历 (Path Traversal)\",\n  \"cwe_id\": \"CWE-22\",\n  \"severity\": \"高\",\n  \"confidence\": \"高\",\n  \"reasons\": [\n    \"用户输入(imageName)直接拼接到文件路径中，没有任何验证或过滤\",\n    \"污点数据从@RequestParam注解的参数流向File构造函数，中间没有任何安全处理\",\n    \"代码注释明确标识这是'不安全实现'\",\n    \"方法上的@Vulnerability注解确认这是一个已知的路径遍历漏洞\",\n    \"没有实施任何防御措施如输入验证、路径规范化检查或访问控制\"\n  ],\n  \"attack_vectors\": [\n    \"攻击者可以提供'../../../etc/passwd'等路径遍历序列作为imageName参数\",\n    \"可以使用URL编码形式如'..%2f..%2f..%2fetc%2fpasswd'绕过简单过滤\"\n  ]",
+        "原始数据": {
+          "类名": "PathTraversalController",
+          "方法名": "getImage02",
+          "行号": 88,
+          "源点": "org.springframework.web.bind.annotation.RequestParam",
+          "汇点": "<java.io.File: void <init>(java.lang.String)>"
+        }
+      },
+      {
+        "是否误报": false,
+        "置信度": 70,
+        "理由": "```json\n{\n  \"verdict\": \"真实漏洞\",\n  \"vulnerability_type\": \"路径遍历/目录遍历 (Path Traversal)\",\n  \"cwe\": \"CWE-22\",\n  \"severity\": \"中等\",\n  \"confidence\": \"高\",\n  \"reasons\": [\n    \"用户输入(propFile)直接与固定路径('./config/')拼接后用于创建File对象，没有任何验证或过滤\",\n    \"攻击者可以使用'../'序列访问预期目录之外的任意文件\",\n    \"没有实现路径规范化或字符过滤机制\",\n    \"方法注解中明确标记了这是一个真实漏洞(@Vulnerability中isRealVulnerability = true)\",\n    \"污点数据从源点(@RequestParam)直接流向汇点(new File())，没有任何安全控制\"\n  ],\n  \"exploit_example\": \"propFile=../../../etc/passwd 将构造路径 ./config/../../../etc/passwd，",
+        "原始数据": {
+          "类名": "PathTraversalController",
+          "方法名": "readProperties09",
+          "行号": 221,
+          "源点": "org.springframework.web.bind.annotation.RequestParam",
+          "汇点": "<java.io.File: void <init>(java.lang.String)>"
+        }
+      },
+      {
+        "是否误报": false,
+        "置信度": 70,
+        "理由": "```json\n{\n  \"漏洞判断\": \"真实漏洞\",\n  \"漏洞类型\": \"路径遍历/文件注入漏洞 (CWE-22)\",\n  \"置信度\": \"高\",\n  \"理由\": [\n    \"用户输入(filePath)未经任何验证直接与基础目录拼接后传递给FileInputStream\",\n    \"缺少路径规范化处理，攻击者可以使用'../'序列访问预期目录之外的文件\",\n    \"没有实施任何输入验证、过滤或白名单机制\",\n    \"代码注释和@Vulnerability注解明确表明这是一个有意设计的不安全实现\",\n    \"污点传播路径清晰可见，从用户输入直接流向文件系统操作\"\n  ],\n  \"攻击向量\": \"攻击者可以提供包含路径遍历序列的filePath参数(如'../../../etc/passwd')来读取系统敏感文件\",\n  \"影响\": \"未授权访问系统文件，可能导致敏感信息泄露\",\n  \"修复建议\": [\n    \"使用java.nio.file.Path API进行路径规范化和验证\",\n    \"实施路径约束检查，确保最终路径不超出预期目录\",\n    \"对文件路径参数实施",
+        "原始数据": {
+          "类名": "PathTraversalController",
+          "方法名": "readFileContent04",
+          "行号": 127,
+          "源点": "org.springframework.web.bind.annotation.RequestParam",
+          "汇点": "<java.io.FileInputStream: void <init>(java.lang.String)>"
+        }
+      },
+      {
+        "是否误报": false,
+        "置信度": 70,
+        "理由": "```json\n{\n  \"漏洞判断\": \"真实漏洞\",\n  \"漏洞类型\": \"路径遍历/文件注入\",\n  \"CWE\": 22,\n  \"严重程度\": \"高\",\n  \"理由\": [\n    \"用户输入通过@RequestParam直接获取，没有任何验证或过滤\",\n    \"用户输入直接与基础路径拼接：(baseDir + \\\"/logs/\\\") + logFile\",\n    \"拼接后的路径传递给FileAccessAspect.accessLogFile()方法\",\n    \"在FileAccessAspect中，路径被直接用于创建File对象，没有任何安全检查\",\n    \"代码注释中明确标识这是一个漏洞：@Vulnerability(cwe = 22, isRealVulnerability = true)\",\n    \"攻击者可以使用'../../../'等路径遍历序列访问系统上的任意文件\"\n  ],\n  \"修复建议\": [\n    \"在AOP切面中实现路径验证逻辑\",\n    \"使用规范化路径并验证结果路径是否在预期目录内\",\n    \"实施文件名白名单验证\",\n    \"应用最",
+        "原始数据": {
+          "类名": "FileAccessAspect",
+          "方法名": "accessLogFile",
+          "行号": 36,
+          "源点": "org.springframework.web.bind.annotation.RequestParam",
+          "汇点": "<java.io.File: void <init>(java.lang.String)>"
+        }
+      },
+      {
+        "是否误报": true,
+        "置信度": 70,
+        "理由": "```json\n{\n  \"漏洞判断\": \"误报\",\n  \"漏洞类型\": \"命令注入\",\n  \"理由\": [\n    \"代码对用户输入(filter参数)进行了严格的正则表达式验证，过滤了所有常见的命令注入字符(;, &, |, `, \\\\, \\\", ', $)\",\n    \"使用了ProcessBuilder的列表构造函数而非字符串拼接，这是防止命令注入的最佳实践\",\n    \"命令和参数被分别添加到列表中，确保了参数隔离\",\n    \"只有在验证通过后才会将用户输入添加到命令列表中\",\n    \"对目录参数也进行了验证，防止目录遍历攻击\"\n  ],\n  \"代码安全措施\": {\n    \"输入验证\": \"使用正则表达式 filter.matches(\\\".*[;&|`\\\\\\\\\\\\\\\"'$].*\\\") 过滤危险字符\",\n    \"安全API使用\": \"ProcessBuilder(List<String>)构造函数不会通过shell解释命令\",\n    \"参数隔离\": \"命令参数被单独添加到列表，而非字符串拼接\",\n    \"条件执行\": \"只有验证通过后才处理用户输入\",\n    \"目",
+        "原始数据": {
+          "类名": "CommandInjectionController",
+          "方法名": "executeWithProcessBuilderSafe06",
+          "行号": 297,
+          "源点": "org.springframework.web.bind.annotation.RequestParam",
+          "汇点": "<java.lang.ProcessBuilder: void <init>(java.util.List)>"
+        }
+      },
+      {
+        "是否误报": false,
+        "置信度": 70,
+        "理由": "```json\n{\n  \"verdict\": \"真实漏洞\",\n  \"vulnerability_type\": \"路径遍历/文件注入\",\n  \"confidence\": \"高\",\n  \"reasoning\": [\n    \"用户输入(template参数)直接从控制器传递到服务层，没有任何验证或过滤\",\n    \"在TemplateService.getTemplateUnsafe方法中，用户输入直接用于构造File对象: new File(templateDir, templateName)\",\n    \"没有实施任何路径验证、规范化或白名单检查机制\",\n    \"方法和类的注释明确表明这是不安全实现，代码注释也指出'不安全：直接拼接模板路径而不验证'\",\n    \"控制器方法上的@Vulnerability注解明确标记了这是一个CWE-22(路径遍历)漏洞\",\n    \"攻击者可以提供包含'../'等路径遍历序列的输入，访问服务器上的任意文件\"\n  ],\n  \"impact\": \"高\",\n  \"exploitation_complexity\": \"低\",\n  \"recommended",
+        "原始数据": {
+          "类名": "TemplateService",
+          "方法名": "getTemplateUnsafe",
+          "行号": 36,
+          "源点": "org.springframework.web.bind.annotation.RequestParam",
+          "汇点": "<java.io.File: void <init>(java.lang.String,java.lang.String)>"
+        }
+      },
+      {
+        "是否误报": false,
+        "置信度": 70,
+        "理由": "```json\n{\n  \"漏洞判断\": \"真实漏洞\",\n  \"漏洞类型\": \"路径遍历/文件注入漏洞 (CWE-22)\",\n  \"置信度\": \"高\",\n  \"理由\": [\n    \"源点数据(@RequestParam String configFile)直接来自用户输入，没有任何验证或过滤\",\n    \"污点数据通过字符串拼接(baseDir + \\\"/config/\\\") + configFile)直接影响文件路径\",\n    \"汇点(new FileInputStream)使用受污染的路径打开文件，没有任何安全检查\",\n    \"代码注释明确标识这是不安全实现：\\\"不安全：未过滤../等字符\\\"\",\n    \"@Vulnerability注解明确指出这是一个真实漏洞(isRealVulnerability = true)\",\n    \"没有任何防止路径遍历的安全机制，如路径规范化、目录限制或特殊字符过滤\"\n  ],\n  \"影响\": [\n    \"攻击者可以通过提供包含\\\"../\\\"的参数访问服务器上的任意文件\",\n    \"可能导致敏感信息泄露\",\n    \"可能导致系统配置信息",
+        "原始数据": {
+          "类名": "PathTraversalController",
+          "方法名": "getConfigFile08",
+          "行号": 201,
+          "源点": "org.springframework.web.bind.annotation.RequestParam",
+          "汇点": "<java.io.FileInputStream: void <init>(java.lang.String)>"
+        }
+      },
+      {
+        "是否误报": false,
+        "置信度": 70,
+        "理由": "```json\n{\n  \"verdict\": \"真实漏洞\",\n  \"confidence\": \"高\",\n  \"vulnerability_type\": \"路径遍历/文件注入\",\n  \"cwe\": \"CWE-22\",\n  \"reasons\": [\n    \"源点数据(@RequestParam String xmlFile)直接流向汇点(new File构造函数)，无任何验证\",\n    \"文件路径构造使用简单字符串拼接((baseDir + \\\"/config/\\\") + xmlFile)，允许攻击者使用../序列跳出预期目录\",\n    \"没有实现任何路径规范化、验证或过滤机制\",\n    \"方法注释中明确标记为真实漏洞(@Vulnerability注解中isRealVulnerability = true)\",\n    \"污点传播路径完整且清晰，从用户输入到文件系统操作\"\n  ],\n  \"impact\": \"攻击者可以读取服务器上任意可访问的文件，包括敏感配置文件和系统文件\",\n  \"remediation\": \"对文件路径进行严格验证，使用Path.normalize()规范化路",
+        "原始数据": {
+          "类名": "PathTraversalController",
+          "方法名": "getXmlFile06",
+          "行号": 166,
+          "源点": "org.springframework.web.bind.annotation.RequestParam",
+          "汇点": "<java.io.File: void <init>(java.lang.String)>"
+        }
+      },
+      {
+        "是否误报": false,
+        "置信度": 70,
+        "理由": "```json\n{\n  \"漏洞判断\": \"真实漏洞\",\n  \"漏洞类型\": \"路径遍历/目录遍历 (Path Traversal/Directory Traversal)\",\n  \"CWE编号\": \"CWE-22\",\n  \"严重程度\": \"高\",\n  \"判断理由\": [\n    \"源点数据(@RequestParam String filePath)直接流向汇点(new File(baseDir, filePath))，无任何验证或过滤\",\n    \"方法完全没有实现任何路径验证、规范化或安全检查机制\",\n    \"攻击者可以使用'../'序列访问服务器上任意文件，包括敏感系统文件\",\n    \"代码注释明确指出'不安全：直接使用用户输入构造File对象'\",\n    \"方法上的@Vulnerability注解明确标识这是一个有意设计的真实漏洞(isRealVulnerability = true)\"\n  ],\n  \"修复建议\": [\n    \"使用Path.normalize()规范化用户输入的路径\",\n    \"使用Path.startsWith()验证最终路径是否在允许的目录范围",
+        "原始数据": {
+          "类名": "PathTraversalController",
+          "方法名": "downloadFile03",
+          "行号": 107,
+          "源点": "org.springframework.web.bind.annotation.RequestParam",
+          "汇点": "<java.io.File: void <init>(java.lang.String,java.lang.String)>"
+        }
+      },
+      {
+        "是否误报": false,
+        "置信度": 70,
+        "理由": "```json\n{\n  \"漏洞判断\": \"真实漏洞\",\n  \"漏洞类型\": \"SQL注入\",\n  \"严重程度\": \"高\",\n  \"理由\": [\n    \"污点源是用户可控的HTTP请求参数(@RequestParam String email)\",\n    \"污点未经任何验证或净化直接传递到SQL查询中\",\n    \"MyBatis Mapper使用了${email}语法进行字符串拼接而非#{email}参数绑定\",\n    \"最终生成的SQL语句形如\\\"SELECT * FROM users WHERE email = '[用户输入]'\\\"\",\n    \"攻击者可以注入恶意SQL代码如' OR '1'='1来绕过认证或执行其他恶意操作\",\n    \"整个调用链中没有任何输入验证、净化或参数化查询措施\"\n  ],\n  \"漏洞位置\": \"edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper.findUserByEmailUnsafe方法\",\n  \"漏洞代码\": \"@Select(\\\"SELECT * FROM users WH",
+        "原始数据": {
+          "类名": "SqlInjectionTestService",
+          "方法名": "findUserByEmailUnsafe",
+          "行号": 107,
+          "源点": "org.springframework.web.bind.annotation.RequestParam",
+          "汇点": "<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: edu.thu.benchmark.annotated.entity.User findUserByEmailUnsafe(java.lang.String)>"
+        }
+      },
+      {
+        "是否误报": false,
+        "置信度": 70,
+        "理由": "由于我没有收到 `SqlInjectionTestService.findUsersByTemplateUnsafe()` 方法的具体实现代码，我只能基于已有信息进行分析：\n\n```json\n{\n  \"判断\": \"可能是真实漏洞\",\n  \"置信度\": \"中等\",\n  \"理由\": [\n    \"从方法名 'findUsersByTemplateUnsafe' 暗示这是一个不安全的实现\",\n    \"污点传播路径显示用户输入从 RequestParam 直接传递到 JdbcTemplate.queryForList() 方法\",\n    \"Jimple语句显示使用了 String.format() 进行字符串拼接，这是常见的SQL注入漏洞成因\",\n    \"控制器方法上的 @Vulnerability 注解明确标记这是一个SQL注入漏洞\",\n    \"注解中的描述指出'使用来自配置文件的SQL模板和String.format()进行字符串拼接，允许SQL注入'\",\n    \"注解建议的修复方法是'使用PreparedStatement和参数绑定代替String.format()'\",\n  ",
+        "原始数据": {
+          "类名": "SqlInjectionTestService",
+          "方法名": "findUsersByTemplateUnsafe",
+          "行号": 155,
+          "源点": "org.springframework.web.bind.annotation.RequestParam",
+          "汇点": "<org.springframework.jdbc.core.JdbcTemplate: java.util.List queryForList(java.lang.String)>"
+        }
+      },
+      {
+        "是否误报": false,
+        "置信度": 70,
+        "理由": "根据目前提供的信息，我无法做出完整的判断，因为缺少关键代码实现。但基于已有信息，我可以给出初步分析：\n\n```json\n{\n  \"判断\": \"可能是真实漏洞\",\n  \"置信度\": \"中等\",\n  \"理由\": [\n    \"控制器方法testCase03直接将用户输入的idList参数传递给服务层方法findUsersInListUnsafe\",\n    \"方法名称'Unsafe'暗示实现可能不安全\",\n    \"注解@Vulnerability明确标记这是一个SQL注入漏洞，描述为'在IN子句中使用${idList}进行字符串拼接，允许任意SQL注入'\",\n    \"污点传播路径显示用户输入未经处理就传递到了SQL查询执行点\"\n  ],\n  \"缺失信息\": [\n    \"SqlInjectionTestService.findUsersInListUnsafe方法的具体实现\",\n    \"UserSqlInjectionMapper.findUsersInListUnsafe方法或相关MyBatis XML映射文件\",\n    \"是否存在任何数据验证、过滤或转义机制\"\n  ],\n  \"",
+        "原始数据": {
+          "类名": "SqlInjectionTestService",
+          "方法名": "findUsersInListUnsafe",
+          "行号": 57,
+          "源点": "org.springframework.web.bind.annotation.RequestParam",
+          "汇点": "<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: java.util.List findUsersInListUnsafe(java.lang.String)>"
+        }
+      },
+      {
+        "是否误报": false,
+        "置信度": 70,
+        "理由": "```json\n{\n  \"漏洞判断\": \"真实漏洞\",\n  \"漏洞类型\": \"SQL注入\",\n  \"严重程度\": \"中等\",\n  \"判断理由\": [\n    \"控制器方法直接接收未验证的String类型参数作为SQL的LIMIT和OFFSET值\",\n    \"从注解描述可知，MyBatis XML中使用了${limit}和${offset}进行字符串拼接而非参数绑定\",\n    \"整个调用链中没有对输入参数进行任何验证、过滤或转义处理\",\n    \"方法注解明确标识这是一个真实漏洞(isRealVulnerability = true)\",\n    \"污点数据从HTTP请求参数直接传递到SQL查询执行点，没有任何安全处理\"\n  ],\n  \"漏洞利用可能\": \"攻击者可通过提供恶意的limit或offset参数执行任意SQL命令\",\n  \"修复建议\": [\n    \"使用MyBatis的#{limit}和#{offset}参数绑定语法代替${limit}和${offset}\",\n    \"将参数类型从String改为Integer，自动过滤非数字输入\",\n    \"在控制器层添加输入验证",
+        "原始数据": {
+          "类名": "SqlInjectionTestService",
+          "方法名": "findUsersWithLimitUnsafe",
+          "行号": 77,
+          "源点": "org.springframework.web.bind.annotation.RequestParam",
+          "汇点": "<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: java.util.List findUsersWithLimitUnsafe(java.lang.String,java.lang.String)>"
+        }
+      },
+      {
+        "是否误报": true,
+        "置信度": 70,
+        "理由": "我无法给出最终判断，因为我缺少关键信息。要确定这是真实漏洞还是误报，我需要查看污点传播路径中的关键方法实现，特别是：\n\n1. `SqlInjectionTestService.findUserByCredentialsUnsafe` - 了解服务层如何处理参数\n2. `UserSqlInjectionMapper.findUserByCredentialsUnsafe` - 了解MyBatis映射器如何构造SQL查询\n\n没有这些信息，我无法确定:\n- 用户输入是否经过验证或净化\n- SQL查询是如何构造的(是使用参数绑定还是字符串拼接)\n- 是否存在任何防御措施\n\n虽然控制器方法上的`@Vulnerability`注解暗示这是一个真实漏洞，但我需要查看实际代码实现才能做出专业判断。\n\n```json\n{\n  \"判断\": \"无法确定\",\n  \"原因\": \"缺少关键方法实现代码，无法完成分析\",\n  \"缺少信息\": [\n    \"SqlInjectionTestService.findUserByCredentialsUnsafe方法实现\",\n    \"UserSqlInjectionMa",
+        "原始数据": {
+          "类名": "SqlInjectionTestService",
+          "方法名": "findUserByCredentialsUnsafe",
+          "行号": 117,
+          "源点": "org.springframework.web.bind.annotation.RequestParam",
+          "汇点": "<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: edu.thu.benchmark.annotated.entity.User findUserByCredentialsUnsafe(java.lang.String,java.lang.String)>"
+        }
+      },
+      {
+        "是否误报": false,
+        "置信度": 70,
+        "理由": "```json\n{\n  \"判断结果\": \"真实漏洞\",\n  \"漏洞类型\": \"SQL注入 (CWE-89)\",\n  \"漏洞严重性\": \"高\",\n  \"理由\": [\n    \"用户输入通过@RequestParam直接获取并未经任何验证或过滤\",\n    \"在控制器层使用字符串拼接构造SQL条件: String condition = ((('id = ' + id) + ' OR username = '') + username) + '''\",\n    \"在服务层再次使用字符串拼接构造完整SQL: String sql = 'SELECT * FROM users WHERE ' + condition\",\n    \"拼接后的SQL直接传递给jdbcTemplate.queryForList(sql)执行\",\n    \"整个过程中没有使用参数化查询、没有进行输入验证、没有对特殊字符进行转义\",\n    \"代码注解@Vulnerability明确标识这是一个已知的SQL注入漏洞(isRealVulnerability = true)\"\n  ],\n  \"攻击示例\": [\n    \"输入",
+        "原始数据": {
+          "类名": "SqlInjectionTestService",
+          "方法名": "findUsersByJdbcUnsafe",
+          "行号": 143,
+          "源点": "org.springframework.web.bind.annotation.RequestParam",
+          "汇点": "<org.springframework.jdbc.core.JdbcTemplate: java.util.List queryForList(java.lang.String)>"
+        }
+      },
+      {
+        "是否误报": false,
+        "置信度": 70,
+        "理由": "```json\n{\n  \"判断结果\": \"真实漏洞\",\n  \"漏洞类型\": \"SQL注入 (CWE-89)\",\n  \"漏洞严重性\": \"高\",\n  \"理由\": [\n    \"用户输入通过@RequestParam直接获取并未经任何验证或过滤\",\n    \"在控制器层使用字符串拼接构造SQL条件: String condition = ((('id = ' + id) + ' OR username = '') + username) + '''\",\n    \"在服务层再次使用字符串拼接构造完整SQL: String sql = 'SELECT * FROM users WHERE ' + condition\",\n    \"拼接后的SQL直接传递给jdbcTemplate.queryForList(sql)执行\",\n    \"整个过程中没有使用参数化查询、没有进行输入验证、没有对特殊字符进行转义\",\n    \"代码注解@Vulnerability明确标识这是一个已知的SQL注入漏洞(isRealVulnerability = true)\"\n  ],\n  \"攻击示例\": [\n    \"输入",
+        "原始数据": {
+          "类名": "SqlInjectionTestService",
+          "方法名": "findUsersByJdbcUnsafe",
+          "行号": 143,
+          "源点": "org.springframework.web.bind.annotation.RequestParam",
+          "汇点": "<org.springframework.jdbc.core.JdbcTemplate: java.util.List queryForList(java.lang.String)>"
+        }
+      },
+      {
+        "是否误报": false,
+        "置信度": 70,
+        "理由": "```json\n{\n  \"判断结果\": \"真实漏洞\",\n  \"漏洞类型\": \"SQL注入 (CWE-89)\",\n  \"漏洞严重性\": \"高\",\n  \"理由\": [\n    \"用户输入通过@RequestParam直接获取并未经任何验证或过滤\",\n    \"在控制器层使用字符串拼接构造SQL条件: String condition = ((('id = ' + id) + ' OR username = '') + username) + '''\",\n    \"在服务层再次使用字符串拼接构造完整SQL: String sql = 'SELECT * FROM users WHERE ' + condition\",\n    \"拼接后的SQL直接传递给jdbcTemplate.queryForList(sql)执行\",\n    \"整个过程中没有使用参数化查询、没有进行输入验证、没有对特殊字符进行转义\",\n    \"代码注解@Vulnerability明确标识这是一个已知的SQL注入漏洞(isRealVulnerability = true)\"\n  ],\n  \"攻击示例\": [\n    \"输入",
+        "原始数据": {
+          "类名": "SqlInjectionTestService",
+          "方法名": "findUsersByJdbcUnsafe",
+          "行号": 143,
+          "源点": "org.springframework.web.bind.annotation.RequestParam",
+          "汇点": "<org.springframework.jdbc.core.JdbcTemplate: java.util.List queryForList(java.lang.String)>"
+        }
+      },
+      {
+        "是否误报": false,
+        "置信度": 70,
+        "理由": "基于已提供的信息，我无法做出完整的分析和最终判断。我需要查看`SqlInjectionTestService.findUsersSortedUnsafe`方法和`UserSqlInjectionMapper.findUsersSortedUnsafe`方法的实现或相关MyBatis XML映射文件，以确定参数如何被处理并最终构造SQL语句。\n\n然而，从已有信息中可以观察到一些线索：\n\n1. 控制器方法上有`@Vulnerability`注解，明确标记这是一个SQL注入漏洞\n2. 注解描述提到\"在ORDER BY子句中使用${sortField}进行字符串拼接\"\n3. 方法名称包含\"Unsafe\"字样\n\n这些线索暗示可能存在真实漏洞，但没有完整代码无法确认。\n\n```json\n{\n  \"判断\": \"无法确定\",\n  \"理由\": \"缺少关键方法实现代码，无法完成分析。需要查看SqlInjectionTestService.findUsersSortedUnsafe方法和UserSqlInjectionMapper.findUsersSortedUnsafe方法的实现或相关MyBatis X",
+        "原始数据": {
+          "类名": "SqlInjectionTestService",
+          "方法名": "findUsersSortedUnsafe",
+          "行号": 47,
+          "源点": "org.springframework.web.bind.annotation.RequestParam",
+          "汇点": "<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: java.util.List findUsersSortedUnsafe(java.lang.String)>"
+        }
+      },
+      {
+        "是否误报": false,
+        "置信度": 70,
+        "理由": "我无法给出完整的分析，因为我缺少关键信息，特别是：\n\n1. `SqlInjectionTestService.updateUserDynamicUnsafe` 方法的实现\n2. `UserSqlInjectionMapper.updateUserDynamicUnsafe` 方法或相关MyBatis XML映射文件\n\n然而，基于已有信息，我可以提供初步判断：\n\n```json\n{\n  \"漏洞判断\": \"可能是真实漏洞\",\n  \"置信度\": \"中等\",\n  \"理由\": [\n    \"控制器方法上有@Vulnerability注解，明确标记为SQL注入漏洞\",\n    \"注解中描述了漏洞原因：'在UPDATE语句的SET子句中使用${setClause}进行字符串拼接，允许任意SQL注入'\",\n    \"参数setClause直接从RequestParam获取，没有看到明显的验证或过滤\",\n    \"方法名称中包含'Unsafe'暗示这是一个不安全的实现\",\n    \"污点传播路径显示用户输入直接传递到SQL执行点\"\n  ],\n  \"缺失信息\": [\n    \"SqlInjectionTe",
+        "原始数据": {
+          "类名": "SqlInjectionTestService",
+          "方法名": "updateUserDynamicUnsafe",
+          "行号": 87,
+          "源点": "org.springframework.web.bind.annotation.RequestParam",
+          "汇点": "<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: int updateUserDynamicUnsafe(int,java.lang.String)>"
+        }
+      },
+      {
+        "是否误报": false,
+        "置信度": 70,
+        "理由": "我无法给出最终判断，因为我缺少关键信息。我需要查看以下代码才能做出准确分析：\n\n1. `SqlInjectionTestService.searchUsersSemiSafe()` 方法的实现\n2. `UserSqlInjectionMapper.searchUsersSemiSafe()` 方法的实现\n3. 相关的MyBatis XML映射文件\n\n没有这些信息，我无法确定：\n- 参数如何被处理和传递\n- SQL查询是如何构造的\n- 是否存在任何验证或过滤机制\n\n从控制器方法的注释来看，这可能是一个真实漏洞（注释中标记为`isRealVulnerability = true`），并且描述了在LIKE子句中使用参数绑定但列名使用字符串拼接的问题。但没有查看实际实现代码，我无法确认这一点。\n\n```json\n{\n  \"判断\": \"无法确定\",\n  \"原因\": \"缺少关键实现代码，包括Service层方法、Mapper方法和MyBatis XML映射文件\",\n  \"需要的信息\": [\n    \"SqlInjectionTestService.searchUsersSemiSafe() 方法实",
+        "原始数据": {
+          "类名": "SqlInjectionTestService",
+          "方法名": "searchUsersSemiSafe",
+          "行号": 132,
+          "源点": "org.springframework.web.bind.annotation.RequestParam",
+          "汇点": "<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: java.util.List searchUsersSemiSafe(java.lang.String,java.lang.String)>"
+        }
+      },
+      {
+        "是否误报": false,
+        "置信度": 70,
+        "理由": "我无法给出最终判断，因为我缺少关键信息。我需要查看以下方法的源代码才能完成分析：\n\n1. `edu.thu.benchmark.annotated.service.SqlInjectionTestService.searchUsersUnsafe`\n2. `edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper.searchUsersUnsafe`\n\n这些方法是污点传播路径中的关键环节，它们决定了用户输入如何被处理并最终用于SQL查询。\n\n从已有信息来看，有几点值得注意：\n1. 方法名包含\"Unsafe\"暗示这可能是不安全的实现\n2. 控制器方法上的`@Vulnerability`注解明确标记这是一个SQL注入漏洞\n3. 注解描述提到\"在@Select注解的LIKE子句中使用${column}和${value}进行字符串拼接，允许SQL注入\"\n\n这些线索表明可能存在真实漏洞，但没有看到实际的SQL查询构建代码，我无法确认。请提供上述方法的源码以完成分析。",
+        "原始数据": {
+          "类名": "SqlInjectionTestService",
+          "方法名": "searchUsersUnsafe",
+          "行号": 127,
+          "源点": "org.springframework.web.bind.annotation.RequestParam",
+          "汇点": "<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: java.util.List searchUsersUnsafe(java.lang.String,java.lang.String)>"
+        }
+      },
+      {
+        "是否误报": false,
+        "置信度": 70,
+        "理由": "```json\n{\n  \"漏洞判断\": \"真实漏洞\",\n  \"漏洞类型\": \"SQL注入 (CWE-89)\",\n  \"严重程度\": \"严重\",\n  \"理由\": [\n    \"控制器方法testCase20直接接收四个用户输入参数(field, value, orderBy, limit)，没有进行任何验证或过滤\",\n    \"这些参数通过字符串拼接方式构造SQL查询条件：field + \\\" = '\\\" + value + \\\"' ORDER BY \\\" + orderBy + \\\" LIMIT \\\" + limit\",\n    \"拼接的SQL片段直接传递给服务层方法findUsersByMultipleConditionsUnsafe，该方法不做任何安全处理\",\n    \"服务层方法直接将未经处理的SQL片段传递给数据访问层的UserSqlInjectionMapper\",\n    \"方法名称(Unsafe)和类上的@Vulnerability注解明确表明这是一个有意设计的漏洞示例\",\n    \"特别危险的是orderBy和limit参数可以被攻击者利用执行ORDER BY注入和LI",
+        "原始数据": {
+          "类名": "SqlInjectionTestService",
+          "方法名": "findUsersByMultipleConditionsUnsafe",
+          "行号": 67,
+          "源点": "org.springframework.web.bind.annotation.RequestParam",
+          "汇点": "<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: java.util.List findUsersByMultipleConditionsUnsafe(java.lang.String)>"
+        }
+      },
+      {
+        "是否误报": false,
+        "置信度": 70,
+        "理由": "```json\n{\n  \"漏洞判断\": \"真实漏洞\",\n  \"漏洞类型\": \"SQL注入 (CWE-89)\",\n  \"严重程度\": \"严重\",\n  \"理由\": [\n    \"控制器方法testCase20直接接收四个用户输入参数(field, value, orderBy, limit)，没有进行任何验证或过滤\",\n    \"这些参数通过字符串拼接方式构造SQL查询条件：field + \\\" = '\\\" + value + \\\"' ORDER BY \\\" + orderBy + \\\" LIMIT \\\" + limit\",\n    \"拼接的SQL片段直接传递给服务层方法findUsersByMultipleConditionsUnsafe，该方法不做任何安全处理\",\n    \"服务层方法直接将未经处理的SQL片段传递给数据访问层的UserSqlInjectionMapper\",\n    \"方法名称(Unsafe)和类上的@Vulnerability注解明确表明这是一个有意设计的漏洞示例\",\n    \"特别危险的是orderBy和limit参数可以被攻击者利用执行ORDER BY注入和LI",
+        "原始数据": {
+          "类名": "SqlInjectionTestService",
+          "方法名": "findUsersByMultipleConditionsUnsafe",
+          "行号": 67,
+          "源点": "org.springframework.web.bind.annotation.RequestParam",
+          "汇点": "<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: java.util.List findUsersByMultipleConditionsUnsafe(java.lang.String)>"
+        }
+      },
+      {
+        "是否误报": false,
+        "置信度": 70,
+        "理由": "```json\n{\n  \"漏洞判断\": \"真实漏洞\",\n  \"漏洞类型\": \"SQL注入 (CWE-89)\",\n  \"严重程度\": \"严重\",\n  \"理由\": [\n    \"控制器方法testCase20直接接收四个用户输入参数(field, value, orderBy, limit)，没有进行任何验证或过滤\",\n    \"这些参数通过字符串拼接方式构造SQL查询条件：field + \\\" = '\\\" + value + \\\"' ORDER BY \\\" + orderBy + \\\" LIMIT \\\" + limit\",\n    \"拼接的SQL片段直接传递给服务层方法findUsersByMultipleConditionsUnsafe，该方法不做任何安全处理\",\n    \"服务层方法直接将未经处理的SQL片段传递给数据访问层的UserSqlInjectionMapper\",\n    \"方法名称(Unsafe)和类上的@Vulnerability注解明确表明这是一个有意设计的漏洞示例\",\n    \"特别危险的是orderBy和limit参数可以被攻击者利用执行ORDER BY注入和LI",
+        "原始数据": {
+          "类名": "SqlInjectionTestService",
+          "方法名": "findUsersByMultipleConditionsUnsafe",
+          "行号": 67,
+          "源点": "org.springframework.web.bind.annotation.RequestParam",
+          "汇点": "<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: java.util.List findUsersByMultipleConditionsUnsafe(java.lang.String)>"
+        }
+      },
+      {
+        "是否误报": false,
+        "置信度": 70,
+        "理由": "```json\n{\n  \"漏洞判断\": \"真实漏洞\",\n  \"漏洞类型\": \"SQL注入 (CWE-89)\",\n  \"严重程度\": \"严重\",\n  \"理由\": [\n    \"控制器方法testCase20直接接收四个用户输入参数(field, value, orderBy, limit)，没有进行任何验证或过滤\",\n    \"这些参数通过字符串拼接方式构造SQL查询条件：field + \\\" = '\\\" + value + \\\"' ORDER BY \\\" + orderBy + \\\" LIMIT \\\" + limit\",\n    \"拼接的SQL片段直接传递给服务层方法findUsersByMultipleConditionsUnsafe，该方法不做任何安全处理\",\n    \"服务层方法直接将未经处理的SQL片段传递给数据访问层的UserSqlInjectionMapper\",\n    \"方法名称(Unsafe)和类上的@Vulnerability注解明确表明这是一个有意设计的漏洞示例\",\n    \"特别危险的是orderBy和limit参数可以被攻击者利用执行ORDER BY注入和LI",
+        "原始数据": {
+          "类名": "SqlInjectionTestService",
+          "方法名": "findUsersByMultipleConditionsUnsafe",
+          "行号": 67,
+          "源点": "org.springframework.web.bind.annotation.RequestParam",
+          "汇点": "<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: java.util.List findUsersByMultipleConditionsUnsafe(java.lang.String)>"
+        }
+      }
+    ],
+    "false_positive_rate": 20.0,
+    "true_positive_rate": 80.0,
+    "uncertain_rate": 0.0
+  }
+}
