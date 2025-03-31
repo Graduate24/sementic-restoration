@@ -1,0 +1,1516 @@
+
+{
+  "78": [
+    {
+      "file_path": "",
+      "function": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithFullValidation07(java.lang.String)>",
+      "class_name": "CommandInjectionController",
+      "method_name": "executeWithFullValidation07",
+      "line_number": 322,
+      "source": "org.springframework.web.bind.annotation.RequestParam",
+      "sink": "<java.lang.ProcessBuilder: java.lang.ProcessBuilder command(java.lang.String[])>",
+      "path": [
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+          "function": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithFullValidation07(java.lang.String)>",
+          "jimpleStmt": "r3 := @parameter0: java.lang.String",
+          "line": -1
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+          "function": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithFullValidation07(java.lang.String)>",
+          "jimpleStmt": "$r4 = virtualinvoke r3.<java.lang.String: java.lang.String[] split(java.lang.String,int)>(\"\\\\s+\", 2)",
+          "line": 315
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+          "function": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithFullValidation07(java.lang.String)>",
+          "jimpleStmt": "$r15 = $r4[0]",
+          "line": 322
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+          "function": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithFullValidation07(java.lang.String)>",
+          "jimpleStmt": "$r14[0] = $r15",
+          "line": 322
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+          "function": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithFullValidation07(java.lang.String)>",
+          "jimpleStmt": "virtualinvoke $r7.<java.lang.ProcessBuilder: java.lang.ProcessBuilder command(java.lang.String[])>($r14)",
+          "line": 322
+        }
+      ],
+      "path_signature": "CommandInjectionController:executeWithFullValidation07 -> CommandInjectionController:executeWithFullValidation07"
+    },
+    {
+      "file_path": "",
+      "function": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeCommandSafe01(java.lang.String)>",
+      "class_name": "CommandInjectionController",
+      "method_name": "executeCommandSafe01",
+      "line_number": 231,
+      "source": "org.springframework.web.bind.annotation.RequestParam",
+      "sink": "<java.lang.ProcessBuilder: void <init>(java.lang.String[])>",
+      "path": [
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+          "function": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeCommandSafe01(java.lang.String)>",
+          "jimpleStmt": "r2 := @parameter0: java.lang.String",
+          "line": -1
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+          "function": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeCommandSafe01(java.lang.String)>",
+          "jimpleStmt": "$r1[1] = r2",
+          "line": 231
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+          "function": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeCommandSafe01(java.lang.String)>",
+          "jimpleStmt": "specialinvoke $r0.<java.lang.ProcessBuilder: void <init>(java.lang.String[])>($r1)",
+          "line": 231
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+          "function": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeCommandSafe01(java.lang.String)>",
+          "jimpleStmt": "specialinvoke $r0.<java.lang.ProcessBuilder: void <init>(java.lang.String[])>($r1)",
+          "line": 231
+        }
+      ],
+      "path_signature": "CommandInjectionController:executeCommandSafe01 -> CommandInjectionController:executeCommandSafe01"
+    },
+    {
+      "file_path": "",
+      "function": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithSystemProperty02(java.lang.String)>",
+      "class_name": "CommandInjectionController",
+      "method_name": "executeWithSystemProperty02",
+      "line_number": 71,
+      "source": "org.springframework.web.bind.annotation.RequestParam",
+      "sink": "<java.lang.Runtime: java.lang.Process exec(java.lang.String)>",
+      "path": [
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+          "function": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithSystemProperty02(java.lang.String)>",
+          "jimpleStmt": "r2 := @parameter0: java.lang.String",
+          "line": -1
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+          "function": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithSystemProperty02(java.lang.String)>",
+          "jimpleStmt": "$r3 = dynamicinvoke \"makeConcatWithConstants\" <java.lang.String (java.lang.String,java.lang.String)>($r0, r2) <java.lang.invoke.StringConcatFactory: java.lang.invoke.CallSite makeConcatWithConstants(java.lang.invoke.MethodHandles$Lookup,java.lang.String,java.lang.invoke.MethodType,java.lang.String,java.lang.Object[])>(\"cd \\u0001 && ls \\u0001\")",
+          "line": 71
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+          "function": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithSystemProperty02(java.lang.String)>",
+          "jimpleStmt": "$r4 = virtualinvoke $r1.<java.lang.Runtime: java.lang.Process exec(java.lang.String)>($r3)",
+          "line": 71
+        }
+      ],
+      "path_signature": "CommandInjectionController:executeWithSystemProperty02 -> CommandInjectionController:executeWithSystemProperty02"
+    },
+    {
+      "file_path": "",
+      "function": "<edu.thu.benchmark.annotated.service.CommandService: java.lang.String executeCommandSafe(java.lang.String)>",
+      "class_name": "CommandService",
+      "method_name": "executeCommandSafe",
+      "line_number": 78,
+      "source": "org.springframework.web.bind.annotation.RequestParam",
+      "sink": "<java.lang.ProcessBuilder: java.lang.ProcessBuilder command(java.lang.String[])>",
+      "path": [
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+          "function": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeViaServiceSafe04(java.lang.String)>",
+          "jimpleStmt": "r1 := @parameter0: java.lang.String",
+          "line": -1
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+          "function": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeViaServiceSafe04(java.lang.String)>",
+          "jimpleStmt": "$r3 = virtualinvoke $r2.<edu.thu.benchmark.annotated.service.CommandService: java.lang.String executeCommandSafe(java.lang.String)>(r1)",
+          "line": 268
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.service.CommandService",
+          "function": "<edu.thu.benchmark.annotated.service.CommandService: java.lang.String executeCommandSafe(java.lang.String)>",
+          "jimpleStmt": "$r1 = virtualinvoke r0.<java.lang.String: java.lang.String[] split(java.lang.String,int)>(\"\\\\s+\", 2)",
+          "line": 70
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.service.CommandService",
+          "function": "<edu.thu.benchmark.annotated.service.CommandService: java.lang.String executeCommandSafe(java.lang.String)>",
+          "jimpleStmt": "$r13 = $r1[0]",
+          "line": 78
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.service.CommandService",
+          "function": "<edu.thu.benchmark.annotated.service.CommandService: java.lang.String executeCommandSafe(java.lang.String)>",
+          "jimpleStmt": "$r12[0] = $r13",
+          "line": 78
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.service.CommandService",
+          "function": "<edu.thu.benchmark.annotated.service.CommandService: java.lang.String executeCommandSafe(java.lang.String)>",
+          "jimpleStmt": "virtualinvoke $r18.<java.lang.ProcessBuilder: java.lang.ProcessBuilder command(java.lang.String[])>($r12)",
+          "line": 78
+        }
+      ],
+      "path_signature": "CommandInjectionController:executeViaServiceSafe04 -> CommandService:executeCommandSafe"
+    },
+    {
+      "file_path": "",
+      "function": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeCommand01(java.lang.String)>",
+      "class_name": "CommandInjectionController",
+      "method_name": "executeCommand01",
+      "line_number": 53,
+      "source": "org.springframework.web.bind.annotation.RequestParam",
+      "sink": "<java.lang.Runtime: java.lang.Process exec(java.lang.String)>",
+      "path": [
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+          "function": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeCommand01(java.lang.String)>",
+          "jimpleStmt": "r1 := @parameter0: java.lang.String",
+          "line": -1
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+          "function": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeCommand01(java.lang.String)>",
+          "jimpleStmt": "$r2 = dynamicinvoke \"makeConcatWithConstants\" <java.lang.String (java.lang.String)>(r1) <java.lang.invoke.StringConcatFactory: java.lang.invoke.CallSite makeConcatWithConstants(java.lang.invoke.MethodHandles$Lookup,java.lang.String,java.lang.invoke.MethodType,java.lang.String,java.lang.Object[])>(\"ls \\u0001\")",
+          "line": 53
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+          "function": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeCommand01(java.lang.String)>",
+          "jimpleStmt": "$r3 = virtualinvoke $r0.<java.lang.Runtime: java.lang.Process exec(java.lang.String)>($r2)",
+          "line": 53
+        }
+      ],
+      "path_signature": "CommandInjectionController:executeCommand01 -> CommandInjectionController:executeCommand01"
+    },
+    {
+      "file_path": "",
+      "function": "<edu.thu.benchmark.annotated.util.CommandUtils: java.lang.String executeUnsafe(java.lang.String)>",
+      "class_name": "CommandUtils",
+      "method_name": "executeUnsafe",
+      "line_number": 24,
+      "source": "org.springframework.web.bind.annotation.RequestParam",
+      "sink": "<java.lang.Runtime: java.lang.Process exec(java.lang.String)>",
+      "path": [
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+          "function": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeViaUtils08(java.lang.String)>",
+          "jimpleStmt": "r0 := @parameter0: java.lang.String",
+          "line": -1
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+          "function": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeViaUtils08(java.lang.String)>",
+          "jimpleStmt": "$r1 = staticinvoke <edu.thu.benchmark.annotated.util.CommandUtils: java.lang.String executeUnsafe(java.lang.String)>(r0)",
+          "line": 183
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.util.CommandUtils",
+          "function": "<edu.thu.benchmark.annotated.util.CommandUtils: java.lang.String executeUnsafe(java.lang.String)>",
+          "jimpleStmt": "$r2 = virtualinvoke $r0.<java.lang.Runtime: java.lang.Process exec(java.lang.String)>(r1)",
+          "line": 24
+        }
+      ],
+      "path_signature": "CommandInjectionController:executeViaUtils08 -> CommandUtils:executeUnsafe"
+    },
+    {
+      "file_path": "",
+      "function": "<edu.thu.benchmark.annotated.util.CommandUtils: java.lang.String executeSafe(java.lang.String)>",
+      "class_name": "CommandUtils",
+      "method_name": "executeSafe",
+      "line_number": 46,
+      "source": "org.springframework.web.bind.annotation.RequestParam",
+      "sink": "<java.lang.ProcessBuilder: java.lang.ProcessBuilder command(java.lang.String[])>",
+      "path": [
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+          "function": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeViaUtilsSafe08(java.lang.String)>",
+          "jimpleStmt": "r0 := @parameter0: java.lang.String",
+          "line": -1
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+          "function": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeViaUtilsSafe08(java.lang.String)>",
+          "jimpleStmt": "$r1 = staticinvoke <edu.thu.benchmark.annotated.util.CommandUtils: java.lang.String executeSafe(java.lang.String)>(r0)",
+          "line": 339
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.util.CommandUtils",
+          "function": "<edu.thu.benchmark.annotated.util.CommandUtils: java.lang.String executeSafe(java.lang.String)>",
+          "jimpleStmt": "$r1 = virtualinvoke r0.<java.lang.String: java.lang.String[] split(java.lang.String,int)>(\"\\\\s+\", 2)",
+          "line": 38
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.util.CommandUtils",
+          "function": "<edu.thu.benchmark.annotated.util.CommandUtils: java.lang.String executeSafe(java.lang.String)>",
+          "jimpleStmt": "$r12 = $r1[0]",
+          "line": 46
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.util.CommandUtils",
+          "function": "<edu.thu.benchmark.annotated.util.CommandUtils: java.lang.String executeSafe(java.lang.String)>",
+          "jimpleStmt": "$r11[0] = $r12",
+          "line": 46
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.util.CommandUtils",
+          "function": "<edu.thu.benchmark.annotated.util.CommandUtils: java.lang.String executeSafe(java.lang.String)>",
+          "jimpleStmt": "virtualinvoke $r17.<java.lang.ProcessBuilder: java.lang.ProcessBuilder command(java.lang.String[])>($r11)",
+          "line": 46
+        }
+      ],
+      "path_signature": "CommandInjectionController:executeViaUtilsSafe08 -> CommandUtils:executeSafe"
+    },
+    {
+      "file_path": "",
+      "function": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeArrayWithInjection03(java.lang.String)>",
+      "class_name": "CommandInjectionController",
+      "method_name": "executeArrayWithInjection03",
+      "line_number": 90,
+      "source": "org.springframework.web.bind.annotation.RequestParam",
+      "sink": "<java.lang.Runtime: java.lang.Process exec(java.lang.String[])>",
+      "path": [
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+          "function": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeArrayWithInjection03(java.lang.String)>",
+          "jimpleStmt": "r1 := @parameter0: java.lang.String",
+          "line": -1
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+          "function": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeArrayWithInjection03(java.lang.String)>",
+          "jimpleStmt": "$r2 = dynamicinvoke \"makeConcatWithConstants\" <java.lang.String (java.lang.String)>(r1) <java.lang.invoke.StringConcatFactory: java.lang.invoke.CallSite makeConcatWithConstants(java.lang.invoke.MethodHandles$Lookup,java.lang.String,java.lang.invoke.MethodType,java.lang.String,java.lang.Object[])>(\"cat \\u0001\")",
+          "line": 89
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+          "function": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeArrayWithInjection03(java.lang.String)>",
+          "jimpleStmt": "$r0[2] = $r2",
+          "line": 89
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+          "function": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeArrayWithInjection03(java.lang.String)>",
+          "jimpleStmt": "$r4 = virtualinvoke $r3.<java.lang.Runtime: java.lang.Process exec(java.lang.String[])>($r0)",
+          "line": 90
+        }
+      ],
+      "path_signature": "CommandInjectionController:executeArrayWithInjection03 -> CommandInjectionController:executeArrayWithInjection03"
+    },
+    {
+      "file_path": "",
+      "function": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithProcessBuilder06(java.lang.String)>",
+      "class_name": "CommandInjectionController",
+      "method_name": "executeWithProcessBuilder06",
+      "line_number": 140,
+      "source": "org.springframework.web.bind.annotation.RequestParam",
+      "sink": "<java.lang.ProcessBuilder: void <init>(java.lang.String[])>",
+      "path": [
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+          "function": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithProcessBuilder06(java.lang.String)>",
+          "jimpleStmt": "r2 := @parameter0: java.lang.String",
+          "line": -1
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+          "function": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithProcessBuilder06(java.lang.String)>",
+          "jimpleStmt": "$r3 = dynamicinvoke \"makeConcatWithConstants\" <java.lang.String (java.lang.String)>(r2) <java.lang.invoke.StringConcatFactory: java.lang.invoke.CallSite makeConcatWithConstants(java.lang.invoke.MethodHandles$Lookup,java.lang.String,java.lang.invoke.MethodType,java.lang.String,java.lang.Object[])>(\"-la \\u0001\")",
+          "line": 140
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+          "function": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithProcessBuilder06(java.lang.String)>",
+          "jimpleStmt": "$r1[1] = $r3",
+          "line": 140
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+          "function": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithProcessBuilder06(java.lang.String)>",
+          "jimpleStmt": "specialinvoke $r0.<java.lang.ProcessBuilder: void <init>(java.lang.String[])>($r1)",
+          "line": 140
+        }
+      ],
+      "path_signature": "CommandInjectionController:executeWithProcessBuilder06 -> CommandInjectionController:executeWithProcessBuilder06"
+    },
+    {
+      "file_path": "",
+      "function": "<edu.thu.benchmark.annotated.aspect.CommandExecutionAspect: java.lang.String executeCommandSafe(java.lang.String)>",
+      "class_name": "CommandExecutionAspect",
+      "method_name": "executeCommandSafe",
+      "line_number": 51,
+      "source": "org.springframework.web.bind.annotation.RequestParam",
+      "sink": "<java.lang.ProcessBuilder: java.lang.ProcessBuilder command(java.lang.String[])>",
+      "path": [
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+          "function": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeViaAspectSafe05(java.lang.String)>",
+          "jimpleStmt": "r1 := @parameter0: java.lang.String",
+          "line": -1
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+          "function": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeViaAspectSafe05(java.lang.String)>",
+          "jimpleStmt": "$r3 = virtualinvoke $r2.<edu.thu.benchmark.annotated.aspect.CommandExecutionAspect: java.lang.String executeCommandSafe(java.lang.String)>(r1)",
+          "line": 277
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.aspect.CommandExecutionAspect",
+          "function": "<edu.thu.benchmark.annotated.aspect.CommandExecutionAspect: java.lang.String executeCommandSafe(java.lang.String)>",
+          "jimpleStmt": "$r1 = virtualinvoke r0.<java.lang.String: java.lang.String[] split(java.lang.String,int)>(\"\\\\s+\", 2)",
+          "line": 43
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.aspect.CommandExecutionAspect",
+          "function": "<edu.thu.benchmark.annotated.aspect.CommandExecutionAspect: java.lang.String executeCommandSafe(java.lang.String)>",
+          "jimpleStmt": "$r13 = $r1[0]",
+          "line": 51
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.aspect.CommandExecutionAspect",
+          "function": "<edu.thu.benchmark.annotated.aspect.CommandExecutionAspect: java.lang.String executeCommandSafe(java.lang.String)>",
+          "jimpleStmt": "$r12[0] = $r13",
+          "line": 51
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.aspect.CommandExecutionAspect",
+          "function": "<edu.thu.benchmark.annotated.aspect.CommandExecutionAspect: java.lang.String executeCommandSafe(java.lang.String)>",
+          "jimpleStmt": "virtualinvoke $r18.<java.lang.ProcessBuilder: java.lang.ProcessBuilder command(java.lang.String[])>($r12)",
+          "line": 51
+        }
+      ],
+      "path_signature": "CommandInjectionController:executeViaAspectSafe05 -> CommandExecutionAspect:executeCommandSafe"
+    },
+    {
+      "file_path": "",
+      "function": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeArraySafe03(java.lang.String)>",
+      "class_name": "CommandInjectionController",
+      "method_name": "executeArraySafe03",
+      "line_number": 259,
+      "source": "org.springframework.web.bind.annotation.RequestParam",
+      "sink": "<java.lang.Runtime: java.lang.Process exec(java.lang.String[])>",
+      "path": [
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+          "function": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeArraySafe03(java.lang.String)>",
+          "jimpleStmt": "r1 := @parameter0: java.lang.String",
+          "line": -1
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+          "function": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeArraySafe03(java.lang.String)>",
+          "jimpleStmt": "$r0[1] = r1",
+          "line": 258
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+          "function": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeArraySafe03(java.lang.String)>",
+          "jimpleStmt": "$r3 = virtualinvoke $r2.<java.lang.Runtime: java.lang.Process exec(java.lang.String[])>($r0)",
+          "line": 259
+        }
+      ],
+      "path_signature": "CommandInjectionController:executeArraySafe03 -> CommandInjectionController:executeArraySafe03"
+    },
+    {
+      "file_path": "",
+      "function": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String fileOperationWithCommand10(java.lang.String)>",
+      "class_name": "CommandInjectionController",
+      "method_name": "fileOperationWithCommand10",
+      "line_number": 219,
+      "source": "org.springframework.web.bind.annotation.RequestParam",
+      "sink": "<java.lang.Runtime: java.lang.Process exec(java.lang.String)>",
+      "path": [
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+          "function": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String fileOperationWithCommand10(java.lang.String)>",
+          "jimpleStmt": "r1 := @parameter0: java.lang.String",
+          "line": -1
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+          "function": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String fileOperationWithCommand10(java.lang.String)>",
+          "jimpleStmt": "$r2 = dynamicinvoke \"makeConcatWithConstants\" <java.lang.String (java.lang.String)>(r1) <java.lang.invoke.StringConcatFactory: java.lang.invoke.CallSite makeConcatWithConstants(java.lang.invoke.MethodHandles$Lookup,java.lang.String,java.lang.invoke.MethodType,java.lang.String,java.lang.Object[])>(\"cat \\u0001\")",
+          "line": 219
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+          "function": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String fileOperationWithCommand10(java.lang.String)>",
+          "jimpleStmt": "$r3 = virtualinvoke $r0.<java.lang.Runtime: java.lang.Process exec(java.lang.String)>($r2)",
+          "line": 219
+        }
+      ],
+      "path_signature": "CommandInjectionController:fileOperationWithCommand10 -> CommandInjectionController:fileOperationWithCommand10"
+    },
+    {
+      "file_path": "",
+      "function": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithProcessBuilderSafe06(java.lang.String,java.lang.String)>",
+      "class_name": "CommandInjectionController",
+      "method_name": "executeWithProcessBuilderSafe06",
+      "line_number": 297,
+      "source": "org.springframework.web.bind.annotation.RequestParam",
+      "sink": "<java.lang.ProcessBuilder: void <init>(java.util.List)>",
+      "path": [
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+          "function": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithProcessBuilderSafe06(java.lang.String,java.lang.String)>",
+          "jimpleStmt": "r1 := @parameter1: java.lang.String",
+          "line": -1
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+          "function": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithProcessBuilderSafe06(java.lang.String,java.lang.String)>",
+          "jimpleStmt": "interfaceinvoke $r0.<java.util.List: boolean add(java.lang.Object)>(r1)",
+          "line": 293
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+          "function": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithProcessBuilderSafe06(java.lang.String,java.lang.String)>",
+          "jimpleStmt": "specialinvoke $r5.<java.lang.ProcessBuilder: void <init>(java.util.List)>($r0)",
+          "line": 297
+        }
+      ],
+      "path_signature": "CommandInjectionController:executeWithProcessBuilderSafe06 -> CommandInjectionController:executeWithProcessBuilderSafe06"
+    },
+    {
+      "file_path": "",
+      "function": "<edu.thu.benchmark.annotated.service.CommandService: java.lang.String executeCommandUnsafe(java.lang.String)>",
+      "class_name": "CommandService",
+      "method_name": "executeCommandUnsafe",
+      "line_number": 51,
+      "source": "org.springframework.web.bind.annotation.RequestParam",
+      "sink": "<java.lang.Runtime: java.lang.Process exec(java.lang.String)>",
+      "path": [
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+          "function": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeViaService04(java.lang.String)>",
+          "jimpleStmt": "r1 := @parameter0: java.lang.String",
+          "line": -1
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+          "function": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeViaService04(java.lang.String)>",
+          "jimpleStmt": "$r3 = virtualinvoke $r2.<edu.thu.benchmark.annotated.service.CommandService: java.lang.String executeCommandUnsafe(java.lang.String)>(r1)",
+          "line": 107
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.service.CommandService",
+          "function": "<edu.thu.benchmark.annotated.service.CommandService: java.lang.String executeCommandUnsafe(java.lang.String)>",
+          "jimpleStmt": "$r4 = dynamicinvoke \"makeConcatWithConstants\" <java.lang.String (java.lang.String,java.lang.String)>($r3, r2) <java.lang.invoke.StringConcatFactory: java.lang.invoke.CallSite makeConcatWithConstants(java.lang.invoke.MethodHandles$Lookup,java.lang.String,java.lang.invoke.MethodType,java.lang.String,java.lang.Object[])>(\"\\u0001 -c \\\"\\u0001\\\"\")",
+          "line": 51
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.service.CommandService",
+          "function": "<edu.thu.benchmark.annotated.service.CommandService: java.lang.String executeCommandUnsafe(java.lang.String)>",
+          "jimpleStmt": "$r5 = virtualinvoke $r0.<java.lang.Runtime: java.lang.Process exec(java.lang.String)>($r4)",
+          "line": 51
+        }
+      ],
+      "path_signature": "CommandInjectionController:executeViaService04 -> CommandService:executeCommandUnsafe"
+    },
+    {
+      "file_path": "",
+      "function": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithWhitelistSafe02(java.lang.String)>",
+      "class_name": "CommandInjectionController",
+      "method_name": "executeWithWhitelistSafe02",
+      "line_number": 245,
+      "source": "org.springframework.web.bind.annotation.RequestParam",
+      "sink": "<java.lang.Runtime: java.lang.Process exec(java.lang.String)>",
+      "path": [
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+          "function": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithWhitelistSafe02(java.lang.String)>",
+          "jimpleStmt": "r2 := @parameter0: java.lang.String",
+          "line": -1
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+          "function": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithWhitelistSafe02(java.lang.String)>",
+          "jimpleStmt": "$r4 = virtualinvoke $r3.<java.lang.Runtime: java.lang.Process exec(java.lang.String)>(r2)",
+          "line": 245
+        }
+      ],
+      "path_signature": "CommandInjectionController:executeWithWhitelistSafe02 -> CommandInjectionController:executeWithWhitelistSafe02"
+    },
+    {
+      "file_path": "",
+      "function": "<edu.thu.benchmark.annotated.aspect.CommandExecutionAspect: java.lang.String executeCommandUnsafe(java.lang.String)>",
+      "class_name": "CommandExecutionAspect",
+      "method_name": "executeCommandUnsafe",
+      "line_number": 29,
+      "source": "org.springframework.web.bind.annotation.RequestParam",
+      "sink": "<java.lang.Runtime: java.lang.Process exec(java.lang.String)>",
+      "path": [
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+          "function": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeViaAspect05(java.lang.String)>",
+          "jimpleStmt": "r1 := @parameter0: java.lang.String",
+          "line": -1
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+          "function": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeViaAspect05(java.lang.String)>",
+          "jimpleStmt": "$r3 = virtualinvoke $r2.<edu.thu.benchmark.annotated.aspect.CommandExecutionAspect: java.lang.String executeCommandUnsafe(java.lang.String)>(r1)",
+          "line": 124
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.aspect.CommandExecutionAspect",
+          "function": "<edu.thu.benchmark.annotated.aspect.CommandExecutionAspect: java.lang.String executeCommandUnsafe(java.lang.String)>",
+          "jimpleStmt": "$r2 = virtualinvoke $r0.<java.lang.Runtime: java.lang.Process exec(java.lang.String)>(r1)",
+          "line": 29
+        }
+      ],
+      "path_signature": "CommandInjectionController:executeViaAspect05 -> CommandExecutionAspect:executeCommandUnsafe"
+    },
+    {
+      "file_path": "",
+      "function": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithMultipleParams09(java.lang.String,java.lang.String)>",
+      "class_name": "CommandInjectionController",
+      "method_name": "executeWithMultipleParams09",
+      "line_number": 201,
+      "source": "org.springframework.web.bind.annotation.RequestParam",
+      "sink": "<java.lang.Runtime: java.lang.Process exec(java.lang.String[])>",
+      "path": [
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+          "function": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithMultipleParams09(java.lang.String,java.lang.String)>",
+          "jimpleStmt": "r1 := @parameter1: java.lang.String",
+          "line": -1
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+          "function": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithMultipleParams09(java.lang.String,java.lang.String)>",
+          "jimpleStmt": "$r2 = dynamicinvoke \"makeConcatWithConstants\" <java.lang.String (java.lang.String,java.lang.String)>(r0, r1) <java.lang.invoke.StringConcatFactory: java.lang.invoke.CallSite makeConcatWithConstants(java.lang.invoke.MethodHandles$Lookup,java.lang.String,java.lang.invoke.MethodType,java.lang.String,java.lang.Object[])>(\"cd \\u0001 && ls \\u0001\")",
+          "line": 200
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+          "function": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithMultipleParams09(java.lang.String,java.lang.String)>",
+          "jimpleStmt": "$r4[2] = $r2",
+          "line": 201
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+          "function": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithMultipleParams09(java.lang.String,java.lang.String)>",
+          "jimpleStmt": "$r5 = virtualinvoke $r3.<java.lang.Runtime: java.lang.Process exec(java.lang.String[])>($r4)",
+          "line": 201
+        }
+      ],
+      "path_signature": "CommandInjectionController:executeWithMultipleParams09 -> CommandInjectionController:executeWithMultipleParams09"
+    },
+    {
+      "file_path": "",
+      "function": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithConfigPrefix07(java.lang.String)>",
+      "class_name": "CommandInjectionController",
+      "method_name": "executeWithConfigPrefix07",
+      "line_number": 163,
+      "source": "org.springframework.web.bind.annotation.RequestParam",
+      "sink": "<java.lang.Runtime: java.lang.Process exec(java.lang.String)>",
+      "path": [
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+          "function": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithConfigPrefix07(java.lang.String)>",
+          "jimpleStmt": "r3 := @parameter0: java.lang.String",
+          "line": -1
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+          "function": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithConfigPrefix07(java.lang.String)>",
+          "jimpleStmt": "$r8 = virtualinvoke $r7.<java.lang.Runtime: java.lang.Process exec(java.lang.String)>(r3)",
+          "line": 163
+        }
+      ],
+      "path_signature": "CommandInjectionController:executeWithConfigPrefix07 -> CommandInjectionController:executeWithConfigPrefix07"
+    }
+  ],
+  "22": [
+    {
+      "file_path": "",
+      "function": "<edu.thu.benchmark.annotated.controller.PathTraversalController: org.springframework.http.ResponseEntity getFile01(java.lang.String)>",
+      "class_name": "PathTraversalController",
+      "method_name": "getFile01",
+      "line_number": 68,
+      "source": "org.springframework.web.bind.annotation.RequestParam",
+      "sink": "<java.io.File: void <init>(java.lang.String)>",
+      "path": [
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+          "function": "<edu.thu.benchmark.annotated.controller.PathTraversalController: org.springframework.http.ResponseEntity getFile01(java.lang.String)>",
+          "jimpleStmt": "r2 := @parameter0: java.lang.String",
+          "line": -1
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+          "function": "<edu.thu.benchmark.annotated.controller.PathTraversalController: org.springframework.http.ResponseEntity getFile01(java.lang.String)>",
+          "jimpleStmt": "$r4 = dynamicinvoke \"makeConcatWithConstants\" <java.lang.String (java.lang.String,java.lang.String)>($r3, r2) <java.lang.invoke.StringConcatFactory: java.lang.invoke.CallSite makeConcatWithConstants(java.lang.invoke.MethodHandles$Lookup,java.lang.String,java.lang.invoke.MethodType,java.lang.String,java.lang.Object[])>(\"\\u0001/\\u0001\")",
+          "line": 68
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+          "function": "<edu.thu.benchmark.annotated.controller.PathTraversalController: org.springframework.http.ResponseEntity getFile01(java.lang.String)>",
+          "jimpleStmt": "specialinvoke $r0.<java.io.File: void <init>(java.lang.String)>($r4)",
+          "line": 68
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+          "function": "<edu.thu.benchmark.annotated.controller.PathTraversalController: org.springframework.http.ResponseEntity getFile01(java.lang.String)>",
+          "jimpleStmt": "specialinvoke $r0.<java.io.File: void <init>(java.lang.String)>($r4)",
+          "line": 68
+        }
+      ],
+      "path_signature": "PathTraversalController:getFile01 -> PathTraversalController:getFile01"
+    },
+    {
+      "file_path": "",
+      "function": "<edu.thu.benchmark.annotated.service.PathTraversalService: java.lang.String readFileUnsafe(java.lang.String)>",
+      "class_name": "PathTraversalService",
+      "method_name": "readFileUnsafe",
+      "line_number": 36,
+      "source": "org.springframework.web.bind.annotation.RequestParam",
+      "sink": "<java.io.FileReader: void <init>(java.io.File)>",
+      "path": [
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+          "function": "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.lang.String getFileWithInjection05(java.lang.String)>",
+          "jimpleStmt": "r1 := @parameter0: java.lang.String",
+          "line": -1
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+          "function": "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.lang.String getFileWithInjection05(java.lang.String)>",
+          "jimpleStmt": "$r3 = virtualinvoke $r2.<edu.thu.benchmark.annotated.service.PathTraversalService: java.lang.String readFileUnsafe(java.lang.String)>(r1)",
+          "line": 150
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.service.PathTraversalService",
+          "function": "<edu.thu.benchmark.annotated.service.PathTraversalService: java.lang.String readFileUnsafe(java.lang.String)>",
+          "jimpleStmt": "specialinvoke $r16.<java.io.File: void <init>(java.lang.String,java.lang.String)>($r4, r3)",
+          "line": 35
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.service.PathTraversalService",
+          "function": "<edu.thu.benchmark.annotated.service.PathTraversalService: java.lang.String readFileUnsafe(java.lang.String)>",
+          "jimpleStmt": "specialinvoke $r17.<java.io.FileReader: void <init>(java.io.File)>($r16)",
+          "line": 36
+        }
+      ],
+      "path_signature": "PathTraversalController:getFileWithInjection05 -> PathTraversalService:readFileUnsafe"
+    },
+    {
+      "file_path": "",
+      "function": "<edu.thu.benchmark.annotated.controller.PathTraversalController: org.springframework.http.ResponseEntity getImage02(java.lang.String)>",
+      "class_name": "PathTraversalController",
+      "method_name": "getImage02",
+      "line_number": 88,
+      "source": "org.springframework.web.bind.annotation.RequestParam",
+      "sink": "<java.io.File: void <init>(java.lang.String)>",
+      "path": [
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+          "function": "<edu.thu.benchmark.annotated.controller.PathTraversalController: org.springframework.http.ResponseEntity getImage02(java.lang.String)>",
+          "jimpleStmt": "r1 := @parameter0: java.lang.String",
+          "line": -1
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+          "function": "<edu.thu.benchmark.annotated.controller.PathTraversalController: org.springframework.http.ResponseEntity getImage02(java.lang.String)>",
+          "jimpleStmt": "$r3 = dynamicinvoke \"makeConcatWithConstants\" <java.lang.String (java.lang.String,java.lang.String)>($r2, r1) <java.lang.invoke.StringConcatFactory: java.lang.invoke.CallSite makeConcatWithConstants(java.lang.invoke.MethodHandles$Lookup,java.lang.String,java.lang.invoke.MethodType,java.lang.String,java.lang.Object[])>(\"\\u0001/images/\\u0001\")",
+          "line": 87
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+          "function": "<edu.thu.benchmark.annotated.controller.PathTraversalController: org.springframework.http.ResponseEntity getImage02(java.lang.String)>",
+          "jimpleStmt": "specialinvoke $r4.<java.io.File: void <init>(java.lang.String)>($r3)",
+          "line": 88
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+          "function": "<edu.thu.benchmark.annotated.controller.PathTraversalController: org.springframework.http.ResponseEntity getImage02(java.lang.String)>",
+          "jimpleStmt": "specialinvoke $r4.<java.io.File: void <init>(java.lang.String)>($r3)",
+          "line": 88
+        }
+      ],
+      "path_signature": "PathTraversalController:getImage02 -> PathTraversalController:getImage02"
+    },
+    {
+      "file_path": "",
+      "function": "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.util.Map readProperties09(java.lang.String)>",
+      "class_name": "PathTraversalController",
+      "method_name": "readProperties09",
+      "line_number": 221,
+      "source": "org.springframework.web.bind.annotation.RequestParam",
+      "sink": "<java.io.File: void <init>(java.lang.String)>",
+      "path": [
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+          "function": "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.util.Map readProperties09(java.lang.String)>",
+          "jimpleStmt": "r2 := @parameter0: java.lang.String",
+          "line": -1
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+          "function": "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.util.Map readProperties09(java.lang.String)>",
+          "jimpleStmt": "$r3 = dynamicinvoke \"makeConcatWithConstants\" <java.lang.String (java.lang.String)>(r2) <java.lang.invoke.StringConcatFactory: java.lang.invoke.CallSite makeConcatWithConstants(java.lang.invoke.MethodHandles$Lookup,java.lang.String,java.lang.invoke.MethodType,java.lang.String,java.lang.Object[])>(\"./config/\\u0001\")",
+          "line": 221
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+          "function": "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.util.Map readProperties09(java.lang.String)>",
+          "jimpleStmt": "specialinvoke $r1.<java.io.File: void <init>(java.lang.String)>($r3)",
+          "line": 221
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+          "function": "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.util.Map readProperties09(java.lang.String)>",
+          "jimpleStmt": "specialinvoke $r1.<java.io.File: void <init>(java.lang.String)>($r3)",
+          "line": 221
+        }
+      ],
+      "path_signature": "PathTraversalController:readProperties09 -> PathTraversalController:readProperties09"
+    },
+    {
+      "file_path": "",
+      "function": "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.lang.String readFileContent04(java.lang.String)>",
+      "class_name": "PathTraversalController",
+      "method_name": "readFileContent04",
+      "line_number": 127,
+      "source": "org.springframework.web.bind.annotation.RequestParam",
+      "sink": "<java.io.FileInputStream: void <init>(java.lang.String)>",
+      "path": [
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+          "function": "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.lang.String readFileContent04(java.lang.String)>",
+          "jimpleStmt": "r3 := @parameter0: java.lang.String",
+          "line": -1
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+          "function": "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.lang.String readFileContent04(java.lang.String)>",
+          "jimpleStmt": "$r5 = dynamicinvoke \"makeConcatWithConstants\" <java.lang.String (java.lang.String,java.lang.String)>($r4, r3) <java.lang.invoke.StringConcatFactory: java.lang.invoke.CallSite makeConcatWithConstants(java.lang.invoke.MethodHandles$Lookup,java.lang.String,java.lang.invoke.MethodType,java.lang.String,java.lang.Object[])>(\"\\u0001/\\u0001\")",
+          "line": 127
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+          "function": "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.lang.String readFileContent04(java.lang.String)>",
+          "jimpleStmt": "specialinvoke $r1.<java.io.FileInputStream: void <init>(java.lang.String)>($r5)",
+          "line": 127
+        }
+      ],
+      "path_signature": "PathTraversalController:readFileContent04 -> PathTraversalController:readFileContent04"
+    },
+    {
+      "file_path": "",
+      "function": "<edu.thu.benchmark.annotated.aspect.FileAccessAspect: java.lang.String accessLogFile(java.lang.String)>",
+      "class_name": "FileAccessAspect",
+      "method_name": "accessLogFile",
+      "line_number": 36,
+      "source": "org.springframework.web.bind.annotation.RequestParam",
+      "sink": "<java.io.File: void <init>(java.lang.String)>",
+      "path": [
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+          "function": "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.lang.String getLogFile07(java.lang.String)>",
+          "jimpleStmt": "r1 := @parameter0: java.lang.String",
+          "line": -1
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+          "function": "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.lang.String getLogFile07(java.lang.String)>",
+          "jimpleStmt": "$r4 = dynamicinvoke \"makeConcatWithConstants\" <java.lang.String (java.lang.String,java.lang.String)>($r2, r1) <java.lang.invoke.StringConcatFactory: java.lang.invoke.CallSite makeConcatWithConstants(java.lang.invoke.MethodHandles$Lookup,java.lang.String,java.lang.invoke.MethodType,java.lang.String,java.lang.Object[])>(\"\\u0001/logs/\\u0001\")",
+          "line": 184
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+          "function": "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.lang.String getLogFile07(java.lang.String)>",
+          "jimpleStmt": "$r5 = virtualinvoke $r3.<edu.thu.benchmark.annotated.aspect.FileAccessAspect: java.lang.String accessLogFile(java.lang.String)>($r4)",
+          "line": 184
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.aspect.FileAccessAspect",
+          "function": "<edu.thu.benchmark.annotated.aspect.FileAccessAspect: java.lang.String accessLogFile(java.lang.String)>",
+          "jimpleStmt": "specialinvoke $r9.<java.io.File: void <init>(java.lang.String)>(r1)",
+          "line": 36
+        }
+      ],
+      "path_signature": "PathTraversalController:getLogFile07 -> FileAccessAspect:accessLogFile"
+    },
+    {
+      "file_path": "",
+      "function": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithProcessBuilderSafe06(java.lang.String,java.lang.String)>",
+      "class_name": "CommandInjectionController",
+      "method_name": "executeWithProcessBuilderSafe06",
+      "line_number": 301,
+      "source": "org.springframework.web.bind.annotation.RequestParam",
+      "sink": "<java.io.File: void <init>(java.lang.String)>",
+      "path": [
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+          "function": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithProcessBuilderSafe06(java.lang.String,java.lang.String)>",
+          "jimpleStmt": "r2 := @parameter0: java.lang.String",
+          "line": -1
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.CommandInjectionController",
+          "function": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithProcessBuilderSafe06(java.lang.String,java.lang.String)>",
+          "jimpleStmt": "specialinvoke $r4.<java.io.File: void <init>(java.lang.String)>(r2)",
+          "line": 301
+        }
+      ],
+      "path_signature": "CommandInjectionController:executeWithProcessBuilderSafe06 -> CommandInjectionController:executeWithProcessBuilderSafe06"
+    },
+    {
+      "file_path": "",
+      "function": "<edu.thu.benchmark.annotated.service.TemplateService: java.lang.String getTemplateUnsafe(java.lang.String)>",
+      "class_name": "TemplateService",
+      "method_name": "getTemplateUnsafe",
+      "line_number": 36,
+      "source": "org.springframework.web.bind.annotation.RequestParam",
+      "sink": "<java.io.File: void <init>(java.lang.String,java.lang.String)>",
+      "path": [
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+          "function": "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.lang.String getTemplateFile10(java.lang.String)>",
+          "jimpleStmt": "r1 := @parameter0: java.lang.String",
+          "line": -1
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+          "function": "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.lang.String getTemplateFile10(java.lang.String)>",
+          "jimpleStmt": "$r3 = virtualinvoke $r2.<edu.thu.benchmark.annotated.service.TemplateService: java.lang.String getTemplateUnsafe(java.lang.String)>(r1)",
+          "line": 241
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.service.TemplateService",
+          "function": "<edu.thu.benchmark.annotated.service.TemplateService: java.lang.String getTemplateUnsafe(java.lang.String)>",
+          "jimpleStmt": "specialinvoke $r10.<java.io.File: void <init>(java.lang.String,java.lang.String)>($r3, r2)",
+          "line": 36
+        }
+      ],
+      "path_signature": "PathTraversalController:getTemplateFile10 -> TemplateService:getTemplateUnsafe"
+    },
+    {
+      "file_path": "",
+      "function": "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.util.Map getConfigFile08(java.lang.String)>",
+      "class_name": "PathTraversalController",
+      "method_name": "getConfigFile08",
+      "line_number": 201,
+      "source": "org.springframework.web.bind.annotation.RequestParam",
+      "sink": "<java.io.FileInputStream: void <init>(java.lang.String)>",
+      "path": [
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+          "function": "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.util.Map getConfigFile08(java.lang.String)>",
+          "jimpleStmt": "r3 := @parameter0: java.lang.String",
+          "line": -1
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+          "function": "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.util.Map getConfigFile08(java.lang.String)>",
+          "jimpleStmt": "$r5 = dynamicinvoke \"makeConcatWithConstants\" <java.lang.String (java.lang.String,java.lang.String)>($r4, r3) <java.lang.invoke.StringConcatFactory: java.lang.invoke.CallSite makeConcatWithConstants(java.lang.invoke.MethodHandles$Lookup,java.lang.String,java.lang.invoke.MethodType,java.lang.String,java.lang.Object[])>(\"\\u0001/config/\\u0001\")",
+          "line": 201
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+          "function": "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.util.Map getConfigFile08(java.lang.String)>",
+          "jimpleStmt": "specialinvoke $r1.<java.io.FileInputStream: void <init>(java.lang.String)>($r5)",
+          "line": 201
+        }
+      ],
+      "path_signature": "PathTraversalController:getConfigFile08 -> PathTraversalController:getConfigFile08"
+    },
+    {
+      "file_path": "",
+      "function": "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.lang.String getXmlFile06(java.lang.String)>",
+      "class_name": "PathTraversalController",
+      "method_name": "getXmlFile06",
+      "line_number": 166,
+      "source": "org.springframework.web.bind.annotation.RequestParam",
+      "sink": "<java.io.File: void <init>(java.lang.String)>",
+      "path": [
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+          "function": "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.lang.String getXmlFile06(java.lang.String)>",
+          "jimpleStmt": "r2 := @parameter0: java.lang.String",
+          "line": -1
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+          "function": "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.lang.String getXmlFile06(java.lang.String)>",
+          "jimpleStmt": "$r4 = dynamicinvoke \"makeConcatWithConstants\" <java.lang.String (java.lang.String,java.lang.String)>($r3, r2) <java.lang.invoke.StringConcatFactory: java.lang.invoke.CallSite makeConcatWithConstants(java.lang.invoke.MethodHandles$Lookup,java.lang.String,java.lang.invoke.MethodType,java.lang.String,java.lang.Object[])>(\"\\u0001/config/\\u0001\")",
+          "line": 166
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+          "function": "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.lang.String getXmlFile06(java.lang.String)>",
+          "jimpleStmt": "specialinvoke $r0.<java.io.File: void <init>(java.lang.String)>($r4)",
+          "line": 166
+        }
+      ],
+      "path_signature": "PathTraversalController:getXmlFile06 -> PathTraversalController:getXmlFile06"
+    },
+    {
+      "file_path": "",
+      "function": "<edu.thu.benchmark.annotated.controller.PathTraversalController: org.springframework.http.ResponseEntity downloadFile03(java.lang.String)>",
+      "class_name": "PathTraversalController",
+      "method_name": "downloadFile03",
+      "line_number": 107,
+      "source": "org.springframework.web.bind.annotation.RequestParam",
+      "sink": "<java.io.File: void <init>(java.lang.String,java.lang.String)>",
+      "path": [
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+          "function": "<edu.thu.benchmark.annotated.controller.PathTraversalController: org.springframework.http.ResponseEntity downloadFile03(java.lang.String)>",
+          "jimpleStmt": "r2 := @parameter0: java.lang.String",
+          "line": -1
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.PathTraversalController",
+          "function": "<edu.thu.benchmark.annotated.controller.PathTraversalController: org.springframework.http.ResponseEntity downloadFile03(java.lang.String)>",
+          "jimpleStmt": "specialinvoke $r0.<java.io.File: void <init>(java.lang.String,java.lang.String)>($r3, r2)",
+          "line": 107
+        }
+      ],
+      "path_signature": "PathTraversalController:downloadFile03 -> PathTraversalController:downloadFile03"
+    }
+  ],
+  "89": [
+    {
+      "file_path": "",
+      "function": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: edu.thu.benchmark.annotated.entity.User findUserByEmailUnsafe(java.lang.String)>",
+      "class_name": "SqlInjectionTestService",
+      "method_name": "findUserByEmailUnsafe",
+      "line_number": 107,
+      "source": "org.springframework.web.bind.annotation.RequestParam",
+      "sink": "<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: edu.thu.benchmark.annotated.entity.User findUserByEmailUnsafe(java.lang.String)>",
+      "path": [
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+          "function": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: edu.thu.benchmark.annotated.entity.User testCase08(java.lang.String)>",
+          "jimpleStmt": "r1 := @parameter0: java.lang.String",
+          "line": -1
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+          "function": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: edu.thu.benchmark.annotated.entity.User testCase08(java.lang.String)>",
+          "jimpleStmt": "$r3 = virtualinvoke $r2.<edu.thu.benchmark.annotated.service.SqlInjectionTestService: edu.thu.benchmark.annotated.entity.User findUserByEmailUnsafe(java.lang.String)>(r1)",
+          "line": 160
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.service.SqlInjectionTestService",
+          "function": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: edu.thu.benchmark.annotated.entity.User findUserByEmailUnsafe(java.lang.String)>",
+          "jimpleStmt": "$r3 = interfaceinvoke $r2.<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: edu.thu.benchmark.annotated.entity.User findUserByEmailUnsafe(java.lang.String)>(r1)",
+          "line": 107
+        }
+      ],
+      "path_signature": "SqlInjectionTestController:testCase08 -> SqlInjectionTestService:findUserByEmailUnsafe"
+    },
+    {
+      "file_path": "",
+      "function": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersByTemplateUnsafe(java.lang.String)>",
+      "class_name": "SqlInjectionTestService",
+      "method_name": "findUsersByTemplateUnsafe",
+      "line_number": 155,
+      "source": "org.springframework.web.bind.annotation.RequestParam",
+      "sink": "<org.springframework.jdbc.core.JdbcTemplate: java.util.List queryForList(java.lang.String)>",
+      "path": [
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+          "function": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase12(java.lang.String)>",
+          "jimpleStmt": "r1 := @parameter0: java.lang.String",
+          "line": -1
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+          "function": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase12(java.lang.String)>",
+          "jimpleStmt": "$r3 = virtualinvoke $r2.<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersByTemplateUnsafe(java.lang.String)>(r1)",
+          "line": 224
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.service.SqlInjectionTestService",
+          "function": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersByTemplateUnsafe(java.lang.String)>",
+          "jimpleStmt": "$r1[0] = r2",
+          "line": 154
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.service.SqlInjectionTestService",
+          "function": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersByTemplateUnsafe(java.lang.String)>",
+          "jimpleStmt": "$r4 = staticinvoke <java.lang.String: java.lang.String format(java.lang.String,java.lang.Object[])>($r3, $r1)",
+          "line": 154
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.service.SqlInjectionTestService",
+          "function": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersByTemplateUnsafe(java.lang.String)>",
+          "jimpleStmt": "$r6 = virtualinvoke $r5.<org.springframework.jdbc.core.JdbcTemplate: java.util.List queryForList(java.lang.String)>($r4)",
+          "line": 155
+        }
+      ],
+      "path_signature": "SqlInjectionTestController:testCase12 -> SqlInjectionTestService:findUsersByTemplateUnsafe"
+    },
+    {
+      "file_path": "",
+      "function": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersInListUnsafe(java.lang.String)>",
+      "class_name": "SqlInjectionTestService",
+      "method_name": "findUsersInListUnsafe",
+      "line_number": 57,
+      "source": "org.springframework.web.bind.annotation.RequestParam",
+      "sink": "<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: java.util.List findUsersInListUnsafe(java.lang.String)>",
+      "path": [
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+          "function": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase03(java.lang.String)>",
+          "jimpleStmt": "r1 := @parameter0: java.lang.String",
+          "line": -1
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+          "function": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase03(java.lang.String)>",
+          "jimpleStmt": "$r3 = virtualinvoke $r2.<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersInListUnsafe(java.lang.String)>(r1)",
+          "line": 80
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.service.SqlInjectionTestService",
+          "function": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersInListUnsafe(java.lang.String)>",
+          "jimpleStmt": "$r3 = interfaceinvoke $r2.<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: java.util.List findUsersInListUnsafe(java.lang.String)>(r1)",
+          "line": 57
+        }
+      ],
+      "path_signature": "SqlInjectionTestController:testCase03 -> SqlInjectionTestService:findUsersInListUnsafe"
+    },
+    {
+      "file_path": "",
+      "function": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersWithLimitUnsafe(java.lang.String,java.lang.String)>",
+      "class_name": "SqlInjectionTestService",
+      "method_name": "findUsersWithLimitUnsafe",
+      "line_number": 77,
+      "source": "org.springframework.web.bind.annotation.RequestParam",
+      "sink": "<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: java.util.List findUsersWithLimitUnsafe(java.lang.String,java.lang.String)>",
+      "path": [
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+          "function": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase05(java.lang.String,java.lang.String)>",
+          "jimpleStmt": "r1 := @parameter0: java.lang.String",
+          "line": -1
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+          "function": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase05(java.lang.String,java.lang.String)>",
+          "jimpleStmt": "$r4 = virtualinvoke $r3.<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersWithLimitUnsafe(java.lang.String,java.lang.String)>(r1, r2)",
+          "line": 112
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.service.SqlInjectionTestService",
+          "function": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersWithLimitUnsafe(java.lang.String,java.lang.String)>",
+          "jimpleStmt": "$r4 = interfaceinvoke $r3.<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: java.util.List findUsersWithLimitUnsafe(java.lang.String,java.lang.String)>(r1, r2)",
+          "line": 77
+        }
+      ],
+      "path_signature": "SqlInjectionTestController:testCase05 -> SqlInjectionTestService:findUsersWithLimitUnsafe"
+    },
+    {
+      "file_path": "",
+      "function": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: edu.thu.benchmark.annotated.entity.User findUserByCredentialsUnsafe(java.lang.String,java.lang.String)>",
+      "class_name": "SqlInjectionTestService",
+      "method_name": "findUserByCredentialsUnsafe",
+      "line_number": 117,
+      "source": "org.springframework.web.bind.annotation.RequestParam",
+      "sink": "<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: edu.thu.benchmark.annotated.entity.User findUserByCredentialsUnsafe(java.lang.String,java.lang.String)>",
+      "path": [
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+          "function": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: edu.thu.benchmark.annotated.entity.User testCase09(java.lang.String,java.lang.String)>",
+          "jimpleStmt": "r1 := @parameter0: java.lang.String",
+          "line": -1
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+          "function": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: edu.thu.benchmark.annotated.entity.User testCase09(java.lang.String,java.lang.String)>",
+          "jimpleStmt": "$r4 = virtualinvoke $r3.<edu.thu.benchmark.annotated.service.SqlInjectionTestService: edu.thu.benchmark.annotated.entity.User findUserByCredentialsUnsafe(java.lang.String,java.lang.String)>(r1, r2)",
+          "line": 176
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.service.SqlInjectionTestService",
+          "function": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: edu.thu.benchmark.annotated.entity.User findUserByCredentialsUnsafe(java.lang.String,java.lang.String)>",
+          "jimpleStmt": "$r4 = interfaceinvoke $r3.<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: edu.thu.benchmark.annotated.entity.User findUserByCredentialsUnsafe(java.lang.String,java.lang.String)>(r1, r2)",
+          "line": 117
+        }
+      ],
+      "path_signature": "SqlInjectionTestController:testCase09 -> SqlInjectionTestService:findUserByCredentialsUnsafe"
+    },
+    {
+      "file_path": "",
+      "function": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersByJdbcUnsafe(java.lang.String)>",
+      "class_name": "SqlInjectionTestService",
+      "method_name": "findUsersByJdbcUnsafe",
+      "line_number": 143,
+      "source": "org.springframework.web.bind.annotation.RequestParam",
+      "sink": "<org.springframework.jdbc.core.JdbcTemplate: java.util.List queryForList(java.lang.String)>",
+      "path": [
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+          "function": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase17(java.lang.String,java.lang.String)>",
+          "jimpleStmt": "r0 := @parameter0: java.lang.String",
+          "line": -1
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+          "function": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase17(java.lang.String,java.lang.String)>",
+          "jimpleStmt": "$r2 = dynamicinvoke \"makeConcatWithConstants\" <java.lang.String (java.lang.String,java.lang.String)>(r0, r1) <java.lang.invoke.StringConcatFactory: java.lang.invoke.CallSite makeConcatWithConstants(java.lang.invoke.MethodHandles$Lookup,java.lang.String,java.lang.invoke.MethodType,java.lang.String,java.lang.Object[])>(\"id = \\u0001 OR username = \\'\\u0001\\'\")",
+          "line": 308
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+          "function": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase17(java.lang.String,java.lang.String)>",
+          "jimpleStmt": "$r5 = virtualinvoke $r4.<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersByJdbcUnsafe(java.lang.String)>($r2)",
+          "line": 309
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.service.SqlInjectionTestService",
+          "function": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersByJdbcUnsafe(java.lang.String)>",
+          "jimpleStmt": "$r1 = dynamicinvoke \"makeConcatWithConstants\" <java.lang.String (java.lang.String)>(r0) <java.lang.invoke.StringConcatFactory: java.lang.invoke.CallSite makeConcatWithConstants(java.lang.invoke.MethodHandles$Lookup,java.lang.String,java.lang.invoke.MethodType,java.lang.String,java.lang.Object[])>(\"SELECT * FROM users WHERE \\u0001\")",
+          "line": 142
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.service.SqlInjectionTestService",
+          "function": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersByJdbcUnsafe(java.lang.String)>",
+          "jimpleStmt": "$r4 = virtualinvoke $r3.<org.springframework.jdbc.core.JdbcTemplate: java.util.List queryForList(java.lang.String)>($r1)",
+          "line": 143
+        }
+      ],
+      "path_signature": "SqlInjectionTestController:testCase17 -> SqlInjectionTestService:findUsersByJdbcUnsafe"
+    },
+    {
+      "file_path": "",
+      "function": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersByJdbcUnsafe(java.lang.String)>",
+      "class_name": "SqlInjectionTestService",
+      "method_name": "findUsersByJdbcUnsafe",
+      "line_number": 143,
+      "source": "org.springframework.web.bind.annotation.RequestParam",
+      "sink": "<org.springframework.jdbc.core.JdbcTemplate: java.util.List queryForList(java.lang.String)>",
+      "path": [
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+          "function": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase11(java.lang.String)>",
+          "jimpleStmt": "r1 := @parameter0: java.lang.String",
+          "line": -1
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+          "function": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase11(java.lang.String)>",
+          "jimpleStmt": "$r3 = virtualinvoke $r2.<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersByJdbcUnsafe(java.lang.String)>(r1)",
+          "line": 208
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.service.SqlInjectionTestService",
+          "function": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersByJdbcUnsafe(java.lang.String)>",
+          "jimpleStmt": "$r1 = dynamicinvoke \"makeConcatWithConstants\" <java.lang.String (java.lang.String)>(r0) <java.lang.invoke.StringConcatFactory: java.lang.invoke.CallSite makeConcatWithConstants(java.lang.invoke.MethodHandles$Lookup,java.lang.String,java.lang.invoke.MethodType,java.lang.String,java.lang.Object[])>(\"SELECT * FROM users WHERE \\u0001\")",
+          "line": 142
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.service.SqlInjectionTestService",
+          "function": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersByJdbcUnsafe(java.lang.String)>",
+          "jimpleStmt": "$r4 = virtualinvoke $r3.<org.springframework.jdbc.core.JdbcTemplate: java.util.List queryForList(java.lang.String)>($r1)",
+          "line": 143
+        }
+      ],
+      "path_signature": "SqlInjectionTestController:testCase11 -> SqlInjectionTestService:findUsersByJdbcUnsafe"
+    },
+    {
+      "file_path": "",
+      "function": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersByJdbcUnsafe(java.lang.String)>",
+      "class_name": "SqlInjectionTestService",
+      "method_name": "findUsersByJdbcUnsafe",
+      "line_number": 143,
+      "source": "org.springframework.web.bind.annotation.RequestParam",
+      "sink": "<org.springframework.jdbc.core.JdbcTemplate: java.util.List queryForList(java.lang.String)>",
+      "path": [
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+          "function": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase01(java.lang.String)>",
+          "jimpleStmt": "r1 := @parameter0: java.lang.String",
+          "line": -1
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+          "function": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase01(java.lang.String)>",
+          "jimpleStmt": "$r3 = virtualinvoke $r2.<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersByJdbcUnsafe(java.lang.String)>(r1)",
+          "line": 46
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.service.SqlInjectionTestService",
+          "function": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersByJdbcUnsafe(java.lang.String)>",
+          "jimpleStmt": "$r1 = dynamicinvoke \"makeConcatWithConstants\" <java.lang.String (java.lang.String)>(r0) <java.lang.invoke.StringConcatFactory: java.lang.invoke.CallSite makeConcatWithConstants(java.lang.invoke.MethodHandles$Lookup,java.lang.String,java.lang.invoke.MethodType,java.lang.String,java.lang.Object[])>(\"SELECT * FROM users WHERE \\u0001\")",
+          "line": 142
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.service.SqlInjectionTestService",
+          "function": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersByJdbcUnsafe(java.lang.String)>",
+          "jimpleStmt": "$r4 = virtualinvoke $r3.<org.springframework.jdbc.core.JdbcTemplate: java.util.List queryForList(java.lang.String)>($r1)",
+          "line": 143
+        }
+      ],
+      "path_signature": "SqlInjectionTestController:testCase01 -> SqlInjectionTestService:findUsersByJdbcUnsafe"
+    },
+    {
+      "file_path": "",
+      "function": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersSortedUnsafe(java.lang.String)>",
+      "class_name": "SqlInjectionTestService",
+      "method_name": "findUsersSortedUnsafe",
+      "line_number": 47,
+      "source": "org.springframework.web.bind.annotation.RequestParam",
+      "sink": "<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: java.util.List findUsersSortedUnsafe(java.lang.String)>",
+      "path": [
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+          "function": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase02(java.lang.String)>",
+          "jimpleStmt": "r1 := @parameter0: java.lang.String",
+          "line": -1
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+          "function": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase02(java.lang.String)>",
+          "jimpleStmt": "$r3 = virtualinvoke $r2.<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersSortedUnsafe(java.lang.String)>(r1)",
+          "line": 64
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.service.SqlInjectionTestService",
+          "function": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersSortedUnsafe(java.lang.String)>",
+          "jimpleStmt": "$r3 = interfaceinvoke $r2.<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: java.util.List findUsersSortedUnsafe(java.lang.String)>(r1)",
+          "line": 47
+        }
+      ],
+      "path_signature": "SqlInjectionTestController:testCase02 -> SqlInjectionTestService:findUsersSortedUnsafe"
+    },
+    {
+      "file_path": "",
+      "function": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: int updateUserDynamicUnsafe(int,java.lang.String)>",
+      "class_name": "SqlInjectionTestService",
+      "method_name": "updateUserDynamicUnsafe",
+      "line_number": 87,
+      "source": "org.springframework.web.bind.annotation.RequestParam",
+      "sink": "<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: int updateUserDynamicUnsafe(int,java.lang.String)>",
+      "path": [
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+          "function": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: int testCase06(int,java.lang.String)>",
+          "jimpleStmt": "i0 := @parameter0: int",
+          "line": -1
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+          "function": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: int testCase06(int,java.lang.String)>",
+          "jimpleStmt": "$i1 = virtualinvoke $r2.<edu.thu.benchmark.annotated.service.SqlInjectionTestService: int updateUserDynamicUnsafe(int,java.lang.String)>(i0, r1)",
+          "line": 128
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.service.SqlInjectionTestService",
+          "function": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: int updateUserDynamicUnsafe(int,java.lang.String)>",
+          "jimpleStmt": "$i1 = interfaceinvoke $r2.<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: int updateUserDynamicUnsafe(int,java.lang.String)>(i0, r1)",
+          "line": 87
+        }
+      ],
+      "path_signature": "SqlInjectionTestController:testCase06 -> SqlInjectionTestService:updateUserDynamicUnsafe"
+    },
+    {
+      "file_path": "",
+      "function": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List searchUsersSemiSafe(java.lang.String,java.lang.String)>",
+      "class_name": "SqlInjectionTestService",
+      "method_name": "searchUsersSemiSafe",
+      "line_number": 132,
+      "source": "org.springframework.web.bind.annotation.RequestParam",
+      "sink": "<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: java.util.List searchUsersSemiSafe(java.lang.String,java.lang.String)>",
+      "path": [
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+          "function": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase15(java.lang.String,java.lang.String)>",
+          "jimpleStmt": "r2 := @parameter1: java.lang.String",
+          "line": -1
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+          "function": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase15(java.lang.String,java.lang.String)>",
+          "jimpleStmt": "$r4 = virtualinvoke $r3.<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List searchUsersSemiSafe(java.lang.String,java.lang.String)>(r1, r2)",
+          "line": 275
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.service.SqlInjectionTestService",
+          "function": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List searchUsersSemiSafe(java.lang.String,java.lang.String)>",
+          "jimpleStmt": "$r4 = interfaceinvoke $r3.<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: java.util.List searchUsersSemiSafe(java.lang.String,java.lang.String)>(r1, r2)",
+          "line": 132
+        }
+      ],
+      "path_signature": "SqlInjectionTestController:testCase15 -> SqlInjectionTestService:searchUsersSemiSafe"
+    },
+    {
+      "file_path": "",
+      "function": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List searchUsersUnsafe(java.lang.String,java.lang.String)>",
+      "class_name": "SqlInjectionTestService",
+      "method_name": "searchUsersUnsafe",
+      "line_number": 127,
+      "source": "org.springframework.web.bind.annotation.RequestParam",
+      "sink": "<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: java.util.List searchUsersUnsafe(java.lang.String,java.lang.String)>",
+      "path": [
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+          "function": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase10(java.lang.String,java.lang.String)>",
+          "jimpleStmt": "r1 := @parameter0: java.lang.String",
+          "line": -1
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+          "function": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase10(java.lang.String,java.lang.String)>",
+          "jimpleStmt": "$r4 = virtualinvoke $r3.<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List searchUsersUnsafe(java.lang.String,java.lang.String)>(r1, r2)",
+          "line": 192
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.service.SqlInjectionTestService",
+          "function": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List searchUsersUnsafe(java.lang.String,java.lang.String)>",
+          "jimpleStmt": "$r4 = interfaceinvoke $r3.<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: java.util.List searchUsersUnsafe(java.lang.String,java.lang.String)>(r1, r2)",
+          "line": 127
+        }
+      ],
+      "path_signature": "SqlInjectionTestController:testCase10 -> SqlInjectionTestService:searchUsersUnsafe"
+    },
+    {
+      "file_path": "",
+      "function": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersByMultipleConditionsUnsafe(java.lang.String)>",
+      "class_name": "SqlInjectionTestService",
+      "method_name": "findUsersByMultipleConditionsUnsafe",
+      "line_number": 67,
+      "source": "org.springframework.web.bind.annotation.RequestParam",
+      "sink": "<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: java.util.List findUsersByMultipleConditionsUnsafe(java.lang.String)>",
+      "path": [
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+          "function": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase20(java.lang.String,java.lang.String,java.lang.String,java.lang.String)>",
+          "jimpleStmt": "r2 := @parameter2: java.lang.String",
+          "line": -1
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+          "function": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase20(java.lang.String,java.lang.String,java.lang.String,java.lang.String)>",
+          "jimpleStmt": "$r4 = dynamicinvoke \"makeConcatWithConstants\" <java.lang.String (java.lang.String,java.lang.String,java.lang.String,java.lang.String)>(r0, r1, r2, r3) <java.lang.invoke.StringConcatFactory: java.lang.invoke.CallSite makeConcatWithConstants(java.lang.invoke.MethodHandles$Lookup,java.lang.String,java.lang.invoke.MethodType,java.lang.String,java.lang.Object[])>(\"\\u0001 = \\'\\u0001\\' ORDER BY \\u0001 LIMIT \\u0001\")",
+          "line": 379
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+          "function": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase20(java.lang.String,java.lang.String,java.lang.String,java.lang.String)>",
+          "jimpleStmt": "$r7 = virtualinvoke $r6.<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersByMultipleConditionsUnsafe(java.lang.String)>($r4)",
+          "line": 380
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.service.SqlInjectionTestService",
+          "function": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersByMultipleConditionsUnsafe(java.lang.String)>",
+          "jimpleStmt": "$r3 = interfaceinvoke $r2.<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: java.util.List findUsersByMultipleConditionsUnsafe(java.lang.String)>(r1)",
+          "line": 67
+        }
+      ],
+      "path_signature": "SqlInjectionTestController:testCase20 -> SqlInjectionTestService:findUsersByMultipleConditionsUnsafe"
+    },
+    {
+      "file_path": "",
+      "function": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersByMultipleConditionsUnsafe(java.lang.String)>",
+      "class_name": "SqlInjectionTestService",
+      "method_name": "findUsersByMultipleConditionsUnsafe",
+      "line_number": 67,
+      "source": "org.springframework.web.bind.annotation.RequestParam",
+      "sink": "<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: java.util.List findUsersByMultipleConditionsUnsafe(java.lang.String)>",
+      "path": [
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+          "function": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase16(java.lang.String,java.lang.String)>",
+          "jimpleStmt": "r1 := @parameter1: java.lang.String",
+          "line": -1
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+          "function": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase16(java.lang.String,java.lang.String)>",
+          "jimpleStmt": "$r2 = dynamicinvoke \"makeConcatWithConstants\" <java.lang.String (java.lang.String,java.lang.String)>(r0, r1) <java.lang.invoke.StringConcatFactory: java.lang.invoke.CallSite makeConcatWithConstants(java.lang.invoke.MethodHandles$Lookup,java.lang.String,java.lang.invoke.MethodType,java.lang.String,java.lang.Object[])>(\"id = \\u0001 OR username LIKE \\'%\\u0001%\\'\")",
+          "line": 291
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+          "function": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase16(java.lang.String,java.lang.String)>",
+          "jimpleStmt": "$r5 = virtualinvoke $r4.<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersByMultipleConditionsUnsafe(java.lang.String)>($r2)",
+          "line": 292
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.service.SqlInjectionTestService",
+          "function": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersByMultipleConditionsUnsafe(java.lang.String)>",
+          "jimpleStmt": "$r3 = interfaceinvoke $r2.<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: java.util.List findUsersByMultipleConditionsUnsafe(java.lang.String)>(r1)",
+          "line": 67
+        }
+      ],
+      "path_signature": "SqlInjectionTestController:testCase16 -> SqlInjectionTestService:findUsersByMultipleConditionsUnsafe"
+    },
+    {
+      "file_path": "",
+      "function": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersByMultipleConditionsUnsafe(java.lang.String)>",
+      "class_name": "SqlInjectionTestService",
+      "method_name": "findUsersByMultipleConditionsUnsafe",
+      "line_number": 67,
+      "source": "org.springframework.web.bind.annotation.RequestParam",
+      "sink": "<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: java.util.List findUsersByMultipleConditionsUnsafe(java.lang.String)>",
+      "path": [
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+          "function": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: edu.thu.benchmark.annotated.entity.User testCase19(java.lang.String)>",
+          "jimpleStmt": "r0 := @parameter0: java.lang.String",
+          "line": -1
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+          "function": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: edu.thu.benchmark.annotated.entity.User testCase19(java.lang.String)>",
+          "jimpleStmt": "$r1 = dynamicinvoke \"makeConcatWithConstants\" <java.lang.String (java.lang.String)>(r0) <java.lang.invoke.StringConcatFactory: java.lang.invoke.CallSite makeConcatWithConstants(java.lang.invoke.MethodHandles$Lookup,java.lang.String,java.lang.invoke.MethodType,java.lang.String,java.lang.Object[])>(\"id = \\u0001\")",
+          "line": 357
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+          "function": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: edu.thu.benchmark.annotated.entity.User testCase19(java.lang.String)>",
+          "jimpleStmt": "$r4 = virtualinvoke $r3.<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersByMultipleConditionsUnsafe(java.lang.String)>($r1)",
+          "line": 358
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.service.SqlInjectionTestService",
+          "function": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersByMultipleConditionsUnsafe(java.lang.String)>",
+          "jimpleStmt": "$r3 = interfaceinvoke $r2.<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: java.util.List findUsersByMultipleConditionsUnsafe(java.lang.String)>(r1)",
+          "line": 67
+        }
+      ],
+      "path_signature": "SqlInjectionTestController:testCase19 -> SqlInjectionTestService:findUsersByMultipleConditionsUnsafe"
+    },
+    {
+      "file_path": "",
+      "function": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersByMultipleConditionsUnsafe(java.lang.String)>",
+      "class_name": "SqlInjectionTestService",
+      "method_name": "findUsersByMultipleConditionsUnsafe",
+      "line_number": 67,
+      "source": "org.springframework.web.bind.annotation.RequestParam",
+      "sink": "<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: java.util.List findUsersByMultipleConditionsUnsafe(java.lang.String)>",
+      "path": [
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+          "function": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase04(java.lang.String)>",
+          "jimpleStmt": "r1 := @parameter0: java.lang.String",
+          "line": -1
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.controller.SqlInjectionTestController",
+          "function": "<edu.thu.benchmark.annotated.controller.SqlInjectionTestController: java.util.List testCase04(java.lang.String)>",
+          "jimpleStmt": "$r3 = virtualinvoke $r2.<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersByMultipleConditionsUnsafe(java.lang.String)>(r1)",
+          "line": 96
+        },
+        {
+          "javaClass": "edu.thu.benchmark.annotated.service.SqlInjectionTestService",
+          "function": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersByMultipleConditionsUnsafe(java.lang.String)>",
+          "jimpleStmt": "$r3 = interfaceinvoke $r2.<edu.thu.benchmark.annotated.mapper.UserSqlInjectionMapper: java.util.List findUsersByMultipleConditionsUnsafe(java.lang.String)>(r1)",
+          "line": 67
+        }
+      ],
+      "path_signature": "SqlInjectionTestController:testCase04 -> SqlInjectionTestService:findUsersByMultipleConditionsUnsafe"
+    }
+  ]
+}
+

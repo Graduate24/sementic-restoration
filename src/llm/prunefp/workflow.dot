@@ -1,0 +1,39 @@
+digraph FalsePositiveReductionSystem {
+    // 节点样式设置
+    node [shape=box, style=filled, color=lightblue];
+    edge [color=darkblue];
+    
+    // 数据节点
+    RawResult [label="污点分析结果\n(JSON格式)", shape=folder, color=lightyellow];
+    FinalReport [label="误报分析报告", shape=folder, color=lightyellow];
+    
+    // 核心组件节点
+    Controller [label="分析控制器\n(Analysis Controller)"];
+    LLMClient [label="大模型客户端\n(LLM Client)"];
+    CodeRepo [label="代码检索工具\n(Source Repository)"];
+    ContextProcessor [label="上下文处理器\n(Context Processor)"];
+    ResultProcessor [label="结果处理器\n(Result Processor)"];
+    
+    // 流程边
+    RawResult -> Controller [label="1. 加载"];
+    Controller -> LLMClient [label="2. 初始查询"];
+    LLMClient -> ContextProcessor [label="3. 请求额外信息"];
+    Controller -> CodeRepo [label="4. 查询代码"];
+    CodeRepo -> ContextProcessor [label="5. 提供代码上下文"];
+    ContextProcessor -> LLMClient [label="6. 补充信息"];
+    LLMClient -> Controller [label="7. 分析结果"];
+    Controller -> ResultProcessor [label="8. 处理结果"];
+    ResultProcessor -> FinalReport [label="9. 生成报告"];
+    
+    // 子图：渐进式分析循环
+    subgraph cluster_progressive {
+        label="渐进式分析循环";
+        style=dotted;
+        color=gray;
+        
+        LLMClient -> Controller [label="请求更多信息", style=dashed, color=red];
+        Controller -> CodeRepo [label="查询相关代码", style=dashed, color=red];
+        CodeRepo -> Controller [label="返回代码信息", style=dashed, color=red];
+        Controller -> LLMClient [label="提供额外上下文", style=dashed, color=red];
+    }
+}
