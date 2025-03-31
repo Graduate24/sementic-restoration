@@ -1,0 +1,1273 @@
+{
+  "22": [
+    {
+      "result_type": "TP",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/PathTraversalController.java",
+        "class_name": "PathTraversalController",
+        "method_name": "getFile01",
+        "start_line": 65,
+        "end_line": 68,
+        "is_vulnerability": true
+      },
+      "flowdroid_item": {
+        "file_path": "",
+        "class_name": "PathTraversalController",
+        "method_name": "getFile01",
+        "line_number": 68,
+        "path_signature": "PathTraversalController:getFile01 -> PathTraversalController:getFile01",
+        "soot_signature": "<edu.thu.benchmark.annotated.controller.PathTraversalController: org.springframework.http.ResponseEntity getFile01(java.lang.String)>"
+      }
+    },
+    {
+      "result_type": "TP",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/PathTraversalController.java",
+        "class_name": "PathTraversalController",
+        "method_name": "getImage02",
+        "start_line": 81,
+        "end_line": 85,
+        "is_vulnerability": true
+      },
+      "flowdroid_item": {
+        "file_path": "",
+        "class_name": "PathTraversalController",
+        "method_name": "getImage02",
+        "line_number": 88,
+        "path_signature": "PathTraversalController:getImage02 -> PathTraversalController:getImage02",
+        "soot_signature": "<edu.thu.benchmark.annotated.controller.PathTraversalController: org.springframework.http.ResponseEntity getImage02(java.lang.String)>"
+      }
+    },
+    {
+      "result_type": "TP",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/PathTraversalController.java",
+        "class_name": "PathTraversalController",
+        "method_name": "downloadFile03",
+        "start_line": 97,
+        "end_line": 101,
+        "is_vulnerability": true
+      },
+      "flowdroid_item": {
+        "file_path": "",
+        "class_name": "PathTraversalController",
+        "method_name": "downloadFile03",
+        "line_number": 107,
+        "path_signature": "PathTraversalController:downloadFile03 -> PathTraversalController:downloadFile03",
+        "soot_signature": "<edu.thu.benchmark.annotated.controller.PathTraversalController: org.springframework.http.ResponseEntity downloadFile03(java.lang.String)>"
+      }
+    },
+    {
+      "result_type": "TP",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/PathTraversalController.java",
+        "class_name": "PathTraversalController",
+        "method_name": "readFileContent04",
+        "start_line": 113,
+        "end_line": 122,
+        "is_vulnerability": true
+      },
+      "flowdroid_item": {
+        "file_path": "",
+        "class_name": "PathTraversalController",
+        "method_name": "readFileContent04",
+        "line_number": 127,
+        "path_signature": "PathTraversalController:readFileContent04 -> PathTraversalController:readFileContent04",
+        "soot_signature": "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.lang.String readFileContent04(java.lang.String)>"
+      }
+    },
+    {
+      "result_type": "TP",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/PathTraversalController.java",
+        "class_name": "PathTraversalController",
+        "method_name": "getFileWithInjection05",
+        "start_line": 134,
+        "end_line": 136,
+        "is_vulnerability": true
+      },
+      "flowdroid_item": {
+        "file_path": "",
+        "class_name": "PathTraversalService",
+        "method_name": "readFileUnsafe",
+        "line_number": 36,
+        "path_signature": "PathTraversalController:getFileWithInjection05 -> PathTraversalService:readFileUnsafe",
+        "soot_signature": "<edu.thu.benchmark.annotated.service.PathTraversalService: java.lang.String readFileUnsafe(java.lang.String)>"
+      }
+    },
+    {
+      "result_type": "TP",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/PathTraversalController.java",
+        "class_name": "PathTraversalController",
+        "method_name": "getXmlFile06",
+        "start_line": 148,
+        "end_line": 150,
+        "is_vulnerability": true
+      },
+      "flowdroid_item": {
+        "file_path": "",
+        "class_name": "PathTraversalController",
+        "method_name": "getXmlFile06",
+        "line_number": 166,
+        "path_signature": "PathTraversalController:getXmlFile06 -> PathTraversalController:getXmlFile06",
+        "soot_signature": "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.lang.String getXmlFile06(java.lang.String)>"
+      }
+    },
+    {
+      "result_type": "TP",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/PathTraversalController.java",
+        "class_name": "PathTraversalController",
+        "method_name": "getLogFile07",
+        "start_line": 162,
+        "end_line": 164,
+        "is_vulnerability": true
+      },
+      "flowdroid_item": {
+        "file_path": "",
+        "class_name": "FileAccessAspect",
+        "method_name": "accessLogFile",
+        "line_number": 36,
+        "path_signature": "PathTraversalController:getLogFile07 -> FileAccessAspect:accessLogFile",
+        "soot_signature": "<edu.thu.benchmark.annotated.aspect.FileAccessAspect: java.lang.String accessLogFile(java.lang.String)>"
+      }
+    },
+    {
+      "result_type": "TP",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/PathTraversalController.java",
+        "class_name": "PathTraversalController",
+        "method_name": "getConfigFile08",
+        "start_line": 176,
+        "end_line": 180,
+        "is_vulnerability": true
+      },
+      "flowdroid_item": {
+        "file_path": "",
+        "class_name": "PathTraversalController",
+        "method_name": "getConfigFile08",
+        "line_number": 201,
+        "path_signature": "PathTraversalController:getConfigFile08 -> PathTraversalController:getConfigFile08",
+        "soot_signature": "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.util.Map getConfigFile08(java.lang.String)>"
+      }
+    },
+    {
+      "result_type": "TP",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/PathTraversalController.java",
+        "class_name": "PathTraversalController",
+        "method_name": "readProperties09",
+        "start_line": 192,
+        "end_line": 197,
+        "is_vulnerability": true
+      },
+      "flowdroid_item": {
+        "file_path": "",
+        "class_name": "PathTraversalController",
+        "method_name": "readProperties09",
+        "line_number": 221,
+        "path_signature": "PathTraversalController:readProperties09 -> PathTraversalController:readProperties09",
+        "soot_signature": "<edu.thu.benchmark.annotated.controller.PathTraversalController: java.util.Map readProperties09(java.lang.String)>"
+      }
+    },
+    {
+      "result_type": "TP",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/PathTraversalController.java",
+        "class_name": "PathTraversalController",
+        "method_name": "getTemplateFile10",
+        "start_line": 209,
+        "end_line": 211,
+        "is_vulnerability": true
+      },
+      "flowdroid_item": {
+        "file_path": "",
+        "class_name": "TemplateService",
+        "method_name": "getTemplateUnsafe",
+        "line_number": 36,
+        "path_signature": "PathTraversalController:getTemplateFile10 -> TemplateService:getTemplateUnsafe",
+        "soot_signature": "<edu.thu.benchmark.annotated.service.TemplateService: java.lang.String getTemplateUnsafe(java.lang.String)>"
+      }
+    },
+    {
+      "result_type": "TN",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/PathTraversalController.java",
+        "class_name": "PathTraversalController",
+        "method_name": "getFileSafe01",
+        "start_line": 223,
+        "end_line": 238,
+        "is_vulnerability": false
+      }
+    },
+    {
+      "result_type": "TN",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/PathTraversalController.java",
+        "class_name": "PathTraversalController",
+        "method_name": "getImageSafe02",
+        "start_line": 245,
+        "end_line": 265,
+        "is_vulnerability": false
+      }
+    },
+    {
+      "result_type": "TN",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/PathTraversalController.java",
+        "class_name": "PathTraversalController",
+        "method_name": "downloadFileSafe03",
+        "start_line": 271,
+        "end_line": 286,
+        "is_vulnerability": false
+      }
+    },
+    {
+      "result_type": "TN",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/PathTraversalController.java",
+        "class_name": "PathTraversalController",
+        "method_name": "readFileContentSafe04",
+        "start_line": 292,
+        "end_line": 307,
+        "is_vulnerability": false
+      }
+    },
+    {
+      "result_type": "TN",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/PathTraversalController.java",
+        "class_name": "PathTraversalController",
+        "method_name": "getFileWithInjectionSafe05",
+        "start_line": 313,
+        "end_line": 315,
+        "is_vulnerability": false
+      }
+    },
+    {
+      "result_type": "TN",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/PathTraversalController.java",
+        "class_name": "PathTraversalController",
+        "method_name": "getXmlFileSafe06",
+        "start_line": 321,
+        "end_line": 339,
+        "is_vulnerability": false
+      }
+    },
+    {
+      "result_type": "TN",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/PathTraversalController.java",
+        "class_name": "PathTraversalController",
+        "method_name": "getLogFileSafe07",
+        "start_line": 345,
+        "end_line": 356,
+        "is_vulnerability": false
+      }
+    },
+    {
+      "result_type": "TN",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/PathTraversalController.java",
+        "class_name": "PathTraversalController",
+        "method_name": "getConfigFileSafe08",
+        "start_line": 362,
+        "end_line": 383,
+        "is_vulnerability": false
+      }
+    },
+    {
+      "result_type": "TN",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/PathTraversalController.java",
+        "class_name": "PathTraversalController",
+        "method_name": "readPropertiesSafe09",
+        "start_line": 389,
+        "end_line": 399,
+        "is_vulnerability": false
+      }
+    },
+    {
+      "result_type": "TN",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/PathTraversalController.java",
+        "class_name": "PathTraversalController",
+        "method_name": "getTemplateFileSafe10",
+        "start_line": 405,
+        "end_line": 413,
+        "is_vulnerability": false
+      }
+    },
+    {
+      "result_type": "FP (未匹配)",
+      "flowdroid_item": {
+        "file_path": "",
+        "class_name": "CommandInjectionController",
+        "method_name": "executeWithProcessBuilderSafe06",
+        "line_number": 301,
+        "path_signature": "CommandInjectionController:executeWithProcessBuilderSafe06 -> CommandInjectionController:executeWithProcessBuilderSafe06",
+        "soot_signature": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithProcessBuilderSafe06(java.lang.String,java.lang.String)>"
+      }
+    }
+  ],
+  "78": [
+    {
+      "result_type": "TP",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/CommandInjectionController.java",
+        "class_name": "CommandInjectionController",
+        "method_name": "executeCommand01",
+        "start_line": 48,
+        "end_line": 51,
+        "is_vulnerability": true
+      },
+      "flowdroid_item": {
+        "file_path": "",
+        "class_name": "CommandInjectionController",
+        "method_name": "executeCommand01",
+        "line_number": 53,
+        "path_signature": "CommandInjectionController:executeCommand01 -> CommandInjectionController:executeCommand01",
+        "soot_signature": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeCommand01(java.lang.String)>"
+      }
+    },
+    {
+      "result_type": "TP",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/CommandInjectionController.java",
+        "class_name": "CommandInjectionController",
+        "method_name": "executeWithSystemProperty02",
+        "start_line": 64,
+        "end_line": 67,
+        "is_vulnerability": true
+      },
+      "flowdroid_item": {
+        "file_path": "",
+        "class_name": "CommandInjectionController",
+        "method_name": "executeWithSystemProperty02",
+        "line_number": 71,
+        "path_signature": "CommandInjectionController:executeWithSystemProperty02 -> CommandInjectionController:executeWithSystemProperty02",
+        "soot_signature": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithSystemProperty02(java.lang.String)>"
+      }
+    },
+    {
+      "result_type": "TP",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/CommandInjectionController.java",
+        "class_name": "CommandInjectionController",
+        "method_name": "executeArrayWithInjection03",
+        "start_line": 82,
+        "end_line": 85,
+        "is_vulnerability": true
+      },
+      "flowdroid_item": {
+        "file_path": "",
+        "class_name": "CommandInjectionController",
+        "method_name": "executeArrayWithInjection03",
+        "line_number": 90,
+        "path_signature": "CommandInjectionController:executeArrayWithInjection03 -> CommandInjectionController:executeArrayWithInjection03",
+        "soot_signature": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeArrayWithInjection03(java.lang.String)>"
+      }
+    },
+    {
+      "result_type": "TP",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/CommandInjectionController.java",
+        "class_name": "CommandInjectionController",
+        "method_name": "executeViaService04",
+        "start_line": 99,
+        "end_line": 101,
+        "is_vulnerability": true
+      },
+      "flowdroid_item": {
+        "file_path": "",
+        "class_name": "CommandService",
+        "method_name": "executeCommandUnsafe",
+        "line_number": 51,
+        "path_signature": "CommandInjectionController:executeViaService04 -> CommandService:executeCommandUnsafe",
+        "soot_signature": "<edu.thu.benchmark.annotated.service.CommandService: java.lang.String executeCommandUnsafe(java.lang.String)>"
+      }
+    },
+    {
+      "result_type": "TP",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/CommandInjectionController.java",
+        "class_name": "CommandInjectionController",
+        "method_name": "executeViaAspect05",
+        "start_line": 115,
+        "end_line": 118,
+        "is_vulnerability": true
+      },
+      "flowdroid_item": {
+        "file_path": "",
+        "class_name": "CommandExecutionAspect",
+        "method_name": "executeCommandUnsafe",
+        "line_number": 29,
+        "path_signature": "CommandInjectionController:executeViaAspect05 -> CommandExecutionAspect:executeCommandUnsafe",
+        "soot_signature": "<edu.thu.benchmark.annotated.aspect.CommandExecutionAspect: java.lang.String executeCommandUnsafe(java.lang.String)>"
+      }
+    },
+    {
+      "result_type": "TP",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/CommandInjectionController.java",
+        "class_name": "CommandInjectionController",
+        "method_name": "executeWithProcessBuilder06",
+        "start_line": 131,
+        "end_line": 134,
+        "is_vulnerability": true
+      },
+      "flowdroid_item": {
+        "file_path": "",
+        "class_name": "CommandInjectionController",
+        "method_name": "executeWithProcessBuilder06",
+        "line_number": 140,
+        "path_signature": "CommandInjectionController:executeWithProcessBuilder06 -> CommandInjectionController:executeWithProcessBuilder06",
+        "soot_signature": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithProcessBuilder06(java.lang.String)>"
+      }
+    },
+    {
+      "result_type": "TP",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/CommandInjectionController.java",
+        "class_name": "CommandInjectionController",
+        "method_name": "executeWithConfigPrefix07",
+        "start_line": 147,
+        "end_line": 159,
+        "is_vulnerability": true
+      },
+      "flowdroid_item": {
+        "file_path": "",
+        "class_name": "CommandInjectionController",
+        "method_name": "executeWithConfigPrefix07",
+        "line_number": 163,
+        "path_signature": "CommandInjectionController:executeWithConfigPrefix07 -> CommandInjectionController:executeWithConfigPrefix07",
+        "soot_signature": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithConfigPrefix07(java.lang.String)>"
+      }
+    },
+    {
+      "result_type": "TP",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/CommandInjectionController.java",
+        "class_name": "CommandInjectionController",
+        "method_name": "executeViaUtils08",
+        "start_line": 173,
+        "end_line": 175,
+        "is_vulnerability": true
+      },
+      "flowdroid_item": {
+        "file_path": "",
+        "class_name": "CommandUtils",
+        "method_name": "executeUnsafe",
+        "line_number": 24,
+        "path_signature": "CommandInjectionController:executeViaUtils08 -> CommandUtils:executeUnsafe",
+        "soot_signature": "<edu.thu.benchmark.annotated.util.CommandUtils: java.lang.String executeUnsafe(java.lang.String)>"
+      }
+    },
+    {
+      "result_type": "TP",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/CommandInjectionController.java",
+        "class_name": "CommandInjectionController",
+        "method_name": "executeWithMultipleParams09",
+        "start_line": 188,
+        "end_line": 192,
+        "is_vulnerability": true
+      },
+      "flowdroid_item": {
+        "file_path": "",
+        "class_name": "CommandInjectionController",
+        "method_name": "executeWithMultipleParams09",
+        "line_number": 201,
+        "path_signature": "CommandInjectionController:executeWithMultipleParams09 -> CommandInjectionController:executeWithMultipleParams09",
+        "soot_signature": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithMultipleParams09(java.lang.String,java.lang.String)>"
+      }
+    },
+    {
+      "result_type": "TP",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/CommandInjectionController.java",
+        "class_name": "CommandInjectionController",
+        "method_name": "fileOperationWithCommand10",
+        "start_line": 205,
+        "end_line": 208,
+        "is_vulnerability": true
+      },
+      "flowdroid_item": {
+        "file_path": "",
+        "class_name": "CommandInjectionController",
+        "method_name": "fileOperationWithCommand10",
+        "line_number": 219,
+        "path_signature": "CommandInjectionController:fileOperationWithCommand10 -> CommandInjectionController:fileOperationWithCommand10",
+        "soot_signature": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String fileOperationWithCommand10(java.lang.String)>"
+      }
+    },
+    {
+      "result_type": "FP",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/CommandInjectionController.java",
+        "class_name": "CommandInjectionController",
+        "method_name": "executeCommandSafe01",
+        "start_line": 222,
+        "end_line": 226,
+        "is_vulnerability": false
+      },
+      "flowdroid_item": {
+        "file_path": "",
+        "class_name": "CommandInjectionController",
+        "method_name": "executeCommandSafe01",
+        "line_number": 231,
+        "path_signature": "CommandInjectionController:executeCommandSafe01 -> CommandInjectionController:executeCommandSafe01",
+        "soot_signature": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeCommandSafe01(java.lang.String)>"
+      }
+    },
+    {
+      "result_type": "FP",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/CommandInjectionController.java",
+        "class_name": "CommandInjectionController",
+        "method_name": "executeWithWhitelistSafe02",
+        "start_line": 233,
+        "end_line": 243,
+        "is_vulnerability": false
+      },
+      "flowdroid_item": {
+        "file_path": "",
+        "class_name": "CommandInjectionController",
+        "method_name": "executeWithWhitelistSafe02",
+        "line_number": 245,
+        "path_signature": "CommandInjectionController:executeWithWhitelistSafe02 -> CommandInjectionController:executeWithWhitelistSafe02",
+        "soot_signature": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithWhitelistSafe02(java.lang.String)>"
+      }
+    },
+    {
+      "result_type": "FP",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/CommandInjectionController.java",
+        "class_name": "CommandInjectionController",
+        "method_name": "executeArraySafe03",
+        "start_line": 250,
+        "end_line": 254,
+        "is_vulnerability": false
+      },
+      "flowdroid_item": {
+        "file_path": "",
+        "class_name": "CommandInjectionController",
+        "method_name": "executeArraySafe03",
+        "line_number": 259,
+        "path_signature": "CommandInjectionController:executeArraySafe03 -> CommandInjectionController:executeArraySafe03",
+        "soot_signature": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeArraySafe03(java.lang.String)>"
+      }
+    },
+    {
+      "result_type": "FP",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/CommandInjectionController.java",
+        "class_name": "CommandInjectionController",
+        "method_name": "executeViaServiceSafe04",
+        "start_line": 261,
+        "end_line": 263,
+        "is_vulnerability": false
+      },
+      "flowdroid_item": {
+        "file_path": "",
+        "class_name": "CommandService",
+        "method_name": "executeCommandSafe",
+        "line_number": 78,
+        "path_signature": "CommandInjectionController:executeViaServiceSafe04 -> CommandService:executeCommandSafe",
+        "soot_signature": "<edu.thu.benchmark.annotated.service.CommandService: java.lang.String executeCommandSafe(java.lang.String)>"
+      }
+    },
+    {
+      "result_type": "FP",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/CommandInjectionController.java",
+        "class_name": "CommandInjectionController",
+        "method_name": "executeViaAspectSafe05",
+        "start_line": 270,
+        "end_line": 273,
+        "is_vulnerability": false
+      },
+      "flowdroid_item": {
+        "file_path": "",
+        "class_name": "CommandExecutionAspect",
+        "method_name": "executeCommandSafe",
+        "line_number": 51,
+        "path_signature": "CommandInjectionController:executeViaAspectSafe05 -> CommandExecutionAspect:executeCommandSafe",
+        "soot_signature": "<edu.thu.benchmark.annotated.aspect.CommandExecutionAspect: java.lang.String executeCommandSafe(java.lang.String)>"
+      }
+    },
+    {
+      "result_type": "FP",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/CommandInjectionController.java",
+        "class_name": "CommandInjectionController",
+        "method_name": "executeWithProcessBuilderSafe06",
+        "start_line": 280,
+        "end_line": 302,
+        "is_vulnerability": false
+      },
+      "flowdroid_item": {
+        "file_path": "",
+        "class_name": "CommandInjectionController",
+        "method_name": "executeWithProcessBuilderSafe06",
+        "line_number": 297,
+        "path_signature": "CommandInjectionController:executeWithProcessBuilderSafe06 -> CommandInjectionController:executeWithProcessBuilderSafe06",
+        "soot_signature": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithProcessBuilderSafe06(java.lang.String,java.lang.String)>"
+      }
+    },
+    {
+      "result_type": "FP",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/CommandInjectionController.java",
+        "class_name": "CommandInjectionController",
+        "method_name": "executeWithFullValidation07",
+        "start_line": 309,
+        "end_line": 329,
+        "is_vulnerability": false
+      },
+      "flowdroid_item": {
+        "file_path": "",
+        "class_name": "CommandInjectionController",
+        "method_name": "executeWithFullValidation07",
+        "line_number": 322,
+        "path_signature": "CommandInjectionController:executeWithFullValidation07 -> CommandInjectionController:executeWithFullValidation07",
+        "soot_signature": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithFullValidation07(java.lang.String)>"
+      }
+    },
+    {
+      "result_type": "FP",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/CommandInjectionController.java",
+        "class_name": "CommandInjectionController",
+        "method_name": "executeViaUtilsSafe08",
+        "start_line": 336,
+        "end_line": 338,
+        "is_vulnerability": false
+      },
+      "flowdroid_item": {
+        "file_path": "",
+        "class_name": "CommandUtils",
+        "method_name": "executeSafe",
+        "line_number": 46,
+        "path_signature": "CommandInjectionController:executeViaUtilsSafe08 -> CommandUtils:executeSafe",
+        "soot_signature": "<edu.thu.benchmark.annotated.util.CommandUtils: java.lang.String executeSafe(java.lang.String)>"
+      }
+    },
+    {
+      "result_type": "TN",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/CommandInjectionController.java",
+        "class_name": "CommandInjectionController",
+        "method_name": "executeWithJavaApiSafe09",
+        "start_line": 345,
+        "end_line": 360,
+        "is_vulnerability": false
+      }
+    },
+    {
+      "result_type": "TN",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/CommandInjectionController.java",
+        "class_name": "CommandInjectionController",
+        "method_name": "fileOperationWithApiSafe10",
+        "start_line": 367,
+        "end_line": 380,
+        "is_vulnerability": false
+      }
+    }
+  ],
+  "89": [
+    {
+      "result_type": "TP",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java",
+        "class_name": "SqlInjectionTestController",
+        "method_name": "testCase01",
+        "start_line": 37,
+        "end_line": 39,
+        "is_vulnerability": true
+      },
+      "flowdroid_item": {
+        "file_path": "",
+        "class_name": "SqlInjectionTestService",
+        "method_name": "findUsersByJdbcUnsafe",
+        "line_number": 143,
+        "path_signature": "SqlInjectionTestController:testCase01 -> SqlInjectionTestService:findUsersByJdbcUnsafe",
+        "soot_signature": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersByJdbcUnsafe(java.lang.String)>"
+      }
+    },
+    {
+      "result_type": "TP",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java",
+        "class_name": "SqlInjectionTestController",
+        "method_name": "testCase02",
+        "start_line": 47,
+        "end_line": 49,
+        "is_vulnerability": true
+      },
+      "flowdroid_item": {
+        "file_path": "",
+        "class_name": "SqlInjectionTestService",
+        "method_name": "findUsersSortedUnsafe",
+        "line_number": 47,
+        "path_signature": "SqlInjectionTestController:testCase02 -> SqlInjectionTestService:findUsersSortedUnsafe",
+        "soot_signature": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersSortedUnsafe(java.lang.String)>"
+      }
+    },
+    {
+      "result_type": "TP",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java",
+        "class_name": "SqlInjectionTestController",
+        "method_name": "testCase03",
+        "start_line": 57,
+        "end_line": 59,
+        "is_vulnerability": true
+      },
+      "flowdroid_item": {
+        "file_path": "",
+        "class_name": "SqlInjectionTestService",
+        "method_name": "findUsersInListUnsafe",
+        "line_number": 57,
+        "path_signature": "SqlInjectionTestController:testCase03 -> SqlInjectionTestService:findUsersInListUnsafe",
+        "soot_signature": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersInListUnsafe(java.lang.String)>"
+      }
+    },
+    {
+      "result_type": "TP",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java",
+        "class_name": "SqlInjectionTestController",
+        "method_name": "testCase04",
+        "start_line": 67,
+        "end_line": 69,
+        "is_vulnerability": true
+      },
+      "flowdroid_item": {
+        "file_path": "",
+        "class_name": "SqlInjectionTestService",
+        "method_name": "findUsersByMultipleConditionsUnsafe",
+        "line_number": 67,
+        "path_signature": "SqlInjectionTestController:testCase04 -> SqlInjectionTestService:findUsersByMultipleConditionsUnsafe",
+        "soot_signature": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersByMultipleConditionsUnsafe(java.lang.String)>"
+      }
+    },
+    {
+      "result_type": "TP",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java",
+        "class_name": "SqlInjectionTestController",
+        "method_name": "testCase05",
+        "start_line": 77,
+        "end_line": 79,
+        "is_vulnerability": true
+      },
+      "flowdroid_item": {
+        "file_path": "",
+        "class_name": "SqlInjectionTestService",
+        "method_name": "findUsersWithLimitUnsafe",
+        "line_number": 77,
+        "path_signature": "SqlInjectionTestController:testCase05 -> SqlInjectionTestService:findUsersWithLimitUnsafe",
+        "soot_signature": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersWithLimitUnsafe(java.lang.String,java.lang.String)>"
+      }
+    },
+    {
+      "result_type": "TP",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java",
+        "class_name": "SqlInjectionTestController",
+        "method_name": "testCase06",
+        "start_line": 87,
+        "end_line": 89,
+        "is_vulnerability": true
+      },
+      "flowdroid_item": {
+        "file_path": "",
+        "class_name": "SqlInjectionTestService",
+        "method_name": "updateUserDynamicUnsafe",
+        "line_number": 87,
+        "path_signature": "SqlInjectionTestController:testCase06 -> SqlInjectionTestService:updateUserDynamicUnsafe",
+        "soot_signature": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: int updateUserDynamicUnsafe(int,java.lang.String)>"
+      }
+    },
+    {
+      "result_type": "FN",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java",
+        "class_name": "SqlInjectionTestController",
+        "method_name": "testCase07",
+        "start_line": 97,
+        "end_line": 99,
+        "is_vulnerability": true
+      }
+    },
+    {
+      "result_type": "TP",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java",
+        "class_name": "SqlInjectionTestController",
+        "method_name": "testCase08",
+        "start_line": 107,
+        "end_line": 109,
+        "is_vulnerability": true
+      },
+      "flowdroid_item": {
+        "file_path": "",
+        "class_name": "SqlInjectionTestService",
+        "method_name": "findUserByEmailUnsafe",
+        "line_number": 107,
+        "path_signature": "SqlInjectionTestController:testCase08 -> SqlInjectionTestService:findUserByEmailUnsafe",
+        "soot_signature": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: edu.thu.benchmark.annotated.entity.User findUserByEmailUnsafe(java.lang.String)>"
+      }
+    },
+    {
+      "result_type": "TP",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java",
+        "class_name": "SqlInjectionTestController",
+        "method_name": "testCase09",
+        "start_line": 117,
+        "end_line": 119,
+        "is_vulnerability": true
+      },
+      "flowdroid_item": {
+        "file_path": "",
+        "class_name": "SqlInjectionTestService",
+        "method_name": "findUserByCredentialsUnsafe",
+        "line_number": 117,
+        "path_signature": "SqlInjectionTestController:testCase09 -> SqlInjectionTestService:findUserByCredentialsUnsafe",
+        "soot_signature": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: edu.thu.benchmark.annotated.entity.User findUserByCredentialsUnsafe(java.lang.String,java.lang.String)>"
+      }
+    },
+    {
+      "result_type": "TP",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java",
+        "class_name": "SqlInjectionTestController",
+        "method_name": "testCase10",
+        "start_line": 127,
+        "end_line": 129,
+        "is_vulnerability": true
+      },
+      "flowdroid_item": {
+        "file_path": "",
+        "class_name": "SqlInjectionTestService",
+        "method_name": "searchUsersUnsafe",
+        "line_number": 127,
+        "path_signature": "SqlInjectionTestController:testCase10 -> SqlInjectionTestService:searchUsersUnsafe",
+        "soot_signature": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List searchUsersUnsafe(java.lang.String,java.lang.String)>"
+      }
+    },
+    {
+      "result_type": "TP",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java",
+        "class_name": "SqlInjectionTestController",
+        "method_name": "testCase11",
+        "start_line": 137,
+        "end_line": 139,
+        "is_vulnerability": true
+      },
+      "flowdroid_item": {
+        "file_path": "",
+        "class_name": "SqlInjectionTestService",
+        "method_name": "findUsersByJdbcUnsafe",
+        "line_number": 143,
+        "path_signature": "SqlInjectionTestController:testCase11 -> SqlInjectionTestService:findUsersByJdbcUnsafe",
+        "soot_signature": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersByJdbcUnsafe(java.lang.String)>"
+      }
+    },
+    {
+      "result_type": "TP",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java",
+        "class_name": "SqlInjectionTestController",
+        "method_name": "testCase12",
+        "start_line": 147,
+        "end_line": 149,
+        "is_vulnerability": true
+      },
+      "flowdroid_item": {
+        "file_path": "",
+        "class_name": "SqlInjectionTestService",
+        "method_name": "findUsersByTemplateUnsafe",
+        "line_number": 155,
+        "path_signature": "SqlInjectionTestController:testCase12 -> SqlInjectionTestService:findUsersByTemplateUnsafe",
+        "soot_signature": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersByTemplateUnsafe(java.lang.String)>"
+      }
+    },
+    {
+      "result_type": "FN",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java",
+        "class_name": "SqlInjectionTestController",
+        "method_name": "testCase13",
+        "start_line": 157,
+        "end_line": 159,
+        "is_vulnerability": true
+      }
+    },
+    {
+      "result_type": "FN",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java",
+        "class_name": "SqlInjectionTestController",
+        "method_name": "testCase14",
+        "start_line": 167,
+        "end_line": 169,
+        "is_vulnerability": true
+      }
+    },
+    {
+      "result_type": "TP",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java",
+        "class_name": "SqlInjectionTestController",
+        "method_name": "testCase15",
+        "start_line": 177,
+        "end_line": 179,
+        "is_vulnerability": true
+      },
+      "flowdroid_item": {
+        "file_path": "",
+        "class_name": "SqlInjectionTestService",
+        "method_name": "searchUsersSemiSafe",
+        "line_number": 132,
+        "path_signature": "SqlInjectionTestController:testCase15 -> SqlInjectionTestService:searchUsersSemiSafe",
+        "soot_signature": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List searchUsersSemiSafe(java.lang.String,java.lang.String)>"
+      }
+    },
+    {
+      "result_type": "TP",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java",
+        "class_name": "SqlInjectionTestController",
+        "method_name": "testCase16",
+        "start_line": 187,
+        "end_line": 189,
+        "is_vulnerability": true
+      },
+      "flowdroid_item": {
+        "file_path": "",
+        "class_name": "SqlInjectionTestService",
+        "method_name": "findUsersByMultipleConditionsUnsafe",
+        "line_number": 67,
+        "path_signature": "SqlInjectionTestController:testCase16 -> SqlInjectionTestService:findUsersByMultipleConditionsUnsafe",
+        "soot_signature": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersByMultipleConditionsUnsafe(java.lang.String)>"
+      }
+    },
+    {
+      "result_type": "TP",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java",
+        "class_name": "SqlInjectionTestController",
+        "method_name": "testCase17",
+        "start_line": 197,
+        "end_line": 199,
+        "is_vulnerability": true
+      },
+      "flowdroid_item": {
+        "file_path": "",
+        "class_name": "SqlInjectionTestService",
+        "method_name": "findUsersByJdbcUnsafe",
+        "line_number": 143,
+        "path_signature": "SqlInjectionTestController:testCase17 -> SqlInjectionTestService:findUsersByJdbcUnsafe",
+        "soot_signature": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersByJdbcUnsafe(java.lang.String)>"
+      }
+    },
+    {
+      "result_type": "FN",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java",
+        "class_name": "SqlInjectionTestController",
+        "method_name": "testCase18",
+        "start_line": 207,
+        "end_line": 209,
+        "is_vulnerability": true
+      }
+    },
+    {
+      "result_type": "TP",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java",
+        "class_name": "SqlInjectionTestController",
+        "method_name": "testCase19",
+        "start_line": 217,
+        "end_line": 219,
+        "is_vulnerability": true
+      },
+      "flowdroid_item": {
+        "file_path": "",
+        "class_name": "SqlInjectionTestService",
+        "method_name": "findUsersByMultipleConditionsUnsafe",
+        "line_number": 67,
+        "path_signature": "SqlInjectionTestController:testCase19 -> SqlInjectionTestService:findUsersByMultipleConditionsUnsafe",
+        "soot_signature": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersByMultipleConditionsUnsafe(java.lang.String)>"
+      }
+    },
+    {
+      "result_type": "TP",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java",
+        "class_name": "SqlInjectionTestController",
+        "method_name": "testCase20",
+        "start_line": 227,
+        "end_line": 229,
+        "is_vulnerability": true
+      },
+      "flowdroid_item": {
+        "file_path": "",
+        "class_name": "SqlInjectionTestService",
+        "method_name": "findUsersByMultipleConditionsUnsafe",
+        "line_number": 67,
+        "path_signature": "SqlInjectionTestController:testCase20 -> SqlInjectionTestService:findUsersByMultipleConditionsUnsafe",
+        "soot_signature": "<edu.thu.benchmark.annotated.service.SqlInjectionTestService: java.util.List findUsersByMultipleConditionsUnsafe(java.lang.String)>"
+      }
+    },
+    {
+      "result_type": "FN",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java",
+        "class_name": "SqlInjectionTestController",
+        "method_name": "testCase41",
+        "start_line": 627,
+        "end_line": 629,
+        "is_vulnerability": true
+      }
+    },
+    {
+      "result_type": "TN",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java",
+        "class_name": "SqlInjectionTestController",
+        "method_name": "testCase21",
+        "start_line": 327,
+        "end_line": 329,
+        "is_vulnerability": false
+      }
+    },
+    {
+      "result_type": "TN",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java",
+        "class_name": "SqlInjectionTestController",
+        "method_name": "testCase22",
+        "start_line": 334,
+        "end_line": 336,
+        "is_vulnerability": false
+      }
+    },
+    {
+      "result_type": "TN",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java",
+        "class_name": "SqlInjectionTestController",
+        "method_name": "testCase23",
+        "start_line": 341,
+        "end_line": 343,
+        "is_vulnerability": false
+      }
+    },
+    {
+      "result_type": "TN",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java",
+        "class_name": "SqlInjectionTestController",
+        "method_name": "testCase24",
+        "start_line": 348,
+        "end_line": 350,
+        "is_vulnerability": false
+      }
+    },
+    {
+      "result_type": "TN",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java",
+        "class_name": "SqlInjectionTestController",
+        "method_name": "testCase25",
+        "start_line": 355,
+        "end_line": 357,
+        "is_vulnerability": false
+      }
+    },
+    {
+      "result_type": "TN",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java",
+        "class_name": "SqlInjectionTestController",
+        "method_name": "testCase26",
+        "start_line": 362,
+        "end_line": 364,
+        "is_vulnerability": false
+      }
+    },
+    {
+      "result_type": "TN",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java",
+        "class_name": "SqlInjectionTestController",
+        "method_name": "testCase27",
+        "start_line": 369,
+        "end_line": 371,
+        "is_vulnerability": false
+      }
+    },
+    {
+      "result_type": "TN",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java",
+        "class_name": "SqlInjectionTestController",
+        "method_name": "testCase28",
+        "start_line": 376,
+        "end_line": 378,
+        "is_vulnerability": false
+      }
+    },
+    {
+      "result_type": "TN",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java",
+        "class_name": "SqlInjectionTestController",
+        "method_name": "testCase29",
+        "start_line": 383,
+        "end_line": 385,
+        "is_vulnerability": false
+      }
+    },
+    {
+      "result_type": "TN",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java",
+        "class_name": "SqlInjectionTestController",
+        "method_name": "testCase30",
+        "start_line": 390,
+        "end_line": 392,
+        "is_vulnerability": false
+      }
+    },
+    {
+      "result_type": "TN",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java",
+        "class_name": "SqlInjectionTestController",
+        "method_name": "testCase31",
+        "start_line": 397,
+        "end_line": 399,
+        "is_vulnerability": false
+      }
+    },
+    {
+      "result_type": "TN",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java",
+        "class_name": "SqlInjectionTestController",
+        "method_name": "testCase32",
+        "start_line": 404,
+        "end_line": 406,
+        "is_vulnerability": false
+      }
+    },
+    {
+      "result_type": "TN",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java",
+        "class_name": "SqlInjectionTestController",
+        "method_name": "testCase33",
+        "start_line": 411,
+        "end_line": 413,
+        "is_vulnerability": false
+      }
+    },
+    {
+      "result_type": "TN",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java",
+        "class_name": "SqlInjectionTestController",
+        "method_name": "testCase34",
+        "start_line": 418,
+        "end_line": 420,
+        "is_vulnerability": false
+      }
+    },
+    {
+      "result_type": "TN",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java",
+        "class_name": "SqlInjectionTestController",
+        "method_name": "testCase35",
+        "start_line": 425,
+        "end_line": 427,
+        "is_vulnerability": false
+      }
+    },
+    {
+      "result_type": "TN",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java",
+        "class_name": "SqlInjectionTestController",
+        "method_name": "testCase36",
+        "start_line": 432,
+        "end_line": 434,
+        "is_vulnerability": false
+      }
+    },
+    {
+      "result_type": "TN",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java",
+        "class_name": "SqlInjectionTestController",
+        "method_name": "testCase37",
+        "start_line": 439,
+        "end_line": 441,
+        "is_vulnerability": false
+      }
+    },
+    {
+      "result_type": "TN",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java",
+        "class_name": "SqlInjectionTestController",
+        "method_name": "testCase38",
+        "start_line": 446,
+        "end_line": 448,
+        "is_vulnerability": false
+      }
+    },
+    {
+      "result_type": "TN",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java",
+        "class_name": "SqlInjectionTestController",
+        "method_name": "testCase39",
+        "start_line": 453,
+        "end_line": 455,
+        "is_vulnerability": false
+      }
+    },
+    {
+      "result_type": "TN",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java",
+        "class_name": "SqlInjectionTestController",
+        "method_name": "testCase40",
+        "start_line": 460,
+        "end_line": 462,
+        "is_vulnerability": false
+      }
+    },
+    {
+      "result_type": "TN",
+      "truth_item": {
+        "file_path": "src/main/java/edu/thu/benchmark/annotated/controller/SqlInjectionTestController.java",
+        "class_name": "SqlInjectionTestController",
+        "method_name": "testCase42",
+        "start_line": 634,
+        "end_line": 636,
+        "is_vulnerability": false
+      }
+    }
+  ]
+}
