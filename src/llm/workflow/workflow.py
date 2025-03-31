@@ -14,9 +14,9 @@ from src.llm.util import ModelingDataProcessor
 from src.llm.workflow.state import WorkflowState
 
 
-def strip_code_markers(text: str) -> str:
+def strip_code_markers_completely(text: str) -> str:
     """
-    去掉字符串开头的 ```java 和结尾的 ```
+    去掉字符串开头的 ```java 和结尾的 ``` 以及结尾 ``` 之后的所有内容
 
     Args:
         text: 输入的字符串
@@ -24,12 +24,17 @@ def strip_code_markers(text: str) -> str:
     Returns:
         处理后的字符串
     """
-    # 方法1：使用 strip() 和 replace()
-    text = text.strip()
+    # 去掉开头的 ```java
     if text.startswith('```java'):
-        text = text[7:]  # 去掉开头的 ```java
-    if text.endswith('```'):
-        text = text[:-3]  # 去掉结尾的 ```
+        text = text[7:]
+    elif text.startswith('```'):
+        text = text[3:]
+
+    # 找到最后一个 ``` 并截断
+    last_marker_pos = text.rfind('```')
+    if last_marker_pos != -1:
+        text = text[:last_marker_pos]
+
     return text.strip()
 
 def copy_directory(source_dir, target_dir):
@@ -280,7 +285,7 @@ class SemanticRestorationWorkflow:
                 response = self.llm_client.generate_completion(prompt=json_pretty,
                                                                system_prompt=system_prompt_semantic_restoration)
                 self.last_llm_response = response
-                restoration = strip_code_markers(response['choices'][0]['message']['content'])
+                restoration = strip_code_markers_completely(response['choices'][0]['message']['content'])
                 modified = os.path.join(self.copy_project_path, file)
                 self.logger.info(f"write file: {modified}")
 
