@@ -108,6 +108,28 @@ class TestPrunefp(unittest.TestCase):
         """
         workflow.run()
 
+    def test_prunefp_4(self):
+        base = "/home/ran/Documents/work/graduate/sementic-restoration/src/llm/test/workflow_result/"
+        result_path = os.path.join(base, "detected_result_raw0.json")
+        project_path = os.path.join(base, "project")
+        code_index = os.path.join(base, "code_indexing")
+        workflow = PruneFalsePositivesWorkflow(
+            raw_result_path=result_path,
+            project_path=project_path,
+            output_path="./output_dir_test",
+            code_index=code_index,
+            llm_model='claude-3-sonnet'
+        )
+        """
+        AVAILABLE_MODELS = {
+            "claude-3-sonnet": "anthropic/claude-3.7-sonnet",
+            "gpt-4o": "openai/gpt-4o",
+            "o1": "openai/o1",
+            "deepseek": "deepseek/deepseek-r1",
+            "gemini-flash": "google/gemini-2.0-flash-001",
+        }
+        """
+        workflow.run()
 
 
 

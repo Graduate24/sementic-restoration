@@ -568,7 +568,8 @@
         "method_name": "executeViaServiceSafe04",
         "start_line": 261,
         "end_line": 263,
-        "is_vulnerability": false
+        "is_vulnerability": false,
+        "未消除": true
       },
       "flowdroid_item": {
         "file_path": "src/main/java/edu/thu/benchmark/annotated/service/CommandService.java",
@@ -587,7 +588,8 @@
         "method_name": "executeViaAspectSafe05",
         "start_line": 270,
         "end_line": 273,
-        "is_vulnerability": false
+        "is_vulnerability": false,
+        "未消除": true
       },
       "flowdroid_item": {
         "file_path": "src/main/java/edu/thu/benchmark/annotated/aspect/CommandExecutionAspect.java",
@@ -644,7 +646,8 @@
         "method_name": "executeViaUtilsSafe08",
         "start_line": 336,
         "end_line": 338,
-        "is_vulnerability": false
+        "is_vulnerability": false,
+         "未消除": true
       },
       "flowdroid_item": {
         "file_path": "src/main/java/edu/thu/benchmark/annotated/util/CommandUtils.java",

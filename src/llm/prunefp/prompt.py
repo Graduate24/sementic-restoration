@@ -5,11 +5,12 @@
 import json
 from typing import Dict, List, Any, Optional
 
+
 class PromptGenerator:
     """
     提示词生成器，用于生成各种分析提示词
     """
-    
+
     def generate_system_prompt(self) -> str:
         """
         生成系统提示词
@@ -48,8 +49,17 @@ class PromptGenerator:
   "置信度": 0-100,
   "理由": "详细解释为什么是误报或真实漏洞的理由",
   "建议修复方案": "如果是真实漏洞，提供修复建议"
-}"""
-    
+}
+
+你一定要按照规定的结果输出,直接输出JSON格式,不需要额外的字符如```json ```等包围. 保证可以直接被解析成json对象.例如直接输出:
+{
+  "是否误报": "误报",
+  "置信度": 70,
+  "理由": "该案例不存在命令注入漏洞，原因如下：1) 实现了严格的命令白名单验证机制，只允许预定义的安全命令执行；2) 对命令参数进行了全面的危险字符过滤，阻止了包含';', '&', '|', '`', '\\', '\"', '\'', '$'等可用于命令注入的特殊字符；3) 使用ProcessBuilder的数组形式传递命令和参数，避免了shell解释器执行，增强了安全性；4) 整个执行流程有多层防御措施，即使攻击者提供恶意输入也无法绕过这些安全控制。",
+  "建议修复方案": "当前实现已足够安全，不需要额外修复措施"
+}
+"""
+
     def generate_initial_prompt(self, finding: Dict[str, Any]) -> str:
         """
         生成初始分析提示词
@@ -68,11 +78,11 @@ class PromptGenerator:
         class_name = finding.get('class_name', '未知')
         method_name = finding.get('method_name', '未知')
         line_number = finding.get('line_number', '未知')
-        
+
         # 格式化污点传播路径
         path = finding.get('path', [])
         formatted_path = self._format_path(path)
-        
+
         prompt = f"""我正在分析一个可能的{vulnerability_type}漏洞。请帮我评估这是真实漏洞还是误报。
 
 ## 漏洞信息
@@ -95,7 +105,7 @@ class PromptGenerator:
 请逐步分析，如果你需要任何方法的具体实现代码或其他信息，请告诉我。
 """
         return prompt
-    
+
     def generate_follow_up_prompt(self, additional_info: Dict[str, Any]) -> str:
         """
         生成后续信息提示词
@@ -107,7 +117,7 @@ class PromptGenerator:
             格式化的提示词字符串
         """
         prompt = "以下是你请求的额外信息：\n\n"
-        
+
         # 添加方法源码
         if "方法源码" in additional_info:
             method_info = additional_info["方法源码"]
@@ -115,7 +125,7 @@ class PromptGenerator:
             prompt += "```java\n"
             prompt += method_info["源码"]
             prompt += "\n```\n\n"
-        
+
         # 添加调用图
         if "调用图" in additional_info:
             call_graph_info = additional_info["调用图"]
@@ -123,7 +133,7 @@ class PromptGenerator:
             prompt += "```\n"
             prompt += call_graph_info["调用图"]
             prompt += "\n```\n\n"
-        
+
         # 添加Jimple IR
         if "Jimple IR" in additional_info:
             jimple_info = additional_info["Jimple IR"]
@@ -131,11 +141,11 @@ class PromptGenerator:
             prompt += "```\n"
             prompt += jimple_info["Jimple"]
             prompt += "\n```\n\n"
-        
+
         prompt += "请继续你的分析，判断这是否是一个真实的安全漏洞或误报。"
-        
+
         return prompt
-    
+
     def _determine_vulnerability_type(self, finding: Dict[str, Any]) -> str:
         """
         根据sink确定漏洞类型
@@ -147,7 +157,7 @@ class PromptGenerator:
             漏洞类型字符串
         """
         sink = finding.get('sink', '').lower()
-        
+
         if 'sql' in sink:
             return "SQL注入"
         elif 'process' in sink or 'exec' in sink or 'command' in sink:
@@ -157,14 +167,14 @@ class PromptGenerator:
         elif 'file' in sink or 'path' in sink:
             return "路径操作/文件注入"
         elif 'ldap' in sink:
-            return "LDAP注入" 
+            return "LDAP注入"
         elif 'xpath' in sink:
             return "XPath注入"
         elif 'deserial' in sink:
             return "不安全的反序列化"
         else:
             return "安全漏洞"
-    
+
     def _format_path(self, path: List[Dict[str, Any]]) -> str:
         """
         格式化污点传播路径
@@ -177,23 +187,43 @@ class PromptGenerator:
         """
         if not path:
             return "未提供污点传播路径"
-        
+
         formatted_path = ""
         for i, node in enumerate(path):
             java_class = node.get('javaClass', '未知')
             function = node.get('function', '未知')
             jimple_stmt = node.get('jimpleStmt', '未知')
             line = node.get('line', -1)
-            
-            formatted_path += f"{i+1}. 类: {java_class}\n"
+
+            formatted_path += f"{i + 1}. 类: {java_class}\n"
             formatted_path += f"   函数: {function}\n"
             formatted_path += f"   Jimple语句: {jimple_stmt}\n"
-            
+
             if line > 0:
                 formatted_path += f"   行号: {line}\n"
-            
+
             # 添加箭头，除了最后一个节点
             if i < len(path) - 1:
                 formatted_path += "   ↓\n"
-        
-        return formatted_path 
+
+        return formatted_path
+
+    def generate_final_prompt(self, finding: Dict[str, Any]) -> str:
+        return """基于我们的讨论，请给出最终判断：该漏洞是真实漏洞还是误报？请提供详细理由，并以JSON格式输出.
+
+        最终结论请使用以下JSON格式输出：
+        {
+          "是否误报": "误报/不是误报",
+          "置信度": 0-100,
+          "理由": "详细解释为什么是误报或真实漏洞的理由",
+          "建议修复方案": "如果是真实漏洞，提供修复建议"
+        }
+
+        你一定要按照规定的结果输出,直接输出JSON格式,不需要额外的字符如```json ```等包围. 保证可以直接被解析成json对象.例如直接输出:
+        {
+          "是否误报": "误报",
+          "置信度": 70,
+          "理由": "该案例不存在命令注入漏洞，原因如下：1) 实现了严格的命令白名单验证机制，只允许预定义的安全命令执行；2) 对命令参数进行了全面的危险字符过滤，阻止了包含';', '&', '|', '`', '\\', '\"', '\'', '$'等可用于命令注入的特殊字符；3) 使用ProcessBuilder的数组形式传递命令和参数，避免了shell解释器执行，增强了安全性；4) 整个执行流程有多层防御措施，即使攻击者提供恶意输入也无法绕过这些安全控制。",
+          "建议修复方案": "当前实现已足够安全，不需要额外修复措施"
+        }
+        """

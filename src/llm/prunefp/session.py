@@ -101,7 +101,7 @@ class AnalysisSession:
             logger.warning(f"达到最大对话轮数 ({self.max_rounds})，但LLM仍需要更多信息")
 
         # 最终判断
-        final_prompt = "基于我们的讨论，请给出最终判断：该漏洞是真实漏洞还是误报？请提供详细理由，并以JSON格式输出。"
+        final_prompt = self._prepare_final_prompt()
         final_response = self.llm_client.generate_completion(
             prompt=final_prompt,
             conversation_history=self.conversation_history
@@ -125,6 +125,15 @@ class AnalysisSession:
             格式化的提示词字符串
         """
         return self.prompt_generator.generate_initial_prompt(self.finding)
+
+    def _prepare_final_prompt(self) -> str:
+        """
+        准备最终分析提示词
+
+        返回:
+            格式化的提示词字符串
+        """
+        return self.prompt_generator.generate_final_prompt(self.finding)
 
     def _prepare_follow_up_prompt(self, additional_info: Dict[str, Any]) -> str:
         """
@@ -299,8 +308,7 @@ class AnalysisSession:
 
         if json_match:
             try:
-                json_str = json_match.group(0)
-                result = json.loads(json_str)
+                result = json.loads(response)
 
                 # 添加原始查询信息
                 result["原始数据"] = {
@@ -308,9 +316,15 @@ class AnalysisSession:
                     "方法名": self.finding.get("method_name"),
                     "行号": self.finding.get("line_number"),
                     "源点": self.finding.get("source"),
-                    "汇点": self.finding.get("sink")
+                    "汇点": self.finding.get("sink"),
+                    "函数": self.finding.get("function"),
                 }
-
+                result["是否误报"] = False if "不是误报" == result["是否误报"] else True
+                """
+                "是否误报": is_false_positive,
+                "置信度": confidence,
+                "理由": response[:500],  # 截取前500个字符作为理由
+                """
                 return result
             except json.JSONDecodeError:
                 logger.warning(f"无法解析结果JSON: {json_match.group(0)}")
@@ -338,7 +352,8 @@ class AnalysisSession:
                 "方法名": self.finding.get("method_name"),
                 "行号": self.finding.get("line_number"),
                 "源点": self.finding.get("source"),
-                "汇点": self.finding.get("sink")
+                "汇点": self.finding.get("sink"),
+                "函数": self.finding.get("function"),
             }
         }
 
