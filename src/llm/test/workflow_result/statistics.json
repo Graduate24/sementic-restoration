@@ -1,11 +1,11 @@
 {
     "times": {
-        "project_analysis": 1.7544937133789062,
-        "code_indexing": 3.0129146575927734,
-        "restoration": 2813.6826872825623,
-        "compilation": 7.685009717941284,
-        "analysis": 6.747359991073608,
-        "evaluation": 0.7539725303649902
+        "project_analysis": 1.8767740726470947,
+        "code_indexing": 3.4859392642974854,
+        "restoration": 382.52314805984497,
+        "compilation": 6.808000802993774,
+        "analysis": 7.578855752944946,
+        "evaluation": 0.8021137714385986
     },
     "model": "claude-3-sonnet",
     "restored_files": 0,
@@ -586,7 +586,7 @@
                     "file_path": "",
                     "class_name": "CommandInjectionController",
                     "method_name": "executeWithFullValidation07",
-                    "line_number": 324,
+                    "line_number": 322,
                     "path_signature": "CommandInjectionController:executeWithFullValidation07 -> CommandInjectionController:executeWithFullValidation07",
                     "soot_signature": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithFullValidation07(java.lang.String)>"
                 }
@@ -1716,7 +1716,7 @@
                     "file_path": "",
                     "class_name": "CommandService",
                     "method_name": "executeCommandSafe",
-                    "line_number": 78,
+                    "line_number": 80,
                     "path_signature": "CommandInjectionController:executeViaServiceSafe04 -> CommandService:executeCommandSafe",
                     "soot_signature": "<edu.thu.benchmark.annotated.service.CommandService: java.lang.String executeCommandSafe(java.lang.String)>"
                 }
@@ -1735,7 +1735,7 @@
                     "file_path": "",
                     "class_name": "CommandExecutionAspect",
                     "method_name": "executeCommandSafe",
-                    "line_number": 51,
+                    "line_number": 53,
                     "path_signature": "CommandInjectionController:executeViaAspectSafe05 -> CommandExecutionAspect:executeCommandSafe",
                     "soot_signature": "<edu.thu.benchmark.annotated.aspect.CommandExecutionAspect: java.lang.String executeCommandSafe(java.lang.String)>"
                 }
@@ -1773,7 +1773,7 @@
                     "file_path": "",
                     "class_name": "CommandInjectionController",
                     "method_name": "executeWithFullValidation07",
-                    "line_number": 322,
+                    "line_number": 324,
                     "path_signature": "CommandInjectionController:executeWithFullValidation07 -> CommandInjectionController:executeWithFullValidation07",
                     "soot_signature": "<edu.thu.benchmark.annotated.controller.CommandInjectionController: java.lang.String executeWithFullValidation07(java.lang.String)>"
                 }

@@ -266,7 +266,7 @@ class SemanticRestorationWorkflow:
     def _execute_restoration(self):
         """执行语义还原"""
         self.logger.info("------Starting restoration workflow------")
-        start_time = time.time()
+
         processor = ModelingDataProcessor(self.copy_project_path, self.modeling_result_path,
                                           self.code_indexing_result_path)
         # 加载建模数据
@@ -281,6 +281,7 @@ class SemanticRestorationWorkflow:
                         prompt_data['modeling_data']['ioc_data'])) == 0:
                     self.logger.info(f"No need to do semantic restoration for: {file}. skip...")
                     continue
+                start_time = time.time()
                 self.logger.info(f"Processing file: {file}")
                 response = self.llm_client.generate_completion(prompt=json_pretty,
                                                                system_prompt=system_prompt_semantic_restoration)
